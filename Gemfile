@@ -17,7 +17,7 @@ group :development do
   gem 'sinatra-reloader', :require => 'sinatra/reloader'
 end
 
-group :development,:test do
+group :development, :test do
   gem 'sqlite3'
   gem 'pry'
 end
