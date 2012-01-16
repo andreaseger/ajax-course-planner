@@ -76,9 +76,6 @@ describe Booking do
   end
 
   context '#key' do
-    it 'should provide a string with 3 characters' do
-      booking.key.should have(3).characters
-    end
     it 'should create the same key if the data is the same' do
       booking.key.should == Booking.from_json(json).key
     end

@@ -1,38 +1,37 @@
-# monkey patching Hash and Array
-# http://snippets.dzone.com/posts/show/12019
-class Hash
-  def recursively_symbolize_keys!
-    self.symbolize_keys!
-    self.values.each do |v|
-      if v.is_a? Hash
-        v.recursively_symbolize_keys!
-      elsif v.is_a? Array
-        v.recursively_symbolize_keys!
-      end
-    end
-    self
-  end
-end
-
-class Array
-  def recursively_symbolize_keys!
-    self.each do |item|
-      if item.is_a? Hash
-        item.recursively_symbolize_keys!
-      elsif item.is_a? Array
-        item.recursively_symbolize_keys!
-      end
-    end
-  end
-end
-
 require 'json'
-require 'digest/md5'
+require 'digest/sha1'
 require 'base64'
 
 class Booking < Hash
   def key
-    Base64.urlsafe_encode64(Digest::MD5.digest(to_json))[0,3]
+    Base64.urlsafe_encode64(Digest::SHA1.digest(to_json))[0,5]
+  end
+  def save
+    $redis.multi do
+      $redis.set key, to_json
+
+      teachers.each do |teacher|
+        $redis.sadd "by_teacher:#{teacher[:name]}", key
+        $redis.sadd "teachers", teacher[:name]
+      end
+      [:room, :group, :course].each do |arg|
+        name = send(arg)[:name]
+        $redis.sadd "by_#{arg}:#{name}", key
+        $redis.sadd "#{arg}s", name
+      end
+    end
+  end
+
+  def self.find(key)
+    from_json $redis.get(key)
+  end
+  class << self
+    [:teacher, :group, :course, :room].each do |arg|
+      method_name = ("find_by_" + arg.to_s).to_sym
+      define_method(method_name) do |key|
+        $redis.smembers("by_#{arg.to_s}:#{key}").map {|k| find k }
+      end
+    end
   end
 
   def self.from_hash hash
