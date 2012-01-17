@@ -12,7 +12,7 @@ describe Booking do
     }
   end
   let(:json) { data.to_json }
-  let(:booking) { Booking.from_json json }
+  let(:booking) { Booking.from_hash data }
 
   context '#to_json' do
     it 'should be equal to the source data' do

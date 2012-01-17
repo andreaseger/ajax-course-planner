@@ -1,12 +1,23 @@
 require 'json'
+require_relative 'recursivly_symbolize_keys'
+require_relative 'buildable'
+require_relative 'has_key'
 class Exam < Hash
+  extend Buildable
+  include HasKey
   def save
     raise "NotYetImplemented"
   end
-  def self.from_hash hash
-    Exam[hash].recursively_symbolize_keys!
+  def self.find key
+    raise "NotYetImplemented"
   end
-  def self.from_json json
-    from_hash JSON.parse(json)
+  class << self
+    [:examiner, :course].each do |arg|
+      method_name = ("find_by_" + arg.to_s).to_sym
+      define_method(method_name) do |key|
+        #$redis.smembers("exams:by_#{arg.to_s}:#{key}").map {|k| find k }
+        raise "NotYetImplemented"
+      end
+    end
   end
 end

@@ -6,6 +6,6 @@ class Parser
 
   def self.run
     parser = new
-    parser.update_bookings
+    parser.update_data
   end
 end

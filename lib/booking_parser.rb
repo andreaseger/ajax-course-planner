@@ -1,6 +1,7 @@
 require_relative 'parser'
+require_relative 'booking'
 class BookingsParser < Parser
-  def update_bookings
+  def update_data
     get_timetables.each do |booking|
       room = build_room(booking.xpath('room').text)
       booking.xpath('courses/course').each do |course|

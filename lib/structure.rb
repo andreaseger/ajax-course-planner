@@ -1,12 +1,23 @@
+require 'redis'
 module Structure
   #TODO add redis lookup to these two methods
-  def get_modul_label modul
-    get_with_xpath("http://fi.cs.hm.edu/fi/rest/public/modul/title/#{modul}.xml", '/modul/name').first.text
+  def get_modul_label code
+    from_redis = $redis.get "course:#{code}"
+    unless from_redis
+      label = get_with_xpath("http://fi.cs.hm.edu/fi/rest/public/modul/title/#{code}.xml", '/modul/name').first.text
+      $redis.set "course:#{code}", label
+      $redis.expire "course:#{code}", 60*60*24*10
+    end
   end
 
-  def get_teacher_name teacher
-    person = get_with_xpath("http://fi.cs.hm.edu/fi/rest/public/person/name/#{teacher}.xml", '/person').first
-    "#{person.xpath('title').text} #{person.xpath('firstname').text} #{person.xpath('lastname').text}"
+  def get_teacher_name code
+    from_redis = $redis.get "teacher:#{code}"
+    unless from_redis
+      person = get_with_xpath("http://fi.cs.hm.edu/fi/rest/public/person/name/#{code}.xml", '/person').first
+      label = "#{person.xpath('title').text} #{person.xpath('firstname').text} #{person.xpath('lastname').text}"
+      $redis.set "teacher:#{code}", label
+      $redis.expire "teacher:#{code}", 60*60*24*10
+    end
   end
 
   def build_room room
