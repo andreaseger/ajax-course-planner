@@ -15,8 +15,7 @@ class Exam < Hash
     [:examiner, :course].each do |arg|
       method_name = ("find_by_" + arg.to_s).to_sym
       define_method(method_name) do |key|
-        #$redis.smembers("exams:by_#{arg.to_s}:#{key}").map {|k| find k }
-        raise "NotYetImplemented"
+        $redis.smembers("exams:by_#{arg.to_s}:#{key}").map {|k| find k }
       end
     end
   end

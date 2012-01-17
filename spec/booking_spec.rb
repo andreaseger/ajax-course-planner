@@ -20,50 +20,50 @@ describe Booking do
     end
   end
   context '#from_json' do
-    it 'should create a new booking object with timeslot data' do
-      booking.should have_key(:timeslot)
-    end
     context '#timeslot' do
+      it 'should create a new booking object with timeslot data' do
+        booking.should have_key(:timeslot)
+      end
       [ :start_minute, :start_hour, :end_hour, :end_minute ].each do |key|
         it "should have a #{key}" do
           booking[:timeslot].should have_key(key)
         end
       end
     end
-    it 'should create a new booking object with room data' do
-      booking.should have_key(:room)
-    end
     context '#room' do
+      it 'should create a new booking object with room data' do
+        booking.should have_key(:room)
+      end
       [ :name, :label, :building, :floor ].each do |key|
         it "should have a #{key}" do
           booking[:room].should have_key(key)
         end
       end
     end
-    it 'should create a new booking object with group data' do
-      booking.should have_key(:group)
-    end
     context '#group' do
+      it 'should create a new booking object with group data' do
+        booking.should have_key(:group)
+      end
       [ :name ].each do |key|
         it "should have a #{key}" do
           booking[:room].should have_key(key)
         end
       end
     end
-    it 'should create a new booking object with course data' do
-      booking.should have_key(:course)
-    end
     context '#course' do
+      it 'should create a new booking object with course data' do
+        booking.should have_key(:course)
+      end
       [ :name, :label ].each do |key|
         it "should have a #{key}" do
           booking[:course].should have_key(key)
         end
       end
     end
-    it 'should create a new booking object with teachers data' do
-      booking.should have_key(:teachers)
-    end
     context '#teachers' do
+      it 'should create a new booking object with teachers data' do
+        booking.should have_key(:teachers)
+      end
       it 'should be a array of teachers' do
         booking[:teachers].should be_a_kind_of(Array)
       end
@@ -77,10 +77,10 @@ describe Booking do
 
   context '#key' do
     it 'should create the same key if the data is the same' do
-      booking.key.should == Booking.from_json(json).key
+      booking.key.should == Booking.from_hash(data).key
     end
     it 'should deliver different keys for different data' do
-      other_booking = Booking.from_json(data.merge(group: {name: 'foo'}).to_json)
+      other_booking = Booking.from_hash(data.merge(group: {name: 'foo'}))
       booking.key.should_not == other_booking.key
     end
   end

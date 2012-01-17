@@ -2,6 +2,7 @@ require 'json'
 require_relative 'recursivly_symbolize_keys'
 require_relative 'buildable'
 require_relative 'has_key'
+
 class Booking < Hash
   extend Buildable
   include HasKey
@@ -9,12 +10,12 @@ class Booking < Hash
     $redis.multi do
       $redis.set key, to_json
 
-      teachers.each do |teacher|
+      self[:teachers].each do |teacher|
         $redis.sadd "bookings:by_teacher:#{teacher[:name]}", key
         $redis.sadd "teachers", teacher[:name]
       end
       [:room, :group, :course].each do |arg|
-        name = send(arg)[:name]
+        name = self[arg][:name]
         $redis.sadd "bookings:by_#{arg}:#{name}", key
         $redis.sadd "#{arg}s", name
       end

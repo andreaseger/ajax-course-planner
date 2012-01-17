@@ -1,3 +1,6 @@
+require 'net/http'
+require "nokogiri"
+
 module Parsing
   def get url
     Timeout::timeout(5) do
@@ -10,9 +13,8 @@ module Parsing
   def get_with_xpath url, xpath
     xml = get url
     xml.xpath xpath
-  rescue
-    p "[ERROR] get_with_xpath(#{url},#{xpath}) -> #{e.message}"
-    p e.backtrace
-    exit 1
+  rescue Exception => e
+    raise "[ERROR] get_with_xpath(#{url},#{xpath}) -> #{e.message}\n#{e.backtrace}"
+    #exit 1
   end
 end

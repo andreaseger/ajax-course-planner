@@ -1,0 +1,251 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://fi.cs.hm.edu/fi/rest/public/person/name/eichsoellneredda.xml
+    body: ''
+    headers:
+      accept:
+      - ! '*/*'
+      user-agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      server:
+      - Apache-Coyote/1.1
+      content-type:
+      - text/xml;charset=utf-8
+      transfer-encoding:
+      - chunked
+      vary:
+      - Accept-Encoding
+      date:
+      - Tue, 17 Jan 2012 22:49:14 GMT
+    body: ! "<?xml version=\"1.0\" encoding=\"UTF-8\"?><person>\n    <lastname>Eich-Soellner</lastname>\n
+      \   <firstname>Edda</firstname>\n    <sex>f</sex>\n    <title>Prof. Dr.</title>\n
+      \   <faculty>07</faculty>\n    <status>prof</status>\n    <hidden>false</hidden>\n
+      \   <email xmlns:emailtrasher=\"java:edu.hm.cs.fi.exporter.EmailTrasher\">removed</email>\n
+      \   <website>http://www.cs.hm.edu/~eich</website>\n    <phone>3729</phone>\n
+      \   <function>Studienfachberatung Bachelor Informatik;Studienfachberatung Bachelor
+      Scientific Computing;\nPrüfungskommission Bachelor Informatik Vorsitz;\nPrüfungskommission
+      Bachelor Scientific Computing Vorsitz;\nPrüfungskommission Master Stochastic
+      Engineering in Finance and Management Vorsitz - Stellvertretung;Prüfungskommission
+      Master Informatik Vorsitz - Stellvertretung;</function>\n    <focus>Numerische
+      Mathematik; Modellbildung; Simulation; Angewandte Mathematik</focus>\n    <publication/>\n
+      \   <office>r3035</office>\n    <emailoptin>true</emailoptin>\n    <officehourweekday>di</officehourweekday>\n
+      \   <officehourtime>15:00</officehourtime>\n    <officehourroom/>\n    <officehourcomment>Die
+      Sprechstunden finden regelmäßig nur in der Vorlesungszeit (1.10.-25.1. und 15.3.
+      - 10.7.) statt.</officehourcomment>\n    <einsichtdate/>\n    <einsichttime>10:00</einsichttime>\n
+      \   <einsichtroom/>\n    <einsichtcomment>Gerne können Sie die Prüfungseinsicht
+      auch als Sprechstunde nutzen.</einsichtcomment>\n    <password>removed</password>\n
+      \   <modul>\n        <name>Analysis</name>\n        <angebot>ws</angebot>\n
+      \       <credits>5</credits>\n        <sws>4</sws>\n        <verantwortlich>eichsoellneredda</verantwortlich>\n
+      \       <teacher>eichsoellneredda</teacher>\n        <teacher>grubermanfred</teacher>\n
+      \       <teacher>hoerwickjosef</teacher>\n        <language>de</language>\n
+      \       <lehrform>su-uebungen</lehrform>\n        <aufwand>40 Präsenzstunden
+      Vorlesung, 20 Präsenzstunden Übung, 35 Stunden Vor-/Nachbereitung der Übungen,
+      55 Stunden Nachbereitung der Vorlesung und Prüfungsvorbereitung</aufwand>\n
+      \       <voraussetzungen>Keine</voraussetzungen>\n        <ziele>Die Studierenden
+      sind in der Lage,\n.einfache Sachverhalte in der Sprache der Mathematik zu formulieren
+      (Modellbildungskompetenz),\n.die Methoden der eindimensionalen Analysis zur
+      Problemlösung sicher und kreativ einzusetzen (z.B. Abschätzungen des Rechenaufwands
+      mit Hilfe von Reihen, Lösung von eindimensionen Optimierungsproblemen),\n.sicher
+      mit Termen, (Un-)Gleichungen und Funktionen umzugehen,\n.die Grundbegriffe der
+      Analysis wie Konvergenz, Stetigkeit, Differenzierbarkeit auf andere Bereiche
+      anzuwenden\n.\n\n.Kenntnisse der wichtigsten Methoden der Analysis\n.Fähigkeit,
+      diese auf praktische Probleme  anwenden zu können\n.Verbesserung der Abstraktionsfähigkeit\n.Stärkung
+      des problemlösenden Denkens\n.</ziele>\n        <inhalt>Grundlegende Konzepte,
+      Methoden und numerische Verfahren der eindimensionalen Analysis für die folgenden
+      Themengebiete\n\n.Beweisverfahren, insbesondere vollständige Induktion\n.Folgen
+      und Reihen\n.Funktionen und Modelle\n.Interpolation und Approximation (Polynominterpolation
+      mittels dividierter Differenzen, Horner-Schema, Taylor-Reihen,...)\n.Differentiation
+      und ihre Anwendung (Differentiationsregeln, Fehlerrechnung, Näherungsrechnung,
+      Newton-Verfahren,...)\n.Integration und ihre Anwendung\n.</inhalt>\n        <leistungen>sps</leistungen>\n
+      \       <medien>Tafel; Mathematica-Demonstrations, Veranschaulichung und Einübung
+      des Gelernten u.a. mit  Hilfe von Computeralgebrasystemen; Folien bzw. Beamer;
+      Gruppenarbeit</medien>\n        <literatur>978-0495383628\n978-0201558029</literatur>\n
+      \       <program/>\n    </modul>\n    <modul>\n        <name>Angewandte Mathematik</name>\n
+      \       <angebot>ss</angebot>\n        <credits>5</credits>\n        <sws>4</sws>\n
+      \       <verantwortlich>eichsoellneredda</verantwortlich>\n        <teacher>eichsoellneredda</teacher>\n
+      \       <teacher>hoerwickjosef</teacher>\n        <teacher>koestergerta</teacher>\n
+      \       <language>de</language>\n        <lehrform>seminar</lehrform>\n        <aufwand>60
+      Präsenzstunden, 50 Stunden Vorbereitung des eigenen Vortrags, 40 Stunden Erstellen
+      der Seminararbeit</aufwand>\n        <voraussetzungen>Analysis (IF-I-B-101),
+      Lineare Algebra (IF-I-B-103)</voraussetzungen>\n        <ziele>Die Studierenden
+      sind in der Lage\n.einfachere mathematische Modelle für praktische Problemstellungen
+      zu entwickeln\n.Modelle und Lösungsmethoden mit Hilfe eines Computeralgebrasystems
+      zu implementieren\n.Erarbeitete Ergebnisse zu interpretieren, zu visualisieren
+      und zu präsentieren\n.\nInsbesondere sollen\n\n.die Fähigkeit zu problemlösenden
+      Denken,\n.die Teamfähigkeit durch Gruppenarbeit und\n.die Präsentationstechnik\n.\ngestärkt
+      werden.</ziele>\n        <inhalt>.Einführung in ein Computeralgebrasystem (CAS)\n.Einüben
+      des Umgangs damit\n.Bearbeitung konkreter mathematischer Probleme (z.B. Probleme
+      aus OR, Optimierung, Graphentheorie) unter Rückgriff auf ein CAS in Kleingruppen\n.Präsentationstechniken\n.Referat
+      über eines der bearbeiteten mathematischen Probleme</inhalt>\n        <leistungen>ref40sem60</leistungen>\n
+      \       <medien>Tafel; Demonstration mit CAS; Folien bzw. Beamer</medien>\n
+      \       <literatur>.978-3868940138\n.978-0495383628\n.Mathematic-Hilfs-Menue\n.</literatur>\n
+      \       <program/>\n    </modul>\n    <modul>\n        <name>Bachelorarbeit</name>\n
+      \       <angebot>alle</angebot>\n        <credits>12</credits>\n        <sws>2</sws>\n
+      \       <verantwortlich>eichsoellneredda</verantwortlich>\n        <teacher>anlauffheidi</teacher>\n
+      \       <teacher>boettcheraxel</teacher>\n        <teacher>eichsoellneredda</teacher>\n
+      \       <teacher>fischerdirk</teacher>\n        <teacher>fischermax</teacher>\n
+      \       <teacher>gerlingrainerw</teacher>\n        <teacher>grubermanfred</teacher>\n
+      \       <teacher>hammerschallulrike</teacher>\n        <teacher>heigertjohannes</teacher>\n
+      \       <teacher>hertlejochen</teacher>\n        <teacher>hoerwickjosef</teacher>\n
+      \       <teacher>hofhansjoachim</teacher>\n        <teacher>kirchulla</teacher>\n
+      \       <teacher>koehlerklaus</teacher>\n        <teacher>koestergerta</teacher>\n
+      \       <teacher>lindermeierrobert</teacher>\n        <teacher>mandlpeter</teacher>\n
+      \       <teacher>moebertpatrick</teacher>\n        <teacher>moenckeulrich</teacher>\n
+      \       <teacher>nischwitzalfred</teacher>\n        <teacher>orehekmartin</teacher>\n
+      \       <teacher>petersgeorg</teacher>\n        <teacher>pleierchristoph</teacher>\n
+      \       <teacher>recknagelwinfried</teacher>\n        <teacher>ruckertmartin</teacher>\n
+      \       <teacher>schiedermeierreinhard</teacher>\n        <teacher>schnoerrclaudius</teacher>\n
+      \       <teacher>schwenkertrainer</teacher>\n        <teacher>sochergudrun</teacher>\n
+      \       <teacher>staudtmartin</teacher>\n        <teacher>stuetzlegerhard</teacher>\n
+      \       <teacher>thurnerveronika</teacher>\n        <teacher>vogtchristian</teacher>\n
+      \       <teacher>wernerralf</teacher>\n        <teacher>zielkeandreas</teacher>\n
+      \       <teacher>zimmertorsten</teacher>\n        <teacher>zugenmaieralf</teacher>\n
+      \       <language>de</language>\n        <language>en</language>\n        <lehrform>selbst</lehrform>\n
+      \       <aufwand>Die Bearbeitungszeit für die Bachelorarbeit beträgt gemäß SPO
+      3 Monate.</aufwand>\n        <voraussetzungen>Die formalen Voraussetzungen für
+      die Ausgabe der Bachelorarbeit sind in der SPO festgelegt.</voraussetzungen>\n
+      \       <ziele>.Fähigkeit, die im Studium erworbenen fachlichen und methodischen
+      Kenntnisse und Kompetenzen zur weitgehend selbständigen Bearbeitung eines etwas
+      größeren, aber zeitlich klar begrenzten, praxisbezogenen Projektes einzusetzen.\n.Fähigkeit,
+      eine Literaturrecherche durchzuführen und Fachinformationsquellen für die Arbeit
+      zu nutzen.\n.Fähigkeit, Experimente oder Systemimplementationen zu planen, durchzuführen
+      und die Ergebnisse zu evaluieren.\n.Kompetenz, die Ergebnisse ihrer Arbeit schriftlich
+      und mündlich verständlich darzustellen und kritisch mit anderen Fachleuten zu
+      diskutieren\n\n\n\nDie Arbeit ist im Rahmen des Bachelorseminars zu präsentieren.</ziele>\n
+      \       <inhalt>Selbständige Bearbeitung (unter Anleitung) einer praxisbezogenen
+      Problemstellung auf der Basis wissenschaftlicher und methodischer Ansätze.\n#\nIm
+      Kolloqium werden die Problemstellungen, Inhalte und Ergebnisse der Bachelorarbeiten
+      präsentiert und diskutiert.</inhalt>\n        <leistungen>ba</leistungen>\n
+      \       <medien>Keine.</medien>\n        <literatur>#Fachliteratur: in Abhängigkeit
+      vom Thema der Bachelorarbeit.\n#Literatur zur Einführung in das wissenschaftliche
+      Arbeiten und Schreiben:\n#\nThe Science of Scientific Writing, George D. Gopen
+      and Judith A. Swan, American Scientist, Nov. 1990, Volume 78, pp. 550-558\n#Mathematical
+      Writing, Donald E. Knuth et al., MAA Notes, The Mathematical Association of
+      America, 1989, Number 14.</literatur>\n        <program/>\n    </modul>\n    <modul>\n
+      \       <name>Fachwissenschaftliche Wahlpflichtfächer</name>\n        <angebot>alle</angebot>\n
+      \       <credits>5</credits>\n        <sws>4</sws>\n        <verantwortlich>eichsoellneredda</verantwortlich>\n
+      \       <language>de</language>\n        <language>en</language>\n        <lehrform>nachfach</lehrform>\n
+      \       <aufwand>Je nach Fach.</aufwand>\n        <voraussetzungen>Je nach Fach.</voraussetzungen>\n
+      \       <ziele>Je nach Fach.\n#Allgemeines Ziel: Vermittlung von Kenntnissen
+      und Fähigkeiten auf speziellen Teilgebieten der Informatik.</ziele>\n        <inhalt>Je
+      nach Fach (siehe die Beschreibungen für Fächer mit der Nummer IF-I-B2xx).</inhalt>\n
+      \       <leistungen>nachfach</leistungen>\n        <medien>Je nach Fach.</medien>\n
+      \       <literatur>Je nach Fach.</literatur>\n        <program/>\n    </modul>\n
+      \   <modul>\n        <name>Fortgeschrittene numerische Mathematik</name>\n        <angebot>wechsel</angebot>\n
+      \       <credits>5</credits>\n        <sws>4</sws>\n        <verantwortlich>eichsoellneredda</verantwortlich>\n
+      \       <teacher>eichsoellneredda</teacher>\n        <language>de</language>\n
+      \       <language>en</language>\n        <lehrform>su-praktikum</lehrform>\n
+      \       <aufwand>40 Präsenzstunden Vorlesung, 20 Präsenzstunden Übung, 35 Stunden
+      Vor-/Nachbereitung der Übungen, 55 Stunden Nachbereitung der Vorlesung und Prüfungsvorbereitung</aufwand>\n
+      \       <voraussetzungen>Numerische Mathematik (IF-I-B-M02)</voraussetzungen>\n
+      \       <ziele>Die Studierenden sind in der Lage,\n.fast alle numerischen Problemstellungen
+      zu klassifizieren;\n.geeignete Algorithmen auszuwählen, effizient zu implementieren,
+      auf spezielle Problemstellungen anzupassen (Strukturausnutzung,...), weiterzuentwickeln,
+      neu zu entwerfen;\n.unter Verwendung von Programmsystemen auch komplexere Probleme
+      kreativ und fachgerecht zu lösen, die numerischen Algorithmen effizient zu implementieren
+      und Rechenergebnisse kritisch zu beurteilen\n.die Ursachen für das Versagen
+      eines Algorithmus zu analysieren und fachgerecht zu beheben\n.numerische Methoden
+      und ihr Konstruktionsprinzip zu verstehen, sicher mit ihnen umzugehen, und das
+      Prinzip auf andere Anwendungen zu übertragen;\n.</ziele>\n        <inhalt>a)
+      Vertiefung und Erweiterung der folgenden Themengebiete:\n.Lineare Gleichungssysteme
+      (sparse matrix Methoden, spezielle strukturausnutzende Verfahren)\n.nichtlineare
+      Gleichungssysteme: Homotopieverfahren, \\...\n.Vefahren des Computer Aided Geometric
+      design (Splines, Nurbs,...);\n.\n\n#b)\nNumerische Verfahren für\n.Trigonometrische
+      Interpolation und diskrete Fourier-Transformation\n.Iterative Methoden zur Lösung
+      linearer Gleichungssysteme\n.Gewöhnliche Differentialgleichungen (Anfangs- und
+      Randwertprobleme)\n.Parameteridentifikation\n.Optimierung\n.Partielle Differentialgleichungen\n.Eigenwertprobleme\n.</inhalt>\n
+      \       <leistungen>sa40sp60</leistungen>\n        <medien>Folien bzw. Beamer,
+      Tafel, Demonstrationen an Hand eines Programmsystems zum wissenschaftlichen
+      Rechnen (z.B. Scilab, Matlab, Octave), selbstgesteuertes Lernen in Kleingruppen</medien>\n
+      \       <literatur>z.B.:\n\n.978-0071244893 (Heath)\n.0-321-46135-5 Sauer\n.0-13-125444-8
+      van Loan\n.3-446-21375-9 fbv\n.978-0898715606 moler\n.3-519-02601-5</literatur>\n
+      \       <program/>\n    </modul>\n    <modul>\n        <name>Numerische Mathematik</name>\n
+      \       <angebot>ws</angebot>\n        <credits>5</credits>\n        <sws>4</sws>\n
+      \       <verantwortlich>eichsoellneredda</verantwortlich>\n        <teacher>eichsoellneredda</teacher>\n
+      \       <teacher>koestergerta</teacher>\n        <language>de</language>\n        <language>en</language>\n
+      \       <lehrform>su-praktikum</lehrform>\n        <aufwand>40 Präsenzstunden
+      Vorlesung, 20 Präsenzstunden Praktikum, 55 Stunden Vor-/Nachbereitung des Praktikums,
+      35 Stunden Nachbereitung der Vorlesung und Prüfungsvorbereitung</aufwand>\n
+      \       <voraussetzungen>Analysis (IF-I-B-101), Lineare Algebra (IF-I-B-103),
+      Angewandte Mathematik (IF-I-B-202)</voraussetzungen>\n        <ziele>Die Studierenden
+      sind in der Lage,\n.die wichtigsten numerischen Problemstellungen zu identifizieren;\n.geeignete
+      numerische Methoden und Algorithmen auszuwähen, fachgerecht zu implementieren,
+      ihr Konstruktionsprinzip zu verstehen, ihre Grenzen zu kennen, sie sicher anzuwenden
+      und auf spezielle Problemstellungen anzupassen\n.die Ursachen für das Versagen
+      eines Algorithmus zu analysieren und fachgerecht zu beheben;\n.\nIm begleitenden
+      Praktikum werden kleine Anwednungsaufgaben in Zweierteams gelöst.</ziele>\n
+      \       <inhalt>Einführung in den Entwurf und die Analyse von Methoden und Algorithmen
+      zur Lösung mathematischer Probleme in Wissenschaft und Technik:\n .Einführung
+      in ein Programmsystem zur Lösung von Aufgaben des wissenschaftlichen Rechnens,
+      z.B. Matlab, Scilab oder Octave;\n .Fehleranalyse, Stabilität von Algorithmen;\n
+      .Lösung linearer Gleichungssysteme (quadratisch und überbestimmt);\n .Lösung
+      nichtlinearer Gleichungssysteme;\n .Interpolation und Approximation;\n .Numerische
+      Differentiation und Integration;\n.</inhalt>\n        <leistungen>spln</leistungen>\n
+      \       <medien>Folien bzw. Beamer, Demonstration mit Hilfe eines Programmpaketes
+      zum wissenschaftlichen Rechnen, Tafel</medien>\n        <literatur>.978-0071244893\n.0-321-46135-5\n.0-13-125444-8\n.3-446-21375-9\n.978-0898715606\n.</literatur>\n
+      \       <program/>\n    </modul>\n    <modul>\n        <name>Numerische Mathematik
+      II</name>\n        <angebot>wechsel</angebot>\n        <credits>5</credits>\n
+      \       <sws>4</sws>\n        <verantwortlich>eichsoellneredda</verantwortlich>\n
+      \       <teacher>eichsoellneredda</teacher>\n        <teacher>koestergerta</teacher>\n
+      \       <language>de</language>\n        <language>en</language>\n        <lehrform>su-praktikum</lehrform>\n
+      \       <aufwand>40 Präsenzstunden Vorlesung, 20 Präsenzstunden Praktikum, 50
+      Stunden Vor-/Nachbereitung des Praktikums, 40 Stunden Nachbereitung der Vorlesung
+      und Prüfungsvorbereitung</aufwand>\n        <voraussetzungen>Numerische Mathematik
+      I</voraussetzungen>\n        <ziele>Die Studierenden sind in der Lage,\n.fast
+      alle numerischen Problemstellungen zu identifizieren;\n.numerische Methoden
+      und ihr Konstruktionsprinzip zu verstehen, sicher mit ihnen umzugehen, und das
+      Prinzip auf andere Anwendungen zu übertragen;\n.geeignete Algorithmen auszuwählen,
+      effizient zu implementieren, ihr Konstruktionsprinzip zu verstehen, ihre Grenzen
+      zu kennen und auf spezielle Problemstellungen anzupassen (Strukturausnutzung,...);\n.unter
+      Verwendung von Programmsystemen auch komplexere Probleme kreativ und fachgerecht
+      zu lösen, die numerischen Algorithmen effizient zu implementieren und Rechenergebnisse
+      kritisch zu beurteilen\n.die Ursachen für das Versagen eines Algorithmus zu
+      analysieren und fachgerecht zu beheben\n.\n\n\nIm begleitenden Praktikum werden
+      kleine Anwednungsaufgaben in Zweierteams gelöst.</ziele>\n        <inhalt>Numerische
+      Verfahren für\n.Iterative Methoden zur Lösung linearer Gleichungssysteme\n.Optimierung\n.Gewöhnliche
+      Differentialgleichungen (Anfangs- und Randwertprobleme)\n.Eigenwertprobleme\n.Trigonometrische
+      Interpolation uns diskrete Fourier-Transformation</inhalt>\n        <leistungen>sa40sp60</leistungen>\n
+      \       <medien/>\n        <literatur>.978-0071244893\n.0-321-46135-5\n.0-13-125444-8\n.3-446-21375-9\n.978-0898715606\n.</literatur>\n
+      \       <program/>\n    </modul>\n    <modul>\n        <name>Operations Research</name>\n
+      \       <angebot>ws</angebot>\n        <credits>5</credits>\n        <sws>4</sws>\n
+      \       <verantwortlich>eichsoellneredda</verantwortlich>\n        <teacher>eichsoellneredda</teacher>\n
+      \       <teacher>recknagelwinfried</teacher>\n        <teacher>schwenkertrainer</teacher>\n
+      \       <language>de</language>\n        <lehrform>su-uebungen</lehrform>\n
+      \       <aufwand>40 Präsenzstunden Vorlesung, 20 Präsenzstunden Übung, 35 Stunden
+      Vor-/Nachbereitung der Übungen, 55 Stunden Nachbereitung der Vorlesung und Prüfungsvorbereitung</aufwand>\n
+      \       <voraussetzungen>Lineare Algebra (IF-I-B-103);\nAnalysis (IF-I-B-101);\nAngewandte
+      Mathematik (IF-I-B-202)</voraussetzungen>\n        <ziele>Kennen der wichtigsten
+      Klassen von Optimierungsproblemen #\nFähigkeit, \n.Optimierungsprobleme zu identifizieren,
+      zu abstrahieren, zu modellieren, zu klassifizieren, \n.ein geeignetes Lösungsverfahren
+      auszuwählen und kleinere Probleme mit der Hand zu lösen\n.</ziele>\n        <inhalt>.Modellbildung
+      (lineare und nichtlineare Modell);\n .Lineare Optimierung (Geometrie, Simplex,
+      Dualität, Transport- und Zuordnungs-Probleme);\n .Klassische Optimierung (Ein-
+      und mehrdimensional, mit und ohne Nebenbedingungen);\n .Kürzeste Wege in Graphen\n
+      .Diskrete Optimierung (Traveling Salesperson, Zuordnungsprobleme, Lösungsverfahren:
+      Simulated Annealing, Ameisenalgorithmen, Branch and Bound);\n .Dynamische Optimierung;\n
+      .Warteschlangentheorie;\n .Optimierung durch Simulation;\n .Netzplantechnik
+      (CPM).\n .</inhalt>\n        <leistungen>sp</leistungen>\n        <medien>Tafel,
+      Folien bzw. Beamer, elektronisches Whiteboard; Demonstrationen mit Mathematica</medien>\n
+      \       <literatur>.978-3540709480\n.978-3540716648</literatur>\n        <program/>\n
+      \   </modul>\n    <course>\n        <modul>analysis</modul>\n        <group>if1b</group>\n
+      \       <teacher>eichsoellneredda</teacher>\n    </course>\n    <course>\n        <modul>numerischemathematik</modul>\n
+      \       <group>ic3</group>\n        <teacher>eichsoellneredda</teacher>\n    </course>\n
+      \   <course>\n        <modul>numerischemathematik</modul>\n        <group>if3a</group>\n
+      \       <teacher>eichsoellneredda</teacher>\n    </course>\n    <course>\n        <modul>numerischemathematik</modul>\n
+      \       <group>if3b</group>\n        <teacher>eichsoellneredda</teacher>\n    </course>\n
+      \   <course>\n        <modul>operationsresearch</modul>\n        <group>ic3</group>\n
+      \       <teacher>eichsoellneredda</teacher>\n    </course>\n    <course>\n        <modul>operationsresearch</modul>\n
+      \       <group>if3a</group>\n        <teacher>eichsoellneredda</teacher>\n    </course>\n
+      \   <course>\n        <modul>operationsresearch</modul>\n        <group>if3b</group>\n
+      \       <teacher>eichsoellneredda</teacher>\n    </course>\n    <course>\n        <modul>operationsresearch</modul>\n
+      \       <group>if4</group>\n        <teacher>eichsoellneredda</teacher>\n    </course>\n</person>"
+    http_version: '1.1'
+  recorded_at: Tue, 17 Jan 2012 22:49:36 GMT
+recorded_with: VCR 2.0.0.rc1

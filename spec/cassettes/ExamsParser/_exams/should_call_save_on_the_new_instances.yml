@@ -1,0 +1,1356 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://fi.cs.hm.edu/fi/rest/public/exam/date.xml
+    body: ''
+    headers:
+      accept:
+      - ! '*/*'
+      user-agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      server:
+      - Apache-Coyote/1.1
+      content-type:
+      - text/xml;charset=utf-8
+      transfer-encoding:
+      - chunked
+      vary:
+      - Accept-Encoding
+      date:
+      - Tue, 17 Jan 2012 23:36:40 GMT
+    body: ! "<?xml version=\"1.0\" encoding=\"UTF-8\"?><examdate>\n    <day>\n        <date>2012-01-18</date>\n
+      \       <time>\n            <time>08:30</time>\n            <examination>\n
+      \               <exam>\n                    <code>083</code>\n                    <modul>softwareengineeringi</modul>\n
+      \                   <subtitle/>\n                    <reference/>\n                    <examiner>hammerschallulrike</examiner>\n
+      \                   <examiner2>schubertheva</examiner2>\n                    <students>0</students>\n
+      \                   <type>sp90</type>\n                    <material>alle eigenen
+      in Papierform</material>\n                    <allocation>graduate</allocation>\n
+      \                   <program>ic</program>\n                </exam>\n                <room>r0006</room>\n
+      \               \n                <room>r0010</room>\n                \n                <exam>\n
+      \                   <code>083</code>\n                    <modul>softwareengineeringi</modul>\n
+      \                   <subtitle/>\n                    <reference/>\n                    <examiner>hammerschallulrike</examiner>\n
+      \                   <examiner2>schubertheva</examiner2>\n                    <students>0</students>\n
+      \                   <type>sp90</type>\n                    <material>alle eigenen
+      in Papierform</material>\n                    <allocation>graduate</allocation>\n
+      \                   <program>if</program>\n                </exam>\n                <students>0</students>\n
+      \               <id>083ic083if</id>\n            </examination>\n            \n
+      \           <examination>\n                <exam>\n                    <code>085</code>\n
+      \                   <modul>softwareengineeringi</modul>\n                    <subtitle/>\n
+      \                   <reference/>\n                    <examiner>schubertheva</examiner>\n
+      \                   <examiner2>hammerschallulrike</examiner2>\n                    <students>0</students>\n
+      \                   <type>sp90</type>\n                    <material>alle eigenen
+      Hilfsmittel (außer Rechner)</material>\n                    <allocation>graduate</allocation>\n
+      \                   <program>ic</program>\n                </exam>\n                <room>r0012</room>\n
+      \               \n                <room>r1006</room>\n                \n                <exam>\n
+      \                   <code>085</code>\n                    <modul>softwareengineeringi</modul>\n
+      \                   <subtitle/>\n                    <reference/>\n                    <examiner>schubertheva</examiner>\n
+      \                   <examiner2>hammerschallulrike</examiner2>\n                    <students>0</students>\n
+      \                   <type>sp90</type>\n                    <material>alle eigenen
+      Hilfsmittel (außer Rechner)</material>\n                    <allocation>graduate</allocation>\n
+      \                   <program>if</program>\n                </exam>\n                <students>0</students>\n
+      \               <id>085ic085if</id>\n            </examination>\n            \n
+      \       </time>\n        <time>\n            <time>10:30</time>\n            <examination>\n
+      \               <exam>\n                    <code>402</code>\n                    <modul>statistikundoperationsresearch</modul>\n
+      \                   <subtitle/>\n                    <reference/>\n                    <examiner>recknagelwinfried</examiner>\n
+      \                   <examiner2>hertlejochen</examiner2>\n                    <students>0</students>\n
+      \                   <type>sp90</type>\n                    <material>alle eigenen,n.prog.Tr.</material>\n
+      \                   <allocation>under</allocation>\n                    <program>ib</program>\n
+      \               </exam>\n                <room>r0006</room>\n                \n
+      \               <students>0</students>\n                <id>402ib</id>\n            </examination>\n
+      \           \n            <examination>\n                <exam>\n                    <code>415</code>\n
+      \                   <modul>softwareentwicklungiiib</modul>\n                    <subtitle/>\n
+      \                   <reference/>\n                    <examiner>abendrothjoerg</examiner>\n
+      \                   <examiner2>zimmertorsten</examiner2>\n                    <students>0</students>\n
+      \                   <type>sp90</type>\n                    <material>alle eigenen</material>\n
+      \                   <allocation>under</allocation>\n                    <program>ib</program>\n
+      \               </exam>\n                <room>r0009</room>\n                \n
+      \               <students>0</students>\n                <id>415ib</id>\n            </examination>\n
+      \           \n            <examination>\n                <exam>\n                    <code>504</code>\n
+      \                   <modul>algorithmenunddatenstrukturen</modul>\n                    <subtitle/>\n
+      \                   <reference/>\n                    <examiner>ballhausenhendrik</examiner>\n
+      \                   <examiner2>staudtmartin</examiner2>\n                    <students>0</students>\n
+      \                   <type>sp90</type>\n                    <material>keine</material>\n
+      \                   <allocation>electivecs</allocation>\n                    <program>ib</program>\n
+      \               </exam>\n                <room>r0010</room>\n                \n
+      \               <students>0</students>\n                <id>504ib</id>\n            </examination>\n
+      \           \n            <examination>\n                <exam>\n                    <code>720</code>\n
+      \                   <modul>datenanalyse</modul>\n                    <subtitle/>\n
+      \                   <reference>Siehe Master Wirtschaftsinformatik.</reference>\n
+      \                   <examiner>hertlejochen</examiner>\n                    <examiner2/>\n
+      \                   <students>0</students>\n                    <type>sp90</type>\n
+      \                   <material/>\n                    <allocation>graduate</allocation>\n
+      \                   <program>ig</program>\n                </exam>\n                <room>r0012</room>\n
+      \               \n                <room>r1006</room>\n                \n                <exam>\n
+      \                   <code>720</code>\n                    <modul>datenanalyse</modul>\n
+      \                   <subtitle/>\n                    <reference/>\n                    <examiner>hertlejochen</examiner>\n
+      \                   <examiner2>staudtmartin</examiner2>\n                    <students>0</students>\n
+      \                   <type>sp90</type>\n                    <material/>\n                    <allocation>graduate</allocation>\n
+      \                   <program>in</program>\n                </exam>\n                <exam>\n
+      \                   <code>720</code>\n                    <modul>datenanalyse</modul>\n
+      \                   <subtitle/>\n                    <reference>Siehe Master
+      Wirtschaftsinformatik.</reference>\n                    <examiner>hertlejochen</examiner>\n
+      \                   <examiner2/>\n                    <students>0</students>\n
+      \                   <type>sp90</type>\n                    <material/>\n                    <allocation>graduate</allocation>\n
+      \                   <program>is</program>\n                </exam>\n                <students>0</students>\n
+      \               <id>720ig720in720is</id>\n            </examination>\n            \n
+      \           <examination>\n                <exam>\n                    <code>862</code>\n
+      \                   <modul>datenfusionund3dmodellierung</modul>\n                    <subtitle/>\n
+      \                   <reference/>\n                    <examiner>abmayrthomas</examiner>\n
+      \                   <examiner2>schnoerrclaudius</examiner2>\n                    <students>0</students>\n
+      \                   <type>sp90</type>\n                    <material>alle eigenen
+      (in Papierform)</material>\n                    <allocation>graduate</allocation>\n
+      \                   <program>ig</program>\n                </exam>\n                <room>r0010</room>\n
+      \               \n                <students>0</students>\n                <id>862ig</id>\n
+      \           </examination>\n            \n        </time>\n        <time>\n
+      \           <time>13:30</time>\n            <examination>\n                <exam>\n
+      \                   <code>513</code>\n                    <modul>softwareengineeringiiib</modul>\n
+      \                   <subtitle/>\n                    <reference/>\n                    <examiner>heigertjohannes</examiner>\n
+      \                   <examiner2>holznergerd</examiner2>\n                    <students>0</students>\n
+      \                   <type>sp60</type>\n                    <material>keine</material>\n
+      \                   <allocation>graduate</allocation>\n                    <program>ib</program>\n
+      \               </exam>\n                <room>r0010</room>\n                \n
+      \               <students>0</students>\n                <id>513ib</id>\n            </examination>\n
+      \           \n        </time>\n        <time>\n            <time>15:30</time>\n
+      \           <examination>\n                <exam>\n                    <code>022</code>\n
+      \                   <modul>compiler</modul>\n                    <subtitle/>\n
+      \                   <reference/>\n                    <examiner>ruckertmartin</examiner>\n
+      \                   <examiner2>schiedermeierreinhard</examiner2>\n                    <students>0</students>\n
+      \                   <type>sp90</type>\n                    <material>alle eigenen</material>\n
+      \                   <allocation>electivecs</allocation>\n                    <program>ic</program>\n
+      \               </exam>\n                <room>r0010</room>\n                \n
+      \               <room>r0012</room>\n                \n                <room>r1006</room>\n
+      \               \n                <exam>\n                    <code>022</code>\n
+      \                   <modul>compiler</modul>\n                    <subtitle/>\n
+      \                   <reference/>\n                    <examiner>ruckertmartin</examiner>\n
+      \                   <examiner2>schiedermeierreinhard</examiner2>\n                    <students>0</students>\n
+      \                   <type>sp90</type>\n                    <material>alle eigenen</material>\n
+      \                   <allocation>graduate</allocation>\n                    <program>if</program>\n
+      \               </exam>\n                <students>0</students>\n                <id>022ic022if</id>\n
+      \           </examination>\n            \n        </time>\n        <time>\n
+      \           <time>17:30</time>\n            <examination>\n                <exam>\n
+      \                   <code>854</code>\n                    <modul>methodederfinitenelemente</modul>\n
+      \                   <subtitle>FG5</subtitle>\n                    <reference>s.
+      Master Informatik</reference>\n                    <examiner>gleichwilfried</examiner>\n
+      \                   <examiner2/>\n                    <students>0</students>\n
+      \                   <type>sp90</type>\n                    <material/>\n                    <allocation>electivemath</allocation>\n
+      \                   <program>ic</program>\n                </exam>\n                <room>r0010</room>\n
+      \               \n                <exam>\n                    <code>854</code>\n
+      \                   <modul>methodederfinitenelemente</modul>\n                    <subtitle>FG5</subtitle>\n
+      \                   <reference/>\n                    <examiner>gleichwilfried</examiner>\n
+      \                   <examiner2>nischwitzalfred</examiner2>\n                    <students>0</students>\n
+      \                   <type>sp90</type>\n                    <material>alle eigenen</material>\n
+      \                   <allocation>graduate</allocation>\n                    <program>ig</program>\n
+      \               </exam>\n                <students>0</students>\n                <id>854ic854ig</id>\n
+      \           </examination>\n            \n        </time>\n    </day>\n    <day>\n
+      \       <date>2012-01-19</date>\n        <time>\n            <time>08:30</time>\n
+      \           <examination>\n                <exam>\n                    <code>600</code>\n
+      \                   <modul>ausgewaehltekapitelderangewandtenmathematiki</modul>\n
+      \                   <subtitle/>\n                    <reference/>\n                    <examiner>recknagelwinfried</examiner>\n
+      \                   <examiner2>schwenkertrainer</examiner2>\n                    <students>0</students>\n
+      \                   <type>sp90</type>\n                    <material>alle eigenen</material>\n
+      \                   <allocation>compulsory</allocation>\n                    <program>ib</program>\n
+      \               </exam>\n                <room>r0010</room>\n                \n
+      \               <room>r1006</room>\n                \n                <students>0</students>\n
+      \               <id>600ib</id>\n            </examination>\n            \n        </time>\n
+      \       <time>\n            <time>10:30</time>\n            <examination>\n
+      \               <exam>\n                    <code>410</code>\n                    <modul>wirtschaftsmathematiki</modul>\n
+      \                   <subtitle/>\n                    <reference/>\n                    <examiner>recknagelwinfried</examiner>\n
+      \                   <examiner2>zielkeandreas</examiner2>\n                    <students>0</students>\n
+      \                   <type>sp90</type>\n                    <material>alle eigenen</material>\n
+      \                   <allocation>under</allocation>\n                    <program>ib</program>\n
+      \               </exam>\n                <room>r0012</room>\n                \n
+      \               <room>r1006</room>\n                \n                <students>0</students>\n
+      \               <id>410ib</id>\n            </examination>\n            \n            <examination>\n
+      \               <exam>\n                    <code>506</code>\n                    <modul>itsicherheit</modul>\n
+      \                   <subtitle/>\n                    <reference/>\n                    <examiner>pleierchristoph</examiner>\n
+      \                   <examiner2>hofhansjoachim</examiner2>\n                    <students>0</students>\n
+      \                   <type>sp90</type>\n                    <material>keine</material>\n
+      \                   <allocation>electivecs</allocation>\n                    <program>ib</program>\n
+      \               </exam>\n                <room>r1007</room>\n                \n
+      \               <students>0</students>\n                <id>506ib</id>\n            </examination>\n
+      \           \n            <examination>\n                <exam>\n                    <code>508</code>\n
+      \                   <modul>informationssystemeii</modul>\n                    <subtitle/>\n
+      \                   <reference/>\n                    <examiner>heigertjohannes</examiner>\n
+      \                   <examiner2>moebertpatrick</examiner2>\n                    <students>0</students>\n
+      \                   <type>sp90</type>\n                    <material>keine</material>\n
+      \                   <allocation>intensive</allocation>\n                    <program>ib</program>\n
+      \               </exam>\n                <room>r1007</room>\n                \n
+      \               <students>0</students>\n                <id>508ib</id>\n            </examination>\n
+      \           \n            <examination>\n                <exam>\n                    <code>516</code>\n
+      \                   <modul>itsicherheit</modul>\n                    <subtitle/>\n
+      \                   <reference/>\n                    <examiner>hofhansjoachim</examiner>\n
+      \                   <examiner2>pleierchristoph</examiner2>\n                    <students>0</students>\n
+      \                   <type>sp90</type>\n                    <material>keine</material>\n
+      \                   <allocation>electivecs</allocation>\n                    <program>ib</program>\n
+      \               </exam>\n                <room>r1007</room>\n                \n
+      \               <students>0</students>\n                <id>516ib</id>\n            </examination>\n
+      \           \n            <examination>\n                <exam>\n                    <code>705</code>\n
+      \                   <modul>verteiltesysteme</modul>\n                    <subtitle/>\n
+      \                   <reference/>\n                    <examiner>mandlpeter</examiner>\n
+      \                   <examiner2>pleierchristoph</examiner2>\n                    <students>0</students>\n
+      \                   <type>sp60</type>\n                    <material>-</material>\n
+      \                   <allocation>electivecs</allocation>\n                    <program>in</program>\n
+      \               </exam>\n                <room>r0007</room>\n                \n
+      \               <students>0</students>\n                <id>705in</id>\n            </examination>\n
+      \           \n            <examination>\n                <exam>\n                    <code>886</code>\n
+      \                   <modul>finanzmaerkteundfinanzmarktakteureausrationalerpsychologischerundethischersicht</modul>\n
+      \                   <subtitle/>\n                    <reference/>\n                    <examiner>schulzstefan</examiner>\n
+      \                   <examiner2>zielkeandreas</examiner2>\n                    <students>0</students>\n
+      \                   <type>sp90</type>\n                    <material>alle eigenen</material>\n
+      \                   <allocation>graduate</allocation>\n                    <program>is</program>\n
+      \               </exam>\n                <room>r0010</room>\n                \n
+      \               <students>0</students>\n                <id>886is</id>\n            </examination>\n
+      \           \n        </time>\n        <time>\n            <time>15:30</time>\n
+      \           <examination>\n                <exam>\n                    <code>012</code>\n
+      \                   <modul>analysis</modul>\n                    <subtitle/>\n
+      \                   <reference/>\n                    <examiner>eichsoellneredda</examiner>\n
+      \                   <examiner2>naumerbirgit</examiner2>\n                    <students>0</students>\n
+      \                   <type>sp90</type>\n                    <material>nicht-progr.
+      TR</material>\n                    <allocation>under</allocation>\n                    <program>ic</program>\n
+      \               </exam>\n                <room>r0006</room>\n                \n
+      \               <room>r0012</room>\n                \n                <room>r1006</room>\n
+      \               \n                <exam>\n                    <code>012</code>\n
+      \                   <modul>analysis</modul>\n                    <subtitle/>\n
+      \                   <reference/>\n                    <examiner>eichsoellneredda</examiner>\n
+      \                   <examiner2>naumerbirgit</examiner2>\n                    <students>0</students>\n
+      \                   <type>sp90</type>\n                    <material>nicht-progr.
+      TR</material>\n                    <allocation>under</allocation>\n                    <program>if</program>\n
+      \               </exam>\n                <students>0</students>\n                <id>012ic012if</id>\n
+      \           </examination>\n            \n            <examination>\n                <exam>\n
+      \                   <code>014</code>\n                    <modul>analysis</modul>\n
+      \                   <subtitle/>\n                    <reference/>\n                    <examiner>naumerbirgit</examiner>\n
+      \                   <examiner2>barththomas</examiner2>\n                    <students>0</students>\n
+      \                   <type>sp90</type>\n                    <material>nicht-progr.
+      TR</material>\n                    <allocation>under</allocation>\n                    <program>go</program>\n
+      \               </exam>\n                <room>r0009</room>\n                \n
+      \               <room>r0011</room>\n                \n                <room>r1008</room>\n
+      \               \n                <exam>\n                    <code>014</code>\n
+      \                   <modul>analysis</modul>\n                    <subtitle/>\n
+      \                   <reference/>\n                    <examiner>naumerbirgit</examiner>\n
+      \                   <examiner2>barththomas</examiner2>\n                    <students>0</students>\n
+      \                   <type>sp90</type>\n                    <material>nicht-progr.
+      TR</material>\n                    <allocation>under</allocation>\n                    <program>ic</program>\n
+      \               </exam>\n                <exam>\n                    <code>014</code>\n
+      \                   <modul>analysis</modul>\n                    <subtitle/>\n
+      \                   <reference/>\n                    <examiner>naumerbirgit</examiner>\n
+      \                   <examiner2>barththomas</examiner2>\n                    <students>0</students>\n
+      \                   <type>sp90</type>\n                    <material>nicht-progr.
+      TR</material>\n                    <allocation>under</allocation>\n                    <program>if</program>\n
+      \               </exam>\n                <students>0</students>\n                <id>014go014ic014if</id>\n
+      \           </examination>\n            \n            <examination>\n                <exam>\n
+      \                   <code>054</code>\n                    <modul>managementvonitprojekten</modul>\n
+      \                   <subtitle/>\n                    <reference/>\n                    <examiner>boczanolaf</examiner>\n
+      \                   <examiner2>pleierchristoph</examiner2>\n                    <students>0</students>\n
+      \                   <type>sp90</type>\n                    <material>keine</material>\n
+      \                   <allocation>graduate</allocation>\n                    <program>go</program>\n
+      \               </exam>\n                <room>r0007</room>\n                \n
+      \               <exam>\n                    <code>054</code>\n                    <modul>managementvonitprojekten</modul>\n
+      \                   <subtitle/>\n                    <reference/>\n                    <examiner>boczanolaf</examiner>\n
+      \                   <examiner2>pleierchristoph</examiner2>\n                    <students>0</students>\n
+      \                   <type>sp90</type>\n                    <material>keine</material>\n
+      \                   <allocation>graduate</allocation>\n                    <program>if</program>\n
+      \               </exam>\n                <students>0</students>\n                <id>054go054if</id>\n
+      \           </examination>\n            \n        </time>\n        <time>\n
+      \           <time>17:30</time>\n            <examination>\n                <exam>\n
+      \                   <code>041</code>\n                    <modul>grundlagenderrobotik</modul>\n
+      \                   <subtitle/>\n                    <reference>s. Bachelor
+      Informatik</reference>\n                    <examiner>fischermax</examiner>\n
+      \                   <examiner2>nischwitzalfred</examiner2>\n                    <students>0</students>\n
+      \                   <type>sp90</type>\n                    <material/>\n                    <allocation>compulsory</allocation>\n
+      \                   <program>go</program>\n                </exam>\n                <room>r0010</room>\n
+      \               \n                <exam>\n                    <code>041</code>\n
+      \                   <modul>grundlagenderrobotik</modul>\n                    <subtitle/>\n
+      \                   <reference/>\n                    <examiner>fischermax</examiner>\n
+      \                   <examiner2>nischwitzalfred</examiner2>\n                    <students>0</students>\n
+      \                   <type>sp90</type>\n                    <material>keine</material>\n
+      \                   <allocation>electiveapp</allocation>\n                    <program>ic</program>\n
+      \               </exam>\n                <exam>\n                    <code>041</code>\n
+      \                   <modul>grundlagenderrobotik</modul>\n                    <subtitle/>\n
+      \                   <reference/>\n                    <examiner>fischermax</examiner>\n
+      \                   <examiner2>nischwitzalfred</examiner2>\n                    <students>0</students>\n
+      \                   <type>sp90</type>\n                    <material>keine</material>\n
+      \                   <allocation>compulsory</allocation>\n                    <program>if</program>\n
+      \               </exam>\n                <students>0</students>\n                <id>041go041ic041if</id>\n
+      \           </examination>\n            \n            <examination>\n                <exam>\n
+      \                   <code>063</code>\n                    <modul>numerischemathematik</modul>\n
+      \                   <subtitle/>\n                    <reference/>\n                    <examiner>eichsoellneredda</examiner>\n
+      \                   <examiner2>koestergerta</examiner2>\n                    <students>0</students>\n
+      \                   <type>sp90</type>\n                    <material>Skript,
+      Formelsammlung, nicht progr. TR</material>\n                    <allocation>graduate</allocation>\n
+      \                   <program>ic</program>\n                </exam>\n                <room>r0006</room>\n
+      \               \n                <exam>\n                    <code>063</code>\n
+      \                   <modul>numerischemathematik</modul>\n                    <subtitle/>\n
+      \                   <reference/>\n                    <examiner>eichsoellneredda</examiner>\n
+      \                   <examiner2>koestergerta</examiner2>\n                    <students>0</students>\n
+      \                   <type>sp90</type>\n                    <material>Skript,
+      Formelsammlung, nicht progr. TR</material>\n                    <allocation>electivemath</allocation>\n
+      \                   <program>if</program>\n                </exam>\n                <students>0</students>\n
+      \               <id>063ic063if</id>\n            </examination>\n            \n
+      \       </time>\n    </day>\n    <day>\n        <date>2012-01-20</date>\n        <time>\n
+      \           <time>08:30</time>\n            <examination>\n                <exam>\n
+      \                   <code>103</code>\n                    <modul>theoretischeinformatiki</modul>\n
+      \                   <subtitle/>\n                    <reference>s. Bachelor
+      Informatik</reference>\n                    <examiner>vogtchristian</examiner>\n
+      \                   <examiner2>zugenmaieralf</examiner2>\n                    <students>0</students>\n
+      \                   <type>sp90</type>\n                    <material/>\n                    <allocation>compulsory</allocation>\n
+      \                   <program>ib</program>\n                </exam>\n                <room>r0006</room>\n
+      \               \n                <room>r0010</room>\n                \n                <room>r0012</room>\n
+      \               \n                <room>r1006</room>\n                \n                <exam>\n
+      \                   <code>103</code>\n                    <modul>theoretischeinformatiki</modul>\n
+      \                   <subtitle/>\n                    <reference/>\n                    <examiner>vogtchristian</examiner>\n
+      \                   <examiner2>zugenmaieralf</examiner2>\n                    <students>0</students>\n
+      \                   <type>sp90</type>\n                    <material>keine</material>\n
+      \                   <allocation>under</allocation>\n                    <program>ic</program>\n
+      \               </exam>\n                <exam>\n                    <code>103</code>\n
+      \                   <modul>theoretischeinformatiki</modul>\n                    <subtitle/>\n
+      \                   <reference/>\n                    <examiner>vogtchristian</examiner>\n
+      \                   <examiner2>zugenmaieralf</examiner2>\n                    <students>0</students>\n
+      \                   <type>sp90</type>\n                    <material>keine</material>\n
+      \                   <allocation>under</allocation>\n                    <program>if</program>\n
+      \               </exam>\n                <students>0</students>\n                <id>103ib103ic103if</id>\n
+      \           </examination>\n            \n        </time>\n        <time>\n
+      \           <time>10:30</time>\n            <examination>\n                <exam>\n
+      \                   <code>074</code>\n                    <modul>prozesseundmethodenbeimtestenvonsoftware</modul>\n
+      \                   <subtitle/>\n                    <reference/>\n                    <examiner>hirschingerjuergen</examiner>\n
+      \                   <examiner2>anlauffheidi</examiner2>\n                    <students>0</students>\n
+      \                   <type>sp90</type>\n                    <material>alle eigenen</material>\n
+      \                   <allocation>electivecs</allocation>\n                    <program>ic</program>\n
+      \               </exam>\n                <room>r2007</room>\n                \n
+      \               <exam>\n                    <code>074</code>\n                    <modul>prozesseundmethodenbeimtestenvonsoftware</modul>\n
+      \                   <subtitle/>\n                    <reference/>\n                    <examiner>hirschingerjuergen</examiner>\n
+      \                   <examiner2>anlauffheidi</examiner2>\n                    <students>0</students>\n
+      \                   <type>sp90</type>\n                    <material>alle eigenen</material>\n
+      \                   <allocation>compulsory</allocation>\n                    <program>if</program>\n
+      \               </exam>\n                <students>0</students>\n                <id>074ic074if</id>\n
+      \           </examination>\n            \n            <examination>\n                <exam>\n
+      \                   <code>079</code>\n                    <modul>sicherheitvonwebanwendungen</modul>\n
+      \                   <subtitle/>\n                    <reference/>\n                    <examiner>hofhansjoachim</examiner>\n
+      \                   <examiner2>pleierchristoph</examiner2>\n                    <students>0</students>\n
+      \                   <type>sp90</type>\n                    <material>1 Blatt
+      DIN A4 mit beliebigem eigenem Text sowie mit Namen und Matrikelnummer versehen</material>\n
+      \                   <allocation>compulsory</allocation>\n                    <program>if</program>\n
+      \               </exam>\n                <room>r0006</room>\n                \n
+      \               <students>0</students>\n                <id>079if</id>\n            </examination>\n
+      \           \n            <examination>\n                <exam>\n                    <code>503</code>\n
+      \                   <modul>softwareengineeringiiib</modul>\n                    <subtitle/>\n
+      \                   <reference/>\n                    <examiner>holznergerd</examiner>\n
+      \                   <examiner2>heigertjohannes</examiner2>\n                    <students>0</students>\n
+      \                   <type>sp60</type>\n                    <material>alle eigenen
+      in Papierform; keine elektronischen</material>\n                    <allocation>graduate</allocation>\n
+      \                   <program>ib</program>\n                </exam>\n                <room>r1007</room>\n
+      \               \n                <students>0</students>\n                <id>503ib</id>\n
+      \           </examination>\n            \n            <examination>\n                <exam>\n
+      \                   <code>707</code>\n                    <modul>itinfrastrukturen</modul>\n
+      \                   <subtitle/>\n                    <reference/>\n                    <examiner>bauermarkus</examiner>\n
+      \                   <examiner2>heigertjohannes</examiner2>\n                    <students>0</students>\n
+      \                   <type>sp90</type>\n                    <material>-</material>\n
+      \                   <allocation>electivecs</allocation>\n                    <program>in</program>\n
+      \               </exam>\n                <room>r0009</room>\n                \n
+      \               <students>0</students>\n                <id>707in</id>\n            </examination>\n
+      \           \n            <examination>\n                <exam>\n                    <code>860</code>\n
+      \                   <modul>photogrammetrischebildverarbeitung</modul>\n                    <subtitle>FG5</subtitle>\n
+      \                   <reference/>\n                    <examiner>krzystekpeter</examiner>\n
+      \                   <examiner2>schnoerrclaudius</examiner2>\n                    <students>0</students>\n
+      \                   <type>sp90</type>\n                    <material>45 min:
+      TR, 45 min: Alle eigenen (in Papierform)  </material>\n                    <allocation>graduate</allocation>\n
+      \                   <program>ig</program>\n                </exam>\n                <room>r0010</room>\n
+      \               \n                <students>0</students>\n                <id>860ig</id>\n
+      \           </examination>\n            \n        </time>\n        <time>\n
+      \           <time>13:30</time>\n            <examination>\n                <exam>\n
+      \                   <code>032</code>\n                    <modul>datenschutzunditsicherheiti</modul>\n
+      \                   <subtitle>Datenschutz I</subtitle>\n                    <reference/>\n
+      \                   <examiner>schusterheidi</examiner>\n                    <examiner2>beierbernd</examiner2>\n
+      \                   <students>0</students>\n                    <type>sp60</type>\n
+      \                   <material>Gesetzestexte, DIN A4 Blatt einseitig handschriftlich
+      im Original beschrieben in einer ohne Hilfsmittel lesbaren Größe</material>\n
+      \                   <allocation>electivecs</allocation>\n                    <program>ic</program>\n
+      \               </exam>\n                <room>r0009</room>\n                \n
+      \               <exam>\n                    <code>032</code>\n                    <modul>datenschutzunditsicherheiti</modul>\n
+      \                   <subtitle>Datenschutz I</subtitle>\n                    <reference/>\n
+      \                   <examiner>schusterheidi</examiner>\n                    <examiner2>beierbernd</examiner2>\n
+      \                   <students>0</students>\n                    <type>sp60</type>\n
+      \                   <material>Gesetzestexte, DIN A4 Blatt einseitig handschriftlich
+      im Original beschrieben in einer ohne Hilfsmittel lesbaren Größe</material>\n
+      \                   <allocation>graduate</allocation>\n                    <program>if</program>\n
+      \               </exam>\n                <students>0</students>\n                <id>032ic032if</id>\n
+      \           </examination>\n            \n        </time>\n    </day>\n    <day>\n
+      \       <date>2012-01-23</date>\n        <time>\n            <time>10:30</time>\n
+      \           <examination>\n                <exam>\n                    <code>020</code>\n
+      \                   <modul>betriebssystemei</modul>\n                    <subtitle/>\n
+      \                   <reference/>\n                    <examiner>vogtchristian</examiner>\n
+      \                   <examiner2>schnoerrclaudius</examiner2>\n                    <students>0</students>\n
+      \                   <type>sp90</type>\n                    <material>Taschenrechner</material>\n
+      \                   <allocation>electivecs</allocation>\n                    <program>ic</program>\n
+      \               </exam>\n                <room>r0010</room>\n                \n
+      \               <exam>\n                    <code>020</code>\n                    <modul>betriebssystemei</modul>\n
+      \                   <subtitle/>\n                    <reference/>\n                    <examiner>vogtchristian</examiner>\n
+      \                   <examiner2>schnoerrclaudius</examiner2>\n                    <students>0</students>\n
+      \                   <type>sp90</type>\n                    <material>Taschenrechner</material>\n
+      \                   <allocation>graduate</allocation>\n                    <program>if</program>\n
+      \               </exam>\n                <students>0</students>\n                <id>020ic020if</id>\n
+      \           </examination>\n            \n            <examination>\n                <exam>\n
+      \                   <code>710</code>\n                    <modul>controlling</modul>\n
+      \                   <subtitle/>\n                    <reference/>\n                    <examiner>fischerdirk</examiner>\n
+      \                   <examiner2>stuetzlegerhard</examiner2>\n                    <students>0</students>\n
+      \                   <type>sp90</type>\n                    <material/>\n                    <allocation>electiveec</allocation>\n
+      \                   <program>in</program>\n                </exam>\n                <room>r1046</room>\n
+      \               \n                <exam>\n                    <code>710</code>\n
+      \                   <modul>controlling</modul>\n                    <subtitle/>\n
+      \                   <reference>Siehe Master Wirtschaftsinformatik.</reference>\n
+      \                   <examiner>fischerdirk</examiner>\n                    <examiner2/>\n
+      \                   <students>0</students>\n                    <type>sp90</type>\n
+      \                   <material/>\n                    <allocation>electiveec</allocation>\n
+      \                   <program>is</program>\n                </exam>\n                <students>0</students>\n
+      \               <id>710in710is</id>\n            </examination>\n            \n
+      \       </time>\n        <time>\n            <time>13:30</time>\n            <examination>\n
+      \               <exam>\n                    <code>095</code>\n                    <modul>softwareentwicklungii</modul>\n
+      \                   <subtitle/>\n                    <reference/>\n                    <examiner>hofhansjoachim</examiner>\n
+      \                   <examiner2>hammerschallulrike</examiner2>\n                    <students>0</students>\n
+      \                   <type>sp90</type>\n                    <material>1 Blatt
+      DIN A4 mit beliebigem eigenem Text sowie mit Namen und Matrikelnummer versehen</material>\n
+      \                   <allocation>under</allocation>\n                    <program>go</program>\n
+      \               </exam>\n                <room>r1006</room>\n                \n
+      \               <room>r1046</room>\n                \n                <exam>\n
+      \                   <code>095</code>\n                    <modul>softwareentwicklungii</modul>\n
+      \                   <subtitle/>\n                    <reference/>\n                    <examiner>hofhansjoachim</examiner>\n
+      \                   <examiner2>hammerschallulrike</examiner2>\n                    <students>0</students>\n
+      \                   <type>sp90</type>\n                    <material>1 Blatt
+      DIN A4 mit beliebigem eigenem Text sowie mit Namen und Matrikelnummer versehen</material>\n
+      \                   <allocation>under</allocation>\n                    <program>ic</program>\n
+      \               </exam>\n                <exam>\n                    <code>095</code>\n
+      \                   <modul>softwareentwicklungii</modul>\n                    <subtitle/>\n
+      \                   <reference/>\n                    <examiner>hofhansjoachim</examiner>\n
+      \                   <examiner2>hammerschallulrike</examiner2>\n                    <students>0</students>\n
+      \                   <type>sp90</type>\n                    <material>1 Blatt
+      DIN A4 mit beliebigem eigenem Text sowie mit Namen und Matrikelnummer versehen</material>\n
+      \                   <allocation>under</allocation>\n                    <program>if</program>\n
+      \               </exam>\n                <students>0</students>\n                <id>095go095ic095if</id>\n
+      \           </examination>\n            \n        </time>\n        <time>\n
+      \           <time>15:30</time>\n            <examination>\n                <exam>\n
+      \                   <code>002</code>\n                    <modul>algebraischestrukturen</modul>\n
+      \                   <subtitle/>\n                    <reference/>\n                    <examiner>hoerwickjosef</examiner>\n
+      \                   <examiner2>recknagelwinfried</examiner2>\n                    <students>0</students>\n
+      \                   <type>sp90</type>\n                    <material>alle eigenen</material>\n
+      \                   <allocation>compulsory</allocation>\n                    <program>go</program>\n
+      \               </exam>\n                <room>r1007</room>\n                \n
+      \               <exam>\n                    <code>002</code>\n                    <modul>algebraischestrukturen</modul>\n
+      \                   <subtitle/>\n                    <reference/>\n                    <examiner>hoerwickjosef</examiner>\n
+      \                   <examiner2>recknagelwinfried</examiner2>\n                    <students>0</students>\n
+      \                   <type>sp90</type>\n                    <material>alle eigenen</material>\n
+      \                   <allocation>compulsory</allocation>\n                    <program>if</program>\n
+      \               </exam>\n                <students>0</students>\n                <id>002go002if</id>\n
+      \           </examination>\n            \n            <examination>\n                <exam>\n
+      \                   <code>411</code>\n                    <modul>wirtschaftsmathematikii</modul>\n
+      \                   <subtitle/>\n                    <reference/>\n                    <examiner>kellerschpeter</examiner>\n
+      \                   <examiner2>recknagelwinfried</examiner2>\n                    <students>0</students>\n
+      \                   <type>sp90</type>\n                    <material>alle eigenen</material>\n
+      \                   <allocation>under</allocation>\n                    <program>ib</program>\n
+      \               </exam>\n                <room>r0007</room>\n                \n
+      \               <students>0</students>\n                <id>411ib</id>\n            </examination>\n
+      \           \n            <examination>\n                <exam>\n                    <code>500</code>\n
+      \                   <modul>datenbanksysteme</modul>\n                    <subtitle/>\n
+      \                   <reference/>\n                    <examiner>schwenkertrainer</examiner>\n
+      \                   <examiner2>staudtmartin</examiner2>\n                    <students>0</students>\n
+      \                   <type>sp90</type>\n                    <material>alle eigenen</material>\n
+      \                   <allocation>graduate</allocation>\n                    <program>ib</program>\n
+      \               </exam>\n                <room>r0010</room>\n                \n
+      \               <room>r1006</room>\n                \n                <room>r1046</room>\n
+      \               \n                <students>0</students>\n                <id>500ib</id>\n
+      \           </examination>\n            \n            <examination>\n                <exam>\n
+      \                   <code>811</code>\n                    <modul>logikkalkuele</modul>\n
+      \                   <subtitle>FG1</subtitle>\n                    <reference/>\n
+      \                   <examiner>hoerwickjosef</examiner>\n                    <examiner2>ruckertmartin</examiner2>\n
+      \                   <students>0</students>\n                    <type>sp90</type>\n
+      \                   <material>keine</material>\n                    <allocation>graduate</allocation>\n
+      \                   <program>ig</program>\n                </exam>\n                <room>r0012</room>\n
+      \               \n                <students>0</students>\n                <id>811ig</id>\n
+      \           </examination>\n            \n        </time>\n        <time>\n
+      \           <time>17:30</time>\n            <examination>\n                <exam>\n
+      \                   <code>078</code>\n                    <modul>securityandprivacyinrfidsystems</modul>\n
+      \                   <subtitle/>\n                    <reference/>\n                    <examiner>piramuthuselwyn</examiner>\n
+      \                   <examiner2>koehlerklaus</examiner2>\n                    <students>0</students>\n
+      \                   <type>sp90</type>\n                    <material>keine</material>\n
+      \                   <allocation>electivecs</allocation>\n                    <program>ic</program>\n
+      \               </exam>\n                <room>r0010</room>\n                \n
+      \               <exam>\n                    <code>078</code>\n                    <modul>securityandprivacyinrfidsystems</modul>\n
+      \                   <subtitle/>\n                    <reference/>\n                    <examiner>piramuthuselwyn</examiner>\n
+      \                   <examiner2>koehlerklaus</examiner2>\n                    <students>0</students>\n
+      \                   <type>sp90</type>\n                    <material>keine</material>\n
+      \                   <allocation>compulsory</allocation>\n                    <program>if</program>\n
+      \               </exam>\n                <students>0</students>\n                <id>078ic078if</id>\n
+      \           </examination>\n            \n            <examination>\n                <exam>\n
+      \                   <code>097</code>\n                    <modul>softwareprojekteincc</modul>\n
+      \                   <subtitle/>\n                    <reference>s. Bachelor
+      Informatik</reference>\n                    <examiner>kirchulla</examiner>\n
+      \                   <examiner2>koehlerklaus</examiner2>\n                    <students>0</students>\n
+      \                   <type>sp90</type>\n                    <material/>\n                    <allocation>compulsory</allocation>\n
+      \                   <program>go</program>\n                </exam>\n                <room>r0010</room>\n
+      \               \n                <exam>\n                    <code>097</code>\n
+      \                   <modul>softwareprojekteincc</modul>\n                    <subtitle/>\n
+      \                   <reference/>\n                    <examiner>kirchulla</examiner>\n
+      \                   <examiner2>koehlerklaus</examiner2>\n                    <students>0</students>\n
+      \                   <type>sp90</type>\n                    <material>alle eigenen</material>\n
+      \                   <allocation>electivecs</allocation>\n                    <program>ic</program>\n
+      \               </exam>\n                <exam>\n                    <code>097</code>\n
+      \                   <modul>softwareprojekteincc</modul>\n                    <subtitle/>\n
+      \                   <reference/>\n                    <examiner>kirchulla</examiner>\n
+      \                   <examiner2>koehlerklaus</examiner2>\n                    <students>0</students>\n
+      \                   <type>sp90</type>\n                    <material>alle eigenen</material>\n
+      \                   <allocation>compulsory</allocation>\n                    <program>if</program>\n
+      \               </exam>\n                <students>0</students>\n                <id>097go097ic097if</id>\n
+      \           </examination>\n            \n        </time>\n    </day>\n    <day>\n
+      \       <date>2012-01-24</date>\n        <time>\n            <time>08:30</time>\n
+      \           <examination>\n                <exam>\n                    <code>501</code>\n
+      \                   <modul>datenkommunikation</modul>\n                    <subtitle/>\n
+      \                   <reference/>\n                    <examiner>mandlpeter</examiner>\n
+      \                   <examiner2>bakomenkoandreas</examiner2>\n                    <students>0</students>\n
+      \                   <type>sp60</type>\n                    <material>keine</material>\n
+      \                   <allocation>graduate</allocation>\n                    <program>ib</program>\n
+      \               </exam>\n                <room>r0006</room>\n                \n
+      \               <room>r0012</room>\n                \n                <room>r1006</room>\n
+      \               \n                <room>r1046</room>\n                \n                <room>r2007</room>\n
+      \               \n                <students>0</students>\n                <id>501ib</id>\n
+      \           </examination>\n            \n        </time>\n        <time>\n
+      \           <time>10:30</time>\n            <examination>\n                <exam>\n
+      \                   <code>051</code>\n                    <modul>linearealgebra</modul>\n
+      \                   <subtitle/>\n                    <reference/>\n                    <examiner>ballhausenhendrik</examiner>\n
+      \                   <examiner2>koestergerta</examiner2>\n                    <students>0</students>\n
+      \                   <type>sp90</type>\n                    <material>keine</material>\n
+      \                   <allocation>under</allocation>\n                    <program>ic</program>\n
+      \               </exam>\n                <room>r1006</room>\n                \n
+      \               <room>r1046</room>\n                \n                <exam>\n
+      \                   <code>051</code>\n                    <modul>linearealgebra</modul>\n
+      \                   <subtitle/>\n                    <reference/>\n                    <examiner>ballhausenhendrik</examiner>\n
+      \                   <examiner2>koestergerta</examiner2>\n                    <students>0</students>\n
+      \                   <type>sp90</type>\n                    <material>keine</material>\n
+      \                   <allocation>under</allocation>\n                    <program>if</program>\n
+      \               </exam>\n                <students>0</students>\n                <id>051ic051if</id>\n
+      \           </examination>\n            \n            <examination>\n                <exam>\n
+      \                   <code>052</code>\n                    <modul>linearealgebra</modul>\n
+      \                   <subtitle/>\n                    <reference>s. Bachelor
+      Informatik</reference>\n                    <examiner>kellerschpeter</examiner>\n
+      \                   <examiner2>koestergerta</examiner2>\n                    <students>0</students>\n
+      \                   <type>sp90</type>\n                    <material/>\n                    <allocation>compulsory</allocation>\n
+      \                   <program>go</program>\n                </exam>\n                <room>r0006</room>\n
+      \               \n                <room>r0012</room>\n                \n                <exam>\n
+      \                   <code>052</code>\n                    <modul>linearealgebra</modul>\n
+      \                   <subtitle/>\n                    <reference/>\n                    <examiner>kellerschpeter</examiner>\n
+      \                   <examiner2>koestergerta</examiner2>\n                    <students>0</students>\n
+      \                   <type>sp90</type>\n                    <material>keine</material>\n
+      \                   <allocation>under</allocation>\n                    <program>ic</program>\n
+      \               </exam>\n                <exam>\n                    <code>052</code>\n
+      \                   <modul>linearealgebra</modul>\n                    <subtitle/>\n
+      \                   <reference/>\n                    <examiner>kellerschpeter</examiner>\n
+      \                   <examiner2>koestergerta</examiner2>\n                    <students>0</students>\n
+      \                   <type>sp90</type>\n                    <material>keine</material>\n
+      \                   <allocation>under</allocation>\n                    <program>if</program>\n
+      \               </exam>\n                <students>0</students>\n                <id>052go052ic052if</id>\n
+      \           </examination>\n            \n            <examination>\n                <exam>\n
+      \                   <code>053</code>\n                    <modul>linearealgebra</modul>\n
+      \                   <subtitle/>\n                    <reference/>\n                    <examiner>koestergerta</examiner>\n
+      \                   <examiner2>ballhausenhendrik</examiner2>\n                    <students>0</students>\n
+      \                   <type>sp90</type>\n                    <material>keine</material>\n
+      \                   <allocation>under</allocation>\n                    <program>ic</program>\n
+      \               </exam>\n                <room>r0010</room>\n                \n
+      \               <room>r1008</room>\n                \n                <exam>\n
+      \                   <code>053</code>\n                    <modul>linearealgebra</modul>\n
+      \                   <subtitle/>\n                    <reference/>\n                    <examiner>koestergerta</examiner>\n
+      \                   <examiner2>ballhausenhendrik</examiner2>\n                    <students>0</students>\n
+      \                   <type>sp90</type>\n                    <material>keine</material>\n
+      \                   <allocation>under</allocation>\n                    <program>if</program>\n
+      \               </exam>\n                <students>0</students>\n                <id>053ic053if</id>\n
+      \           </examination>\n            \n        </time>\n        <time>\n
+      \           <time>13:30</time>\n            <examination>\n                <exam>\n
+      \                   <code>711</code>\n                    <modul>investitionundfinanzierung</modul>\n
+      \                   <subtitle/>\n                    <reference/>\n                    <examiner>fischerdirk</examiner>\n
+      \                   <examiner2>stuetzlegerhard</examiner2>\n                    <students>0</students>\n
+      \                   <type>sp90</type>\n                    <material/>\n                    <allocation>compulsory</allocation>\n
+      \                   <program>in</program>\n                </exam>\n                <room>r1046</room>\n
+      \               \n                <exam>\n                    <code>711</code>\n
+      \                   <modul>investitionundfinanzierung</modul>\n                    <subtitle/>\n
+      \                   <reference>Siehe Master Wirtschaftsinformatik.</reference>\n
+      \                   <examiner>fischerdirk</examiner>\n                    <examiner2/>\n
+      \                   <students>0</students>\n                    <type>sp90</type>\n
+      \                   <material/>\n                    <allocation>compulsory</allocation>\n
+      \                   <program>is</program>\n                </exam>\n                <students>0</students>\n
+      \               <id>711in711is</id>\n            </examination>\n            \n
+      \       </time>\n        <time>\n            <time>17:30</time>\n            <examination>\n
+      \               <exam>\n                    <code>028</code>\n                    <modul>datenbanksystemei</modul>\n
+      \                   <subtitle/>\n                    <reference/>\n                    <examiner>staudtmartin</examiner>\n
+      \                   <examiner2>grubermanfred</examiner2>\n                    <students>0</students>\n
+      \                   <type>sp90</type>\n                    <material>alle eigenen</material>\n
+      \                   <allocation>electivecs</allocation>\n                    <program>ic</program>\n
+      \               </exam>\n                <room>r1006</room>\n                \n
+      \               <room>r1046</room>\n                \n                <exam>\n
+      \                   <code>028</code>\n                    <modul>datenbanksystemei</modul>\n
+      \                   <subtitle/>\n                    <reference/>\n                    <examiner>staudtmartin</examiner>\n
+      \                   <examiner2>grubermanfred</examiner2>\n                    <students>0</students>\n
+      \                   <type>sp90</type>\n                    <material>alle eigenen</material>\n
+      \                   <allocation>graduate</allocation>\n                    <program>if</program>\n
+      \               </exam>\n                <students>0</students>\n                <id>028ic028if</id>\n
+      \           </examination>\n            \n            <examination>\n                <exam>\n
+      \                   <code>105</code>\n                    <modul>verteiltesoftwaresysteme</modul>\n
+      \                   <subtitle/>\n                    <reference/>\n                    <examiner>pleierchristoph</examiner>\n
+      \                   <examiner2>mandlpeter</examiner2>\n                    <students>0</students>\n
+      \                   <type>sp90</type>\n                    <material>keine</material>\n
+      \                   <allocation>electivecs</allocation>\n                    <program>ic</program>\n
+      \               </exam>\n                <room>r1007</room>\n                \n
+      \               <exam>\n                    <code>105</code>\n                    <modul>verteiltesoftwaresysteme</modul>\n
+      \                   <subtitle/>\n                    <reference/>\n                    <examiner>pleierchristoph</examiner>\n
+      \                   <examiner2>mandlpeter</examiner2>\n                    <students>0</students>\n
+      \                   <type>sp90</type>\n                    <material>keine</material>\n
+      \                   <allocation>graduate</allocation>\n                    <program>if</program>\n
+      \               </exam>\n                <students>0</students>\n                <id>105ic105if</id>\n
+      \           </examination>\n            \n            <examination>\n                <exam>\n
+      \                   <code>858</code>\n                    <modul>embeddedundechtzeitbetriebssysteme</modul>\n
+      \                   <subtitle/>\n                    <reference/>\n                    <examiner>fischermax</examiner>\n
+      \                   <examiner2>boettcheraxel</examiner2>\n                    <students>0</students>\n
+      \                   <type>sp90</type>\n                    <material>keine</material>\n
+      \                   <allocation>graduate</allocation>\n                    <program>ig</program>\n
+      \               </exam>\n                <room>r0007</room>\n                \n
+      \               <students>0</students>\n                <id>858ig</id>\n            </examination>\n
+      \           \n        </time>\n    </day>\n    <day>\n        <date>2012-01-25</date>\n
+      \       <time>\n            <time>08:30</time>\n            <examination>\n
+      \               <exam>\n                    <code>006</code>\n                    <modul>algorithmenunddatenstruktureni</modul>\n
+      \                   <subtitle/>\n                    <reference/>\n                    <examiner>kirchulla</examiner>\n
+      \                   <examiner2>fischermax</examiner2>\n                    <students>0</students>\n
+      \                   <type>sp90</type>\n                    <material>alle eigenen</material>\n
+      \                   <allocation>graduate</allocation>\n                    <program>ic</program>\n
+      \               </exam>\n                <room>r1006</room>\n                \n
+      \               <room>r1046</room>\n                \n                <exam>\n
+      \                   <code>006</code>\n                    <modul>algorithmenunddatenstruktureni</modul>\n
+      \                   <subtitle/>\n                    <reference/>\n                    <examiner>kirchulla</examiner>\n
+      \                   <examiner2>fischermax</examiner2>\n                    <students>0</students>\n
+      \                   <type>sp90</type>\n                    <material>alle eigenen</material>\n
+      \                   <allocation>graduate</allocation>\n                    <program>if</program>\n
+      \               </exam>\n                <students>0</students>\n                <id>006ic006if</id>\n
+      \           </examination>\n            \n            <examination>\n                <exam>\n
+      \                   <code>400</code>\n                    <modul>wirtschaftsmathematiki</modul>\n
+      \                   <subtitle/>\n                    <reference/>\n                    <examiner>naumerbirgit</examiner>\n
+      \                   <examiner2>recknagelwinfried</examiner2>\n                    <students>0</students>\n
+      \                   <type>sp90</type>\n                    <material>alle eigenen,
+      n.progr.TR</material>\n                    <allocation>under</allocation>\n
+      \                   <program>ib</program>\n                </exam>\n                <room>r0006</room>\n
+      \               \n                <room>r0012</room>\n                \n                <students>0</students>\n
+      \               <id>400ib</id>\n            </examination>\n            \n        </time>\n
+      \       <time>\n            <time>10:30</time>\n            <examination>\n
+      \               <exam>\n                    <code>004</code>\n                    <modul>algorithmenunddatenstruktureni</modul>\n
+      \                   <subtitle/>\n                    <reference/>\n                    <examiner>fischermax</examiner>\n
+      \                   <examiner2>kirchulla</examiner2>\n                    <students>0</students>\n
+      \                   <type>sp90</type>\n                    <material>alle eigenen</material>\n
+      \                   <allocation>graduate</allocation>\n                    <program>go</program>\n
+      \               </exam>\n                <room>r1007</room>\n                \n
+      \               <exam>\n                    <code>004</code>\n                    <modul>algorithmenunddatenstruktureni</modul>\n
+      \                   <subtitle/>\n                    <reference/>\n                    <examiner>fischermax</examiner>\n
+      \                   <examiner2>kirchulla</examiner2>\n                    <students>0</students>\n
+      \                   <type>sp90</type>\n                    <material>alle eigenen</material>\n
+      \                   <allocation>graduate</allocation>\n                    <program>ic</program>\n
+      \               </exam>\n                <exam>\n                    <code>004</code>\n
+      \                   <modul>algorithmenunddatenstruktureni</modul>\n                    <subtitle/>\n
+      \                   <reference/>\n                    <examiner>fischermax</examiner>\n
+      \                   <examiner2>kirchulla</examiner2>\n                    <students>0</students>\n
+      \                   <type>sp90</type>\n                    <material>alle eigenen</material>\n
+      \                   <allocation>graduate</allocation>\n                    <program>if</program>\n
+      \               </exam>\n                <students>0</students>\n                <id>004go004ic004if</id>\n
+      \           </examination>\n            \n            <examination>\n                <exam>\n
+      \                   <code>873</code>\n                    <modul>raytracing</modul>\n
+      \                   <subtitle/>\n                    <reference/>\n                    <examiner>hertelstefan</examiner>\n
+      \                   <examiner2>nischwitzalfred</examiner2>\n                    <students>0</students>\n
+      \                   <type>sp90</type>\n                    <material>Taschenrechner</material>\n
+      \                   <allocation>graduate</allocation>\n                    <program>ig</program>\n
+      \               </exam>\n                <room>r1007</room>\n                \n
+      \               <students>0</students>\n                <id>873ig</id>\n            </examination>\n
+      \           \n            <examination>\n                <exam>\n                    <code>889</code>\n
+      \                   <modul>markovprozesseundwarteschlangensysteme</modul>\n
+      \                   <subtitle/>\n                    <reference>siehe Studiengang
+      Stochastic Engineering in Business and Finance</reference>\n                    <examiner>grubermanfred</examiner>\n
+      \                   <examiner2/>\n                    <students>0</students>\n
+      \                   <type>sp90</type>\n                    <material/>\n                    <allocation>graduate</allocation>\n
+      \                   <program>ig</program>\n                </exam>\n                <room>r0007</room>\n
+      \               \n                <exam>\n                    <code>889</code>\n
+      \                   <modul>markovprozesseundwarteschlangensysteme</modul>\n
+      \                   <subtitle/>\n                    <reference/>\n                    <examiner>grubermanfred</examiner>\n
+      \                   <examiner2>zielkeandreas</examiner2>\n                    <students>0</students>\n
+      \                   <type>sp90</type>\n                    <material>alle eigenen</material>\n
+      \                   <allocation>graduate</allocation>\n                    <program>is</program>\n
+      \               </exam>\n                <students>0</students>\n                <id>889ig889is</id>\n
+      \           </examination>\n            \n        </time>\n        <time>\n
+      \           <time>13:30</time>\n            <examination>\n                <exam>\n
+      \                   <code>089</code>\n                    <modul>softwareentwicklungi</modul>\n
+      \                   <subtitle/>\n                    <reference/>\n                    <examiner>hammerschallulrike</examiner>\n
+      \                   <examiner2>koehlerklaus</examiner2>\n                    <students>0</students>\n
+      \                   <type>sp90</type>\n                    <material>alle eigenen
+      (in Papierform)</material>\n                    <allocation>under</allocation>\n
+      \                   <program>go</program>\n                </exam>\n                <room>r0012</room>\n
+      \               \n                <room>r1006</room>\n                \n                <room>r1046</room>\n
+      \               \n                <exam>\n                    <code>089</code>\n
+      \                   <modul>softwareentwicklungi</modul>\n                    <subtitle/>\n
+      \                   <reference/>\n                    <examiner>hammerschallulrike</examiner>\n
+      \                   <examiner2>koehlerklaus</examiner2>\n                    <students>0</students>\n
+      \                   <type>sp90</type>\n                    <material>alle eigenen
+      (in Papierform)</material>\n                    <allocation>under</allocation>\n
+      \                   <program>ic</program>\n                </exam>\n                <exam>\n
+      \                   <code>089</code>\n                    <modul>softwareentwicklungi</modul>\n
+      \                   <subtitle/>\n                    <reference/>\n                    <examiner>hammerschallulrike</examiner>\n
+      \                   <examiner2>koehlerklaus</examiner2>\n                    <students>0</students>\n
+      \                   <type>sp90</type>\n                    <material>alle eigenen
+      (in Papierform)</material>\n                    <allocation>under</allocation>\n
+      \                   <program>if</program>\n                </exam>\n                <students>0</students>\n
+      \               <id>089go089ic089if</id>\n            </examination>\n            \n
+      \           <examination>\n                <exam>\n                    <code>093</code>\n
+      \                   <modul>softwareentwicklungi</modul>\n                    <subtitle/>\n
+      \                   <reference/>\n                    <examiner>koehlerklaus</examiner>\n
+      \                   <examiner2>hammerschallulrike</examiner2>\n                    <students>0</students>\n
+      \                   <type>sp90</type>\n                    <material>alle eigenen
+      (in Papierform)</material>\n                    <allocation>under</allocation>\n
+      \                   <program>ic</program>\n                </exam>\n                <room>r0010</room>\n
+      \               \n                <room>r1008</room>\n                \n                <room>r2007</room>\n
+      \               \n                <exam>\n                    <code>093</code>\n
+      \                   <modul>softwareentwicklungi</modul>\n                    <subtitle/>\n
+      \                   <reference/>\n                    <examiner>koehlerklaus</examiner>\n
+      \                   <examiner2>hammerschallulrike</examiner2>\n                    <students>0</students>\n
+      \                   <type>sp90</type>\n                    <material>alle eigenen
+      (in Papierform)</material>\n                    <allocation>under</allocation>\n
+      \                   <program>if</program>\n                </exam>\n                <students>0</students>\n
+      \               <id>093ic093if</id>\n            </examination>\n            \n
+      \           <examination>\n                <exam>\n                    <code>703</code>\n
+      \                   <modul>datenbanksysteme</modul>\n                    <subtitle/>\n
+      \                   <reference/>\n                    <examiner>guenzelholger</examiner>\n
+      \                   <examiner2>staudtmartin</examiner2>\n                    <students>0</students>\n
+      \                   <type>sp60</type>\n                    <material>-</material>\n
+      \                   <allocation>electivecs</allocation>\n                    <program>in</program>\n
+      \               </exam>\n                <room>r1007</room>\n                <students>0</students>\n
+      \               <id>703in</id>\n            </examination>\n            \n        </time>\n
+      \       <time>\n            <time>15:30</time>\n            <examination>\n
+      \               <exam>\n                    <code>505</code>\n                    <modul>datenmanagement</modul>\n
+      \                   <subtitle/>\n                    <reference/>\n                    <examiner>staudtmartin</examiner>\n
+      \                   <examiner2>schwenkertrainer</examiner2>\n                    <students>0</students>\n
+      \                   <type>sp90</type>\n                    <material>alle eigenen</material>\n
+      \                   <allocation>electivecs</allocation>\n                    <program>ib</program>\n
+      \               </exam>\n                <room>r1046</room>\n                \n
+      \               <students>0</students>\n                <id>505ib</id>\n            </examination>\n
+      \           \n        </time>\n    </day>\n    <day>\n        <date>2012-01-26</date>\n
+      \       <time>\n            <time>08:30</time>\n            <examination>\n
+      \               <exam>\n                    <code>056</code>\n                    <modul>netzwerkei</modul>\n
+      \                   <subtitle/>\n                    <reference/>\n                    <examiner>wischhoflars</examiner>\n
+      \                   <examiner2>zugenmaieralf</examiner2>\n                    <students>0</students>\n
+      \                   <type>sp90</type>\n                    <material>Taschenrechner</material>\n
+      \                   <allocation>electivecs</allocation>\n                    <program>ic</program>\n
+      \               </exam>\n                <room>r1006</room>\n                \n
+      \               <room>r1046</room>\n                \n                <exam>\n
+      \                   <code>056</code>\n                    <modul>netzwerkei</modul>\n
+      \                   <subtitle/>\n                    <reference/>\n                    <examiner>wischhoflars</examiner>\n
+      \                   <examiner2>zugenmaieralf</examiner2>\n                    <students>0</students>\n
+      \                   <type>sp90</type>\n                    <material>Taschenrechner</material>\n
+      \                   <allocation>graduate</allocation>\n                    <program>if</program>\n
+      \               </exam>\n                <students>0</students>\n                <id>056ic056if</id>\n
+      \           </examination>\n            \n            <examination>\n                <exam>\n
+      \                   <code>058</code>\n                    <modul>netzwerkei</modul>\n
+      \                   <subtitle/>\n                    <reference/>\n                    <examiner>zugenmaieralf</examiner>\n
+      \                   <examiner2>wischhoflars</examiner2>\n                    <students>0</students>\n
+      \                   <type>sp90</type>\n                    <material>Taschenrechner</material>\n
+      \                   <allocation>electivecs</allocation>\n                    <program>go</program>\n
+      \               </exam>\n                <room>r1008</room>\n                \n
+      \               <students>0</students>\n                <id>058go</id>\n            </examination>\n
+      \           \n            <examination>\n                <exam>\n                    <code>502</code>\n
+      \                   <modul>softwareengineeringiib</modul>\n                    <subtitle/>\n
+      \                   <reference/>\n                    <examiner>zimmertorsten</examiner>\n
+      \                   <examiner2>heigertjohannes</examiner2>\n                    <students>0</students>\n
+      \                   <type>sp60</type>\n                    <material>keine</material>\n
+      \                   <allocation>graduate</allocation>\n                    <program>ib</program>\n
+      \               </exam>\n                <room>r0006</room>\n                \n
+      \               <room>r0012</room>\n                \n                <room>r2007</room>\n
+      \               \n                <students>0</students>\n                <id>502ib</id>\n
+      \           </examination>\n            \n            <examination>\n                <exam>\n
+      \                   <code>803</code>\n                    <modul>digitalebildverarbeitung</modul>\n
+      \                   <subtitle>M2</subtitle>\n                    <reference/>\n
+      \                   <examiner>schnoerrclaudius</examiner>\n                    <examiner2>nischwitzalfred</examiner2>\n
+      \                   <students>0</students>\n                    <type>sp90</type>\n
+      \                   <material>Taschenrechner</material>\n                    <allocation>graduate</allocation>\n
+      \                   <program>ig</program>\n                </exam>\n                <room>r0007</room>\n
+      \               \n                <students>0</students>\n                <id>803ig</id>\n
+      \           </examination>\n            \n        </time>\n        <time>\n
+      \           <time>10:30</time>\n            <examination>\n                <exam>\n
+      \                   <code>512</code>\n                    <modul>softwareengineeringiib</modul>\n
+      \                   <subtitle/>\n                    <reference/>\n                    <examiner>heigertjohannes</examiner>\n
+      \                   <examiner2>zimmertorsten</examiner2>\n                    <students>0</students>\n
+      \                   <type>sp60</type>\n                    <material>keine</material>\n
+      \                   <allocation>graduate</allocation>\n                    <program>ib</program>\n
+      \               </exam>\n                <room>r1046</room>\n                \n
+      \               <students>0</students>\n                <id>512ib</id>\n            </examination>\n
+      \           \n            <examination>\n                <exam>\n                    <code>724</code>\n
+      \                   <modul>projektundqualitaetsmanagement</modul>\n                    <subtitle/>\n
+      \                   <reference/>\n                    <examiner>lindermeierrobert</examiner>\n
+      \                   <examiner2>mandlpeter</examiner2>\n                    <students>0</students>\n
+      \                   <type>sp90</type>\n                    <material>-</material>\n
+      \                   <allocation>intensive</allocation>\n                    <program>in</program>\n
+      \               </exam>\n                <room>r0010</room>\n                \n
+      \               <students>0</students>\n                <id>724in</id>\n            </examination>\n
+      \           \n            <examination>\n                <exam>\n                    <code>888</code>\n
+      \                   <modul>simulationstochastischerprozesse</modul>\n                    <subtitle/>\n
+      \                   <reference/>\n                    <examiner>wernerralf</examiner>\n
+      \                   <examiner2>grubermanfred</examiner2>\n                    <students>0</students>\n
+      \                   <type>sp90</type>\n                    <material>keine</material>\n
+      \                   <allocation>graduate</allocation>\n                    <program>is</program>\n
+      \               </exam>\n                <room>r0010</room>\n                \n
+      \               <students>0</students>\n                <id>888is</id>\n            </examination>\n
+      \           \n        </time>\n        <time>\n            <time>13:30</time>\n
+      \           <examination>\n                <exam>\n                    <code>061</code>\n
+      \                   <modul>netzwerkmanagement</modul>\n                    <subtitle/>\n
+      \                   <reference/>\n                    <examiner>soceanualexandru</examiner>\n
+      \                   <examiner2>zugenmaieralf</examiner2>\n                    <students>0</students>\n
+      \                   <type>sp90</type>\n                    <material>alle eigenen</material>\n
+      \                   <allocation>electivecs</allocation>\n                    <program>ic</program>\n
+      \               </exam>\n                <room>r0010</room>\n                \n
+      \               <exam>\n                    <code>061</code>\n                    <modul>netzwerkmanagement</modul>\n
+      \                   <subtitle/>\n                    <reference/>\n                    <examiner>soceanualexandru</examiner>\n
+      \                   <examiner2>zugenmaieralf</examiner2>\n                    <students>0</students>\n
+      \                   <type>sp90</type>\n                    <material>alle eigenen</material>\n
+      \                   <allocation>compulsory</allocation>\n                    <program>if</program>\n
+      \               </exam>\n                <students>0</students>\n                <id>061ic061if</id>\n
+      \           </examination>\n            \n        </time>\n    </day>\n    <day>\n
+      \       <date>2012-01-27</date>\n        <time>\n            <time>08:30</time>\n
+      \           <examination>\n                <exam>\n                    <code>100</code>\n
+      \                   <modul>technischeinformatiki</modul>\n                    <subtitle/>\n
+      \                   <reference>s. Bachelor Informatik</reference>\n                    <examiner>vogtchristian</examiner>\n
+      \                   <examiner2>zugenmaieralf</examiner2>\n                    <students>0</students>\n
+      \                   <type>sp90</type>\n                    <material/>\n                    <allocation>compulsory</allocation>\n
+      \                   <program>ib</program>\n                </exam>\n                <room>r0006</room>\n
+      \               \n                <room>r0010</room>\n                \n                <room>r0012</room>\n
+      \               \n                <exam>\n                    <code>100</code>\n
+      \                   <modul>technischeinformatiki</modul>\n                    <subtitle/>\n
+      \                   <reference/>\n                    <examiner>vogtchristian</examiner>\n
+      \                   <examiner2>zugenmaieralf</examiner2>\n                    <students>0</students>\n
+      \                   <type>sp90</type>\n                    <material>alle eigenen</material>\n
+      \                   <allocation>under</allocation>\n                    <program>ic</program>\n
+      \               </exam>\n                <exam>\n                    <code>100</code>\n
+      \                   <modul>technischeinformatiki</modul>\n                    <subtitle/>\n
+      \                   <reference/>\n                    <examiner>vogtchristian</examiner>\n
+      \                   <examiner2>zugenmaieralf</examiner2>\n                    <students>0</students>\n
+      \                   <type>sp90</type>\n                    <material>alle eigenen</material>\n
+      \                   <allocation>under</allocation>\n                    <program>if</program>\n
+      \               </exam>\n                <students>0</students>\n                <id>100ib100ic100if</id>\n
+      \           </examination>\n            \n            <examination>\n                <exam>\n
+      \                   <code>102</code>\n                    <modul>technischeinformatiki</modul>\n
+      \                   <subtitle/>\n                    <reference>s. Bachelor
+      Informatik</reference>\n                    <examiner>zugenmaieralf</examiner>\n
+      \                   <examiner2>vogtchristian</examiner2>\n                    <students>0</students>\n
+      \                   <type>sp90</type>\n                    <material/>\n                    <allocation>compulsory</allocation>\n
+      \                   <program>ib</program>\n                </exam>\n                <room>r0012</room>\n
+      \               \n                <room>r1006</room>\n                \n                <room>r1046</room>\n
+      \               \n                <exam>\n                    <code>102</code>\n
+      \                   <modul>technischeinformatiki</modul>\n                    <subtitle/>\n
+      \                   <reference/>\n                    <examiner>zugenmaieralf</examiner>\n
+      \                   <examiner2>vogtchristian</examiner2>\n                    <students>0</students>\n
+      \                   <type>sp90</type>\n                    <material>alle eigenen</material>\n
+      \                   <allocation>under</allocation>\n                    <program>ic</program>\n
+      \               </exam>\n                <exam>\n                    <code>102</code>\n
+      \                   <modul>technischeinformatiki</modul>\n                    <subtitle/>\n
+      \                   <reference/>\n                    <examiner>zugenmaieralf</examiner>\n
+      \                   <examiner2>vogtchristian</examiner2>\n                    <students>0</students>\n
+      \                   <type>sp90</type>\n                    <material>alle eigenen</material>\n
+      \                   <allocation>under</allocation>\n                    <program>if</program>\n
+      \               </exam>\n                <students>0</students>\n                <id>102ib102ic102if</id>\n
+      \           </examination>\n            \n        </time>\n        <time>\n
+      \           <time>10:30</time>\n            <examination>\n                <exam>\n
+      \                   <code>026</code>\n                    <modul>datamining</modul>\n
+      \                   <subtitle/>\n                    <reference/>\n                    <examiner>piramuthuselwyn</examiner>\n
+      \                   <examiner2>staudtmartin</examiner2>\n                    <students>0</students>\n
+      \                   <type>sp90</type>\n                    <material>alle eigenen</material>\n
+      \                   <allocation>electivecs</allocation>\n                    <program>ic</program>\n
+      \               </exam>\n                <room>r1007</room>\n                \n
+      \               <exam>\n                    <code>026</code>\n                    <modul>datamining</modul>\n
+      \                   <subtitle/>\n                    <reference/>\n                    <examiner>piramuthuselwyn</examiner>\n
+      \                   <examiner2>staudtmartin</examiner2>\n                    <students>0</students>\n
+      \                   <type>sp90</type>\n                    <material>alle eigenen</material>\n
+      \                   <allocation>compulsory</allocation>\n                    <program>if</program>\n
+      \               </exam>\n                <students>0</students>\n                <id>026ic026if</id>\n
+      \           </examination>\n            \n            <examination>\n                <exam>\n
+      \                   <code>106</code>\n                    <modul>wahrscheinlichkeitstheorieundstatistik</modul>\n
+      \                   <subtitle/>\n                    <reference/>\n                    <examiner>zielkeandreas</examiner>\n
+      \                   <examiner2>hoerwickjosef</examiner2>\n                    <students>0</students>\n
+      \                   <type>sp90</type>\n                    <material>alle eigenen</material>\n
+      \                   <allocation>graduate</allocation>\n                    <program>ic</program>\n
+      \               </exam>\n                <room>r0006</room>\n                \n
+      \               <room>r1046</room>\n                \n                <exam>\n
+      \                   <code>106</code>\n                    <modul>wahrscheinlichkeitstheorieundstatistik</modul>\n
+      \                   <subtitle/>\n                    <reference/>\n                    <examiner>zielkeandreas</examiner>\n
+      \                   <examiner2>hoerwickjosef</examiner2>\n                    <students>0</students>\n
+      \                   <type>sp90</type>\n                    <material>alle eigenen</material>\n
+      \                   <allocation>graduate</allocation>\n                    <program>if</program>\n
+      \               </exam>\n                <students>0</students>\n                <id>106ic106if</id>\n
+      \           </examination>\n            \n            <examination>\n                <exam>\n
+      \                   <code>403</code>\n                    <modul>wirtschaftsinformatik</modul>\n
+      \                   <subtitle/>\n                    <reference/>\n                    <examiner>mandlpeter</examiner>\n
+      \                   <examiner2>lindermeierrobert</examiner2>\n                    <students>0</students>\n
+      \                   <type>sp90</type>\n                    <material>n.prog.Tr.</material>\n
+      \                   <allocation>under</allocation>\n                    <program>ib</program>\n
+      \               </exam>\n                <room>r0010</room>\n                \n
+      \               <room>r1006</room>\n                \n                <students>0</students>\n
+      \               <id>403ib</id>\n            </examination>\n            \n        </time>\n
+      \       <time>\n            <time>13:30</time>\n            <examination>\n
+      \               <exam>\n                    <code>807</code>\n                    <modul>mustererkennung</modul>\n
+      \                   <subtitle>M3</subtitle>\n                    <reference/>\n
+      \                   <examiner>schnoerrclaudius</examiner>\n                    <examiner2>fischermax</examiner2>\n
+      \                   <students>0</students>\n                    <type>sp90</type>\n
+      \                   <material>Taschenrechner</material>\n                    <allocation>graduate</allocation>\n
+      \                   <program>ig</program>\n                </exam>\n                <room>r0010</room>\n
+      \               \n                <exam>\n                    <code>807</code>\n
+      \                   <modul>mustererkennung</modul>\n                    <subtitle>M3</subtitle>\n
+      \                   <reference>Siehe Master Informatik</reference>\n                    <examiner>schnoerrclaudius</examiner>\n
+      \                   <examiner2/>\n                    <students>0</students>\n
+      \                   <type>sp90</type>\n                    <material/>\n                    <allocation>graduate</allocation>\n
+      \                   <program>is</program>\n                </exam>\n                <students>0</students>\n
+      \               <id>807ig807is</id>\n            </examination>\n            \n
+      \       </time>\n    </day>\n    <day>\n        <date>2012-01-30</date>\n        <time>\n
+      \           <time>08:30</time>\n            <examination>\n                <exam>\n
+      \                   <code>046</code>\n                    <modul>itsystemei</modul>\n
+      \                   <subtitle/>\n                    <reference/>\n                    <examiner>anlauffheidi</examiner>\n
+      \                   <examiner2>orehekmartin</examiner2>\n                    <students>0</students>\n
+      \                   <type>sp90</type>\n                    <material>alle eigenen</material>\n
+      \                   <allocation>under</allocation>\n                    <program>ic</program>\n
+      \               </exam>\n                <room>r0006</room>\n                \n
+      \               <room>r0010</room>\n                \n                <exam>\n
+      \                   <code>046</code>\n                    <modul>itsystemei</modul>\n
+      \                   <subtitle/>\n                    <reference/>\n                    <examiner>anlauffheidi</examiner>\n
+      \                   <examiner2>orehekmartin</examiner2>\n                    <students>0</students>\n
+      \                   <type>sp90</type>\n                    <material>alle eigenen</material>\n
+      \                   <allocation>under</allocation>\n                    <program>if</program>\n
+      \               </exam>\n                <students>0</students>\n                <id>046ic046if</id>\n
+      \           </examination>\n            \n            <examination>\n                <exam>\n
+      \                   <code>048</code>\n                    <modul>itsystemei</modul>\n
+      \                   <subtitle/>\n                    <reference/>\n                    <examiner>orehekmartin</examiner>\n
+      \                   <examiner2>anlauffheidi</examiner2>\n                    <students>0</students>\n
+      \                   <type>sp90</type>\n                    <material>alle eigenen</material>\n
+      \                   <allocation>under</allocation>\n                    <program>ic</program>\n
+      \               </exam>\n                <room>r0006</room>\n                \n
+      \               <room>r0012</room>\n                \n                <room>r1006</room>\n
+      \               \n                <room>r1046</room>\n                \n                <exam>\n
+      \                   <code>048</code>\n                    <modul>itsystemei</modul>\n
+      \                   <subtitle/>\n                    <reference/>\n                    <examiner>orehekmartin</examiner>\n
+      \                   <examiner2>anlauffheidi</examiner2>\n                    <students>0</students>\n
+      \                   <type>sp90</type>\n                    <material>alle eigenen</material>\n
+      \                   <allocation>under</allocation>\n                    <program>if</program>\n
+      \               </exam>\n                <students>0</students>\n                <id>048ic048if</id>\n
+      \           </examination>\n            \n        </time>\n        <time>\n
+      \           <time>10:30</time>\n            <examination>\n                <exam>\n
+      \                   <code>075</code>\n                    <modul>rechnerarchitektur</modul>\n
+      \                   <subtitle/>\n                    <reference/>\n                    <examiner>wischhoflars</examiner>\n
+      \                   <examiner2>zugenmaieralf</examiner2>\n                    <students>0</students>\n
+      \                   <type>sp90</type>\n                    <material>keine</material>\n
+      \                   <allocation>electivecs</allocation>\n                    <program>ic</program>\n
+      \               </exam>\n                <room>r0007</room>\n                \n
+      \               <room>r1006</room>\n                \n                <exam>\n
+      \                   <code>075</code>\n                    <modul>rechnerarchitektur</modul>\n
+      \                   <subtitle/>\n                    <reference/>\n                    <examiner>wischhoflars</examiner>\n
+      \                   <examiner2>zugenmaieralf</examiner2>\n                    <students>0</students>\n
+      \                   <type>sp90</type>\n                    <material>keine</material>\n
+      \                   <allocation>graduate</allocation>\n                    <program>if</program>\n
+      \               </exam>\n                <students>0</students>\n                <id>075ic075if</id>\n
+      \           </examination>\n            \n            <examination>\n                <exam>\n
+      \                   <code>076</code>\n                    <modul>rechnerarchitektur</modul>\n
+      \                   <subtitle/>\n                    <reference/>\n                    <examiner>zugenmaieralf</examiner>\n
+      \                   <examiner2>wischhoflars</examiner2>\n                    <students>0</students>\n
+      \                   <type>sp90</type>\n                    <material>keine</material>\n
+      \                   <allocation>electivecs</allocation>\n                    <program>ic</program>\n
+      \               </exam>\n                <room>r1006</room>\n                \n
+      \               <room>r1046</room>\n                \n                <exam>\n
+      \                   <code>076</code>\n                    <modul>rechnerarchitektur</modul>\n
+      \                   <subtitle/>\n                    <reference/>\n                    <examiner>zugenmaieralf</examiner>\n
+      \                   <examiner2>wischhoflars</examiner2>\n                    <students>0</students>\n
+      \                   <type>sp90</type>\n                    <material>keine</material>\n
+      \                   <allocation>graduate</allocation>\n                    <program>if</program>\n
+      \               </exam>\n                <students>0</students>\n                <id>076ic076if</id>\n
+      \           </examination>\n            \n            <examination>\n                <exam>\n
+      \                   <code>405</code>\n                    <modul>softwareentwicklungiiib</modul>\n
+      \                   <subtitle/>\n                    <reference/>\n                    <examiner>zimmertorsten</examiner>\n
+      \                   <examiner2>staudtmartin</examiner2>\n                    <students>0</students>\n
+      \                   <type>sp90</type>\n                    <material>alle eigenen</material>\n
+      \                   <allocation>under</allocation>\n                    <program>ib</program>\n
+      \               </exam>\n                <room>r0010</room>\n                \n
+      \               <room>r0012</room>\n                \n                <students>0</students>\n
+      \               <id>405ib</id>\n            </examination>\n            \n            <examination>\n
+      \               <exam>\n                    <code>412</code>\n                    <modul>statistikundoperationsresearch</modul>\n
+      \                   <subtitle/>\n                    <reference/>\n                    <examiner>hertlejochen</examiner>\n
+      \                   <examiner2>recknagelwinfried</examiner2>\n                    <students>0</students>\n
+      \                   <type>sp90</type>\n                    <material>alle eigenen</material>\n
+      \                   <allocation>under</allocation>\n                    <program>ib</program>\n
+      \               </exam>\n                <room>r0009</room>\n                \n
+      \               <students>0</students>\n                <id>412ib</id>\n            </examination>\n
+      \           \n            <examination>\n                <exam>\n                    <code>529</code>\n
+      \                   <modul>geschaeftsprozesse</modul>\n                    <subtitle/>\n
+      \                   <reference/>\n                    <examiner>hammerschallulrike</examiner>\n
+      \                   <examiner2>thurnerveronika</examiner2>\n                    <students>0</students>\n
+      \                   <type>sp90</type>\n                    <material>keine</material>\n
+      \                   <allocation>intensive</allocation>\n                    <program>ib</program>\n
+      \               </exam>\n                <room>r1007</room>\n                \n
+      \               <students>0</students>\n                <id>529ib</id>\n            </examination>\n
+      \           \n        </time>\n        <time>\n            <time>13:30</time>\n
+      \           <examination>\n                <exam>\n                    <code>031</code>\n
+      \                   <modul>datenschutzunditsicherheiti</modul>\n                    <subtitle>IT-Sicherheit
+      I</subtitle>\n                    <reference/>\n                    <examiner>gerlingrainerw</examiner>\n
+      \                   <examiner2>pleierchristoph</examiner2>\n                    <students>0</students>\n
+      \                   <type>sp60</type>\n                    <material>Vorlesungsskript
+      mit Index</material>\n                    <allocation>electivecs</allocation>\n
+      \                   <program>ic</program>\n                </exam>\n                <room>r1046</room>\n
+      \               \n                <exam>\n                    <code>031</code>\n
+      \                   <modul>datenschutzunditsicherheiti</modul>\n                    <subtitle>IT-Sicherheit
+      I</subtitle>\n                    <reference/>\n                    <examiner>gerlingrainerw</examiner>\n
+      \                   <examiner2>pleierchristoph</examiner2>\n                    <students>0</students>\n
+      \                   <type>sp60</type>\n                    <material>Vorlesungsskript
+      mit Index</material>\n                    <allocation>graduate</allocation>\n
+      \                   <program>if</program>\n                </exam>\n                <students>0</students>\n
+      \               <id>031ic031if</id>\n            </examination>\n            \n
+      \       </time>\n    </day>\n    <day>\n        <date>2012-01-31</date>\n        <time>\n
+      \           <time>08:30</time>\n            <examination>\n                <exam>\n
+      \                   <code>404</code>\n                    <modul>softwareentwicklungiib</modul>\n
+      \                   <subtitle/>\n                    <reference/>\n                    <examiner>abendrothjoerg</examiner>\n
+      \                   <examiner2>thurnerveronika</examiner2>\n                    <students>0</students>\n
+      \                   <type>sp90</type>\n                    <material>5 beschriftete
+      A4-Blätter</material>\n                    <allocation>under</allocation>\n
+      \                   <program>ib</program>\n                </exam>\n                <room>r0009</room>\n
+      \               \n                <room>r0058</room>\n                \n                <room>r1008</room>\n
+      \               \n                <students>0</students>\n                <id>404ib</id>\n
+      \           </examination>\n            \n            <examination>\n                <exam>\n
+      \                   <code>414</code>\n                    <modul>softwareentwicklungiib</modul>\n
+      \                   <subtitle/>\n                    <reference/>\n                    <examiner>schiffnerstephan</examiner>\n
+      \                   <examiner2>thurnerveronika</examiner2>\n                    <students>0</students>\n
+      \                   <type>sp90</type>\n                    <material>5 beschriftete
+      A4-Blätter</material>\n                    <allocation>under</allocation>\n
+      \                   <program>ib</program>\n                </exam>\n                <room>r0007</room>\n
+      \               \n                <room>r0010</room>\n                \n                <room>r2007</room>\n
+      \               \n                <students>0</students>\n                <id>414ib</id>\n
+      \           </examination>\n            \n            <examination>\n                <exam>\n
+      \                   <code>424</code>\n                    <modul>softwareentwicklungiib</modul>\n
+      \                   <subtitle/>\n                    <reference/>\n                    <examiner>thurnerveronika</examiner>\n
+      \                   <examiner2>zimmertorsten</examiner2>\n                    <students>0</students>\n
+      \                   <type>sp90</type>\n                    <material>5 beschriftete
+      A4-Blätter</material>\n                    <allocation>under</allocation>\n
+      \                   <program>ib</program>\n                </exam>\n                <room>r0006</room>\n
+      \               \n                <room>r0012</room>\n                \n                <room>r1006</room>\n
+      \               \n                <students>0</students>\n                <id>424ib</id>\n
+      \           </examination>\n            \n        </time>\n        <time>\n
+      \           <time>10:30</time>\n            <examination>\n                <exam>\n
+      \                   <code>701</code>\n                    <modul>informationssysteme</modul>\n
+      \                   <subtitle/>\n                    <reference/>\n                    <examiner>moebertpatrick</examiner>\n
+      \                   <examiner2>zimmertorsten</examiner2>\n                    <students>0</students>\n
+      \                   <type>sp60</type>\n                    <material>-</material>\n
+      \                   <allocation>electivecs</allocation>\n                    <program>in</program>\n
+      \               </exam>\n                <room>r1006</room>\n                \n
+      \               <students>0</students>\n                <id>701in</id>\n            </examination>\n
+      \           \n        </time>\n        <time>\n            <time>13:30</time>\n
+      \           <examination>\n                <exam>\n                    <code>064</code>\n
+      \                   <modul>operationsresearch</modul>\n                    <subtitle/>\n
+      \                   <reference/>\n                    <examiner>eichsoellneredda</examiner>\n
+      \                   <examiner2>wernerralf</examiner2>\n                    <students>0</students>\n
+      \                   <type>sp90</type>\n                    <material>Skript,
+      Formelsammlung, nicht progr. TR</material>\n                    <allocation>graduate</allocation>\n
+      \                   <program>ic</program>\n                </exam>\n                <room>r0010</room>\n
+      \               \n                <room>r1006</room>\n                \n                <exam>\n
+      \                   <code>064</code>\n                    <modul>operationsresearch</modul>\n
+      \                   <subtitle/>\n                    <reference/>\n                    <examiner>eichsoellneredda</examiner>\n
+      \                   <examiner2>wernerralf</examiner2>\n                    <students>0</students>\n
+      \                   <type>sp90</type>\n                    <material>Skript,
+      Formelsammlung, nicht progr. TR</material>\n                    <allocation>electivemath</allocation>\n
+      \                   <program>if</program>\n                </exam>\n                <students>0</students>\n
+      \               <id>064ic064if</id>\n            </examination>\n            \n
+      \           <examination>\n                <exam>\n                    <code>885</code>\n
+      \                   <modul>massundwahrscheinlichkeitstheorie</modul>\n                    <subtitle/>\n
+      \                   <reference>siehe Studiengang Stochastic Engineering in Business
+      and Finance</reference>\n                    <examiner>hoerwickjosef</examiner>\n
+      \                   <examiner2/>\n                    <students>0</students>\n
+      \                   <type>sp90</type>\n                    <material/>\n                    <allocation>graduate</allocation>\n
+      \                   <program>ig</program>\n                </exam>\n                <room>r0012</room>\n
+      \               \n                <room>r1007</room>\n                \n                <exam>\n
+      \                   <code>885</code>\n                    <modul>massundwahrscheinlichkeitstheorie</modul>\n
+      \                   <subtitle/>\n                    <reference/>\n                    <examiner>hoerwickjosef</examiner>\n
+      \                   <examiner2>grubermanfred</examiner2>\n                    <students>0</students>\n
+      \                   <type>sp90</type>\n                    <material>keine</material>\n
+      \                   <allocation>graduate</allocation>\n                    <program>is</program>\n
+      \               </exam>\n                <students>0</students>\n                <id>885ig885is</id>\n
+      \           </examination>\n            \n        </time>\n        <time>\n
+      \           <time>15:30</time>\n            <examination>\n                <exam>\n
+      \                   <code>037</code>\n                    <modul>diskretemathematik</modul>\n
+      \                   <subtitle/>\n                    <reference/>\n                    <examiner>wernerralf</examiner>\n
+      \                   <examiner2>hoerwickjosef</examiner2>\n                    <students>0</students>\n
+      \                   <type>sp90</type>\n                    <material>nicht-prog
+      TR</material>\n                    <allocation>under</allocation>\n                    <program>go</program>\n
+      \               </exam>\n                <room>r0006</room>\n                \n
+      \               <room>r0012</room>\n                \n                <room>r1006</room>\n
+      \               \n                <exam>\n                    <code>037</code>\n
+      \                   <modul>diskretemathematik</modul>\n                    <subtitle/>\n
+      \                   <reference/>\n                    <examiner>wernerralf</examiner>\n
+      \                   <examiner2>hoerwickjosef</examiner2>\n                    <students>0</students>\n
+      \                   <type>sp90</type>\n                    <material>nicht-prog
+      TR</material>\n                    <allocation>under</allocation>\n                    <program>ic</program>\n
+      \               </exam>\n                <exam>\n                    <code>037</code>\n
+      \                   <modul>diskretemathematik</modul>\n                    <subtitle/>\n
+      \                   <reference/>\n                    <examiner>wernerralf</examiner>\n
+      \                   <examiner2>hoerwickjosef</examiner2>\n                    <students>0</students>\n
+      \                   <type>sp90</type>\n                    <material>nicht-prog
+      TR</material>\n                    <allocation>under</allocation>\n                    <program>if</program>\n
+      \               </exam>\n                <students>0</students>\n                <id>037go037ic037if</id>\n
+      \           </examination>\n            \n            <examination>\n                <exam>\n
+      \                   <code>098</code>\n                    <modul>technicalwritingincomputerscience</modul>\n
+      \                   <subtitle/>\n                    <reference/>\n                    <examiner>balazsaniko</examiner>\n
+      \                   <examiner2>vogtchristian</examiner2>\n                    <students>0</students>\n
+      \                   <type>sp90</type>\n                    <material>Dictionary,
+      English or bilingual</material>\n                    <allocation>electivecs</allocation>\n
+      \                   <program>ic</program>\n                </exam>\n                <room>r0010</room>\n
+      \               \n                <exam>\n                    <code>098</code>\n
+      \                   <modul>technicalwritingincomputerscience</modul>\n                    <subtitle/>\n
+      \                   <reference/>\n                    <examiner>balazsaniko</examiner>\n
+      \                   <examiner2>vogtchristian</examiner2>\n                    <students>0</students>\n
+      \                   <type>sp90</type>\n                    <material>Dictionary,
+      English or bilingual</material>\n                    <allocation>compulsory</allocation>\n
+      \                   <program>if</program>\n                </exam>\n                <students>0</students>\n
+      \               <id>098ic098if</id>\n            </examination>\n            \n
+      \           <examination>\n                <exam>\n                    <code>409</code>\n
+      \                   <modul>wirtschaftsprivatrecht</modul>\n                    <subtitle/>\n
+      \                   <reference/>\n                    <examiner>moenckeulrich</examiner>\n
+      \                   <examiner2>noreischbernhard</examiner2>\n                    <students>0</students>\n
+      \                   <type>sp90</type>\n                    <material>Gesetzestext
+      BGB</material>\n                    <allocation>under</allocation>\n                    <program>ib</program>\n
+      \               </exam>\n                <room>r0007</room>\n                \n
+      \               <exam>\n                    <code>409</code>\n                    <modul>wirtschaftsprivatrecht</modul>\n
+      \                   <subtitle/>\n                    <reference>s. Bachelor
+      Wirtschaftsinformatik</reference>\n                    <examiner>moenckeulrich</examiner>\n
+      \                   <examiner2/>\n                    <students>0</students>\n
+      \                   <type>sp90</type>\n                    <material/>\n                    <allocation>graduate</allocation>\n
+      \                   <program>if</program>\n                </exam>\n                <students>0</students>\n
+      \               <id>409ib409if</id>\n            </examination>\n            \n
+      \       </time>\n        <time>\n            <time>17:30</time>\n            <examination>\n
+      \               <exam>\n                    <code>081</code>\n                    <modul>softwarearchitektur</modul>\n
+      \                   <subtitle/>\n                    <reference/>\n                    <examiner>boettcheraxel</examiner>\n
+      \                   <examiner2>schiedermeierreinhard</examiner2>\n                    <students>0</students>\n
+      \                   <type>sp90</type>\n                    <material>alle eigenen</material>\n
+      \                   <allocation>electivecs</allocation>\n                    <program>ic</program>\n
+      \               </exam>\n                <room>r1006</room>\n                \n
+      \               <exam>\n                    <code>081</code>\n                    <modul>softwarearchitektur</modul>\n
+      \                   <subtitle/>\n                    <reference/>\n                    <examiner>boettcheraxel</examiner>\n
+      \                   <examiner2>schiedermeierreinhard</examiner2>\n                    <students>0</students>\n
+      \                   <type>sp90</type>\n                    <material>alle eigenen</material>\n
+      \                   <allocation>graduate</allocation>\n                    <program>if</program>\n
+      \               </exam>\n                <students>0</students>\n                <id>081ic081if</id>\n
+      \           </examination>\n            \n        </time>\n    </day>\n    <day>\n
+      \       <date>2012-02-01</date>\n        <time>\n            <time>08:30</time>\n
+      \           <examination>\n                <exam>\n                    <code>507</code>\n
+      \                   <modul>informationssystemei</modul>\n                    <subtitle/>\n
+      \                   <reference/>\n                    <examiner>petersgeorg</examiner>\n
+      \                   <examiner2>moebertpatrick</examiner2>\n                    <students>0</students>\n
+      \                   <type>sp90</type>\n                    <material>keine</material>\n
+      \                   <allocation>intensive</allocation>\n                    <program>ib</program>\n
+      \               </exam>\n                <room>r0006</room>\n                \n
+      \               <room>r0012</room>\n                \n                <room>r1006</room>\n
+      \               \n                <exam>\n                    <code>507</code>\n
+      \                   <modul>informationssystemei</modul>\n                    <subtitle/>\n
+      \                   <reference>s. Bachelor Wirtschaftsinformatik</reference>\n
+      \                   <examiner>petersgeorg</examiner>\n                    <examiner2/>\n
+      \                   <students>0</students>\n                    <type>sp90</type>\n
+      \                   <material/>\n                    <allocation>compulsory</allocation>\n
+      \                   <program>if</program>\n                </exam>\n                <students>0</students>\n
+      \               <id>507ib507if</id>\n            </examination>\n            \n
+      \       </time>\n        <time>\n            <time>10:30</time>\n            <examination>\n
+      \               <exam>\n                    <code>517</code>\n                    <modul>informationssystemei</modul>\n
+      \                   <subtitle/>\n                    <reference/>\n                    <examiner>moebertpatrick</examiner>\n
+      \                   <examiner2>petersgeorg</examiner2>\n                    <students>0</students>\n
+      \                   <type>sp90</type>\n                    <material>keine</material>\n
+      \                   <allocation>intensive</allocation>\n                    <program>ib</program>\n
+      \               </exam>\n                <room>r0010</room>\n                \n
+      \               <room>r1006</room>\n                \n                <exam>\n
+      \                   <code>517</code>\n                    <modul>informationssystemei</modul>\n
+      \                   <subtitle/>\n                    <reference>s. Bachelor
+      Wirtschaftsinformatik</reference>\n                    <examiner>moebertpatrick</examiner>\n
+      \                   <examiner2/>\n                    <students>0</students>\n
+      \                   <type>sp90</type>\n                    <material/>\n                    <allocation>compulsory</allocation>\n
+      \                   <program>if</program>\n                </exam>\n                <students>0</students>\n
+      \               <id>517ib517if</id>\n            </examination>\n            \n
+      \       </time>\n        <time>\n            <time>13:30</time>\n            <examination>\n
+      \               <exam>\n                    <code>024</code>\n                    <modul>computergrafikundbildverarbeitung</modul>\n
+      \                   <subtitle/>\n                    <reference/>\n                    <examiner>nischwitzalfred</examiner>\n
+      \                   <examiner2>schnoerrclaudius</examiner2>\n                    <students>0</students>\n
+      \                   <type>sp90</type>\n                    <material>keine</material>\n
+      \                   <allocation>electivecs</allocation>\n                    <program>go</program>\n
+      \               </exam>\n                <room>r1007</room>\n                \n
+      \               <exam>\n                    <code>024</code>\n                    <modul>computergrafikundbildverarbeitung</modul>\n
+      \                   <subtitle/>\n                    <reference/>\n                    <examiner>nischwitzalfred</examiner>\n
+      \                   <examiner2>schnoerrclaudius</examiner2>\n                    <students>0</students>\n
+      \                   <type>sp90</type>\n                    <material>keine</material>\n
+      \                   <allocation>electivecs</allocation>\n                    <program>ic</program>\n
+      \               </exam>\n                <exam>\n                    <code>024</code>\n
+      \                   <modul>computergrafikundbildverarbeitung</modul>\n                    <subtitle/>\n
+      \                   <reference/>\n                    <examiner>nischwitzalfred</examiner>\n
+      \                   <examiner2>schnoerrclaudius</examiner2>\n                    <students>0</students>\n
+      \                   <type>sp90</type>\n                    <material>keine</material>\n
+      \                   <allocation>graduate</allocation>\n                    <program>if</program>\n
+      \               </exam>\n                <students>0</students>\n                <id>024go024ic024if</id>\n
+      \           </examination>\n            \n            <examination>\n                <exam>\n
+      \                   <code>050</code>\n                    <modul>itsystemeii</modul>\n
+      \                   <subtitle/>\n                    <reference/>\n                    <examiner>ruckertmartin</examiner>\n
+      \                   <examiner2>anlauffheidi</examiner2>\n                    <students>0</students>\n
+      \                   <type>sp90</type>\n                    <material>alle eigenen</material>\n
+      \                   <allocation>under</allocation>\n                    <program>ic</program>\n
+      \               </exam>\n                <room>r0010</room>\n                \n
+      \               <room>r0012</room>\n                \n                <room>r1006</room>\n
+      \               \n                <exam>\n                    <code>050</code>\n
+      \                   <modul>itsystemeii</modul>\n                    <subtitle/>\n
+      \                   <reference/>\n                    <examiner>ruckertmartin</examiner>\n
+      \                   <examiner2>anlauffheidi</examiner2>\n                    <students>0</students>\n
+      \                   <type>sp90</type>\n                    <material>alle eigenen</material>\n
+      \                   <allocation>under</allocation>\n                    <program>if</program>\n
+      \               </exam>\n                <students>0</students>\n                <id>050ic050if</id>\n
+      \           </examination>\n            \n            <examination>\n                <exam>\n
+      \                   <code>518</code>\n                    <modul>informationssystemeii</modul>\n
+      \                   <subtitle/>\n                    <reference/>\n                    <examiner>moebertpatrick</examiner>\n
+      \                   <examiner2>heigertjohannes</examiner2>\n                    <students>0</students>\n
+      \                   <type>sp90</type>\n                    <material>keine</material>\n
+      \                   <allocation>intensive</allocation>\n                    <program>ib</program>\n
+      \               </exam>\n                <room>r1008</room>\n                \n
+      \               <students>0</students>\n                <id>518ib</id>\n            </examination>\n
+      \           \n        </time>\n        <time>\n            <time>15:30</time>\n
+      \           <examination>\n                <exam>\n                    <code>601</code>\n
+      \                   <modul>wirtschaftsethikundcorporategovernance</modul>\n
+      \                   <subtitle/>\n                    <reference/>\n                    <examiner>hahnhansjoachim</examiner>\n
+      \                   <examiner2>lindermeierrobert</examiner2>\n                    <students>0</students>\n
+      \                   <type>sp90</type>\n                    <material>-</material>\n
+      \                   <allocation>compulsory</allocation>\n                    <program>ib</program>\n
+      \               </exam>\n                <room>r0006</room>\n                \n
+      \               <students>0</students>\n                <id>601ib</id>\n            </examination>\n
+      \           \n        </time>\n    </day>\n    <day>\n        <date>2012-02-02</date>\n
+      \       <time>\n            <time>08:30</time>\n            <examination>\n
+      \               <exam>\n                    <code>420</code>\n                    <modul>wirtschaftsmathematiki</modul>\n
+      \                   <subtitle/>\n                    <reference/>\n                    <examiner>zielkeandreas</examiner>\n
+      \                   <examiner2>recknagelwinfried</examiner2>\n                    <students>0</students>\n
+      \                   <type>sp90</type>\n                    <material>alle eigenen,
+      n.progr.TR</material>\n                    <allocation>under</allocation>\n
+      \                   <program>ib</program>\n                </exam>\n                <room>r0006</room>\n
+      \               \n                <room>r0010</room>\n                \n                <room>r0012</room>\n
+      \               \n                <room>r1006</room>\n                \n                <students>0</students>\n
+      \               <id>420ib</id>\n            </examination>\n            \n        </time>\n
+      \       <time>\n            <time>10:30</time>\n            <examination>\n
+      \               <exam>\n                    <code>036</code>\n                    <modul>differentialrechnunginrnunddifferentialgleichungen</modul>\n
+      \                   <subtitle/>\n                    <reference/>\n                    <examiner>hoerwickjosef</examiner>\n
+      \                   <examiner2>grubermanfred</examiner2>\n                    <students>0</students>\n
+      \                   <type>sp90</type>\n                    <material>alle eigenen</material>\n
+      \                   <allocation>graduate</allocation>\n                    <program>ic</program>\n
+      \               </exam>\n                <room>r0006</room>\n                \n
+      \               <room>r0012</room>\n                \n                <room>r1006</room>\n
+      \               \n                <exam>\n                    <code>036</code>\n
+      \                   <modul>differentialrechnunginrnunddifferentialgleichungen</modul>\n
+      \                   <subtitle/>\n                    <reference/>\n                    <examiner>hoerwickjosef</examiner>\n
+      \                   <examiner2>grubermanfred</examiner2>\n                    <students>0</students>\n
+      \                   <type>sp90</type>\n                    <material>alle eigenen</material>\n
+      \                   <allocation>electivemath</allocation>\n                    <program>if</program>\n
+      \               </exam>\n                <students>0</students>\n                <id>036ic036if</id>\n
+      \           </examination>\n            \n            <examination>\n                <exam>\n
+      \                   <code>401</code>\n                    <modul>wirtschaftsmathematikii</modul>\n
+      \                   <subtitle/>\n                    <reference/>\n                    <examiner>recknagelwinfried</examiner>\n
+      \                   <examiner2>zielkeandreas</examiner2>\n                    <students>0</students>\n
+      \                   <type>sp90</type>\n                    <material>alle eigenen</material>\n
+      \                   <allocation>under</allocation>\n                    <program>ib</program>\n
+      \               </exam>\n                <room>r0010</room>\n                \n
+      \               <room>r2007</room>\n                \n                <students>0</students>\n
+      \               <id>401ib</id>\n            </examination>\n            \n        </time>\n
+      \       <time>\n            <time>13:30</time>\n            <examination>\n
+      \               <exam>\n                    <code>509</code>\n                    <modul>geschaeftsprozesse</modul>\n
+      \                   <subtitle/>\n                    <reference/>\n                    <examiner>petersgeorg</examiner>\n
+      \                   <examiner2>hammerschallulrike</examiner2>\n                    <students>0</students>\n
+      \                   <type>sp90</type>\n                    <material>keine</material>\n
+      \                   <allocation>intensive</allocation>\n                    <program>ib</program>\n
+      \               </exam>\n                <room>r0009</room>\n                \n
+      \               <students>0</students>\n                <id>509ib</id>\n            </examination>\n
+      \           \n            <examination>\n                <exam>\n                    <code>510</code>\n
+      \                   <modul>datenbanksysteme</modul>\n                    <subtitle/>\n
+      \                   <reference/>\n                    <examiner>milijasbojan</examiner>\n
+      \                   <examiner2>schwenkertrainer</examiner2>\n                    <students>0</students>\n
+      \                   <type>sp90</type>\n                    <material>alle eigenen</material>\n
+      \                   <allocation>graduate</allocation>\n                    <program>ib</program>\n
+      \               </exam>\n                <room>r0010</room>\n                \n
+      \               <room>r1006</room>\n                \n                <students>0</students>\n
+      \               <id>510ib</id>\n            </examination>\n            \n            <examination>\n
+      \               <exam>\n                    <code>812</code>\n                    <modul>modellbasiertesoftwareentwicklung</modul>\n
+      \                   <subtitle/>\n                    <reference/>\n                    <examiner>moenckeulrich</examiner>\n
+      \                   <examiner2>ruckertmartin</examiner2>\n                    <students>0</students>\n
+      \                   <type>sp90</type>\n                    <material>alle eigenen</material>\n
+      \                   <allocation>graduate</allocation>\n                    <program>ig</program>\n
+      \               </exam>\n                <room>r1007</room>\n                \n
+      \               <students>0</students>\n                <id>812ig</id>\n            </examination>\n
+      \           \n        </time>\n        <time>\n            <time>15:30</time>\n
+      \           <examination>\n                <exam>\n                    <code>515</code>\n
+      \                   <modul>datenmanagement</modul>\n                    <subtitle/>\n
+      \                   <reference/>\n                    <examiner>milijasbojan</examiner>\n
+      \                   <examiner2>staudtmartin</examiner2>\n                    <students>0</students>\n
+      \                   <type>sp90</type>\n                    <material>alle eigenen</material>\n
+      \                   <allocation>electivecs</allocation>\n                    <program>ib</program>\n
+      \               </exam>\n                <room>r0010</room>\n                \n
+      \               <students>0</students>\n                <id>515ib</id>\n            </examination>\n
+      \           \n        </time>\n    </day>\n    <day>\n        <date>2012-02-03</date>\n
+      \       <time>\n            <time>08:30</time>\n            <examination>\n
+      \               <exam>\n                    <code>463</code>\n                    <modul>datenschutz</modul>\n
+      \                   <subtitle/>\n                    <reference/>\n                    <examiner>moenckeulrich</examiner>\n
+      \                   <examiner2>schusterheidi</examiner2>\n                    <students>0</students>\n
+      \                   <type>sp90</type>\n                    <material>Gesetzestexte</material>\n
+      \                   <allocation>electiveec</allocation>\n                    <program>ib</program>\n
+      \               </exam>\n                <room>r0006</room>\n                \n
+      \               <room>r0012</room>\n                \n                <room>r1006</room>\n
+      \               \n                <room>r1008</room>\n                \n                <room>r2007</room>\n
+      \               \n                <students>0</students>\n                <id>463ib</id>\n
+      \           </examination>\n            \n        </time>\n        <time>\n
+      \           <time>10:30</time>\n            <examination>\n                <exam>\n
+      \                   <code>010</code>\n                    <modul>analysis</modul>\n
+      \                   <subtitle/>\n                    <reference/>\n                    <examiner>barththomas</examiner>\n
+      \                   <examiner2>eichsoellneredda</examiner2>\n                    <students>0</students>\n
+      \                   <type>sp90</type>\n                    <material>nicht-progr.
+      TR</material>\n                    <allocation>under</allocation>\n                    <program>ic</program>\n
+      \               </exam>\n                <room>r0009</room>\n                \n
+      \               <room>r0012</room>\n                \n                <room>r1006</room>\n
+      \               \n                <exam>\n                    <code>010</code>\n
+      \                   <modul>analysis</modul>\n                    <subtitle/>\n
+      \                   <reference/>\n                    <examiner>barththomas</examiner>\n
+      \                   <examiner2>eichsoellneredda</examiner2>\n                    <students>0</students>\n
+      \                   <type>sp90</type>\n                    <material>nicht-progr.
+      TR</material>\n                    <allocation>under</allocation>\n                    <program>if</program>\n
+      \               </exam>\n                <students>0</students>\n                <id>010ic010if</id>\n
+      \           </examination>\n            \n            <examination>\n                <exam>\n
+      \                   <code>722</code>\n                    <modul>entscheidungstheorie</modul>\n
+      \                   <subtitle/>\n                    <reference/>\n                    <examiner>petersgeorg</examiner>\n
+      \                   <examiner2>greinerchristian</examiner2>\n                    <students>0</students>\n
+      \                   <type>sp90</type>\n                    <material>nicht programmierbarer
+      Taschenrechner</material>\n                    <allocation>intensive</allocation>\n
+      \                   <program>in</program>\n                </exam>\n                <room>r0010</room>\n
+      \               \n                <students>0</students>\n                <id>722in</id>\n
+      \           </examination>\n            \n        </time>\n        <time>\n
+      \           <time>13:30</time>\n            <examination>\n                <exam>\n
+      \                   <code>044</code>\n                    <modul>integraltransformationen</modul>\n
+      \                   <subtitle/>\n                    <reference/>\n                    <examiner>zielkeandreas</examiner>\n
+      \                   <examiner2>koestergerta</examiner2>\n                    <students>0</students>\n
+      \                   <type>sp90</type>\n                    <material>alle eigenen</material>\n
+      \                   <allocation>graduate</allocation>\n                    <program>ic</program>\n
+      \               </exam>\n                <room>r0010</room>\n                \n
+      \               <room>r1006</room>\n                \n                <exam>\n
+      \                   <code>044</code>\n                    <modul>integraltransformationen</modul>\n
+      \                   <subtitle/>\n                    <reference/>\n                    <examiner>zielkeandreas</examiner>\n
+      \                   <examiner2>koestergerta</examiner2>\n                    <students>0</students>\n
+      \                   <type>sp90</type>\n                    <material>alle eigenen</material>\n
+      \                   <allocation>graduate</allocation>\n                    <program>if</program>\n
+      \               </exam>\n                <students>0</students>\n                <id>044ic044if</id>\n
+      \           </examination>\n            \n        </time>\n    </day>\n    <day>\n
+      \       <date>2012-02-06</date>\n        <time>\n            <time>10:00</time>\n
+      \           <examination>\n                <exam>\n                    <code>602</code>\n
+      \                   <modul>systemundanwendungsmanagementmitdemsapsolutionmanager</modul>\n
+      \                   <subtitle/>\n                    <reference/>\n                    <examiner>moebertpatrick</examiner>\n
+      \                   <examiner2>zimmertorsten</examiner2>\n                    <students>0</students>\n
+      \                   <type>sp90</type>\n                    <material>-</material>\n
+      \                   <allocation>compulsory</allocation>\n                    <program>ib</program>\n
+      \               </exam>\n                <room>r0006</room>\n                \n
+      \               <students>0</students>\n                <id>602ib</id>\n            </examination>\n
+      \           \n        </time>\n    </day>\n</examdate>"
+    http_version: '1.1'
+  recorded_at: Tue, 17 Jan 2012 23:37:02 GMT
+recorded_with: VCR 2.0.0.rc1

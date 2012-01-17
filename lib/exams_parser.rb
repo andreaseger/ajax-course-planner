@@ -1,6 +1,6 @@
 require_relative 'parser'
 require_relative 'exam'
-class ExamParser < Parser
+class ExamsParser < Parser
   def update_data
     get_exams.each do |day|
       date = day.xpath('date').text

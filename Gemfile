@@ -8,6 +8,7 @@ gem 'mustache'
 
 gem 'unicorn'
 gem 'redis'
+gem 'nokogiri'
 
 group :production do
   gem 'hiredis'
@@ -26,4 +27,6 @@ group :test do
   gem 'rspec'
   gem 'mocha'
   gem 'guard-rspec'
+  gem 'vcr', '>= 2.0.0.rc1'
+  gem 'fakeweb'
 end

@@ -1,0 +1,71 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://fi.cs.hm.edu/fi/rest/public/modul/title/anwendungsentwicklungmitchipkarten.xml
+    body: ''
+    headers:
+      accept:
+      - ! '*/*'
+      user-agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      server:
+      - Apache-Coyote/1.1
+      content-type:
+      - text/xml;charset=utf-8
+      transfer-encoding:
+      - chunked
+      vary:
+      - Accept-Encoding
+      date:
+      - Tue, 17 Jan 2012 22:50:50 GMT
+    body: ! "<?xml version=\"1.0\" encoding=\"UTF-8\"?><modul>\n    <name>Anwendungsentwicklung
+      mit Chipkarten</name>\n    <angebot>einzeln</angebot>\n    <credits>5</credits>\n
+      \   <sws>4</sws>\n    <verantwortlich>anlauffheidi</verantwortlich>\n    <teacher>anlauffheidi</teacher>\n
+      \   <language>de</language>\n    <lehrform>projekt</lehrform>\n    <aufwand>60
+      Präsenzstunden Projektstudium, 90 Stunden Vor-/Nachbereitung inklusive Erstellung
+      der Projektarbeit bzw. Referat</aufwand>\n    <voraussetzungen>Paralleler Besuch
+      der Lehrveranstaltung \"Management von IT-Projekten\" im gleichen Semester.
+      #\nErfolgreiche Teilnahme an:\nTechnische Informatik I (IF-I-B-105), Theoretische
+      Informatik I (IF-I-B-205), IT-Systeme I, II (IF-I-B-102, IF-I-B-203), Softwareentwicklung
+      I, II (IF-I-B-104, IF-I-B-204)</voraussetzungen>\n    <ziele>#\n.Verständnis
+      der Funktionsweise von Chipkarten\n.Erstellung sicherer Chipkartenapplikationen\n.Beurteilung
+      nützlicher Anwendungen und der möglichen Einsatzgebiete\n.Fähigkeit zur Projektarbeit
+      im Team\n.</ziele>\n    <inhalt>In der Vorlesung werden grundlegende Kenntnisse
+      über Chipkarten vermittelt, wie:\n.Aufbau und Funktion von Chipkarten\n.Chipkarten-Betriebssysteme\n.Chipkarten-Kommandos
+      nach ISO 7816\n.Einsatz kryptologischer Funktionen\n.Sicheres Nachladen von
+      Software\n.Mögliche Angriffe und Gegenmaßnahmen\n.Entwicklung einer Applikation
+      im Praktikum\n.\nDie Studierenden erwerben in der verpflichtend parallel zu
+      besuchenden Lehrveranstaltung \"Management von IT-Projekten\" entsprechendes
+      theoretisches Wissen über Projektmanagement, das sie im Rahmen des Projektstudiums
+      praktisch anwenden können. Zeitgleich fließen Erfahrungen und offene Fragen
+      in der \"Anwendungsentwicklung mit Chipkarten\" in die Lehrveranstaltung \"Management
+      von IT-Projekten\" ein. Die Projektarbeit kann idealerweise mit einem industriellen
+      Partner durchgeführt werden, um aktuelle industrielle Anforderungen und Wissen\nmit
+      einzubringen.\nJe nach Konzeption und Zielsetzung beträgt die Teilnehmeranzahl
+      bzw.\nGruppengröße 6 bis 12 StudentInnen. Der Veranstaltungsort kann\nbedarfsorientiert
+      bei einem industriellen Partner sein.</inhalt>\n    <leistungen>p60r40</leistungen>\n
+      \   <medien>Beamer, Folien, Tafel</medien>\n    <literatur>.W. Rankl, W. Effing:
+      \"Handbuch der Chipkarten\",\nCarl Hanser Verlag, ISBN 3-466-21115-2\n.W. Rankl:
+      \"Chipkarten-Anwendungen\",\nCarl Hanser Verlag, ISBN-10: 3-446-40403-1\n.</literatur>\n
+      \   <program/>\n    <what>anwendungsentwicklungmitchipkarten</what>\n    <modulcode>\n
+      \       <modul>anwendungsentwicklungmitchipkarten</modul>\n        <program>ib</program>\n
+      \       <code>IF-WI-B-30-34-117</code>\n        <semester>4</semester>\n        <semester>6</semester>\n
+      \       <semester>7</semester>\n        <curriculum>zugelassen als FWP-Fach
+      im Bachelor Wirtschaftsinformatik</curriculum>\n    </modulcode>\n    <modulcode>\n
+      \       <modul>anwendungsentwicklungmitchipkarten</modul>\n        <program>ic</program>\n
+      \       <code>IF-S-B-I31</code>\n        <semester>4</semester>\n        <semester>6</semester>\n
+      \       <semester>7</semester>\n        <curriculum>FWP-Fach (IF-I-B-137) im
+      Bachelor Scientific Computing</curriculum>\n    </modulcode>\n    <modulcode>\n
+      \       <modul>anwendungsentwicklungmitchipkarten</modul>\n        <program>if</program>\n
+      \       <code>IF-I-B-F21</code>\n        <semester>4</semester>\n        <semester>6</semester>\n
+      \       <semester>7</semester>\n        <curriculum>FWP-Fach (IF-I-B-137) im
+      Bachelor Informatik</curriculum>\n    </modulcode>\n</modul>"
+    http_version: '1.1'
+  recorded_at: Tue, 17 Jan 2012 22:51:13 GMT
+recorded_with: VCR 2.0.0.rc1
