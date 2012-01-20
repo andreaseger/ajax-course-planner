@@ -23,7 +23,7 @@ http_interactions:
       vary:
       - Accept-Encoding
       date:
-      - Tue, 17 Jan 2012 23:27:31 GMT
+      - Fri, 20 Jan 2012 00:05:02 GMT
     body: ! "<?xml version=\"1.0\" encoding=\"UTF-8\"?><examdate>\n    <day>\n        <date>2012-01-18</date>\n
       \       <time>\n            <time>08:30</time>\n            <examination>\n
       \               <exam>\n                    <code>083</code>\n                    <modul>softwareengineeringi</modul>\n
@@ -1352,5 +1352,201 @@ http_interactions:
       \               <students>0</students>\n                <id>602ib</id>\n            </examination>\n
       \           \n        </time>\n    </day>\n</examdate>"
     http_version: '1.1'
-  recorded_at: Tue, 17 Jan 2012 23:27:53 GMT
+  recorded_at: Fri, 20 Jan 2012 00:05:26 GMT
+- request:
+    method: get
+    uri: http://fi.cs.hm.edu/fi/rest/public/modul/title/softwareengineeringi.xml
+    body: ''
+    headers:
+      accept:
+      - ! '*/*'
+      user-agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      server:
+      - Apache-Coyote/1.1
+      content-type:
+      - text/xml;charset=utf-8
+      transfer-encoding:
+      - chunked
+      vary:
+      - Accept-Encoding
+      date:
+      - Fri, 20 Jan 2012 00:05:02 GMT
+    body: ! "<?xml version=\"1.0\" encoding=\"UTF-8\"?><modul>\n    <name>Software
+      Engineering I</name>\n    <angebot>ws</angebot>\n    <credits>5</credits>\n
+      \   <sws>4</sws>\n    <verantwortlich>moenckeulrich</verantwortlich>\n    <teacher>hammerschallulrike</teacher>\n
+      \   <language>de</language>\n    <language>en</language>\n    <lehrform>su-praktikum</lehrform>\n
+      \   <aufwand>30 Präsenzstunden Vorlesung, 30 Präsenzstunden Praktikum, 45 Stunden
+      Vor-/Nachbereitung des Praktikums, 45 Stunden Nachbereitung der Vorlesung und
+      Prüfungsvorbereitung</aufwand>\n    <voraussetzungen/>\n    <ziele>Der Studierende
+      ist in der Lage\n.den Softwareentwicklungsprozess in einem Unternehmen unter
+      kritischer Würdigung von Vorgehensmodellen zu definieren\n.für alle Aktivitätstypen
+      des Entwicklungsprozesses geeignete Methoden und Werkzeuge vorzuschlagen\n.Architektur-Stile
+      und Entwurfsmuster problemadäquat auszuwählen, zu nutzen, und ihren Einsatz
+      zu begründen\n.Entwürfe in geeigneter Notation zu formulieren</ziele>\n    <inhalt>Software-Engineering
+      ist die Technik der Entwicklung mittlerer und großer SW-Systeme im Team in einem
+      Auftraggeber-Auftragnehmer- Verhältnis und unter wirtschaftlichen Bedingungen.\n#Im
+      Einzelnen:\n.Ziele des Software Engineering\n.Software-Entwicklungs-Modelle
+      (stark regulierte, dokumentenorientierte als auch leichtgewichtige,»agile« Modelle)\n.Anforderungen
+      und anwendungsfachliches Modell\n.Objektorientierte Analyse und Entwurf, Abgrenzung
+      und Charakteristika\n.Unified Modelling Language\n.Architekturen und Entwurfsmuster\n.Test
+      und Verifikation\n.Querschnittsthemen: Qualitätsmanagement, Konfigurationsmanagement
+      und Dokumentation\n.Ansätze zur Automatisierung</inhalt>\n    <leistungen>spln</leistungen>\n
+      \   <medien>Tafel, Folien oder Beamer</medien>\n    <literatur>Balzert, Helmut;
+      Lehrbuch der Software-Technik Bd 1: Software-Entwickung; Spektrum -Akademischer
+      Verlag; Heidelberg; 2001\n#Balzert, Helmut; Lehrbuch der Software-Technik Bd
+      2: Software-Management, Software-Qualitätssicherung, Unternehmensmodellierung;
+      Spektrum - Akademischer Verlag; Heidelberg; 1998\n#ISBN 3-8274-1162-9\n#Balzert,
+      Heide; Lehrbuch der Objektmodellierung: Software-Management, Software-Qualitätssicherung,
+      Unternehmensmodellierung; Spektrum-Elsevier; München; 2005\n#Booch; Object-oriented
+      Design with Applications; Benjamin/Cunnings; 1994\n#ISBN 3-8273-7082-3\n#Brügge/Dutoit;
+      Objektorientierte Softwaretechnik;Pearson - Prentice Hall; 2004\n#Fowler; UML
+      distilled, Addison-Wesley, 2004\n#ISBN 0-201-63361-2\n#Gamma et.al.; Design
+      Patterns, Elements of Reusable Object-Oriented Software; Addison-Wesley; 1997\n#ISBN
+      3-486-27266-7\n#Oestereich; Objektorientierte Softwarentwicklung, Oldenbourg,
+      2005\n#Rumbough et. al.; The Unified Modeling Language Reference Manual; Addison-Wesley;
+      1999\n#Sommerville; Software Engineering; Addison-Wesley; 1995\n#ISBN 978-0-596-00712-6</literatur>\n
+      \   <program/>\n    <what>softwareengineeringi</what>\n    <modulcode>\n        <modul>softwareengineeringi</modul>\n
+      \       <program>ic</program>\n        <code>IF-S-B-703</code>\n        <semester>7</semester>\n
+      \       <curriculum>Pflichtfach im Bachelor Scientific Computing</curriculum>\n
+      \   </modulcode>\n    <modulcode>\n        <modul>softwareengineeringi</modul>\n
+      \       <program>if</program>\n        <code>IF-I-B-306</code>\n        <semester>3</semester>\n
+      \       <curriculum>Pflichtfach im Bachelor Informatik</curriculum>\n    </modulcode>\n</modul>"
+    http_version: '1.1'
+  recorded_at: Fri, 20 Jan 2012 00:05:26 GMT
+- request:
+    method: get
+    uri: http://fi.cs.hm.edu/fi/rest/public/person/name/hammerschallulrike.xml
+    body: ''
+    headers:
+      accept:
+      - ! '*/*'
+      user-agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      server:
+      - Apache-Coyote/1.1
+      content-type:
+      - text/xml;charset=utf-8
+      transfer-encoding:
+      - chunked
+      vary:
+      - Accept-Encoding
+      date:
+      - Fri, 20 Jan 2012 00:05:02 GMT
+    body: ! "<?xml version=\"1.0\" encoding=\"UTF-8\"?><person>\n    <lastname>Hammerschall</lastname>\n
+      \   <firstname>Ulrike</firstname>\n    <sex>f</sex>\n    <title>Prof. Dr.</title>\n
+      \   <faculty>07</faculty>\n    <status>prof</status>\n    <hidden>false</hidden>\n
+      \   <email xmlns:emailtrasher=\"java:edu.hm.cs.fi.exporter.EmailTrasher\">removed</email>\n
+      \   <website>http://www.cs.hm.edu/die_fakultaet/ansprechpartner/professoren/hammerschall</website>\n
+      \   <phone>3760</phone>\n    <function/>\n    <focus>Software Engineering; Software-Architektur;
+      Prozessmodelle; Requirements Engineering; Projektmanagement</focus>\n    <publication/>\n
+      \   <office>r4031</office>\n    <emailoptin>true</emailoptin>\n    <officehourweekday>mi</officehourweekday>\n
+      \   <officehourtime>13:00</officehourtime>\n    <officehourroom/>\n    <officehourcomment>In
+      den Semesterferien bitte per Email nachfragen</officehourcomment>\n    <einsichtdate>2012-02-10</einsichtdate>\n
+      \   <einsichttime>09:00</einsichttime>\n    <einsichtroom/>\n    <einsichtcomment>Einsichtnahme
+      von 9:00 - 10:00 Uhr</einsichtcomment>\n    <password>removed</password>\n    <modul>\n
+      \       <name>Entwurf großer Anwendungen</name>\n        <angebot>einzeln</angebot>\n
+      \       <credits>5</credits>\n        <sws>4</sws>\n        <verantwortlich>hammerschallulrike</verantwortlich>\n
+      \       <teacher>hammerschallulrike</teacher>\n        <language>de</language>\n
+      \       <lehrform>su-praktikum</lehrform>\n        <aufwand>30 Präsenzstunden
+      Vorlesung, 30 Präsenzstunden Praktikum, 45 Stunden Vor-/Nachbereitung des Praktikums,
+      45 Stunden Nachbereitung der Vorlesung und Prüfungsvorbereitung</aufwand>\n
+      \       <voraussetzungen>Softwarearchitektur</voraussetzungen>\n        <ziele>.Kenntnis
+      bekannter Architekturparadigmen und Entwurfsmethoden sowie Fähigkeit zu ihrer
+      problemadäquaten Beurteilung und Anwendung\n.Fähigkeit zum Entwurf und zur kritischen
+      Analyse bestehender Anwendungslandschaften.\n.Kenntnis relevanter Standards
+      und Werkzeuge</ziele>\n        <inhalt>.Architektur im Kleinen und im Großen\n.Entwurfsmuster
+      und Entwurfsmethodik\n.Einbettung des Entwurfsprozesses in den Entwicklungsprozess\n.Entwurf
+      und Management von Anwendungslandschaften\n.Service-orientierte Architekturen\n.Cloud-Computing,
+      SaaS (Konzepte, Umsetzung, Herausforderungen)</inhalt>\n        <leistungen>sa40sp60</leistungen>\n
+      \       <medien>Tafel, Beamer</medien>\n        <literatur>.J. Siedersleben:
+      Moderne Softwarearchitektur. dpunkt-Verlag (2004)\n.O. Vogel et al.: Software-Architektur.
+      Grundlagen - Konzepte  Praxis, Spektrum Akademischer Verlag, 2. Auflage (2009)\n.R.
+      Reussner Hrsg., Handbuch der Softwarearchitektur, dpunkt-Verlag, 2. Auflage
+      (2008)\n.G. Engels et al. :Quasar Enterprise: Anwendungslandschaften serviceorientiert
+      gestalten, dPunkt Verlag 2008</literatur>\n        <program>ig</program>\n    </modul>\n
+      \   <modul>\n        <name>Requirements Engineering</name>\n        <angebot>einzeln</angebot>\n
+      \       <credits>5</credits>\n        <sws>4</sws>\n        <verantwortlich>hammerschallulrike</verantwortlich>\n
+      \       <teacher>hammerschallulrike</teacher>\n        <language>de</language>\n
+      \       <lehrform>su-uebungen</lehrform>\n        <aufwand>60 Präsenzstunden,
+      30 Stunden Nachbereitung der Vorlesung, 60 Stunden Studienarbeiten und Prüfungsvorbereitung</aufwand>\n
+      \       <voraussetzungen/>\n        <ziele>Ziele des Moduls sind:\n.Kenntnis
+      der relevanten Standards und Prozesse im RE, ihrer Probleme und Herausforderungen.\n.Fähigkeit
+      zur qualitätsgesicherten Erfassung und Dokumentation von Anforderungen.\n.Kenntnis
+      von und Erfahrung mit relevanten Standards, Methoden und Werkzeuge und ihrer
+      Anwendung.</ziele>\n        <inhalt>Inhalte des Moduls sind:\n.Konzepte, Methoden
+      und Werkzeuge des Requirements Engineering\n.RE im Product Life-cycle: Elicitation,
+      Spezifikation und Modellierung von Anforderungen, Anforderungstracing im Projektverlauf,
+      Change und Problem Management, Schätzung von Anforderungen\n.Verwaltung und
+      Qualitätssicherumg von Anforderungen\n.RE Standards und Prozesse\n.Ausschreibung
+      und Vergabe von Projekten (UfaB, V-Modell XT): Lastenheft, Pflichtenheft, Projektbegleitung
+      und Abnahme.</inhalt>\n        <leistungen>sa40mp60</leistungen>\n        <medien>Beamer,
+      Tafel</medien>\n        <literatur>.Requirements-Engineering und -Management:
+      Professionelle, iterative Anforderungsanalyse für die Praxis. 5. Auflage (Gebundene
+      Ausgabe), Chris Rupp, Hanser Fachbuch, 5. Auflage 2009\n\n.Systematisches Requirements
+      Engineering und Management: Anforderungen ermitteln, spezifizieren, analysieren
+      und verwalten, Christof Ebert, dpunkt Verlag 2. Auflage Juli 2008\n\n.Requirements
+      Engineering: Grundlagen, Prinzipien,Techniken, Klaus Pohl, dpunkt Verlag, 2.
+      Auflage Juni 2008\n\n.Requirements Engineering: From System Goals to UML Models
+      to Software Specifications, Axel van Lamsweerde, John Wiley &amp; Sons, 1. Auflage
+      Januar 2009</literatur>\n        <program>ig</program>\n    </modul>\n    <course>\n
+      \       <modul>requirementsengineering</modul>\n        <group>ig</group>\n
+      \       <teacher>hammerschallulrike</teacher>\n    </course>\n    <course>\n
+      \       <modul>softwareengineeringi</modul>\n        <group>ic7</group>\n        <teacher>hammerschallulrike</teacher>\n
+      \   </course>\n    <course>\n        <modul>softwareengineeringi</modul>\n        <group>if3a</group>\n
+      \       <teacher>hammerschallulrike</teacher>\n    </course>\n    <course>\n
+      \       <modul>softwareentwicklungi</modul>\n        <group>go1</group>\n        <teacher>hammerschallulrike</teacher>\n
+      \       <teacher>kailerdaniel</teacher>\n    </course>\n    <course>\n        <modul>softwareentwicklungi</modul>\n
+      \       <group>ic1</group>\n        <teacher>hammerschallulrike</teacher>\n
+      \   </course>\n    <course>\n        <modul>softwareentwicklungi</modul>\n        <group>if1a</group>\n
+      \       <teacher>hammerschallulrike</teacher>\n    </course>\n    <course>\n
+      \       <modul>softwareentwicklungi</modul>\n        <group>if1c</group>\n        <teacher>hammerschallulrike</teacher>\n
+      \   </course>\n</person>"
+    http_version: '1.1'
+  recorded_at: Fri, 20 Jan 2012 00:05:27 GMT
+- request:
+    method: get
+    uri: http://fi.cs.hm.edu/fi/rest/public/person/name/schubertheva.xml
+    body: ''
+    headers:
+      accept:
+      - ! '*/*'
+      user-agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      server:
+      - Apache-Coyote/1.1
+      content-type:
+      - text/xml;charset=utf-8
+      transfer-encoding:
+      - chunked
+      vary:
+      - Accept-Encoding
+      date:
+      - Fri, 20 Jan 2012 00:05:04 GMT
+    body: ! "<?xml version=\"1.0\" encoding=\"UTF-8\"?><person>\n    <lastname>Schuberth</lastname>\n
+      \   <firstname>Eva</firstname>\n    <sex>f</sex>\n    <title>Dr.</title>\n    <faculty>07</faculty>\n
+      \   <status>lba</status>\n    <hidden>false</hidden>\n    <email xmlns:emailtrasher=\"java:edu.hm.cs.fi.exporter.EmailTrasher\">removed</email>\n
+      \   <website/>\n    <phone/>\n    <function/>\n    <focus/>\n    <publication/>\n
+      \   <office/>\n    <emailoptin>false</emailoptin>\n    <officehourweekday/>\n
+      \   <officehourtime/>\n    <officehourroom/>\n    <officehourcomment/>\n    <einsichtdate/>\n
+      \   <einsichttime>10:00</einsichttime>\n    <einsichtroom/>\n    <einsichtcomment/>\n
+      \   <password>removed</password>\n    <course>\n        <modul>softwareengineeringi</modul>\n
+      \       <group>if3b</group>\n        <teacher>schubertheva</teacher>\n    </course>\n</person>"
+    http_version: '1.1'
+  recorded_at: Fri, 20 Jan 2012 00:05:27 GMT
 recorded_with: VCR 2.0.0.rc1

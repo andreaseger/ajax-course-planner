@@ -1,4 +1,4 @@
-require_relative 'env'
+require './env'
 require 'bundler'
 
 rack_env = ENV['RACK_ENV'] || 'production'
@@ -19,4 +19,5 @@ REDIS_CONFIG =  if ENV['PLANNER_REDIS_URL']
                   {}
                 end
 
-require_relative 'service'
+require './service'
+run CoursePlanner.new

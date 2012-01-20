@@ -15,15 +15,15 @@ describe Parser do
       end
     end
   end
-  context '#teacher', :vcr do
-    it 'should have a method "get_teacher_name"' do
-      parser.should respond_to(:get_teacher_name)
+  context '#people', :vcr do
+    it 'should have a method "get_person_name"' do
+      parser.should respond_to(:get_person_name)
     end
 
     { 'eichsoellneredda' => "Prof. Dr. Edda Eich-Soellner",
       'kailerdaniel' => "Daniel Kailer" }.each do |k,v|
       it "should get the full name for #{k}" do
-        parser.get_teacher_name(k).should == v
+        parser.get_person_name(k).should == v
       end
     end
   end

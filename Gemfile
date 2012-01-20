@@ -1,10 +1,12 @@
 # A sample Gemfile
 source "https://rubygems.org"
 
+gem 'rack', :git => 'git://github.com/rack/rack.git'
+
 gem 'sinatra', :require => 'sinatra/base'
 gem 'sinatra-contrib', :require => 'sinatra/contrib'
 gem 'sinatra-flash', :require => 'sinatra/flash'
-gem 'mustache'
+gem 'mustache', :require => 'mustache/sinatra'
 
 gem 'unicorn'
 gem 'redis'

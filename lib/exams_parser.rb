@@ -7,12 +7,12 @@ class ExamsParser < Parser
       day.xpath('time').each do |time|
         local_time = Time.local( *[ date.split('-') ,
                                     time.xpath('time').text.split(':')
-                                  ].map(&:to_i) )
+                                  ].flatten.map(&:to_i) )
         time.xpath('examination').each do |e|
           exam = e.xpath('exam').first
           Exam.from_hash(
             {
-              course: build_course(exam.xpath('modul')),
+              course: build_course(exam.xpath('modul').text),
               examiner: exam.xpath('*[starts-with(name(.), "examiner")]').map {|t| build_teacher(t.text)},
               material: exam.xpath('material').text,
               type: exam.xpath('type').text,
@@ -24,8 +24,8 @@ class ExamsParser < Parser
       end
     end
   end
-private
+
   def get_exams
-    get_with_xpath('http://fi.cs.hm.edu/fi/rest/public/exam/date.xml', '/examlist/day')
+    get_with_xpath('http://fi.cs.hm.edu/fi/rest/public/exam/date.xml', '/examdate/day')
   end
 end

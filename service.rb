@@ -3,6 +3,7 @@ class CoursePlanner < Sinatra::Base
     register Sinatra::Contrib
     register Sinatra::Flash
     register Mustache::Sinatra
+    require './views/layout'
 
     set :mustache, {
       templates: File.dirname(__FILE__) + '/templates',
@@ -12,10 +13,10 @@ class CoursePlanner < Sinatra::Base
 
     set :public_folder, File.dirname(__FILE__) + '/public'
     enable :sessions
+    $redis = Redis.new(REDIS_CONFIG)
   end
 
-  def database
-    @database ||= Redis.new(REDIS_CONFIG)
+  get '/' do
+    mustache :index
   end
-
 end

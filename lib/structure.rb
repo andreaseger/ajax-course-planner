@@ -10,13 +10,13 @@ module Structure
     return label
   end
 
-  def get_teacher_name code
-    label = $redis.get "teacher:#{code}"
+  def get_person_name code
+    label = $redis.get "people:#{code}"
     unless label
       person = get_with_xpath("http://fi.cs.hm.edu/fi/rest/public/person/name/#{code}.xml", '/person').first
       label = [ person.xpath('title').text, person.xpath('firstname').text, person.xpath('lastname').text ].delete_if{|e| e.empty? }.join ' '
-      $redis.set "teacher:#{code}", label
-      $redis.expire "teacher:#{code}", 60*60*24*10
+      $redis.set "people:#{code}", label
+      $redis.expire "people:#{code}", 60*60*24*10
     end
     return label
   end
@@ -32,6 +32,7 @@ module Structure
   end
 
   def build_course course
+    return nil if course.empty?
     {
       name: course,
       label: get_modul_label(course)
@@ -39,15 +40,15 @@ module Structure
   end
 
   def build_group group
-    {
-      name: group
-    }
+    return nil if group.empty?
+    { name: group }
   end
 
-  def build_teacher teacher
+  def build_person person
+    return nil if person.empty?
     {
-      name: teacher,
-      label: get_teacher_name(teacher)
+      name: person,
+      label: get_person_name(person)
     }
   end
 
@@ -56,7 +57,22 @@ module Structure
       start_minute: stime.split(':')[1].to_i,
       start_hour: stime.split(':')[0].to_i,
       end_minute: etime.split(':')[1].to_i,
-      end_hour: etime.split(':')[0].to_i
+      end_hour: etime.split(':')[0].to_i,
+      day: get_day(day)
     }
+  end
+  def get_day id
+    case id
+    when 'mo'
+      { name: 'mo', label: 'Montag' }
+    when 'di'
+      { name: 'di', label: 'Dienstag' }
+    when 'mi'
+      { name: 'mi', label: 'Mittwoch' }
+    when 'do'
+      { name: 'do', label: 'Donnerstag' }
+    when 'fr'
+      { name: 'fr', label: 'Freitag' }
+    end
   end
 end

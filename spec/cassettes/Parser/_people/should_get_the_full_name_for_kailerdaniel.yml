@@ -1,0 +1,43 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://fi.cs.hm.edu/fi/rest/public/person/name/kailerdaniel.xml
+    body: ''
+    headers:
+      accept:
+      - ! '*/*'
+      user-agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      server:
+      - Apache-Coyote/1.1
+      content-type:
+      - text/xml;charset=utf-8
+      transfer-encoding:
+      - chunked
+      vary:
+      - Accept-Encoding
+      date:
+      - Fri, 20 Jan 2012 01:47:34 GMT
+    body: ! "<?xml version=\"1.0\" encoding=\"UTF-8\"?><person>\n    <lastname>Kailer</lastname>\n
+      \   <firstname>Daniel</firstname>\n    <sex>m</sex>\n    <title/>\n    <faculty>07</faculty>\n
+      \   <status>associate</status>\n    <hidden>false</hidden>\n    <email xmlns:emailtrasher=\"java:edu.hm.cs.fi.exporter.EmailTrasher\">removed</email>\n
+      \   <website>http://www.cs.hm.edu/die_fakultaet/ansprechpartner/wissenschaftlichemitarbeiter/kailer/index.de.html</website>\n
+      \   <phone>3764</phone>\n    <function/>\n    <focus>Lehrbeauftragter SWE 2
+      im SS 2011 (Bachelor Wirtschaftsinformatik)</focus>\n    <publication/>\n    <office>r1019</office>\n
+      \   <emailoptin>true</emailoptin>\n    <officehourweekday>mi</officehourweekday>\n
+      \   <officehourtime>10:00</officehourtime>\n    <officehourroom/>\n    <officehourcomment/>\n
+      \   <einsichtdate/>\n    <einsichttime/>\n    <einsichtroom/>\n    <einsichtcomment/>\n
+      \   <password>removed</password>\n    <course>\n        <modul>softwareentwicklungi</modul>\n
+      \       <group>go1</group>\n        <teacher>hammerschallulrike</teacher>\n
+      \       <teacher>kailerdaniel</teacher>\n    </course>\n    <course>\n        <modul>softwareentwicklungiib</modul>\n
+      \       <group>ib1b</group>\n        <teacher>kailerdaniel</teacher>\n        <teacher>schiffnerstephan</teacher>\n
+      \   </course>\n</person>"
+    http_version: '1.1'
+  recorded_at: Fri, 20 Jan 2012 01:47:57 GMT
+recorded_with: VCR 2.0.0.rc1
