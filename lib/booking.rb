@@ -14,7 +14,7 @@ class Booking < Hash
 
   def save
     $redis.multi do
-      $redis.set key, to_json
+      $redis.set db_key, to_json
       self[:teachers].each do |teacher|
         $redis.sadd "#{namespace}:by_teacher:#{teacher[:name]}", key
         $redis.sadd "teacher", teacher[:name]
@@ -26,8 +26,15 @@ class Booking < Hash
       end
     end
   end
-  def self.find id
-    from_json $redis.get(id)
+
+  def db_key
+    "#{namespace}:#{key}"
+  end
+  def self.db_key(key)
+    "#{namespace}:#{key}"
+  end
+  def self.find key
+    from_json $redis.get(self.db_key(key))
   end
   class << self
     [:examiner, :group, :course, :room].each do |arg|
