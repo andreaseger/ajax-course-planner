@@ -9,7 +9,7 @@ gem 'sinatra-contrib', :require => 'sinatra/contrib'
 gem 'sinatra-flash', :require => 'sinatra/flash'
 gem 'mustache', :require => 'mustache/sinatra'
 
-gem 'thin'
+#gem 'thin'
 gem 'redis'
 gem 'nokogiri'
 

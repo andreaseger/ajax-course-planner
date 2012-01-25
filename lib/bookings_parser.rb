@@ -15,7 +15,7 @@ class BookingsParser < Parser
             room: room,
             group: build_group(course.xpath('group').text),
             course: build_course(course.xpath('modul').text),
-            teachers: course.xpath('teacher').map {|t| build_person(t.text) }
+            people: course.xpath('teacher').map {|t| build_person(t.text) }
           }).save
       end
     end

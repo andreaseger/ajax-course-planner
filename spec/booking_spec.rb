@@ -8,7 +8,7 @@ describe Booking do
       room: { name: 'r0007', label: 'R0.007', building: 'r', floor: 0 },
       group: { name: 'IG' },
       course: { name: 'webengineering', label: 'Web Engineering' },
-      teachers: [ { name: 'hofhansjoachim', label: 'Hof Hans-Joachim' }, { name: 'schiedermeierreinhard', label: 'Schiedermeier Reinhard' } ]
+      people: [ { name: 'hofhansjoachim', label: 'Hof Hans-Joachim' }, { name: 'schiedermeierreinhard', label: 'Schiedermeier Reinhard' } ]
     }
   end
   let(:json) { data.to_json }
@@ -60,16 +60,16 @@ describe Booking do
         end
       end
     end
-    context '#teachers' do
+    context '#people' do
       it 'should create a new booking object with teachers data' do
-        booking.should have_key(:teachers)
+        booking.should have_key(:people)
       end
       it 'should be a array of teachers' do
-        booking[:teachers].should be_a_kind_of(Array)
+        booking[:people].should be_a_kind_of(Array)
       end
       [ :name, :label ].each do |key|
         it "should have a #{key}" do
-          booking[:teachers].first.should have_key(key)
+          booking[:people].first.should have_key(key)
         end
       end
     end

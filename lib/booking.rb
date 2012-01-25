@@ -15,9 +15,9 @@ class Booking < Hash
   def save
     $redis.multi do
       $redis.set db_key, to_json
-      self[:teachers].each do |teacher|
-        $redis.sadd "#{namespace}:by_teacher:#{teacher[:name]}", key
-        $redis.sadd "teacher", teacher[:name]
+      self[:people].each do |person|
+        $redis.sadd "#{namespace}:by_person:#{person[:name]}", key
+        $redis.sadd "person", person[:name]
       end
       [:room, :group, :course].each do |arg|
         name = self[arg][:name]
@@ -37,13 +37,13 @@ class Booking < Hash
     from_json $redis.get(self.db_key(key))
   end
   class << self
-    [:examiner, :group, :course, :room].each do |arg|
+    [:person, :group, :course, :room].each do |arg|
       method_name = ("keys_by_" + arg.to_s).to_sym
       define_method(method_name) do |id|
         $redis.smembers("#{namespace}:by_#{arg.to_s}:#{id}")
       end
     end
-    [:examiner, :group, :course, :room].each do |arg|
+    [:person, :group, :course, :room].each do |arg|
       method_name = ("find_by_" + arg.to_s).to_sym
       define_method(method_name) do |id|
         $redis.smembers("#{namespace}:by_#{arg.to_s}:#{id}").map {|k| find k }

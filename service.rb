@@ -1,5 +1,6 @@
-require './lib/booking'
-require './lib/bookings_parser'
+require_relative 'lib/booking'
+require_relative 'lib/bookings_parser'
+require_relative 'lib/templates'
 
 class CoursePlanner < Sinatra::Base
   configure do |c|
@@ -26,14 +27,17 @@ class CoursePlanner < Sinatra::Base
   end
 
 
-  def jsoe(data)
+  def json(data)
     content_type 'application/javascript'
     data.to_json
   end
 
-
   get '/' do
     mustache :site
+  end
+
+  get '/templates.json' do
+    json({ templates: templates, partials: partials })
   end
 
   namespace '/api' do
@@ -42,7 +46,7 @@ class CoursePlanner < Sinatra::Base
       json bookings.map { |e| Booking.find(e) }.compact
     end
     get '/b/g/:group' do |group|
-      json Booking.find_by_group(group)
+      json Booking.find_by_group(group).map{|b| b.merge(key: b.key)}
     end
     get '/b/c/:course' do |course|
       json Booking.find_by_course(course)
