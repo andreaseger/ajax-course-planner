@@ -5,7 +5,7 @@ class Parser
   include Structure
 
   def get url
-    Timeout::timeout(5) do
+    Timeout::timeout(10) do
       net = Net::HTTP.get_response(URI.parse(url))
       raise "HTTP Error: #{net.code}" if %w(404 500).include? net.code
       xml = Nokogiri::XML(net.body)

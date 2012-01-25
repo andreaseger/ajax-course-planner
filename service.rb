@@ -1,4 +1,5 @@
 require './lib/booking'
+require './lib/bookings_parser'
 
 class CoursePlanner < Sinatra::Base
   configure do |c|
@@ -18,23 +19,43 @@ class CoursePlanner < Sinatra::Base
     $redis = Redis.new(REDIS_CONFIG)
   end
 
+
+  def json(data)
+    content_type 'application/javascript'
+    data.to_json
+  end
+
+
   get '/' do
-    mustache :index
+    mustache :site
   end
 
-  get '/schedule/*' do
-    bookings = params['splat'].first.split('/')
-    @data = bookings.map { |e| Booking.find(e) }.compact
-    mustache :schedule
+  namespace '/api' do
+    get '/s/*' do
+      bookings = params[:splat].first.split('/')
+      json bookings.map { |e| Booking.find(e) }.compact
+    end
+    get '/b/g/:group' do |group|
+      json Booking.find_by_group(group)
+    end
+    get '/b/c/:course' do |course|
+      json Booking.find_by_course(course)
+    end
+
+    get '/b/:hash' do |hash|
+      b = Booking.find(hash)
+      json b
+    end
   end
 
-  get '/exams/c/:course(.json)', '/e/c/:course(.json)' do
-    Exam.find_by_course(course).to_json
+  get '/schedule/*', '/s/*' do
+    bookings = params[:splat].first.split('/')
+    @api_urls = bookings.map{|e| url("/api/b/#{e}")}.to_json if bookings
+    mustache :site
   end
-  get '/bookings/g/:group(.json)', '/b/g/:group(.json)' do
-    render :json, Booking.find_by_group(group)
-  end
-  get '/bookings/c/:course(.json)', '/b/c/:course(.json)' do
-    render :json, Booking.find_by_course(course)
+  get '/bookings/g/:group' do |group|
+    bookings = Booking.keys_by_group(group)
+    @api_urls = bookings.map{|e| url("/api/b/#{e}")}.to_json if bookings
+    mustache :site
   end
 end

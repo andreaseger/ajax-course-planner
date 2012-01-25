@@ -8,7 +8,7 @@ Bundler.require(:default, rack_env)
 
 REDIS_CONFIG =  if ENV['PLANNER_REDIS_URL']
                   require 'uri'
-                    uri = URI.parse ENV['HM_REDIS_URL']
+                    uri = URI.parse ENV['PLANNER_REDIS_URL']
                       {
                         host: uri.host,
                         port: uri.port,
@@ -18,6 +18,5 @@ REDIS_CONFIG =  if ENV['PLANNER_REDIS_URL']
                 else
                   {}
                 end
-
 require './service'
 run CoursePlanner.new

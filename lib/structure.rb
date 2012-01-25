@@ -53,11 +53,12 @@ module Structure
   end
 
   def build_timeslot day, stime, etime
+    stimes = stime.split(':').map(&:to_i)
+    etimes = etime.split(':').map(&:to_i)
     {
-      start_minute: stime.split(':')[1].to_i,
-      start_hour: stime.split(':')[0].to_i,
-      end_minute: etime.split(':')[1].to_i,
-      end_hour: etime.split(':')[0].to_i,
+      start_minute: stimes[1],
+      start_hour: stimes[0],
+      length: ( etimes[0] - stimes[0] ) * 60 + ( etimes[1] - stimes[1] ),
       day: get_day(day)
     }
   end

@@ -2,6 +2,7 @@
 source "https://rubygems.org"
 
 gem 'rack', :git => 'git://github.com/rack/rack.git'
+gem 'rake'
 
 gem 'sinatra', :require => 'sinatra/base'
 gem 'sinatra-contrib', :require => 'sinatra/contrib'

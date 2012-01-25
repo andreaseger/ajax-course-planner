@@ -38,6 +38,12 @@ class Booking < Hash
   end
   class << self
     [:examiner, :group, :course, :room].each do |arg|
+      method_name = ("keys_by_" + arg.to_s).to_sym
+      define_method(method_name) do |id|
+        $redis.smembers("#{namespace}:by_#{arg.to_s}:#{id}")
+      end
+    end
+    [:examiner, :group, :course, :room].each do |arg|
       method_name = ("find_by_" + arg.to_s).to_sym
       define_method(method_name) do |id|
         $redis.smembers("#{namespace}:by_#{arg.to_s}:#{id}").map {|k| find k }
