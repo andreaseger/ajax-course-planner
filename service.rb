@@ -19,8 +19,14 @@ class CoursePlanner < Sinatra::Base
     $redis = Redis.new(REDIS_CONFIG)
   end
 
+  configure :development do |c|
+    register Sinatra::Reloader
+    c.also_reload "./lib/**/*.rb"
+    c.also_reload "./views/**/*.tb"
+  end
 
-  def json(data)
+
+  def jsoe(data)
     content_type 'application/javascript'
     data.to_json
   end
@@ -43,19 +49,20 @@ class CoursePlanner < Sinatra::Base
     end
 
     get '/b/:hash' do |hash|
-      b = Booking.find(hash)
-      json b
+      json Booking.find(hash)
     end
   end
 
   get '/schedule/*', '/s/*' do
-    bookings = params[:splat].first.split('/')
-    @api_urls = bookings.map{|e| url("/api/b/#{e}")}.to_json if bookings
+    @api_url = url("/api/s/#{params[:splat]}")
     mustache :site
   end
   get '/bookings/g/:group' do |group|
-    bookings = Booking.keys_by_group(group)
-    @api_urls = bookings.map{|e| url("/api/b/#{e}")}.to_json if bookings
+    @api_url = url("/api/b/g/#{group}") if group
+    mustache :site
+  end
+  get '/bookings/c/:course' do |course|
+    @api_url = url("/api/b/c/#{course}") if course
     mustache :site
   end
 end

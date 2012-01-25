@@ -1,11 +1,8 @@
 class CoursePlanner
   module Views
     class Site < Layout
-      def content
-        "Welcome! Mustache lives."
-      end
-      def api_urls
-        @api_urls
+      def api_url
+        @api_url
       end
     end
   end
