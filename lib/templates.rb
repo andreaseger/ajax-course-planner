@@ -4,7 +4,7 @@ module Sinatra
       @templates ||= [
         { name: 'booking',
           template: '
-<li class="booking length{{ timeslot.length }} shour{{ timeslot.start_hour }} smin{{ timeslot.start_minute }}" data-booking-key="{{& key }}">
+<li class="booking length-{{ timeslot.length }} shour-{{ timeslot.start_hour }} smin-{{ timeslot.start_minute }} day-{{ timeslot.day.name }}" data-booking-key="{{& key }}">
   {{> course }}
   <ul class="people">
   {{# people }}
@@ -12,6 +12,7 @@ module Sinatra
   {{/ people }}
   </ul>
   {{> room }}
+  {{> timeslot }}
 </li>
 '}
       ]
@@ -29,6 +30,13 @@ module Sinatra
           template: '
 <span class="course">
   <a href="http://fi.cs.hm.edu/fi/rest/public/modul/title/{{& course.name }}" target="_blank">{{ course.label }}</a>
+</span>
+'},
+        {
+          name: 'timeslot',
+          template: '
+<span class="timeslot">
+  {{ timeslot.day.label }} {{ timeslot.start_hour }}:{{ timeslot.start_minute }} | {{ timeslot.length }} minutes
 </span>
 '},
         { name: 'room',

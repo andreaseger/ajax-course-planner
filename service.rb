@@ -43,22 +43,23 @@ class CoursePlanner < Sinatra::Base
   namespace '/api' do
     get '/s/*' do
       bookings = params[:splat].first.split('/')
-      json bookings.map { |e| Booking.find(e) }.compact
+      json bookings.map { |e| Booking.find(e) }.compact.map{|b| b.merge(key: b.key)}
     end
     get '/b/g/:group' do |group|
       json Booking.find_by_group(group).map{|b| b.merge(key: b.key)}
     end
     get '/b/c/:course' do |course|
-      json Booking.find_by_course(course)
+      json Booking.find_by_course(course).map{|b| b.merge(key: b.key)}
     end
 
     get '/b/:hash' do |hash|
-      json Booking.find(hash)
+      b = Booking.find(hash)
+      json b.merge(key: b.key)
     end
   end
 
   get '/schedule/*', '/s/*' do
-    @api_url = url("/api/s/#{params[:splat]}")
+    @api_url = url("/api/s/#{params[:splat].first}")
     mustache :site
   end
   get '/bookings/g/:group' do |group|
