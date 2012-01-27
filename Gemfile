@@ -9,9 +9,13 @@ gem 'sinatra-contrib', :require => 'sinatra/contrib'
 gem 'sinatra-flash', :require => 'sinatra/flash'
 gem 'mustache', :require => 'mustache/sinatra'
 
-#gem 'thin'
+gem 'thin'
 gem 'redis'
 gem 'nokogiri'
+
+gem 'compass'
+gem 'compass-susy-plugin'
+gem 'compass-h5bp'
 
 group :production do
   gem 'hiredis'
@@ -19,6 +23,7 @@ end
 group :development do
   gem 'capistrano'
   gem 'sinatra-reloader', :require => 'sinatra/reloader'
+  gem 'guard-compass'
 end
 
 group :development, :test do

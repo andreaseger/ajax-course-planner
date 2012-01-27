@@ -7,3 +7,6 @@ guard 'rspec', :version => 2, :cli => '--color --format d' do
   watch('spec/spec_helper.rb')  { "spec" }
 end
 
+guard 'compass' do
+  watch('^src/(.*)\.s[ac]ss')
+end
