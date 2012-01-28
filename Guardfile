@@ -8,5 +8,5 @@ guard 'rspec', :version => 2, :cli => '--color --format d' do
 end
 
 guard 'compass' do
-  watch('^src/(.*)\.s[ac]ss')
+  watch(/^src\/(.*)\.s[ac]ss/)
 end

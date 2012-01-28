@@ -56,6 +56,10 @@ class CoursePlanner < Sinatra::Base
       b = Booking.find(hash)
       json b.merge(key: b.key)
     end
+
+    get '/g' do
+      json( groups: $redis.keys('*by_group*').map{|e| e.split(':').last }.compact.sort )
+    end
   end
 
   get '/schedule/*', '/s/*' do
@@ -63,7 +67,8 @@ class CoursePlanner < Sinatra::Base
     mustache :site
   end
   get '/bookings/g/:group' do |group|
-    @api_url = url("/api/b/g/#{group}") if group
+    @group = group
+    @api_url = "/api/b/g/#{group}" if group
     mustache :site
   end
   get '/bookings/c/:course' do |course|

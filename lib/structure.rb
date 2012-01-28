@@ -1,9 +1,11 @@
 require 'redis'
+require 'active_support/core_ext/object/try'
 module Structure
   def get_modul_label code
     label = $redis.get "course:#{code}"
     unless label
-      label = get_with_xpath("http://fi.cs.hm.edu/fi/rest/public/modul/title/#{code}.xml", '/modul/name').first.text
+      response = get_with_xpath("http://fi.cs.hm.edu/fi/rest/public/modul/title/#{code}.xml", '/modul/name').try(:first)
+      label = response.try(:text)
       $redis.set "course:#{code}", label
       $redis.expire "course:#{code}", 60*60*24*10
     end
@@ -13,8 +15,8 @@ module Structure
   def get_person_name code
     label = $redis.get "people:#{code}"
     unless label
-      person = get_with_xpath("http://fi.cs.hm.edu/fi/rest/public/person/name/#{code}.xml", '/person').first
-      label = [ person.xpath('title').text, person.xpath('firstname').text, person.xpath('lastname').text ].delete_if{|e| e.empty? }.join ' '
+      response = get_with_xpath("http://fi.cs.hm.edu/fi/rest/public/person/name/#{code}.xml", '/person').try(:first)
+      label = response.try { |person| [ person.xpath('title').text, person.xpath('firstname').text, person.xpath('lastname').text ].delete_if{|e| e.empty? }.join(' ') }
       $redis.set "people:#{code}", label
       $redis.expire "people:#{code}", 60*60*24*10
     end
@@ -56,6 +58,7 @@ module Structure
     stimes = stime.split(':').map(&:to_i)
     etimes = etime.split(':').map(&:to_i)
     {
+      label: stime,
       start_minute: stimes[1],
       start_hour: stimes[0],
       length: ( etimes[0] - stimes[0] ) * 60 + ( etimes[1] - stimes[1] ),

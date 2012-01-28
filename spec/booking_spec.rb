@@ -8,7 +8,9 @@ describe Booking do
       room: { name: 'r0007', label: 'R0.007', building: 'r', floor: 0 },
       group: { name: 'IG' },
       course: { name: 'webengineering', label: 'Web Engineering' },
-      people: [ { name: 'hofhansjoachim', label: 'Hof Hans-Joachim' }, { name: 'schiedermeierreinhard', label: 'Schiedermeier Reinhard' } ]
+      people: [ { name: 'hofhansjoachim', label: 'Hof Hans-Joachim' }, { name: 'schiedermeierreinhard', label: 'Schiedermeier Reinhard' } ],
+      teacher: { name: 'orehekmartin', label: 'Prof. Dr.-Ing. Martin Orehek'},
+      suffix: "Embedded Systems"
     }
   end
   let(:json) { data.to_json }

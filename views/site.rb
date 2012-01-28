@@ -4,8 +4,11 @@ class CoursePlanner
       def api_url
         @api_url
       end
+      def group
+        @group
+      end
       def image
-        ['y_u_no.jpg', 'not_sure.jpg'].sample
+        'not_sure.jpg'
       end
     end
   end

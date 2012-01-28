@@ -3,21 +3,21 @@ require "nokogiri"
 require_relative 'structure'
 class Parser
   include Structure
-
   def get url
-    Timeout::timeout(10) do
-      net = Net::HTTP.get_response(URI.parse(url))
-      raise "HTTP Error: #{net.code}" if %w(404 500).include? net.code
-      xml = Nokogiri::XML(net.body)
-    end
+    Timeout::timeout(5) { Net::HTTP.get_response(URI.parse(url)) }
   end
 
   def get_with_xpath url, xpath
-    xml = get url
-    xml.xpath xpath
+    response = get(url)
+    case response.code
+    when /^2\d{2}$/
+      xml = Nokogiri::XML(response.body)
+      return xml.xpath xpath
+    else
+      return nil
+    end
   rescue Exception => e
     raise "[ERROR] get_with_xpath(#{url},#{xpath}) -> #{e.message}\n#{e.backtrace}"
-    #exit 1
   end
 
   def self.run

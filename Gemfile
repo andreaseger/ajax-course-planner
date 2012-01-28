@@ -8,6 +8,7 @@ gem 'sinatra', :require => 'sinatra/base'
 gem 'sinatra-contrib', :require => 'sinatra/contrib'
 gem 'sinatra-flash', :require => 'sinatra/flash'
 gem 'mustache', :require => 'mustache/sinatra'
+gem 'activesupport', :require => false
 
 gem 'thin'
 gem 'redis'

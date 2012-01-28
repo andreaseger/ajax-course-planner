@@ -1,15 +1,7 @@
 # monkey patching Hash and Array
 # http://snippets.dzone.com/posts/show/12019
+require 'active_support/core_ext/hash/keys'
 class Hash
-  def symbolize_keys
-    dub.symbolize_keys!
-  end
-  def symbolize_keys!
-    keys.each do |key|
-      self[(key.to_sym rescue key) || key] = delete(key)
-    end
-    self
-  end
   def recursively_symbolize_keys!
     self.symbolize_keys!
     self.values.each do |v|
