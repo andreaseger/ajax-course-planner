@@ -2,7 +2,7 @@ class CoursePlanner
   module Views
     class Layout < Mustache
       def title
-        @title || "Coures Planner"
+        "Coures Planner"
       end
     end
   end

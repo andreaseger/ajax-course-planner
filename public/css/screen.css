@@ -465,15 +465,17 @@ img {
   clear: both;
 }
 /* line 12, ../../assets/screen.sass */
-#container h3.day-header:link, #container h3.day-header:visited {
-  color: #cc6633;
-}
-/* line 14, ../../assets/screen.sass */
 #container h3.day-header:focus, #container h3.day-header:hover, #container h3.day-header:active {
   color: #aa4411;
   text-decoration: none;
 }
-/* line 20, ../../assets/screen.sass */
+/* line 16, ../../assets/screen.sass */
 #container .bookings {
   display: none;
+}
+/* line 18, ../../assets/screen.sass */
+#container .booking {
+  margin-left: 1em;
+  padding: 0.3em;
+  border-bottom: 1px solid black;
 }
