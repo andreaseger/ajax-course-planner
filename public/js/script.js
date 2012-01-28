@@ -24,8 +24,8 @@ $(function(){
     update_bookings(group, false);
     $('#groups').val(group);
   });
-  update_bookings($('#' + meta.id ).data('group'), false);
   get_groups();
+  update_bookings($('#' + meta.id ).data('group'), false);
 });
 
 function get_groups(){
@@ -38,6 +38,10 @@ function get_groups(){
     });
   });
 }
+function update_page_title(title){
+  document.title = title;
+  $('header #title').text(title)
+}
 function update_bookings(group, push){
   var api_url = '/api/b/g/' + group;
   if(api_url){
@@ -45,15 +49,28 @@ function update_bookings(group, push){
       $('#' + meta.id ).replaceWith( ich.structure(meta) );
 
       $('.day-header').click(function(){
-        $('#' + $(this).data('bookings-list')).toggle();
+        var div = $('#' + $(this).data('bookings-list'));
+        if(div.is(':hidden')){
+          $('.bookings').hide();
+          div.toggle();
+        }else{
+          div.toggle();
+        }
       });
 
       $.each(data, function(index, elem) {
         html = ich.booking(elem)
-        $('#' + elem.timeslot.day.name + ' .bookings').append(html);
+        var div = $('#bookings-' + elem.timeslot.day.name + '-' + elem.timeslot.label.replace(':',''));
+        if(div.is(':empty')){
+          div.append('<h4>' + elem.timeslot.label + '</h4>');
+        }
+        div.append(html);
       });
+      var title = 'Bookings for ' + group;
+      update_page_title(title);
+
       if(push){
-        history.pushState({'group': group}, 'Bookings for ' + group, '/bookings/g/' + group );
+        history.pushState({'group': group}, title, '/bookings/g/' + group );
       }
     });
   }

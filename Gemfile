@@ -25,6 +25,7 @@ group :development do
   gem 'capistrano'
   gem 'sinatra-reloader', :require => 'sinatra/reloader'
   gem 'guard-compass'
+  gem 'guard-bundler'
 end
 
 group :development, :test do

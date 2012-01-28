@@ -8,5 +8,9 @@ guard 'rspec', :version => 2, :cli => '--color --format d' do
 end
 
 guard 'compass' do
-  watch(/^src\/(.*)\.s[ac]ss/)
+  watch(/^assets\/(.*)\.s[ac]ss/)
+end
+
+guard 'bundler' do
+  watch('Gemfile')
 end

@@ -3,16 +3,15 @@ module Sinatra
     def templates
       @templates ||= [
         { name: 'booking',
-          template: '<div class="booking length-{{ timeslot.length }} shour-{{ timeslot.start_hour }} smin-{{ timeslot.start_minute }}" data-booking-key="{{& key }}">
-  {{> course }}<em class="suffix">{{ suffix }}</em>
-  <ul class="people">
-  {{> teacher }}
-  {{# people }}
-    {{> person }}
-  {{/ people }}
-  </ul>
+          template: '<div class="booking length-{{ timeslot.length }} timeslot-{{ timeslot.label }}" data-booking-key="{{& key }}">
+  {{> course }}{{> suffix }}
   {{> room }}
-  {{> timeslot }}
+  <ul class="people">
+    {{> teacher }}
+    {{# people }}
+      {{> person }}
+    {{/ people }}
+  </ul>
 </div>
 '},
         { name: 'structure',
@@ -57,16 +56,26 @@ module Sinatra
   {{ timeslot.day.label }} {{ timeslot.label }} | {{ timeslot.length }} minutes
 </span>
 '},
+        { name: 'suffix',
+          template: '<em class="suffix">{{ suffix }}</em>'},
         { name: 'room',
           template: '<span class="room">{{ room.label }}</span>'},
         { name: 'day',
-          template: '<div id="{{name}}">
+          template: %|<div id="{{name}}">
   <h3 class="day-header" data-bookings-list="bookings-{{name}}">{{ label }}</h3>
-  <div id="bookings-{{name}}" class="bookings"></div>
-</div>'},
+  <div id="bookings-{{name}}" class="bookings">
+    #{timeslots}
+  </div>
+</div>|
+      },
         { name: 'groupoption',
           template: '<option value={{.}}>{{.}}</option>'}
       ]
+    end
+    def timeslots
+      %w(08:15 10:00 11:45 13:30 15:15 17:00 18:45).map {|label|
+        %{<div id="bookings-{{name}}-#{label.gsub(':','')}"></div>}
+      }.join
     end
   end
 end

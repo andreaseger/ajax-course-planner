@@ -40,4 +40,3 @@ desc 'show some database stats'
 task :db_stats => ["environment"] do
   p $redis.info
 end
-task :default => ["rspec"]

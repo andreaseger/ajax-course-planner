@@ -67,12 +67,13 @@ class CoursePlanner < Sinatra::Base
     mustache :site
   end
   get '/bookings/g/:group' do |group|
+    @title = "Bookings for #{group}"
     @group = group
     @api_url = "/api/b/g/#{group}" if group
     mustache :site
   end
-  get '/bookings/c/:course' do |course|
-    @api_url = url("/api/b/c/#{course}") if course
-    mustache :site
-  end
+  #get '/bookings/c/:course' do |course|
+  #  @api_url = url("/api/b/c/#{course}") if course
+  #  mustache :site
+  #end
 end
