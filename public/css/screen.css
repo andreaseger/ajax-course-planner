@@ -72,7 +72,7 @@ abbr[title] {
 }
 
 /* line 86, ../../../../.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/compass-h5bp-0.0.2/stylesheets/h5bp/_normalize.scss */
-b, strong {
+b, strong, #container #schedule .booking .course, #container #bookings .booking .course, #container #bookings .booking button {
   font-weight: bold;
 }
 
@@ -290,7 +290,7 @@ td {
 /* @group defaults */
 /* line 23, ../../assets/_defaults.sass */
 body {
-  font-family: Helvetica, Arial, sans-serif;
+  font-family: "Ubuntu", sans-serif;
   color: #194c66;
 }
 
@@ -314,51 +314,53 @@ a:focus, a:hover, a:active {
 /* @group headers */
 /* line 43, ../../assets/_defaults.sass */
 h1, h2, h3, h4, h5, h6 {
+  font-family: "Vollkorn", serif;
   font-weight: bold;
 }
 
 /* @end */
 /* @group forms */
-/* line 50, ../../assets/_defaults.sass */
+/* line 51, ../../assets/_defaults.sass */
 form *:focus {
   outline: none;
 }
 
-/* line 53, ../../assets/_defaults.sass */
+/* line 54, ../../assets/_defaults.sass */
 fieldset {
   margin: 24px 0;
 }
 
-/* line 56, ../../assets/_defaults.sass */
+/* line 57, ../../assets/_defaults.sass */
 legend {
   font-weight: bold;
   font-variant: small-caps;
 }
 
-/* line 60, ../../assets/_defaults.sass */
+/* line 61, ../../assets/_defaults.sass */
 label {
   display: block;
   margin-top: 24px;
 }
 
-/* line 64, ../../assets/_defaults.sass */
+/* line 65, ../../assets/_defaults.sass */
 legend + label {
   margin-top: 0;
 }
 
-/* line 67, ../../assets/_defaults.sass */
+/* line 68, ../../assets/_defaults.sass */
 textarea, input[type="text"] {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   -ms-box-sizing: border-box;
   box-sizing: border-box;
+  font-family: monospace, sans-serif;
   width: 100%;
 }
 
 /* @end */
 /* @group tables */
 /* tables still need 'cellspacing="0"' in the markup */
-/* line 77, ../../assets/_defaults.sass */
+/* line 79, ../../assets/_defaults.sass */
 table {
   width: 100%;
   border: 1/16em solid #4c7f99;
@@ -368,75 +370,75 @@ table {
   margin: 8/16em 0;
 }
 
-/* line 85, ../../assets/_defaults.sass */
+/* line 87, ../../assets/_defaults.sass */
 th {
   font-weight: bold;
 }
 
 /* @end */
 /* @group block tags */
-/* line 92, ../../assets/_defaults.sass */
+/* line 94, ../../assets/_defaults.sass */
 p {
   margin: 24px 0;
 }
 
-/* line 107, ../../assets/_defaults.sass */
+/* line 109, ../../assets/_defaults.sass */
 ol {
   margin: 24px;
   list-style: decimal;
 }
 
-/* line 110, ../../assets/_defaults.sass */
+/* line 112, ../../assets/_defaults.sass */
 ul {
   margin: 24px;
   list-style: disc;
 }
 
-/* line 113, ../../assets/_defaults.sass */
+/* line 115, ../../assets/_defaults.sass */
 blockquote {
   margin: 24px;
-  font-family: Baskerville, Palatino, serif;
+  font-family: "Vollkorn", serif;
 }
 
 /* @end */
 /* @group inline tags */
-/* line 121, ../../assets/_defaults.sass */
+/* line 123, ../../assets/_defaults.sass */
 cite {
   font-style: italic;
 }
 
-/* line 124, ../../assets/_defaults.sass */
+/* line 126, ../../assets/_defaults.sass */
 em {
   font-style: italic;
 }
 
-/* line 127, ../../assets/_defaults.sass */
-strong {
+/* line 129, ../../assets/_defaults.sass */
+strong, #container #schedule .booking .course, #container #bookings .booking .course, #container #bookings .booking button {
   font-weight: bold;
 }
 
-/* line 130, ../../assets/_defaults.sass */
+/* line 132, ../../assets/_defaults.sass */
 ins {
   text-decoration: underline;
 }
 
-/* line 133, ../../assets/_defaults.sass */
+/* line 135, ../../assets/_defaults.sass */
 del {
   text-decoration: line-through;
 }
 
-/* line 136, ../../assets/_defaults.sass */
+/* line 138, ../../assets/_defaults.sass */
 q {
   font-style: italic;
 }
-/* line 138, ../../assets/_defaults.sass */
+/* line 140, ../../assets/_defaults.sass */
 q em {
   font-style: normal;
 }
 
 /* @end */
 /* @group replaced tags */
-/* line 145, ../../assets/_defaults.sass */
+/* line 147, ../../assets/_defaults.sass */
 img {
   vertical-align: bottom;
 }
@@ -444,7 +446,12 @@ img {
 /* @end */
 /* @end */
 /* Layout ------------------------------------------------------------------ */
-/* line 7, ../../assets/screen.sass */
+/* line 11, ../../assets/screen.sass */
+.clear, #container #schedule .booking .timeslot, #container #bookings .booking .people {
+  clear: both;
+}
+
+/* line 14, ../../assets/screen.sass */
 #container {
   *zoom: 1;
   margin: auto;
@@ -464,18 +471,224 @@ img {
   display: table;
   clear: both;
 }
-/* line 12, ../../assets/screen.sass */
+/* line 17, ../../assets/screen.sass */
+#container header, #container footer {
+  clear: both;
+  margin-left: 1.639%;
+  margin-right: 1.639%;
+}
+/* line 20, ../../assets/screen.sass */
+#container h3.day-header {
+  text-align: center;
+}
+/* line 22, ../../assets/screen.sass */
 #container h3.day-header:focus, #container h3.day-header:hover, #container h3.day-header:active {
   color: #aa4411;
   text-decoration: none;
 }
-/* line 16, ../../assets/screen.sass */
-#container .bookings {
+/* line 26, ../../assets/screen.sass */
+#container button {
+  font-size: 16px;
+  padding: 0.3em 0.5em;
+  display: inline-block;
+  cursor: pointer;
+  text-decoration: none;
+  line-height: 1.5;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -o-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -khtml-border-radius: 5px;
+  border-radius: 5px;
+  background-color: #363737;
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #5c5e5e), color-stop(70%, #363737));
+  background: -webkit-linear-gradient(#5c5e5e, #363737 70%);
+  background: -moz-linear-gradient(#5c5e5e, #363737 70%);
+  background: -o-linear-gradient(#5c5e5e, #363737 70%);
+  background: -ms-linear-gradient(#5c5e5e, #363737 70%);
+  background: linear-gradient(#5c5e5e, #363737 70%);
+  -moz-box-shadow: #828484 0 1px 0 inset;
+  -webkit-box-shadow: #828484 0 1px 0 inset;
+  -o-box-shadow: #828484 0 1px 0 inset;
+  box-shadow: #828484 0 1px 0 inset;
+  border: 1px solid #292a2a;
+  color: white;
+  text-shadow: #191919 0 -1px 0;
+}
+/* line 10, ../../../../.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/sassy-buttons-0.0.9/stylesheets/sassy-buttons/_sassy-button-pseudo-states.sass */
+#container button:hover {
+  background-color: #292a2a;
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(3%, #4f5151), color-stop(75%, #292a2a));
+  background: -webkit-linear-gradient(#4f5151 3%, #292a2a 75%);
+  background: -moz-linear-gradient(#4f5151 3%, #292a2a 75%);
+  background: -o-linear-gradient(#4f5151 3%, #292a2a 75%);
+  background: -ms-linear-gradient(#4f5151 3%, #292a2a 75%);
+  background: linear-gradient(#4f5151 3%, #292a2a 75%);
+}
+/* line 13, ../../../../.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/sassy-buttons-0.0.9/stylesheets/sassy-buttons/_sassy-button-pseudo-states.sass */
+#container button:active {
+  -moz-box-shadow: #222222 0 1px 2px inset;
+  -webkit-box-shadow: #222222 0 1px 2px inset;
+  -o-box-shadow: #222222 0 1px 2px inset;
+  box-shadow: #222222 0 1px 2px inset;
+}
+/* line 29, ../../assets/screen.sass */
+#container ul {
+  margin: 0.5em 1em;
+  padding: 0;
+}
+/* line 34, ../../assets/screen.sass */
+#container #schedule {
+  display: inline;
+  float: left;
+  width: 47.541%;
+  margin-right: 1.639%;
+  display: inline;
+  float: right;
+  margin-right: 1.639%;
+  #margin-left: -1em;
+}
+/* line 37, ../../assets/screen.sass */
+#container #schedule .booking {
+  border-bottom: 1px solid black;
+}
+/* line 39, ../../assets/screen.sass */
+#container #schedule .booking .course {
+  display: inline;
+  float: left;
+  width: 48.276%;
+  margin-right: 3.448%;
+}
+/* line 42, ../../assets/screen.sass */
+#container #schedule .booking .suffix {
+  display: inline;
+  float: left;
+  width: 48.276%;
+  margin-right: 3.448%;
+  display: inline;
+  float: right;
+  margin-right: 0;
+  #margin-left: -1em;
+}
+/* line 45, ../../assets/screen.sass */
+#container #schedule .booking .timeslot {
+  display: inline;
+  float: left;
+  width: 48.276%;
+  margin-right: 3.448%;
+}
+/* line 48, ../../assets/screen.sass */
+#container #schedule .booking .room {
+  display: inline;
+  float: left;
+  width: 48.276%;
+  margin-right: 3.448%;
+  display: inline;
+  float: right;
+  margin-right: 0;
+  #margin-left: -1em;
+  text-align: right;
+}
+/* line 52, ../../assets/screen.sass */
+#container #schedule .booking .teacher {
+  display: inline;
+  float: left;
+  width: 65.517%;
+  margin-right: 3.448%;
+}
+/* line 54, ../../assets/screen.sass */
+#container #schedule .booking .teacher a {
+  color: inherit;
+  text-decoration: inherit;
+  cursor: inherit;
+}
+/* line 6, ../../../../.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/compass-0.11.7/frameworks/compass/stylesheets/compass/typography/links/_unstyled-link.scss */
+#container #schedule .booking .teacher a:active, #container #schedule .booking .teacher a:focus {
+  outline: none;
+}
+/* line 56, ../../assets/screen.sass */
+#container #schedule .booking button {
+  display: inline;
+  float: left;
+  width: 31.034%;
+  margin-right: 3.448%;
+  display: inline;
+  float: right;
+  margin-right: 0;
+  #margin-left: -1em;
+  margin-bottom: 1px;
+}
+/* line 61, ../../assets/screen.sass */
+#container #bookings {
+  display: inline;
+  float: left;
+  width: 47.541%;
+  margin-right: 1.639%;
+  margin-left: 1.639%;
+}
+/* line 64, ../../assets/screen.sass */
+#container #bookings .bookings {
   display: none;
 }
-/* line 18, ../../assets/screen.sass */
-#container .booking {
-  margin-left: 1em;
-  padding: 0.3em;
+/* line 66, ../../assets/screen.sass */
+#container #bookings .bookings h4 {
+  margin: 0.5em 0;
+}
+/* line 68, ../../assets/screen.sass */
+#container #bookings .booking {
   border-bottom: 1px solid black;
+}
+/* line 70, ../../assets/screen.sass */
+#container #bookings .booking .course {
+  clear: both;
+}
+/* line 73, ../../assets/screen.sass */
+#container #bookings .booking .suffix {
+  padding-left: 17.241%;
+  display: inline;
+  float: left;
+  width: 65.517%;
+  margin-right: 3.448%;
+  font-size: 0.75em;
+  line-height: 2em;
+}
+/* line 77, ../../assets/screen.sass */
+#container #bookings .booking .people {
+  margin: 0.2em 0;
+  padding-left: 17.241%;
+  display: inline;
+  float: left;
+  width: 65.517%;
+  margin-right: 3.448%;
+}
+/* line 83, ../../assets/screen.sass */
+#container #bookings .booking .people .person a {
+  color: inherit;
+  text-decoration: inherit;
+  cursor: inherit;
+}
+/* line 6, ../../../../.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/compass-0.11.7/frameworks/compass/stylesheets/compass/typography/links/_unstyled-link.scss */
+#container #bookings .booking .people .person a:active, #container #bookings .booking .people .person a:focus {
+  outline: none;
+}
+/* line 85, ../../assets/screen.sass */
+#container #bookings .booking .room {
+  clear: left;
+  padding-left: 17.241%;
+  display: inline;
+  float: left;
+  width: 31.034%;
+  margin-right: 3.448%;
+}
+/* line 89, ../../assets/screen.sass */
+#container #bookings .booking button {
+  display: inline;
+  float: left;
+  width: 13.793%;
+  margin-right: 3.448%;
+  display: inline;
+  float: right;
+  margin-right: 0;
+  #margin-left: -1em;
+  line-height: 1.1;
 }

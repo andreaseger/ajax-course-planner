@@ -14,16 +14,16 @@ gem 'thin'
 gem 'redis'
 gem 'nokogiri'
 
-gem 'compass'
-gem 'compass-susy-plugin'
-gem 'compass-h5bp'
-
 group :production do
   gem 'hiredis'
 end
 group :development do
   gem 'capistrano'
   gem 'sinatra-reloader', :require => 'sinatra/reloader'
+  gem 'compass'
+  gem 'compass-susy-plugin'
+  gem 'compass-h5bp'
+  gem 'sassy-buttons'
   gem 'guard-compass'
   gem 'guard-bundler'
 end

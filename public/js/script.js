@@ -1,60 +1,12 @@
 /* Author: sch1zo
 
 */
-var meta = {'days' : [{ 'name': 'mo', 'label': 'Montag'},
-                      { 'name': 'di', 'label': 'Dienstag'},
-                      { 'name': 'mi', 'label': 'Mittwoch'},
-                      { 'name': 'do', 'label': 'Donnerstag'},
-                      { 'name': 'fr', 'label': 'Freitag' }],
-            'id' : 'bookings'
-           };
-
-$(function(){
-  $.getJSON('/templates.json', function (data) {
-    $.each(data.templates, function (i,template) {
-      ich.addTemplate(template.name, template.template);
-    });
-    $.each(data.partials, function (i,template) {
-      ich.addTemplate(template.name, template.template);
-    });
-  });
-  var History = window.History; // Note: We are using a capital H instead of a lower h
-  History.Adapter.bind(window,'statechange',function(){
-    var State = History.getState().data;
-    update_bookings(State.group, false);
-    $('#groups').val(State.group);
-  });
-  get_groups();
-  update_schedule();
-  update_bookings($('#' + meta.id ).data('group'), true);
-
-  $('.day-header').live('click',function(){
-    var div = $('#' + $(this).data('bookings-list'));
-    if(div.is(':hidden')){
-      $('.bookings').hide();
-      div.toggle();
-      $.scrollTo($(this),{duration: 'slow'})
-    }else{
-      div.toggle();
-      $.scrollTo(0,{duration: 'fast'})
-    }
-  });
-
-  $('.bookings-schedule-toggle').live('click',function(){
-    var key = $(this).data('booking-key');
-    toggle_in_cookie(key);
-    update_schedule();
-  });
-});
 
 function get_groups(){
   $.getJSON('/api/g',function(data){
     var current = $('#groups').data('current');
-    $('#groups').replaceWith( ich.groupsselect(data) );
+    $('#groups').replaceWith( ich.groupselect(data) );
     $('#groups').val(current);
-    $('#groups').change(function(){
-      update_bookings($(this).val(), true);
-    });
   });
 }
 function update_page_title(title){
@@ -108,3 +60,53 @@ function update_bookings(group, push){
     });
   }
 }
+var meta = {'days' : [{ 'name': 'mo', 'label': 'Montag'},
+                      { 'name': 'di', 'label': 'Dienstag'},
+                      { 'name': 'mi', 'label': 'Mittwoch'},
+                      { 'name': 'do', 'label': 'Donnerstag'},
+                      { 'name': 'fr', 'label': 'Freitag' }],
+            'id' : 'bookings'
+           };
+
+$(function(){
+  $.getJSON('/templates.json', function (data) {
+    $.each(data.templates, function (i,template) {
+      ich.addTemplate(template.name, template.template);
+    });
+    $.each(data.partials, function (i,template) {
+      ich.addTemplate(template.name, template.template);
+    });
+  });
+  var History = window.History; // Note: We are using a capital H instead of a lower h
+  History.Adapter.bind(window,'statechange',function(){
+    var State = History.getState().data;
+    update_bookings(State.group, false);
+    $('#groups').val(State.group);
+  });
+  get_groups();
+  update_schedule();
+  update_bookings($('#' + meta.id).data('group'), true);
+
+  $('#groups').live('change',function(){
+    update_bookings($(this).val(), true);
+  });
+  $('.day-header').live('click',function(){
+    var div = $('#' + $(this).data('bookings-list'));
+    if(div.is(':hidden')){
+      $('.bookings').hide();
+      div.toggle();
+      $.scrollTo($(this),{duration: 'slow'})
+    }else{
+      div.toggle();
+      $.scrollTo(0,{duration: 'fast'})
+    }
+  });
+
+  $('.bookings-schedule-toggle').live('click',function(){
+    var button = $(this)
+    var key = button.data('booking-key');
+    toggle_in_cookie(key);
+    update_schedule();
+  });
+});
+

@@ -2,20 +2,92 @@
 
 @import defaults
 
+@import sassybuttons
+@import "compass/typography/lists/bullets"
+@import "compass/typography/links"
+@import "compass/typography/vertical_rhythm"
 /* Layout ------------------------------------------------------------------
+
+.clear
+  clear: both
 
 #container
   +container
   +susy-grid-background
+  header, footer
+    +full
 
   h3.day-header
+    text-align: center
     &:focus, &:hover, &:active
       color: $alt - #222222
       text-decoration: none
 
-  .bookings
-    display: none
-  .booking
-    margin-left: 1em
-    padding: .3em
-    border-bottom: 1px solid black
+  button
+    +sassy-button
+
+  ul
+    margin: .5em 1em
+    padding: 0
+    //+no-bullets
+
+  #schedule
+    +columns(6)
+    +omega
+    .booking
+      border-bottom: 1px solid black
+      .course
+        +columns(3,6)
+        @extend strong
+      .suffix
+        +columns(3,6)
+        +omega(6)
+      .timeslot
+        +columns(3,6)
+        @extend .clear
+      .room
+        +columns(3,6)
+        +omega(6)
+        text-align: right
+      .teacher
+        +columns(4,6)
+        a
+          +unstyled-link
+      button
+        +columns(2,6)
+        +omega(6)
+        margin-bottom: 1px
+
+  #bookings
+    +columns(6)
+    +alpha
+    .bookings
+      display: none
+      h4
+        margin: .5em 0
+    .booking
+      border-bottom: 1px solid black
+      .course
+        @extend strong
+        +full(6)
+      .suffix
+        +prefix(1,6)
+        +columns(4,6)
+        +adjust-font-size-to(12px)
+      .people
+        @extend .clear
+        margin: 0.2em 0
+        +prefix(1,6)
+        +columns(4,6)
+        .person
+          a
+            +unstyled-link
+      .room
+        clear: left
+        +prefix(1,6)
+        +columns(2,6)
+      button
+        +columns(1,6)
+        +omega(6)
+        @extend strong
+        line-height: 1.1

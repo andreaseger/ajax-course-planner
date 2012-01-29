@@ -4,37 +4,35 @@ module Sinatra
       @templates ||= [
         { name: 'booking',
           template: '<div class="booking length-{{timeslot.length}} timeslot-{{timeslot.label}}">
-  {{>course}}{{>suffix}}
-  {{>room}}
-  <ul class="people">
-    {{>teacher-li}}
-    {{#people}}
-      {{>person}}
-    {{/people}}
-  </ul>
-  <button type="button" class="bookings-schedule-toggle" data-booking-key="{{& key}}">Toggle</button>
-</div>'
+{{>course}}{{>suffix}}
+<ul class="people">
+  {{>teacher-li}}
+  {{#people}}
+    {{>person}}
+  {{/people}}
+</ul>
+<button type="button" class="bookings-schedule-toggle" data-booking-key="{{& key}}">&#x219C;<br />&#x219D;</button>
+{{>room}}
+<div class="clear"></div></div>'
         },
         { name: 'schedule',
           template: '<div id="schedule">
 <h2 id="schedule-header">Schedule:</h2>
-<ul>
-  {{#bookings}}
-    {{> pbooking }}
-  {{/bookings}}
-</ul>
+{{#bookings}}
+  {{> pbooking }}
+{{/bookings}}
 </div>'
         },
         { name: 'structure',
           template: '<div id="{{id}}">
-  <h2 id="bookings-header">Bookings</h2>
   {{#days}}
     {{>day}}
   {{/days}}
 </div>'
         },
-        { name: 'groupsselect',
+        { name: 'groupselect',
           template: '<div id="groups-div">
+<h2 id="bookings-header">Bookings</h2>
 <span id="groups-select-label">Group: </span>
 <select id="groups">
   {{#groups}}
@@ -48,24 +46,23 @@ module Sinatra
     def partials
       @partials ||= [
         { name: 'pbooking',
-          template:'<li>
-<strong>{{>course}}</strong>
-{{>suffix}}
-{{>room}}
-<div>{{>timeslot}}{{>teacher}}</div>
-<button type="button" class="bookings-schedule-toggle" data-booking-key="{{& key}}">Remove</button>
-</li>'
+          template:'<div class="booking">
+{{>course}}{{>suffix}}
+{{>timeslot}}{{>room}}
+{{>teacher}}<button type="button" class="bookings-schedule-toggle" data-booking-key="{{& key}}">&#x2718;</button>
+<div class="clear"></div>
+</div>'
         },
         { name: 'teacher',
           template: '{{#label}}
-<span class="teacher">
+<div class="teacher">
   <a href="http://fi.cs.hm.edu/fi/rest/public/person/name/{{&name}}" target="_blank">{{label}}</a>
-</span>{{/label}}'
+</div>{{/label}}'
         },
         { name: 'teacher-li',
           template: '{{#teacher.label}}
 <li class="teacher">
-  <strong><a href="http://fi.cs.hm.edu/fi/rest/public/person/name/{{&teacher.name}}" target="_blank">{{teacher.label}}</a></strong>
+  <a href="http://fi.cs.hm.edu/fi/rest/public/person/name/{{&teacher.name}}" target="_blank">{{teacher.label}}</a>
 </li>{{/teacher.label}}'
         },
         { name: 'person',
@@ -75,20 +72,20 @@ module Sinatra
 </li>{{/label}}'
         },
         { name: 'course',
-          template: '<span class="course">
+          template: '<div class="course">
   <a href="http://fi.cs.hm.edu/fi/rest/public/modul/title/{{&name}}" target="_blank">{{label}}</a>
-</span>'
+</div>'
         },
         {
           name: 'timeslot',
-          template: '<span class="timeslot">
+          template: '<div class="timeslot">
   {{day.label}} | {{label}}
-</span>'
+</div>'
         },
         { name: 'suffix',
-          template: '<em class="suffix">{{suffix}}</em>'},
+          template: '<div class="suffix"><em>{{suffix}}</em></div>'},
         { name: 'room',
-          template: '<span class="room">{{label}}</span>'},
+          template: '<div class="room">{{label}}</div>'},
         { name: 'day',
           template: %|<div id="{{name}}">
   <h3 class="day-header" data-bookings-list="bookings-{{name}}">{{label}}</h3>

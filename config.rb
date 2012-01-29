@@ -1,5 +1,6 @@
 require 'susy'
 require 'compass-h5bp'
+require 'sassy-buttons'
 # Require any additional compass plugins here.
 
 
@@ -7,7 +8,7 @@ require 'compass-h5bp'
 http_path = "public"
 css_dir = "public/css"
 sass_dir = "assets"
-images_dir = "images"
+images_dir = "public/images"
 javascripts_dir = "js"
 
 # You can select your preferred output style here (can be overridden via the command line):
