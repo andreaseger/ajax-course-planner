@@ -1,6 +1,6 @@
 require_relative 'lib/booking'
 require_relative 'lib/bookings_parser'
-require_relative 'lib/templates'
+#require_relative 'lib/templates'
 
 class CoursePlanner < Sinatra::Base
   configure do |c|
@@ -32,12 +32,16 @@ class CoursePlanner < Sinatra::Base
     data.to_json
   end
 
+  def templates
+    Dir['templates/client/*'].map {|e| { name: File.basename(e, '.mustache').sub(/^_/,''), template: IO.read(e) } }
+  end
+
   get '/' do
     mustache :site
   end
 
   get '/templates.json' do
-    json({ templates: templates, partials: partials })
+    json templates
   end
 
   namespace '/api' do
@@ -48,29 +52,29 @@ class CoursePlanner < Sinatra::Base
       end
     end
 
-    #get '/s/*' do
-    #  bookings = params[:splat].first.split('/')
-    #  json bookings.map { |e| Booking.find(e) }.compact.map{|b| b.merge(key: b.key)}
-    #end
     get '/b/g/:group' do |group|
       json Booking.find_by_group(group).map{|b| b.merge(key: b.key)}
-    end
-    #get '/b/c/:course' do |course|
-    #  json Booking.find_by_course(course).map{|b| b.merge(key: b.key)}
-    #end
-
-    get '/b/:hash' do |hash|
-      b = Booking.find(hash)
-      json b.merge(key: b.key)
     end
 
     get '/g' do
       json( groups: $redis.keys('*by_group*').map{|e| e.split(':').last }.compact.sort )
     end
+
+    get '/e' do
+      bookings = params[:bookings]
+      if bookings
+        json( todo: "find some nice way to find exams for bookings")
+      end
+    end
+
+    #get '/b/:hash' do |hash|
+    #  b = Booking.find(hash)
+    #  json b.merge(key: b.key)
+    #end
   end
 
-  get '/schedule/*', '/s/*' do
-    @api_url = url("/api/s/#{params[:splat].first}")
+  get '/schedule/*' do
+    @bookings = params[:splat].first
     mustache :site
   end
   get '/bookings/g/:group' do |group|
@@ -78,8 +82,4 @@ class CoursePlanner < Sinatra::Base
     @api_url = "/api/b/g/#{group}" if group
     mustache :site
   end
-  #get '/bookings/c/:course' do |course|
-  #  @api_url = url("/api/b/c/#{course}") if course
-  #  mustache :site
-  #end
 end

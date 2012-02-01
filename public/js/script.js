@@ -4,8 +4,8 @@
 
 function get_groups(){
   $.getJSON('/api/g',function(data){
-    var current = $('#groups').data('current');
-    $('#groups').replaceWith( ich.groupselect(data) );
+    var current = $('#' + meta.id).data('group');
+    $('#groupselect').replaceWith( ich.groupselect(data) )
     $('#groups').val(current);
   });
 }
@@ -39,11 +39,11 @@ function update_bookings(group, push){
   var api_url = '/api/b/g/' + group;
   if(api_url){
     $.getJSON(api_url, function(data){
-      $('#' + meta.id ).replaceWith( ich.structure(meta) );
+      $('#' + meta.id ).replaceWith( ich.bookings_list(meta) );
 
       $.each(data, function(index, elem) {
-        html = ich.booking(elem)
-        var div = $('#bookings-' + elem.timeslot.day.name + '-' + elem.timeslot.label.replace(':',''));
+        html = ich.full_booking(elem)
+        var div = $('#bookings-' + elem.timeslot.day.name + ' .' + elem.timeslot.label.replace(':',''));
         if(div.is(':empty')){
           div.append('<h4>' + elem.timeslot.label + '</h4>');
         }
@@ -65,24 +65,23 @@ var meta = {'days' : [{ 'name': 'mo', 'label': 'Montag'},
                       { 'name': 'mi', 'label': 'Mittwoch'},
                       { 'name': 'do', 'label': 'Donnerstag'},
                       { 'name': 'fr', 'label': 'Freitag' }],
-            'id' : 'bookings'
+            'id' : 'bookings_list'
            };
 
 $(function(){
   $.getJSON('/templates.json', function (data) {
-    $.each(data.templates, function (i,template) {
-      ich.addTemplate(template.name, template.template);
-    });
-    $.each(data.partials, function (i,template) {
+    $.each(data, function (i,template) {
       ich.addTemplate(template.name, template.template);
     });
   });
-  var History = window.History; // Note: We are using a capital H instead of a lower h
+
+  var History = window.History;
   History.Adapter.bind(window,'statechange',function(){
     var State = History.getState().data;
     update_bookings(State.group, false);
     $('#groups').val(State.group);
   });
+
   get_groups();
   update_schedule();
   update_bookings($('#' + meta.id).data('group'), true);
@@ -95,7 +94,7 @@ $(function(){
     if(div.is(':hidden')){
       $('.bookings').hide();
       div.toggle();
-      $.scrollTo($(this),{duration: 'slow'})
+      $.scrollTo($(this),{duration: 'fast'})
     }else{
       div.toggle();
       $.scrollTo(0,{duration: 'fast'})

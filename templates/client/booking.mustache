@@ -1,0 +1,10 @@
+<div class="booking">
+  {{>course}}{{>suffix}}
+  <div class="timeslot">{{timeslot.day.label}} | {{timeslot.label}}</div>
+  {{>room}}
+  {{#teacher.label}}
+    <div class="teacher">{{>person}}</div>
+  {{/teacher.label}}
+  <button type="button" class="bookings-schedule-toggle" data-booking-key="{{& key}}">&#x2718;</button>
+  <div class="clear"></div>
+</div>
