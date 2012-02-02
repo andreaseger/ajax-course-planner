@@ -30,12 +30,14 @@ namespace :update do
   task :bookings => ["environment"] do
     require './lib/bookings_parser'
     BookingsParser.run
+    print "Bookingsparser run\n"
   end
 
   desc 'run the ExamsParser'
   task :exams => ["environment"] do
     require './lib/exams_parser'
     ExamsParser.run
+    print "Examsparser run\n"
   end
 
   desc 'update both'
@@ -46,6 +48,7 @@ namespace :db do
   desc 'clear all data from the choosen redis db'
   task :flush => ["environment"] do
     $redis.flushdb
+    print "Database flushed\n"
   end
 
   desc 'show some database stats'
