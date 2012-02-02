@@ -61,9 +61,9 @@ class CoursePlanner < Sinatra::Base
     end
 
     get '/e' do
-      bookings = params[:bookings]
-      if bookings
-        json( todo: "find some nice way to find exams for bookings")
+      courses = params[:courses]
+      if courses
+        json courses.map {|e| Exam.find_by_course(e) }
       end
     end
 

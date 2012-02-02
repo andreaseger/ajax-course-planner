@@ -13,7 +13,7 @@ class ExamsParser < Parser
           Exam.from_hash(
             {
               course: build_course(exam.xpath('modul').text),
-              examiner: exam.xpath('*[starts-with(name(.), "examiner")]').map {|t| build_teacher(t.text)},
+              examiner: exam.xpath('*[starts-with(name(.), "examiner")]').map {|t| build_person(t.text)},
               material: exam.xpath('material').text,
               type: exam.xpath('type').text,
               rooms: e.xpath('room').map {|r| build_room(r.text)},

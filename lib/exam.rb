@@ -1,3 +1,4 @@
+require 'json'
 require_relative 'recursivly_symbolize_keys'
 require_relative 'buildable'
 require_relative 'has_key'
@@ -13,29 +14,21 @@ class Exam < Hash
 
   def save
     $redis.multi do
-      $redis.set key, to_json
-      [:examiner, :room].each do |arg|
-        name = self[arg][:name]
-        self[arg].each do |e|
-          $redis.sadd "#{namespace}:by_#{arg.to_s}:#{name}", key
-          $redis.sadd arg.to_s, name
-        end
-      end
-      [:material, :type].each do |arg|
-        name = self[arg]
-        $redis.sadd "#{namespace}:by_#{arg}:#{name}", key
-      end
+      $redis.set db_key, to_json
+      $redis.sadd "#{namespace}:by_course:#{self[:course][:name]}", key
     end
+  end
+
+  def db_key
+    "#{namespace}:#{key}"
+  end
+  def self.db_key(key)
+    "#{namespace}:#{key}"
   end
   def self.find id
-    from_json $redis.get(id)
+    from_json $redis.get(self.db_key(key))
   end
-  class << self
-    [:examiner, :room, :material, :type].each do |arg|
-      method_name = ("find_by_" + arg.to_s).to_sym
-      define_method(method_name) do |id|
-        $redis.smembers("#{namespace}:by_#{arg.to_s}:#{id}").map {|k| find k }
-      end
-    end
+  def self.find_by_course course
+    $redis.smembers("#{namespace}:by_course:#{course}").map {|k| find k }
   end
 end

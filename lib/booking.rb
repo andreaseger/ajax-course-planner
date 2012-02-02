@@ -3,7 +3,6 @@ require_relative 'recursivly_symbolize_keys'
 require_relative 'buildable'
 require_relative 'has_key'
 
-require 'pry'
 class Booking < Hash
   extend Buildable
   include HasKey
@@ -16,13 +15,8 @@ class Booking < Hash
   def save
     $redis.multi do
       $redis.set db_key, to_json
-      [:room, :group, :course, :teacher].each do |arg|
-        name = self[arg].try {|e| e[:name] }
-        if name
-          $redis.sadd "#{namespace}:by_#{arg}:#{name}", key
-          $redis.sadd "#{arg.to_s}", name
-        end
-      end
+      $redis.sadd "#{namespace}:by_group:#{self[:group][:name]}", key
+      $redis.sadd "group", self[:group][:name]
     end
   end
 
@@ -35,12 +29,7 @@ class Booking < Hash
   def self.find key
     from_json $redis.get(self.db_key(key))
   end
-  class << self
-    [:teacher, :group, :course, :room].each do |arg|
-      method_name = ("find_by_" + arg.to_s).to_sym
-      define_method(method_name) do |id|
-        $redis.smembers("#{namespace}:by_#{arg.to_s}:#{id}").map {|k| find k }
-      end
-    end
+  def self.find_by_group group
+    $redis.smembers("#{namespace}:by_group:#{group}").map {|k| find k }
   end
 end

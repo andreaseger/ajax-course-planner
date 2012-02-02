@@ -25,18 +25,31 @@ task :environment do
   $redis = Redis.new(REDIS_CONFIG)
 end
 
-desc 'run the BookingsParser again'
-task :update_bookings => ["environment"] do
-  require './lib/bookings_parser'
-  BookingsParser.run
+namespace :update do
+  desc 'run the BookingsParser'
+  task :bookings => ["environment"] do
+    require './lib/bookings_parser'
+    BookingsParser.run
+  end
+
+  desc 'run the ExamsParser'
+  task :exams => ["environment"] do
+    require './lib/exams_parser'
+    ExamsParser.run
+  end
+
+  desc 'update both'
+  task :both => ['db:flush', 'update:bookings', 'update:exams']
 end
 
-desc 'clear all data from the choosen redis db'
-task :clear_db => ["environment"] do
-  $redis.flushdb
-end
+namespace :db do
+  desc 'clear all data from the choosen redis db'
+  task :flush => ["environment"] do
+    $redis.flushdb
+  end
 
-desc 'show some database stats'
-task :db_stats => ["environment"] do
-  p $redis.info
+  desc 'show some database stats'
+  task :stats => ["environment"] do
+    p $redis.info
+  end
 end
