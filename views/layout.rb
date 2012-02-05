@@ -4,6 +4,9 @@ class CoursePlanner
       def title
         "Coures Planner"
       end
+      def pagename
+        @pagename || "bookingslist"
+      end
     end
   end
 end

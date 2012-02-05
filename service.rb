@@ -66,14 +66,10 @@ class CoursePlanner < Sinatra::Base
         json courses.map {|e| Exam.find_by_course(e) }
       end
     end
-
-    #get '/b/:hash' do |hash|
-    #  b = Booking.find(hash)
-    #  json b.merge(key: b.key)
-    #end
   end
 
   get '/schedule/*' do
+    @pagename = "schedule"
     @bookings = params[:splat].first
     mustache :site
   end
