@@ -57,7 +57,7 @@ class CoursePlanner < Sinatra::Base
     end
 
     get '/g' do
-      json( groups: $redis.keys('*by_group*').map{|e| e.split(':').last }.compact.sort )
+      json( groups: $redis.smembers('group').sort )
     end
 
     get '/e' do

@@ -40,6 +40,16 @@
     padding: 0
     //+no-bullets
 
+  #full_schedule
+    +full
+    .day
+      +columns(2)
+      li.time
+        background-color: #222
+    &:first-child
+      +alpha
+    &:last-child
+      +omega
   #schedule
     .booking
       border-bottom: 1px solid black
