@@ -37,7 +37,7 @@ class CoursePlanner < Sinatra::Base
   end
 
   get '/' do
-    mustache :site
+    redirect url('bookings/g/ig')
   end
 
   get '/templates.json' do

@@ -451,7 +451,10 @@ img {
   clear: both;
 }
 
-/* line 14, ../../assets/screen.sass */
+/* Smaller than standard 960 (devices and browsers) */
+/* WVGA/iPhone Landscape size to standard 960 (devices and browsers) */
+/* WVGA/iPhone Portrait (devices and browser) */
+/* line 23, ../../assets/screen.sass */
 #container {
   *zoom: 1;
   margin: auto;
@@ -471,132 +474,52 @@ img {
   display: table;
   clear: both;
 }
-/* line 17, ../../assets/screen.sass */
+/* line 26, ../../assets/screen.sass */
 #container header, #container footer {
   clear: both;
   margin-left: 1.639%;
   margin-right: 1.639%;
 }
-/* line 20, ../../assets/screen.sass */
+/* line 29, ../../assets/screen.sass */
 #container h3.day-header {
   text-align: center;
 }
-/* line 22, ../../assets/screen.sass */
+/* line 31, ../../assets/screen.sass */
 #container h3.day-header:focus, #container h3.day-header:hover, #container h3.day-header:active {
   color: #aa4411;
   text-decoration: none;
 }
-/* line 26, ../../assets/screen.sass */
+/* line 35, ../../assets/screen.sass */
 #container button {
-  font-size: 16px;
-  padding: 0.3em 0.5em;
-  display: inline-block;
-  cursor: pointer;
-  text-decoration: none;
-  line-height: 1.5;
-  -moz-border-radius: 5px;
-  -webkit-border-radius: 5px;
-  -o-border-radius: 5px;
-  -ms-border-radius: 5px;
-  -khtml-border-radius: 5px;
-  border-radius: 5px;
-  background-color: #363737;
-  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #5c5e5e), color-stop(70%, #363737));
-  background: -webkit-linear-gradient(#5c5e5e, #363737 70%);
-  background: -moz-linear-gradient(#5c5e5e, #363737 70%);
-  background: -o-linear-gradient(#5c5e5e, #363737 70%);
-  background: -ms-linear-gradient(#5c5e5e, #363737 70%);
-  background: linear-gradient(#5c5e5e, #363737 70%);
-  -moz-box-shadow: #828484 0 1px 0 inset;
-  -webkit-box-shadow: #828484 0 1px 0 inset;
-  -o-box-shadow: #828484 0 1px 0 inset;
-  box-shadow: #828484 0 1px 0 inset;
-  border: 1px solid #292a2a;
-  color: white;
-  text-shadow: #191919 0 -1px 0;
+  background-color: #969696;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="hsl(0, 0%, 73%)", endColorstr="hsl(0, 0%, 59%)");
+  background-repeat: repeat-x;
+  background-image: -khtml-gradient(linear, left top, left bottom, from(#bababa), to(#969696));
+  background-image: -moz-linear-gradient(top, #bababa, #969696);
+  background-image: -ms-linear-gradient(top, #bababa, #969696);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #bababa), color-stop(100%, #969696));
+  background-image: -webkit-linear-gradient(top, #bababa, #969696);
+  background-image: -o-linear-gradient(top, #bababa, #969696);
+  background-image: linear-gradient(#bababa, #969696);
+  border-color: #969696 #969696 #8e8e8e;
+  color: #333333;
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.23);
+  -webkit-font-smoothing: antialiased;
 }
-/* line 10, ../../../../.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/sassy-buttons-0.0.9/stylesheets/sassy-buttons/_sassy-button-pseudo-states.sass */
-#container button:hover {
-  background-color: #292a2a;
-  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(3%, #4f5151), color-stop(75%, #292a2a));
-  background: -webkit-linear-gradient(#4f5151 3%, #292a2a 75%);
-  background: -moz-linear-gradient(#4f5151 3%, #292a2a 75%);
-  background: -o-linear-gradient(#4f5151 3%, #292a2a 75%);
-  background: -ms-linear-gradient(#4f5151 3%, #292a2a 75%);
-  background: linear-gradient(#4f5151 3%, #292a2a 75%);
-}
-/* line 13, ../../../../.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/sassy-buttons-0.0.9/stylesheets/sassy-buttons/_sassy-button-pseudo-states.sass */
-#container button:active {
-  -moz-box-shadow: #222222 0 1px 2px inset;
-  -webkit-box-shadow: #222222 0 1px 2px inset;
-  -o-box-shadow: #222222 0 1px 2px inset;
-  box-shadow: #222222 0 1px 2px inset;
-}
-/* line 29, ../../assets/screen.sass */
+/* line 38, ../../assets/screen.sass */
 #container ul {
   margin: 0.5em 1em;
   padding: 0;
 }
-/* line 34, ../../assets/screen.sass */
-#container #schedule {
-  display: inline;
-  float: left;
-  width: 47.541%;
-  margin-right: 1.639%;
-  display: inline;
-  float: right;
-  margin-right: 1.639%;
-  #margin-left: -1em;
-}
-/* line 37, ../../assets/screen.sass */
+/* line 44, ../../assets/screen.sass */
 #container #schedule .booking {
   border-bottom: 1px solid black;
 }
-/* line 39, ../../assets/screen.sass */
-#container #schedule .booking .course {
-  display: inline;
-  float: left;
-  width: 48.276%;
-  margin-right: 3.448%;
-}
-/* line 42, ../../assets/screen.sass */
-#container #schedule .booking .suffix {
-  display: inline;
-  float: left;
-  width: 48.276%;
-  margin-right: 3.448%;
-  display: inline;
-  float: right;
-  margin-right: 0;
-  #margin-left: -1em;
-}
-/* line 45, ../../assets/screen.sass */
-#container #schedule .booking .timeslot {
-  display: inline;
-  float: left;
-  width: 48.276%;
-  margin-right: 3.448%;
-}
-/* line 48, ../../assets/screen.sass */
+/* line 50, ../../assets/screen.sass */
 #container #schedule .booking .room {
-  display: inline;
-  float: left;
-  width: 48.276%;
-  margin-right: 3.448%;
-  display: inline;
-  float: right;
-  margin-right: 0;
-  #margin-left: -1em;
   text-align: right;
 }
-/* line 52, ../../assets/screen.sass */
-#container #schedule .booking .teacher {
-  display: inline;
-  float: left;
-  width: 65.517%;
-  margin-right: 3.448%;
-}
-/* line 54, ../../assets/screen.sass */
+/* line 53, ../../assets/screen.sass */
 #container #schedule .booking .teacher a {
   color: inherit;
   text-decoration: inherit;
@@ -606,62 +529,99 @@ img {
 #container #schedule .booking .teacher a:active, #container #schedule .booking .teacher a:focus {
   outline: none;
 }
-/* line 56, ../../assets/screen.sass */
+/* line 55, ../../assets/screen.sass */
 #container #schedule .booking button {
-  display: inline;
-  float: left;
-  width: 31.034%;
-  margin-right: 3.448%;
-  display: inline;
-  float: right;
-  margin-right: 0;
-  #margin-left: -1em;
   margin-bottom: 1px;
 }
-/* line 61, ../../assets/screen.sass */
-#container #bookings_list {
-  display: inline;
-  float: left;
-  width: 47.541%;
-  margin-right: 1.639%;
-  margin-left: 1.639%;
+@media screen and (min-width: 960px) {
+  /* line 43, ../../assets/screen.sass */
+  #container #schedule {
+    display: inline;
+    float: left;
+    width: 47.541%;
+    margin-right: 1.639%;
+    display: inline;
+    float: right;
+    margin-right: 1.639%;
+    #margin-left: -1em;
+  }
+  /* line 61, ../../assets/screen.sass */
+  #container #schedule .booking .course {
+    display: inline;
+    float: left;
+    width: 48.276%;
+    margin-right: 3.448%;
+  }
+  /* line 63, ../../assets/screen.sass */
+  #container #schedule .booking .suffix {
+    display: inline;
+    float: left;
+    width: 48.276%;
+    margin-right: 3.448%;
+    display: inline;
+    float: right;
+    margin-right: 0;
+    #margin-left: -1em;
+  }
+  /* line 66, ../../assets/screen.sass */
+  #container #schedule .booking .timeslot {
+    display: inline;
+    float: left;
+    width: 48.276%;
+    margin-right: 3.448%;
+  }
+  /* line 68, ../../assets/screen.sass */
+  #container #schedule .booking .room {
+    display: inline;
+    float: left;
+    width: 48.276%;
+    margin-right: 3.448%;
+    display: inline;
+    float: right;
+    margin-right: 0;
+    #margin-left: -1em;
+  }
+  /* line 71, ../../assets/screen.sass */
+  #container #schedule .booking .teacher {
+    display: inline;
+    float: left;
+    width: 65.517%;
+    margin-right: 3.448%;
+  }
+  /* line 73, ../../assets/screen.sass */
+  #container #schedule .booking button {
+    display: inline;
+    float: left;
+    width: 31.034%;
+    margin-right: 3.448%;
+    display: inline;
+    float: right;
+    margin-right: 0;
+    #margin-left: -1em;
+  }
 }
-/* line 64, ../../assets/screen.sass */
+/* line 78, ../../assets/screen.sass */
 #container #bookings_list .bookings {
   display: none;
 }
-/* line 66, ../../assets/screen.sass */
+/* line 80, ../../assets/screen.sass */
 #container #bookings_list .bookings h4 {
   margin: 0.5em 0;
 }
-/* line 68, ../../assets/screen.sass */
+/* line 82, ../../assets/screen.sass */
 #container #bookings_list .booking {
   border-bottom: 1px solid black;
 }
-/* line 70, ../../assets/screen.sass */
-#container #bookings_list .booking .course {
-  clear: both;
-}
-/* line 73, ../../assets/screen.sass */
+/* line 86, ../../assets/screen.sass */
 #container #bookings_list .booking .suffix {
-  padding-left: 17.241%;
-  display: inline;
-  float: left;
-  width: 65.517%;
-  margin-right: 3.448%;
   font-size: 0.75em;
   line-height: 2em;
 }
-/* line 77, ../../assets/screen.sass */
+/* line 88, ../../assets/screen.sass */
 #container #bookings_list .booking .people {
   margin: 0.2em 0;
-  padding-left: 17.241%;
-  display: inline;
-  float: left;
-  width: 65.517%;
-  margin-right: 3.448%;
 }
-/* line 83, ../../assets/screen.sass */
+/* line 92, ../../assets/screen.sass */
 #container #bookings_list .booking .people .person a {
   color: inherit;
   text-decoration: inherit;
@@ -671,24 +631,57 @@ img {
 #container #bookings_list .booking .people .person a:active, #container #bookings_list .booking .people .person a:focus {
   outline: none;
 }
-/* line 85, ../../assets/screen.sass */
-#container #bookings_list .booking .room {
-  clear: left;
-  padding-left: 17.241%;
-  display: inline;
-  float: left;
-  width: 31.034%;
-  margin-right: 3.448%;
-}
-/* line 89, ../../assets/screen.sass */
+/* line 94, ../../assets/screen.sass */
 #container #bookings_list .booking button {
-  display: inline;
-  float: left;
-  width: 13.793%;
-  margin-right: 3.448%;
-  display: inline;
-  float: right;
-  margin-right: 0;
-  #margin-left: -1em;
   line-height: 1.1;
+}
+@media screen and (min-width: 960px) {
+  /* line 77, ../../assets/screen.sass */
+  #container #bookings_list {
+    display: inline;
+    float: left;
+    width: 47.541%;
+    margin-right: 1.639%;
+    margin-left: 1.639%;
+  }
+  /* line 101, ../../assets/screen.sass */
+  #container #bookings_list .booking .course {
+    clear: both;
+  }
+  /* line 103, ../../assets/screen.sass */
+  #container #bookings_list .booking .suffix {
+    padding-left: 17.241%;
+    display: inline;
+    float: left;
+    width: 65.517%;
+    margin-right: 3.448%;
+  }
+  /* line 106, ../../assets/screen.sass */
+  #container #bookings_list .booking .people {
+    padding-left: 17.241%;
+    display: inline;
+    float: left;
+    width: 65.517%;
+    margin-right: 3.448%;
+  }
+  /* line 109, ../../assets/screen.sass */
+  #container #bookings_list .booking .room {
+    clear: left;
+    padding-left: 17.241%;
+    display: inline;
+    float: left;
+    width: 31.034%;
+    margin-right: 3.448%;
+  }
+  /* line 113, ../../assets/screen.sass */
+  #container #bookings_list .booking button {
+    display: inline;
+    float: left;
+    width: 13.793%;
+    margin-right: 3.448%;
+    display: inline;
+    float: right;
+    margin-right: 0;
+    #margin-left: -1em;
+  }
 }

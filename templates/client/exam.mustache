@@ -1,0 +1,15 @@
+<article class="exam">
+  {{>course}}
+  {{>time}}
+  <div class="rooms">
+    {{#rooms}}
+      <div class="room">{{.}}</div>
+    {{/rooms}}
+  </div>
+  <div class="examiner">
+    {{#examiner}}
+      <div class="person">{{,}}</div>
+    {{/examiner}}
+  </div>
+  <div class"clear"></div>
+</article>
