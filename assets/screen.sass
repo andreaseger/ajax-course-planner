@@ -40,16 +40,31 @@
     padding: 0
     //+no-bullets
 
+  #full_schedule_horizontal
+    +full
+    +pad(1,1)
+    //#time-0815
+      color: blue
+    .time
+      +full(10)
+      border-bottom: 2px solid black
+      .day
+        +columns(2,10)
+        &:first-child
+          +alpha(10)
+        &:last-child
+          +omega(10)
+
   #full_schedule
     +full
     .day
-      +columns(2)
-      li.time
+      +columns(2,10)
+      .time
         background-color: #222
     &:first-child
-      +alpha
+      +alpha(10)
     &:last-child
-      +omega
+      +omega(10)
   #schedule
     .booking
       border-bottom: 1px solid black

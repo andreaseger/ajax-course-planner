@@ -1,17 +1,19 @@
-<article id="full_schedule">
+<article id="full_schedule_horizontal">
   <header><h2 id="schedule-header">Schedule:</h2></header>
-  {{#days}}
-    <section id="day-{{label}}" class="day">
-    {{#times}}
-      <section id="time-{{label}}" class="time">
+  {{#times}}
+    <section id="time-{{label}}" class="time">
+    <header>{{name}}</header>
+    {{#days}}
+      <section id="day-{{label}}" class="day">
       {{#bookings}}
         {{>booking}}
       {{/bookings}}
+      &nbsp;
       </section>
-    {{/times}}
+    {{/days}}
     <div class="clear"></div>
     </section>
-  {{/days}}
+  {{/times}}
 </article>
 {{#has_exams}}
 <article id="exams">
