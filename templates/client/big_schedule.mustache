@@ -1,6 +1,22 @@
 <article id="big_schedule">
   <header><h2 id="schedule-header">Schedule:</h2></header>
-  {{#bookings}}
-    {{> booking }}
-  {{/bookings}}
+  {{#days}}
+    <section id="day-{{label}}">
+    {{#time}}
+      <section id="time-{{label}}">
+      {{#bookings}}
+        {{>booking}}
+      {{/bookings}}
+      </section>
+    {{/time}}
+    </section>
+  {{/days}}
 </article>
+{{#has_exams}}
+<article id="exams">
+  <header><h2 id="exams-header">Exams:</h2></header>
+  {{#exams}}
+    {{>exam}}
+  {{/exams}}
+</article>
+{{/has_exams}}

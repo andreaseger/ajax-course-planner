@@ -1,5 +1,5 @@
 require_relative 'lib/booking'
-require_relative 'lib/bookings_parser'
+require_relative 'lib/exam'
 #require_relative 'lib/templates'
 
 class CoursePlanner < Sinatra::Base
@@ -14,6 +14,7 @@ class CoursePlanner < Sinatra::Base
       views: File.dirname(__FILE__) + '/views',
       namespace: CoursePlanner
     }
+    disable :exams
 
     set :public_folder, File.dirname(__FILE__) + '/public'
     enable :sessions
@@ -44,11 +45,42 @@ class CoursePlanner < Sinatra::Base
     json templates
   end
 
+  def index_for_day(day)
+    @days ||= {mo: 0, di: 1, mi: 2, do: 3, fr: 4}
+    @days[day.to_sym]
+  end
+  def index_for_time(time)
+    @times ||= { "0815" => 0, "1000" => 1, "1145" => 2, "1330" => 3, "1515" => 4, "1700" => 5, "1845" => 6 }
+    @times[time.gsub(':','')]
+  end
   namespace '/api' do
     get '/s' do
       bookings = params[:bookings]
+      get_exams = params[:exams]
+      structure = params[:structure].try(:to_sym) || :list
       if bookings
-        json( bookings: bookings.map { |e| Booking.find(e) }.compact.map{|b| b.merge(key: b.key)})
+        b = bookings.map { |e| Booking.find(e) }.compact.map{|b| b.merge(key: b.key)}
+        schedule= case structure
+                  when :list
+                    b
+                  when :timetable
+                    b.reduce(days: []){ |a,e|
+                      day = e[:timeslot][:day][:name]
+                      time = e[:timeslot][:label]
+                      i = index_for_day day
+                      j = index_for_time time
+                      a[:days][i] ||= {label: day, times: []}
+                      a[:days][i][:times][j] ||= {label: time, bookings: []}
+                      a[:days][i][:times][j][:bookings] << e
+                      a
+                    }
+                  end
+        if get_exams && settings.exams
+          exams = schedule.map { |e| Exam.find_by_course(e[:course][:name]) }.flatten.compact
+          json( bookings: schedule, has_exams: !exams.empty?, exams: exams )
+        else
+          json( bookings: schedule, has_exams: false )
+        end
       end
     end
 

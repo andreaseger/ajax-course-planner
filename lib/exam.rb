@@ -26,7 +26,7 @@ class Exam < Hash
     "#{namespace}:#{key}"
   end
   def self.find id
-    from_json $redis.get(self.db_key(key))
+    from_json $redis.get(self.db_key(id))
   end
   def self.find_by_course course
     $redis.smembers("#{namespace}:by_course:#{course}").map {|k| find k }
