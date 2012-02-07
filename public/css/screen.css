@@ -446,7 +446,7 @@ img {
 /* @end */
 /* @end */
 /* Layout ------------------------------------------------------------------ */
-/* line 11, assets/screen.sass */
+/* line 11, ../../assets/screen.sass */
 .clear, #container #schedule .booking .timeslot, #container #bookings_list .booking .people {
   clear: both;
 }
@@ -454,7 +454,7 @@ img {
 /* Smaller than standard 960 (devices and browsers) */
 /* WVGA/iPhone Landscape size to standard 960 (devices and browsers) */
 /* WVGA/iPhone Portrait (devices and browser) */
-/* line 23, assets/screen.sass */
+/* line 23, ../../assets/screen.sass */
 #container {
   *zoom: 1;
   margin: auto;
@@ -474,22 +474,22 @@ img {
   display: table;
   clear: both;
 }
-/* line 26, assets/screen.sass */
+/* line 26, ../../assets/screen.sass */
 #container header, #container footer {
   clear: both;
   margin-left: 1.639%;
   margin-right: 1.639%;
 }
-/* line 29, assets/screen.sass */
+/* line 29, ../../assets/screen.sass */
 #container h3.day-header {
   text-align: center;
 }
-/* line 31, assets/screen.sass */
+/* line 31, ../../assets/screen.sass */
 #container h3.day-header:focus, #container h3.day-header:hover, #container h3.day-header:active {
   color: #aa4411;
   text-decoration: none;
 }
-/* line 35, assets/screen.sass */
+/* line 35, ../../assets/screen.sass */
 #container button {
   background-color: #969696;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="hsl(0, 0%, 73%)", endColorstr="hsl(0, 0%, 59%)");
@@ -506,12 +506,12 @@ img {
   text-shadow: 0 1px 1px rgba(255, 255, 255, 0.23);
   -webkit-font-smoothing: antialiased;
 }
-/* line 38, assets/screen.sass */
+/* line 38, ../../assets/screen.sass */
 #container ul {
   margin: 0.5em 1em;
   padding: 0;
 }
-/* line 43, assets/screen.sass */
+/* line 43, ../../assets/screen.sass */
 #container #full_schedule_horizontal {
   clear: both;
   margin-left: 1.639%;
@@ -519,58 +519,58 @@ img {
   padding-left: 8.197%;
   padding-right: 8.197%;
 }
-/* line 48, assets/screen.sass */
+/* line 48, ../../assets/screen.sass */
 #container #full_schedule_horizontal .time {
   clear: both;
   border-bottom: 2px solid black;
 }
-/* line 51, assets/screen.sass */
+/* line 51, ../../assets/screen.sass */
 #container #full_schedule_horizontal .time .day {
   display: inline;
   float: left;
   width: 18.367%;
   margin-right: 2.041%;
 }
-/* line 55, assets/screen.sass */
+/* line 55, ../../assets/screen.sass */
 #container #full_schedule_horizontal .time .day:last-child {
   display: inline;
   float: right;
   margin-right: 0;
   #margin-left: -1em;
 }
-/* line 58, assets/screen.sass */
+/* line 58, ../../assets/screen.sass */
 #container #full_schedule {
   clear: both;
   margin-left: 1.639%;
   margin-right: 1.639%;
 }
-/* line 60, assets/screen.sass */
+/* line 60, ../../assets/screen.sass */
 #container #full_schedule .day {
   display: inline;
   float: left;
   width: 18.367%;
   margin-right: 2.041%;
 }
-/* line 62, assets/screen.sass */
+/* line 62, ../../assets/screen.sass */
 #container #full_schedule .day .time {
   background-color: #222222;
 }
-/* line 66, assets/screen.sass */
+/* line 66, ../../assets/screen.sass */
 #container #full_schedule:last-child {
   display: inline;
   float: right;
   margin-right: 0;
   #margin-left: -1em;
 }
-/* line 69, assets/screen.sass */
+/* line 69, ../../assets/screen.sass */
 #container #schedule .booking {
   border-bottom: 1px solid black;
 }
-/* line 75, assets/screen.sass */
+/* line 75, ../../assets/screen.sass */
 #container #schedule .booking .room {
   text-align: right;
 }
-/* line 78, assets/screen.sass */
+/* line 78, ../../assets/screen.sass */
 #container #schedule .booking .teacher a {
   color: inherit;
   text-decoration: inherit;
@@ -580,12 +580,12 @@ img {
 #container #schedule .booking .teacher a:active, #container #schedule .booking .teacher a:focus {
   outline: none;
 }
-/* line 80, assets/screen.sass */
+/* line 80, ../../assets/screen.sass */
 #container #schedule .booking button {
   margin-bottom: 1px;
 }
 @media screen and (min-width: 960px) {
-  /* line 68, assets/screen.sass */
+  /* line 68, ../../assets/screen.sass */
   #container #schedule {
     display: inline;
     float: left;
@@ -596,14 +596,14 @@ img {
     margin-right: 1.639%;
     #margin-left: -1em;
   }
-  /* line 86, assets/screen.sass */
+  /* line 86, ../../assets/screen.sass */
   #container #schedule .booking .course {
     display: inline;
     float: left;
     width: 48.276%;
     margin-right: 3.448%;
   }
-  /* line 88, assets/screen.sass */
+  /* line 88, ../../assets/screen.sass */
   #container #schedule .booking .suffix {
     display: inline;
     float: left;
@@ -614,14 +614,14 @@ img {
     margin-right: 0;
     #margin-left: -1em;
   }
-  /* line 91, assets/screen.sass */
+  /* line 91, ../../assets/screen.sass */
   #container #schedule .booking .timeslot {
     display: inline;
     float: left;
     width: 48.276%;
     margin-right: 3.448%;
   }
-  /* line 93, assets/screen.sass */
+  /* line 93, ../../assets/screen.sass */
   #container #schedule .booking .room {
     display: inline;
     float: left;
@@ -632,14 +632,14 @@ img {
     margin-right: 0;
     #margin-left: -1em;
   }
-  /* line 96, assets/screen.sass */
+  /* line 96, ../../assets/screen.sass */
   #container #schedule .booking .teacher {
     display: inline;
     float: left;
     width: 65.517%;
     margin-right: 3.448%;
   }
-  /* line 98, assets/screen.sass */
+  /* line 98, ../../assets/screen.sass */
   #container #schedule .booking button {
     display: inline;
     float: left;
@@ -651,28 +651,28 @@ img {
     #margin-left: -1em;
   }
 }
-/* line 103, assets/screen.sass */
+/* line 103, ../../assets/screen.sass */
 #container #bookings_list .bookings {
   display: none;
 }
-/* line 105, assets/screen.sass */
+/* line 105, ../../assets/screen.sass */
 #container #bookings_list .bookings h4 {
   margin: 0.5em 0;
 }
-/* line 107, assets/screen.sass */
+/* line 107, ../../assets/screen.sass */
 #container #bookings_list .booking {
   border-bottom: 1px solid black;
 }
-/* line 111, assets/screen.sass */
+/* line 111, ../../assets/screen.sass */
 #container #bookings_list .booking .suffix {
   font-size: 0.75em;
   line-height: 2em;
 }
-/* line 113, assets/screen.sass */
+/* line 113, ../../assets/screen.sass */
 #container #bookings_list .booking .people {
   margin: 0.2em 0;
 }
-/* line 117, assets/screen.sass */
+/* line 117, ../../assets/screen.sass */
 #container #bookings_list .booking .people .person a {
   color: inherit;
   text-decoration: inherit;
@@ -682,12 +682,12 @@ img {
 #container #bookings_list .booking .people .person a:active, #container #bookings_list .booking .people .person a:focus {
   outline: none;
 }
-/* line 119, assets/screen.sass */
+/* line 119, ../../assets/screen.sass */
 #container #bookings_list .booking button {
   line-height: 1.1;
 }
 @media screen and (min-width: 960px) {
-  /* line 102, assets/screen.sass */
+  /* line 102, ../../assets/screen.sass */
   #container #bookings_list {
     display: inline;
     float: left;
@@ -695,11 +695,11 @@ img {
     margin-right: 1.639%;
     margin-left: 1.639%;
   }
-  /* line 126, assets/screen.sass */
+  /* line 126, ../../assets/screen.sass */
   #container #bookings_list .booking .course {
     clear: both;
   }
-  /* line 128, assets/screen.sass */
+  /* line 128, ../../assets/screen.sass */
   #container #bookings_list .booking .suffix {
     padding-left: 17.241%;
     display: inline;
@@ -707,7 +707,7 @@ img {
     width: 65.517%;
     margin-right: 3.448%;
   }
-  /* line 131, assets/screen.sass */
+  /* line 131, ../../assets/screen.sass */
   #container #bookings_list .booking .people {
     padding-left: 17.241%;
     display: inline;
@@ -715,7 +715,7 @@ img {
     width: 65.517%;
     margin-right: 3.448%;
   }
-  /* line 134, assets/screen.sass */
+  /* line 134, ../../assets/screen.sass */
   #container #bookings_list .booking .room {
     clear: left;
     padding-left: 17.241%;
@@ -724,7 +724,7 @@ img {
     width: 31.034%;
     margin-right: 3.448%;
   }
-  /* line 138, assets/screen.sass */
+  /* line 138, ../../assets/screen.sass */
   #container #bookings_list .booking button {
     display: inline;
     float: left;
