@@ -1,0 +1,12 @@
+@import "base.css.sass"
+
+#full_schedule_horizontal
+  +full
+  .time
+    border-bottom: 2px solid black
+    .day
+      +columns(2)
+      &:first-child
+        +alpha
+      &:last-child
+        +omega

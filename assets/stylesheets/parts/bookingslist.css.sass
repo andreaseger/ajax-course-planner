@@ -1,0 +1,42 @@
+@import "base.css.sass"
+@import "compass/typography/links"
+@import "compass/typography/vertical_rhythm"
+#bookings_list
+  .bookings
+    display: none
+    h4
+      margin: .5em 0
+  .booking
+    border-bottom: 1px solid black
+    .course
+      @extend strong
+    .suffix
+      +adjust-font-size-to(12px)
+    .people
+      @extend .clear
+      margin: 0.2em 0
+      .person
+        a
+          +unstyled-link
+    button
+      @extend strong
+      line-height: 1.1
+  @media screen and (min-width: 960px)
+    +columns(6)
+    +alpha
+    .booking
+      .course
+        +full(6)
+      .suffix
+        +prefix(1,6)
+        +columns(4,6)
+      .people
+        +prefix(1,6)
+        +columns(4,6)
+      .room
+        clear: left
+        +prefix(1,6)
+        +columns(2,6)
+      button
+        +columns(1,6)
+        +omega(6)

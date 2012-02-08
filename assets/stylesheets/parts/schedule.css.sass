@@ -1,0 +1,35 @@
+@import "base.css.sass"
+@import "compass/typography/links"
+#schedule
+  .booking
+    border-bottom: 1px solid black
+    .course
+      @extend strong
+    .timeslot
+      @extend .clear
+    .room
+      text-align: right
+    .teacher
+      a
+        +unstyled-link
+    button
+      margin-bottom: 1px
+  @media screen and (min-width: 960px)
+    +columns(4)
+    +omega
+    .booking
+      .course
+        +columns(2,4)
+      .suffix
+        +columns(2,4)
+        +omega(4)
+      .timeslot
+        +columns(2,4)
+      .room
+        +columns(2,4)
+        +omega(4)
+      .teacher
+        +columns(3,4)
+      button
+        +columns(1,4)
+        +omega(4)

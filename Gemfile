@@ -17,15 +17,26 @@ gem 'nokogiri'
 group :production do
   gem 'hiredis'
 end
+
+group :assets do
+  gem 'therubyracer'
+  gem 'sprockets'
+  gem 'coffee-script'
+  gem 'sass'
+  gem 'uglifier'
+  gem 'compass-susy-plugin', :require => 'susy'
+  gem 'compass', ">= 0.12.alpha.1", :require => false
+  gem 'compass-h5bp'
+end
+
 group :development do
   gem 'capistrano'
   gem 'sinatra-reloader', :require => 'sinatra/reloader'
-  gem 'compass'
-  gem 'compass-susy-plugin'
-  gem 'compass-h5bp'
-  gem 'sassy-buttons'
-  gem 'guard-compass'
-  gem 'guard-bundler'
+  gem 'guard-sprockets2'
+  #gem 'compass'
+  #gem 'compass-susy-plugin'
+  #gem 'guard-compass'
+  #gem 'guard-bundler'
 end
 
 group :development, :test do

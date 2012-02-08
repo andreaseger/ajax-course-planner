@@ -4,7 +4,7 @@ require 'bundler'
 rack_env = ENV['RACK_ENV'] || 'production'
 
 Bundler.setup
-Bundler.require(:default, rack_env)
+Bundler.require(:default, rack_env, :assets)
 
 REDIS_CONFIG =  if ENV['PLANNER_REDIS_URL']
                   require 'uri'
@@ -19,4 +19,19 @@ REDIS_CONFIG =  if ENV['PLANNER_REDIS_URL']
                   {}
                 end
 require './service'
-run CoursePlanner.new
+
+map '/assets' do
+  environment = Sprockets::Environment.new
+  environment.append_path 'assets/javascripts'
+  environment.append_path 'assets/stylesheets'
+  environment.append_path 'assets/images'
+  environment.append_path "#{Gem.loaded_specs['compass'].full_gem_path}/frameworks/compass/stylesheets"
+  environment.append_path "#{Gem.loaded_specs['compass'].full_gem_path}/frameworks/compass/stylesheets/compass"
+  environment.append_path "#{Gem.loaded_specs['compass-susy-plugin'].full_gem_path}/sass"
+
+  run environment
+end
+
+map '/' do
+  run CoursePlanner.new
+end

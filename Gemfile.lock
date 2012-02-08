@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/rack/rack.git
-  revision: 4c58e4d3088c08ae54f8c1883b62f6e727ea45d4
+  revision: 7289f396b832169d63b1c1e8e26a968414f8a1c3
   specs:
     rack (1.4.1)
 
@@ -19,7 +19,11 @@ GEM
       net-ssh-gateway (>= 1.1.0)
     chunky_png (1.2.5)
     coderay (1.0.5)
-    compass (0.11.7)
+    coffee-script (2.2.0)
+      coffee-script-source
+      execjs
+    coffee-script-source (1.2.0)
+    compass (0.12.rc.1)
       chunky_png (~> 1.2)
       fssm (>= 0.2.7)
       sass (~> 3.1)
@@ -27,26 +31,27 @@ GEM
       compass
     compass-susy-plugin (0.9)
       compass (>= 0.11.1)
-    daemons (1.1.6)
+    daemons (1.1.8)
     diff-lcs (1.1.3)
     eventmachine (0.12.10)
+    execjs (1.3.0)
+      multi_json (~> 1.0)
     fakeweb (1.3.0)
     ffi (1.0.11)
     fssm (0.2.8.1)
     guard (1.0.0)
       ffi (>= 0.5.0)
       thor (~> 0.14.6)
-    guard-bundler (0.1.3)
-      bundler (>= 1.0.0)
-      guard (>= 0.2.2)
-    guard-compass (0.0.6)
-      compass (>= 0.10.5)
-      guard (>= 0.2.1)
     guard-rspec (0.6.0)
       guard (>= 0.10.0)
+    guard-sprockets2 (0.0.6)
+      guard
+      sprockets (~> 2.0)
     highline (1.6.11)
+    hike (1.2.1)
     hiredis (0.4.4)
     i18n (0.6.0)
+    libv8 (3.3.10.4)
     metaclass (0.0.1)
     method_source (0.7.0)
     mocha (0.10.3)
@@ -61,7 +66,7 @@ GEM
     net-ssh-gateway (1.1.0)
       net-ssh (>= 1.99.1)
     nokogiri (1.5.0)
-    pry (0.9.8)
+    pry (0.9.8.1)
       coderay (~> 1.0.5)
       method_source (~> 0.7)
       slop (>= 2.4.3, < 3)
@@ -79,9 +84,7 @@ GEM
     rspec-expectations (2.8.0)
       diff-lcs (~> 1.1.2)
     rspec-mocks (2.8.0)
-    sass (3.1.12)
-    sassy-buttons (0.0.9)
-      compass (>= 0.11)
+    sass (3.1.14)
     sinatra (1.3.2)
       rack (~> 1.3, >= 1.3.6)
       rack-protection (~> 1.2)
@@ -97,14 +100,24 @@ GEM
       sinatra (>= 1.0.0)
     sinatra-reloader (1.0)
       sinatra-contrib
-    slop (2.4.3)
+    slop (2.4.4)
+    sprockets (2.3.0)
+      hike (~> 1.2)
+      multi_json (~> 1.0)
+      rack (~> 1.0)
+      tilt (~> 1.1, != 1.3.0)
     sqlite3 (1.3.5)
+    therubyracer (0.9.9)
+      libv8 (~> 3.3.10)
     thin (1.3.1)
       daemons (>= 1.0.9)
       eventmachine (>= 0.12.6)
       rack (>= 1.0.0)
     thor (0.14.6)
     tilt (1.3.3)
+    uglifier (1.2.3)
+      execjs (>= 0.3.0)
+      multi_json (>= 1.0.2)
     vcr (2.0.0.rc1)
 
 PLATFORMS
@@ -113,13 +126,13 @@ PLATFORMS
 DEPENDENCIES
   activesupport
   capistrano
-  compass
+  coffee-script
+  compass (>= 0.12.alpha.1)
   compass-h5bp
   compass-susy-plugin
   fakeweb
-  guard-bundler
-  guard-compass
   guard-rspec
+  guard-sprockets2
   hiredis
   mocha
   mustache
@@ -129,11 +142,14 @@ DEPENDENCIES
   rake
   redis
   rspec
-  sassy-buttons
+  sass
   sinatra
   sinatra-contrib
   sinatra-flash
   sinatra-reloader
+  sprockets
   sqlite3
+  therubyracer
   thin
+  uglifier
   vcr (>= 2.0.0.rc1)
