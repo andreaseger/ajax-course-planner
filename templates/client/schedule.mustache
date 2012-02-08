@@ -1,7 +1,17 @@
 <article id="schedule">
   <header><h2 id="schedule-header">Schedule:</h2></header>
-  {{#bookings}}
-    {{> booking }}
-  {{/bookings}}
-  <footer><a href="{{permalink}}">Permalink</a></footer>
+  {{#bookings.days}}
+    <section id="day-{{label}}" class="day">
+      <header><h4>{{name}}</h4></header>
+      {{#times}}
+        <section id="time-{{label}}" class="time">
+          {{#bookings}}
+            {{>booking}}
+          {{/bookings}}
+          &nbsp;
+        </section>
+      {{/times}}
+    </section>
+  {{/bookings.days}}
+  <footer><a id="schedule-permalink" href="{{permalink}}">Permalink</a></footer>
 </article>

@@ -21,6 +21,8 @@ $.getJSON('/templates.json', function (data) {
 var History = window.History;
 History.Adapter.bind(window,'statechange',function(){
   var State = History.getState().data;
+
+  //TODO handle the switch to the big schedule and back
   update_bookings(State.group, false);
   $('#groups').val(State.group);
 });
@@ -34,9 +36,6 @@ function get_groups(){
 }
 function update_page_title(title){
   document.title = title;
-}
-function clear_cookie(){
-  $.cookie("schedule-data",null)
 }
 function toggle_in_cookie(key){
   var data=JSON.parse($.cookie("schedule-data"));
@@ -55,44 +54,30 @@ function update_schedule(){
   if(store === null || store.bookings.length === 0){
     $('#schedule').text('');
   }else{
+    store.structure = 'table_by_days'
     $.getJSON('/api/s', store, function(data){
-      data.permalink = "/schedule/" + store.bookings.join("/");
+      //data.permalink = "/schedule/" + store.bookings.join("/");
       $('#schedule').replaceWith(ich.schedule(data));
     });
   }
 }
 function update_bookings(group, push){
-  var api_url = '/api/b/g/' + group;
-  if(api_url){
-    $.getJSON(api_url, function(data){
-      $('#' + meta.id ).replaceWith( ich.bookings_list(meta) );
+  $.getJSON('/api/b/g', {group: group, structure: 'table_by_days'}, function(data){
+    $('#bookings_list').replaceWith( ich.bookings_list(data) );
 
-      $.each(data, function(index, elem) {
-        html = ich.full_booking(elem)
-        var div = $('#bookings-' + elem.timeslot.day.name + ' .' + elem.timeslot.label.replace(':',''));
-        if(div.is(':empty')){
-          div.append('<h4>' + elem.timeslot.label + '</h4>');
-        }
-        div.append(html);
-      });
+    var title = 'Bookings for ' + group;
+    update_page_title(title);
+    $('#bookings-header').text(title + ':')
 
-      var title = 'Bookings for ' + group;
-      update_page_title(title);
-      $('#bookings-header').text(title + ':')
-
-      if(push){
-        History.pushState({group: group, api_url: api_url}, title, '/bookings/g/' + group );
-      }
-    });
-  }
+    if(push){
+      History.pushState({pagename: 'bookingslist', group: group}, title, '/bookings/g/' + group );
+    }
+  });
 }
-function show_schedule_from_uri(){
-  var bookings = window.location.pathname.split('/');
-  //$.getJSON('/api/s', {bookings: bookings, exams: true, structure: 'timetable'}, function(data) {
-  //  $('#schedule').replaceWith(ich.big_schedule(data.bookings))
-  //});
-  $.getJSON('/api/s', {bookings: bookings, exams: true, structure: 'htimetable'}, function(data) {
-    $('#schedule').replaceWith(ich.big_schedule_horizontal(data.bookings))
+function big_schedule_from_bookings(bookings){
+  $.getJSON('/api/s', {bookings: bookings, exams: true, structure: 'table_by_times'}, function(data) {
+    $('#schedule').replaceWith(ich.big_schedule_by_times(data.bookings))
+    //TODO History
   });
 }
 function cleanup_structure () {
@@ -103,7 +88,7 @@ function cleanup_structure () {
 function init_bookingslist(){
   get_groups();
   update_schedule();
-  update_bookings($('#' + meta.id).data('group'), true);
+  update_bookings($('#bookings_list').data('group'), true);
 
   $('#container').on('change', '#groups', function(){
     update_bookings($(this).val(), true);
@@ -127,11 +112,14 @@ function init_bookingslist(){
 };
 
 function init_schedule(){
-  show_schedule_from_uri();
+  big_schedule_from_bookings(window.location.pathname.split('/'));
   cleanup_structure();
 };
 
 function template_finished(){
+  $('footer').on('click', '#clear_cookie', function(){
+    $.cookie("schedule-data",null)
+  });
   $(function(){
     switch($(meta.page).attr('content')){
     case 'bookingslist':

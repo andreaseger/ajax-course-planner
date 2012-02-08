@@ -1,16 +1,17 @@
-<article id="{{id}}">
+<article id="bookings_list">
   {{#days}}
-    <article id="{{name}}">
-      <header><h3 class="day-header" data-bookings-list="bookings-{{name}}">{{label}}</h3></header>
-      <div id="bookings-{{name}}" class="bookings">
-        <section class="0815"></section>
-        <section class="1000"></section>
-        <section class="1145"></section>
-        <section class="1330"></section>
-        <section class="1515"></section>
-        <section class="1700"></section>
-        <section class="1845"></section>
-      </div>
-    </article>
+    <section id="day-{{label}}" class="day">
+      <header><h3 class="day-header" data-bookings-list="bookings-{{label}}">{{name}}</h3></header>
+      <div id="bookings-{{label}}" class="bookings">
+      {{#times}}
+        <section id="time-{{label}}" class="time">
+          <header><h4>{{name}}</h4></header>
+          {{#bookings}}
+            {{>full_booking}}
+          {{/bookings}}
+          &nbsp;
+        </section>
+      {{/times}}
+    </section>
   {{/days}}
 </article>

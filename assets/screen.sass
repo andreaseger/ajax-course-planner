@@ -6,6 +6,7 @@
 @import "compass/typography/lists/bullets"
 @import "compass/typography/links"
 @import "compass/typography/vertical_rhythm"
+@import "compass/utilities/lists/horizontal-list"
 /* Layout ------------------------------------------------------------------
 
 .clear
@@ -25,7 +26,10 @@
   +susy-grid-background
   header, footer
     +full
-
+  header nav
+    +horizontal-list
+  footer .links
+    +horizontal-list
   h3.day-header
     text-align: center
     &:focus, &:hover, &:active
@@ -42,18 +46,17 @@
 
   #full_schedule_horizontal
     +full
-    +pad(1,1)
     //#time-0815
       color: blue
     .time
-      +full(10)
+      +full
       border-bottom: 2px solid black
       .day
-        +columns(2,10)
-        //&:first-child
-          +alpha(10)
+        +columns(2)
+        &:first-child
+          +alpha
         &:last-child
-          +omega(10)
+          +omega
 
   #full_schedule
     +full
@@ -80,24 +83,24 @@
       button
         margin-bottom: 1px
     @media screen and (min-width: 960px)
-      +columns(6)
+      +columns(4)
       +omega
       .booking
         .course
-          +columns(3,6)
+          +columns(2,4)
         .suffix
-          +columns(3,6)
-          +omega(6)
+          +columns(2,4)
+          +omega(4)
         .timeslot
-          +columns(3,6)
+          +columns(2,4)
         .room
-          +columns(3,6)
-          +omega(6)
+          +columns(2,4)
+          +omega(4)
         .teacher
-          +columns(4,6)
+          +columns(3,4)
         button
-          +columns(2,6)
-          +omega(6)
+          +columns(1,4)
+          +omega(4)
 
   #bookings_list
     .bookings

@@ -446,7 +446,7 @@ img {
 /* @end */
 /* @end */
 /* Layout ------------------------------------------------------------------ */
-/* line 11, ../../assets/screen.sass */
+/* line 12, ../../assets/screen.sass */
 .clear, #container #schedule .booking .timeslot, #container #bookings_list .booking .people {
   clear: both;
 }
@@ -454,18 +454,18 @@ img {
 /* Smaller than standard 960 (devices and browsers) */
 /* WVGA/iPhone Landscape size to standard 960 (devices and browsers) */
 /* WVGA/iPhone Portrait (devices and browser) */
-/* line 23, ../../assets/screen.sass */
+/* line 24, ../../assets/screen.sass */
 #container {
   *zoom: 1;
   margin: auto;
   width: 61em;
   max-width: 100%;
-  background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(1.639%, rgba(0, 0, 0, 0)), color-stop(1.639%, rgba(100, 100, 225, 0.25)), color-stop(8.197%, rgba(100, 100, 225, 0.25)), color-stop(8.197%, rgba(0, 0, 0, 0)), color-stop(9.836%, rgba(0, 0, 0, 0)), color-stop(9.836%, rgba(100, 100, 225, 0.25)), color-stop(16.393%, rgba(100, 100, 225, 0.25)), color-stop(16.393%, rgba(0, 0, 0, 0)), color-stop(18.033%, rgba(0, 0, 0, 0)), color-stop(18.033%, rgba(100, 100, 225, 0.25)), color-stop(24.59%, rgba(100, 100, 225, 0.25)), color-stop(24.59%, rgba(0, 0, 0, 0)), color-stop(26.23%, rgba(0, 0, 0, 0)), color-stop(26.23%, rgba(100, 100, 225, 0.25)), color-stop(32.787%, rgba(100, 100, 225, 0.25)), color-stop(32.787%, rgba(0, 0, 0, 0)), color-stop(34.426%, rgba(0, 0, 0, 0)), color-stop(34.426%, rgba(100, 100, 225, 0.25)), color-stop(40.984%, rgba(100, 100, 225, 0.25)), color-stop(40.984%, rgba(0, 0, 0, 0)), color-stop(42.623%, rgba(0, 0, 0, 0)), color-stop(42.623%, rgba(100, 100, 225, 0.25)), color-stop(49.18%, rgba(100, 100, 225, 0.25)), color-stop(49.18%, rgba(0, 0, 0, 0)), color-stop(50.82%, rgba(0, 0, 0, 0)), color-stop(50.82%, rgba(100, 100, 225, 0.25)), color-stop(57.377%, rgba(100, 100, 225, 0.25)), color-stop(57.377%, rgba(0, 0, 0, 0)), color-stop(59.016%, rgba(0, 0, 0, 0)), color-stop(59.016%, rgba(100, 100, 225, 0.25)), color-stop(65.574%, rgba(100, 100, 225, 0.25)), color-stop(65.574%, rgba(0, 0, 0, 0)), color-stop(67.213%, rgba(0, 0, 0, 0)), color-stop(67.213%, rgba(100, 100, 225, 0.25)), color-stop(73.77%, rgba(100, 100, 225, 0.25)), color-stop(73.77%, rgba(0, 0, 0, 0)), color-stop(75.41%, rgba(0, 0, 0, 0)), color-stop(75.41%, rgba(100, 100, 225, 0.25)), color-stop(81.967%, rgba(100, 100, 225, 0.25)), color-stop(81.967%, rgba(0, 0, 0, 0)), color-stop(83.607%, rgba(0, 0, 0, 0)), color-stop(83.607%, rgba(100, 100, 225, 0.25)), color-stop(90.164%, rgba(100, 100, 225, 0.25)), color-stop(90.164%, rgba(0, 0, 0, 0)), color-stop(91.803%, rgba(0, 0, 0, 0)), color-stop(91.803%, rgba(100, 100, 225, 0.25)), color-stop(98.361%, rgba(100, 100, 225, 0.25)), color-stop(98.361%, rgba(0, 0, 0, 0)), color-stop(100%, rgba(0, 0, 0, 0)));
-  background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0) 1.639%, rgba(100, 100, 225, 0.25) 1.639%, rgba(100, 100, 225, 0.25) 8.197%, rgba(0, 0, 0, 0) 8.197%, rgba(0, 0, 0, 0) 9.836%, rgba(100, 100, 225, 0.25) 9.836%, rgba(100, 100, 225, 0.25) 16.393%, rgba(0, 0, 0, 0) 16.393%, rgba(0, 0, 0, 0) 18.033%, rgba(100, 100, 225, 0.25) 18.033%, rgba(100, 100, 225, 0.25) 24.59%, rgba(0, 0, 0, 0) 24.59%, rgba(0, 0, 0, 0) 26.23%, rgba(100, 100, 225, 0.25) 26.23%, rgba(100, 100, 225, 0.25) 32.787%, rgba(0, 0, 0, 0) 32.787%, rgba(0, 0, 0, 0) 34.426%, rgba(100, 100, 225, 0.25) 34.426%, rgba(100, 100, 225, 0.25) 40.984%, rgba(0, 0, 0, 0) 40.984%, rgba(0, 0, 0, 0) 42.623%, rgba(100, 100, 225, 0.25) 42.623%, rgba(100, 100, 225, 0.25) 49.18%, rgba(0, 0, 0, 0) 49.18%, rgba(0, 0, 0, 0) 50.82%, rgba(100, 100, 225, 0.25) 50.82%, rgba(100, 100, 225, 0.25) 57.377%, rgba(0, 0, 0, 0) 57.377%, rgba(0, 0, 0, 0) 59.016%, rgba(100, 100, 225, 0.25) 59.016%, rgba(100, 100, 225, 0.25) 65.574%, rgba(0, 0, 0, 0) 65.574%, rgba(0, 0, 0, 0) 67.213%, rgba(100, 100, 225, 0.25) 67.213%, rgba(100, 100, 225, 0.25) 73.77%, rgba(0, 0, 0, 0) 73.77%, rgba(0, 0, 0, 0) 75.41%, rgba(100, 100, 225, 0.25) 75.41%, rgba(100, 100, 225, 0.25) 81.967%, rgba(0, 0, 0, 0) 81.967%, rgba(0, 0, 0, 0) 83.607%, rgba(100, 100, 225, 0.25) 83.607%, rgba(100, 100, 225, 0.25) 90.164%, rgba(0, 0, 0, 0) 90.164%, rgba(0, 0, 0, 0) 91.803%, rgba(100, 100, 225, 0.25) 91.803%, rgba(100, 100, 225, 0.25) 98.361%, rgba(0, 0, 0, 0) 98.361%, rgba(0, 0, 0, 0) 100%);
-  background-image: -moz-linear-gradient(left, rgba(0, 0, 0, 0) 1.639%, rgba(100, 100, 225, 0.25) 1.639%, rgba(100, 100, 225, 0.25) 8.197%, rgba(0, 0, 0, 0) 8.197%, rgba(0, 0, 0, 0) 9.836%, rgba(100, 100, 225, 0.25) 9.836%, rgba(100, 100, 225, 0.25) 16.393%, rgba(0, 0, 0, 0) 16.393%, rgba(0, 0, 0, 0) 18.033%, rgba(100, 100, 225, 0.25) 18.033%, rgba(100, 100, 225, 0.25) 24.59%, rgba(0, 0, 0, 0) 24.59%, rgba(0, 0, 0, 0) 26.23%, rgba(100, 100, 225, 0.25) 26.23%, rgba(100, 100, 225, 0.25) 32.787%, rgba(0, 0, 0, 0) 32.787%, rgba(0, 0, 0, 0) 34.426%, rgba(100, 100, 225, 0.25) 34.426%, rgba(100, 100, 225, 0.25) 40.984%, rgba(0, 0, 0, 0) 40.984%, rgba(0, 0, 0, 0) 42.623%, rgba(100, 100, 225, 0.25) 42.623%, rgba(100, 100, 225, 0.25) 49.18%, rgba(0, 0, 0, 0) 49.18%, rgba(0, 0, 0, 0) 50.82%, rgba(100, 100, 225, 0.25) 50.82%, rgba(100, 100, 225, 0.25) 57.377%, rgba(0, 0, 0, 0) 57.377%, rgba(0, 0, 0, 0) 59.016%, rgba(100, 100, 225, 0.25) 59.016%, rgba(100, 100, 225, 0.25) 65.574%, rgba(0, 0, 0, 0) 65.574%, rgba(0, 0, 0, 0) 67.213%, rgba(100, 100, 225, 0.25) 67.213%, rgba(100, 100, 225, 0.25) 73.77%, rgba(0, 0, 0, 0) 73.77%, rgba(0, 0, 0, 0) 75.41%, rgba(100, 100, 225, 0.25) 75.41%, rgba(100, 100, 225, 0.25) 81.967%, rgba(0, 0, 0, 0) 81.967%, rgba(0, 0, 0, 0) 83.607%, rgba(100, 100, 225, 0.25) 83.607%, rgba(100, 100, 225, 0.25) 90.164%, rgba(0, 0, 0, 0) 90.164%, rgba(0, 0, 0, 0) 91.803%, rgba(100, 100, 225, 0.25) 91.803%, rgba(100, 100, 225, 0.25) 98.361%, rgba(0, 0, 0, 0) 98.361%, rgba(0, 0, 0, 0) 100%);
-  background-image: -o-linear-gradient(left, rgba(0, 0, 0, 0) 1.639%, rgba(100, 100, 225, 0.25) 1.639%, rgba(100, 100, 225, 0.25) 8.197%, rgba(0, 0, 0, 0) 8.197%, rgba(0, 0, 0, 0) 9.836%, rgba(100, 100, 225, 0.25) 9.836%, rgba(100, 100, 225, 0.25) 16.393%, rgba(0, 0, 0, 0) 16.393%, rgba(0, 0, 0, 0) 18.033%, rgba(100, 100, 225, 0.25) 18.033%, rgba(100, 100, 225, 0.25) 24.59%, rgba(0, 0, 0, 0) 24.59%, rgba(0, 0, 0, 0) 26.23%, rgba(100, 100, 225, 0.25) 26.23%, rgba(100, 100, 225, 0.25) 32.787%, rgba(0, 0, 0, 0) 32.787%, rgba(0, 0, 0, 0) 34.426%, rgba(100, 100, 225, 0.25) 34.426%, rgba(100, 100, 225, 0.25) 40.984%, rgba(0, 0, 0, 0) 40.984%, rgba(0, 0, 0, 0) 42.623%, rgba(100, 100, 225, 0.25) 42.623%, rgba(100, 100, 225, 0.25) 49.18%, rgba(0, 0, 0, 0) 49.18%, rgba(0, 0, 0, 0) 50.82%, rgba(100, 100, 225, 0.25) 50.82%, rgba(100, 100, 225, 0.25) 57.377%, rgba(0, 0, 0, 0) 57.377%, rgba(0, 0, 0, 0) 59.016%, rgba(100, 100, 225, 0.25) 59.016%, rgba(100, 100, 225, 0.25) 65.574%, rgba(0, 0, 0, 0) 65.574%, rgba(0, 0, 0, 0) 67.213%, rgba(100, 100, 225, 0.25) 67.213%, rgba(100, 100, 225, 0.25) 73.77%, rgba(0, 0, 0, 0) 73.77%, rgba(0, 0, 0, 0) 75.41%, rgba(100, 100, 225, 0.25) 75.41%, rgba(100, 100, 225, 0.25) 81.967%, rgba(0, 0, 0, 0) 81.967%, rgba(0, 0, 0, 0) 83.607%, rgba(100, 100, 225, 0.25) 83.607%, rgba(100, 100, 225, 0.25) 90.164%, rgba(0, 0, 0, 0) 90.164%, rgba(0, 0, 0, 0) 91.803%, rgba(100, 100, 225, 0.25) 91.803%, rgba(100, 100, 225, 0.25) 98.361%, rgba(0, 0, 0, 0) 98.361%, rgba(0, 0, 0, 0) 100%);
-  background-image: -ms-linear-gradient(left, rgba(0, 0, 0, 0) 1.639%, rgba(100, 100, 225, 0.25) 1.639%, rgba(100, 100, 225, 0.25) 8.197%, rgba(0, 0, 0, 0) 8.197%, rgba(0, 0, 0, 0) 9.836%, rgba(100, 100, 225, 0.25) 9.836%, rgba(100, 100, 225, 0.25) 16.393%, rgba(0, 0, 0, 0) 16.393%, rgba(0, 0, 0, 0) 18.033%, rgba(100, 100, 225, 0.25) 18.033%, rgba(100, 100, 225, 0.25) 24.59%, rgba(0, 0, 0, 0) 24.59%, rgba(0, 0, 0, 0) 26.23%, rgba(100, 100, 225, 0.25) 26.23%, rgba(100, 100, 225, 0.25) 32.787%, rgba(0, 0, 0, 0) 32.787%, rgba(0, 0, 0, 0) 34.426%, rgba(100, 100, 225, 0.25) 34.426%, rgba(100, 100, 225, 0.25) 40.984%, rgba(0, 0, 0, 0) 40.984%, rgba(0, 0, 0, 0) 42.623%, rgba(100, 100, 225, 0.25) 42.623%, rgba(100, 100, 225, 0.25) 49.18%, rgba(0, 0, 0, 0) 49.18%, rgba(0, 0, 0, 0) 50.82%, rgba(100, 100, 225, 0.25) 50.82%, rgba(100, 100, 225, 0.25) 57.377%, rgba(0, 0, 0, 0) 57.377%, rgba(0, 0, 0, 0) 59.016%, rgba(100, 100, 225, 0.25) 59.016%, rgba(100, 100, 225, 0.25) 65.574%, rgba(0, 0, 0, 0) 65.574%, rgba(0, 0, 0, 0) 67.213%, rgba(100, 100, 225, 0.25) 67.213%, rgba(100, 100, 225, 0.25) 73.77%, rgba(0, 0, 0, 0) 73.77%, rgba(0, 0, 0, 0) 75.41%, rgba(100, 100, 225, 0.25) 75.41%, rgba(100, 100, 225, 0.25) 81.967%, rgba(0, 0, 0, 0) 81.967%, rgba(0, 0, 0, 0) 83.607%, rgba(100, 100, 225, 0.25) 83.607%, rgba(100, 100, 225, 0.25) 90.164%, rgba(0, 0, 0, 0) 90.164%, rgba(0, 0, 0, 0) 91.803%, rgba(100, 100, 225, 0.25) 91.803%, rgba(100, 100, 225, 0.25) 98.361%, rgba(0, 0, 0, 0) 98.361%, rgba(0, 0, 0, 0) 100%);
-  background-image: linear-gradient(left, rgba(0, 0, 0, 0) 1.639%, rgba(100, 100, 225, 0.25) 1.639%, rgba(100, 100, 225, 0.25) 8.197%, rgba(0, 0, 0, 0) 8.197%, rgba(0, 0, 0, 0) 9.836%, rgba(100, 100, 225, 0.25) 9.836%, rgba(100, 100, 225, 0.25) 16.393%, rgba(0, 0, 0, 0) 16.393%, rgba(0, 0, 0, 0) 18.033%, rgba(100, 100, 225, 0.25) 18.033%, rgba(100, 100, 225, 0.25) 24.59%, rgba(0, 0, 0, 0) 24.59%, rgba(0, 0, 0, 0) 26.23%, rgba(100, 100, 225, 0.25) 26.23%, rgba(100, 100, 225, 0.25) 32.787%, rgba(0, 0, 0, 0) 32.787%, rgba(0, 0, 0, 0) 34.426%, rgba(100, 100, 225, 0.25) 34.426%, rgba(100, 100, 225, 0.25) 40.984%, rgba(0, 0, 0, 0) 40.984%, rgba(0, 0, 0, 0) 42.623%, rgba(100, 100, 225, 0.25) 42.623%, rgba(100, 100, 225, 0.25) 49.18%, rgba(0, 0, 0, 0) 49.18%, rgba(0, 0, 0, 0) 50.82%, rgba(100, 100, 225, 0.25) 50.82%, rgba(100, 100, 225, 0.25) 57.377%, rgba(0, 0, 0, 0) 57.377%, rgba(0, 0, 0, 0) 59.016%, rgba(100, 100, 225, 0.25) 59.016%, rgba(100, 100, 225, 0.25) 65.574%, rgba(0, 0, 0, 0) 65.574%, rgba(0, 0, 0, 0) 67.213%, rgba(100, 100, 225, 0.25) 67.213%, rgba(100, 100, 225, 0.25) 73.77%, rgba(0, 0, 0, 0) 73.77%, rgba(0, 0, 0, 0) 75.41%, rgba(100, 100, 225, 0.25) 75.41%, rgba(100, 100, 225, 0.25) 81.967%, rgba(0, 0, 0, 0) 81.967%, rgba(0, 0, 0, 0) 83.607%, rgba(100, 100, 225, 0.25) 83.607%, rgba(100, 100, 225, 0.25) 90.164%, rgba(0, 0, 0, 0) 90.164%, rgba(0, 0, 0, 0) 91.803%, rgba(100, 100, 225, 0.25) 91.803%, rgba(100, 100, 225, 0.25) 98.361%, rgba(0, 0, 0, 0) 98.361%, rgba(0, 0, 0, 0) 100%);
+  background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(1.639%, rgba(0, 0, 0, 0)), color-stop(1.639%, rgba(100, 100, 225, 0.25)), color-stop(9.836%, rgba(100, 100, 225, 0.25)), color-stop(9.836%, rgba(0, 0, 0, 0)), color-stop(11.475%, rgba(0, 0, 0, 0)), color-stop(11.475%, rgba(100, 100, 225, 0.25)), color-stop(19.672%, rgba(100, 100, 225, 0.25)), color-stop(19.672%, rgba(0, 0, 0, 0)), color-stop(21.311%, rgba(0, 0, 0, 0)), color-stop(21.311%, rgba(100, 100, 225, 0.25)), color-stop(29.508%, rgba(100, 100, 225, 0.25)), color-stop(29.508%, rgba(0, 0, 0, 0)), color-stop(31.148%, rgba(0, 0, 0, 0)), color-stop(31.148%, rgba(100, 100, 225, 0.25)), color-stop(39.344%, rgba(100, 100, 225, 0.25)), color-stop(39.344%, rgba(0, 0, 0, 0)), color-stop(40.984%, rgba(0, 0, 0, 0)), color-stop(40.984%, rgba(100, 100, 225, 0.25)), color-stop(49.18%, rgba(100, 100, 225, 0.25)), color-stop(49.18%, rgba(0, 0, 0, 0)), color-stop(50.82%, rgba(0, 0, 0, 0)), color-stop(50.82%, rgba(100, 100, 225, 0.25)), color-stop(59.016%, rgba(100, 100, 225, 0.25)), color-stop(59.016%, rgba(0, 0, 0, 0)), color-stop(60.656%, rgba(0, 0, 0, 0)), color-stop(60.656%, rgba(100, 100, 225, 0.25)), color-stop(68.852%, rgba(100, 100, 225, 0.25)), color-stop(68.852%, rgba(0, 0, 0, 0)), color-stop(70.492%, rgba(0, 0, 0, 0)), color-stop(70.492%, rgba(100, 100, 225, 0.25)), color-stop(78.689%, rgba(100, 100, 225, 0.25)), color-stop(78.689%, rgba(0, 0, 0, 0)), color-stop(80.328%, rgba(0, 0, 0, 0)), color-stop(80.328%, rgba(100, 100, 225, 0.25)), color-stop(88.525%, rgba(100, 100, 225, 0.25)), color-stop(88.525%, rgba(0, 0, 0, 0)), color-stop(90.164%, rgba(0, 0, 0, 0)), color-stop(90.164%, rgba(100, 100, 225, 0.25)), color-stop(98.361%, rgba(100, 100, 225, 0.25)), color-stop(98.361%, rgba(0, 0, 0, 0)), color-stop(100%, rgba(0, 0, 0, 0)));
+  background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0) 1.639%, rgba(100, 100, 225, 0.25) 1.639%, rgba(100, 100, 225, 0.25) 9.836%, rgba(0, 0, 0, 0) 9.836%, rgba(0, 0, 0, 0) 11.475%, rgba(100, 100, 225, 0.25) 11.475%, rgba(100, 100, 225, 0.25) 19.672%, rgba(0, 0, 0, 0) 19.672%, rgba(0, 0, 0, 0) 21.311%, rgba(100, 100, 225, 0.25) 21.311%, rgba(100, 100, 225, 0.25) 29.508%, rgba(0, 0, 0, 0) 29.508%, rgba(0, 0, 0, 0) 31.148%, rgba(100, 100, 225, 0.25) 31.148%, rgba(100, 100, 225, 0.25) 39.344%, rgba(0, 0, 0, 0) 39.344%, rgba(0, 0, 0, 0) 40.984%, rgba(100, 100, 225, 0.25) 40.984%, rgba(100, 100, 225, 0.25) 49.18%, rgba(0, 0, 0, 0) 49.18%, rgba(0, 0, 0, 0) 50.82%, rgba(100, 100, 225, 0.25) 50.82%, rgba(100, 100, 225, 0.25) 59.016%, rgba(0, 0, 0, 0) 59.016%, rgba(0, 0, 0, 0) 60.656%, rgba(100, 100, 225, 0.25) 60.656%, rgba(100, 100, 225, 0.25) 68.852%, rgba(0, 0, 0, 0) 68.852%, rgba(0, 0, 0, 0) 70.492%, rgba(100, 100, 225, 0.25) 70.492%, rgba(100, 100, 225, 0.25) 78.689%, rgba(0, 0, 0, 0) 78.689%, rgba(0, 0, 0, 0) 80.328%, rgba(100, 100, 225, 0.25) 80.328%, rgba(100, 100, 225, 0.25) 88.525%, rgba(0, 0, 0, 0) 88.525%, rgba(0, 0, 0, 0) 90.164%, rgba(100, 100, 225, 0.25) 90.164%, rgba(100, 100, 225, 0.25) 98.361%, rgba(0, 0, 0, 0) 98.361%, rgba(0, 0, 0, 0) 100%);
+  background-image: -moz-linear-gradient(left, rgba(0, 0, 0, 0) 1.639%, rgba(100, 100, 225, 0.25) 1.639%, rgba(100, 100, 225, 0.25) 9.836%, rgba(0, 0, 0, 0) 9.836%, rgba(0, 0, 0, 0) 11.475%, rgba(100, 100, 225, 0.25) 11.475%, rgba(100, 100, 225, 0.25) 19.672%, rgba(0, 0, 0, 0) 19.672%, rgba(0, 0, 0, 0) 21.311%, rgba(100, 100, 225, 0.25) 21.311%, rgba(100, 100, 225, 0.25) 29.508%, rgba(0, 0, 0, 0) 29.508%, rgba(0, 0, 0, 0) 31.148%, rgba(100, 100, 225, 0.25) 31.148%, rgba(100, 100, 225, 0.25) 39.344%, rgba(0, 0, 0, 0) 39.344%, rgba(0, 0, 0, 0) 40.984%, rgba(100, 100, 225, 0.25) 40.984%, rgba(100, 100, 225, 0.25) 49.18%, rgba(0, 0, 0, 0) 49.18%, rgba(0, 0, 0, 0) 50.82%, rgba(100, 100, 225, 0.25) 50.82%, rgba(100, 100, 225, 0.25) 59.016%, rgba(0, 0, 0, 0) 59.016%, rgba(0, 0, 0, 0) 60.656%, rgba(100, 100, 225, 0.25) 60.656%, rgba(100, 100, 225, 0.25) 68.852%, rgba(0, 0, 0, 0) 68.852%, rgba(0, 0, 0, 0) 70.492%, rgba(100, 100, 225, 0.25) 70.492%, rgba(100, 100, 225, 0.25) 78.689%, rgba(0, 0, 0, 0) 78.689%, rgba(0, 0, 0, 0) 80.328%, rgba(100, 100, 225, 0.25) 80.328%, rgba(100, 100, 225, 0.25) 88.525%, rgba(0, 0, 0, 0) 88.525%, rgba(0, 0, 0, 0) 90.164%, rgba(100, 100, 225, 0.25) 90.164%, rgba(100, 100, 225, 0.25) 98.361%, rgba(0, 0, 0, 0) 98.361%, rgba(0, 0, 0, 0) 100%);
+  background-image: -o-linear-gradient(left, rgba(0, 0, 0, 0) 1.639%, rgba(100, 100, 225, 0.25) 1.639%, rgba(100, 100, 225, 0.25) 9.836%, rgba(0, 0, 0, 0) 9.836%, rgba(0, 0, 0, 0) 11.475%, rgba(100, 100, 225, 0.25) 11.475%, rgba(100, 100, 225, 0.25) 19.672%, rgba(0, 0, 0, 0) 19.672%, rgba(0, 0, 0, 0) 21.311%, rgba(100, 100, 225, 0.25) 21.311%, rgba(100, 100, 225, 0.25) 29.508%, rgba(0, 0, 0, 0) 29.508%, rgba(0, 0, 0, 0) 31.148%, rgba(100, 100, 225, 0.25) 31.148%, rgba(100, 100, 225, 0.25) 39.344%, rgba(0, 0, 0, 0) 39.344%, rgba(0, 0, 0, 0) 40.984%, rgba(100, 100, 225, 0.25) 40.984%, rgba(100, 100, 225, 0.25) 49.18%, rgba(0, 0, 0, 0) 49.18%, rgba(0, 0, 0, 0) 50.82%, rgba(100, 100, 225, 0.25) 50.82%, rgba(100, 100, 225, 0.25) 59.016%, rgba(0, 0, 0, 0) 59.016%, rgba(0, 0, 0, 0) 60.656%, rgba(100, 100, 225, 0.25) 60.656%, rgba(100, 100, 225, 0.25) 68.852%, rgba(0, 0, 0, 0) 68.852%, rgba(0, 0, 0, 0) 70.492%, rgba(100, 100, 225, 0.25) 70.492%, rgba(100, 100, 225, 0.25) 78.689%, rgba(0, 0, 0, 0) 78.689%, rgba(0, 0, 0, 0) 80.328%, rgba(100, 100, 225, 0.25) 80.328%, rgba(100, 100, 225, 0.25) 88.525%, rgba(0, 0, 0, 0) 88.525%, rgba(0, 0, 0, 0) 90.164%, rgba(100, 100, 225, 0.25) 90.164%, rgba(100, 100, 225, 0.25) 98.361%, rgba(0, 0, 0, 0) 98.361%, rgba(0, 0, 0, 0) 100%);
+  background-image: -ms-linear-gradient(left, rgba(0, 0, 0, 0) 1.639%, rgba(100, 100, 225, 0.25) 1.639%, rgba(100, 100, 225, 0.25) 9.836%, rgba(0, 0, 0, 0) 9.836%, rgba(0, 0, 0, 0) 11.475%, rgba(100, 100, 225, 0.25) 11.475%, rgba(100, 100, 225, 0.25) 19.672%, rgba(0, 0, 0, 0) 19.672%, rgba(0, 0, 0, 0) 21.311%, rgba(100, 100, 225, 0.25) 21.311%, rgba(100, 100, 225, 0.25) 29.508%, rgba(0, 0, 0, 0) 29.508%, rgba(0, 0, 0, 0) 31.148%, rgba(100, 100, 225, 0.25) 31.148%, rgba(100, 100, 225, 0.25) 39.344%, rgba(0, 0, 0, 0) 39.344%, rgba(0, 0, 0, 0) 40.984%, rgba(100, 100, 225, 0.25) 40.984%, rgba(100, 100, 225, 0.25) 49.18%, rgba(0, 0, 0, 0) 49.18%, rgba(0, 0, 0, 0) 50.82%, rgba(100, 100, 225, 0.25) 50.82%, rgba(100, 100, 225, 0.25) 59.016%, rgba(0, 0, 0, 0) 59.016%, rgba(0, 0, 0, 0) 60.656%, rgba(100, 100, 225, 0.25) 60.656%, rgba(100, 100, 225, 0.25) 68.852%, rgba(0, 0, 0, 0) 68.852%, rgba(0, 0, 0, 0) 70.492%, rgba(100, 100, 225, 0.25) 70.492%, rgba(100, 100, 225, 0.25) 78.689%, rgba(0, 0, 0, 0) 78.689%, rgba(0, 0, 0, 0) 80.328%, rgba(100, 100, 225, 0.25) 80.328%, rgba(100, 100, 225, 0.25) 88.525%, rgba(0, 0, 0, 0) 88.525%, rgba(0, 0, 0, 0) 90.164%, rgba(100, 100, 225, 0.25) 90.164%, rgba(100, 100, 225, 0.25) 98.361%, rgba(0, 0, 0, 0) 98.361%, rgba(0, 0, 0, 0) 100%);
+  background-image: linear-gradient(left, rgba(0, 0, 0, 0) 1.639%, rgba(100, 100, 225, 0.25) 1.639%, rgba(100, 100, 225, 0.25) 9.836%, rgba(0, 0, 0, 0) 9.836%, rgba(0, 0, 0, 0) 11.475%, rgba(100, 100, 225, 0.25) 11.475%, rgba(100, 100, 225, 0.25) 19.672%, rgba(0, 0, 0, 0) 19.672%, rgba(0, 0, 0, 0) 21.311%, rgba(100, 100, 225, 0.25) 21.311%, rgba(100, 100, 225, 0.25) 29.508%, rgba(0, 0, 0, 0) 29.508%, rgba(0, 0, 0, 0) 31.148%, rgba(100, 100, 225, 0.25) 31.148%, rgba(100, 100, 225, 0.25) 39.344%, rgba(0, 0, 0, 0) 39.344%, rgba(0, 0, 0, 0) 40.984%, rgba(100, 100, 225, 0.25) 40.984%, rgba(100, 100, 225, 0.25) 49.18%, rgba(0, 0, 0, 0) 49.18%, rgba(0, 0, 0, 0) 50.82%, rgba(100, 100, 225, 0.25) 50.82%, rgba(100, 100, 225, 0.25) 59.016%, rgba(0, 0, 0, 0) 59.016%, rgba(0, 0, 0, 0) 60.656%, rgba(100, 100, 225, 0.25) 60.656%, rgba(100, 100, 225, 0.25) 68.852%, rgba(0, 0, 0, 0) 68.852%, rgba(0, 0, 0, 0) 70.492%, rgba(100, 100, 225, 0.25) 70.492%, rgba(100, 100, 225, 0.25) 78.689%, rgba(0, 0, 0, 0) 78.689%, rgba(0, 0, 0, 0) 80.328%, rgba(100, 100, 225, 0.25) 80.328%, rgba(100, 100, 225, 0.25) 88.525%, rgba(0, 0, 0, 0) 88.525%, rgba(0, 0, 0, 0) 90.164%, rgba(100, 100, 225, 0.25) 90.164%, rgba(100, 100, 225, 0.25) 98.361%, rgba(0, 0, 0, 0) 98.361%, rgba(0, 0, 0, 0) 100%);
   background-position: left top;
 }
 /* line 38, ../../../../.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/compass-0.11.7/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
@@ -474,22 +474,84 @@ img {
   display: table;
   clear: both;
 }
-/* line 26, ../../assets/screen.sass */
+/* line 27, ../../assets/screen.sass */
 #container header, #container footer {
   clear: both;
   margin-left: 1.639%;
   margin-right: 1.639%;
 }
 /* line 29, ../../assets/screen.sass */
+#container header nav {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  overflow: hidden;
+  *zoom: 1;
+}
+/* line 60, ../../../../.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/compass-0.11.7/frameworks/compass/stylesheets/compass/typography/lists/_horizontal-list.scss */
+#container header nav li {
+  list-style-image: none;
+  list-style-type: none;
+  margin-left: 0;
+  white-space: nowrap;
+  display: inline;
+  float: left;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+/* line 48, ../../../../.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/compass-0.11.7/frameworks/compass/stylesheets/compass/typography/lists/_horizontal-list.scss */
+#container header nav li:first-child, #container header nav li.first {
+  padding-left: 0;
+}
+/* line 49, ../../../../.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/compass-0.11.7/frameworks/compass/stylesheets/compass/typography/lists/_horizontal-list.scss */
+#container header nav li:last-child {
+  padding-right: 0;
+}
+/* line 50, ../../../../.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/compass-0.11.7/frameworks/compass/stylesheets/compass/typography/lists/_horizontal-list.scss */
+#container header nav li.last {
+  padding-right: 0;
+}
+/* line 31, ../../assets/screen.sass */
+#container footer .links {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  overflow: hidden;
+  *zoom: 1;
+}
+/* line 60, ../../../../.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/compass-0.11.7/frameworks/compass/stylesheets/compass/typography/lists/_horizontal-list.scss */
+#container footer .links li {
+  list-style-image: none;
+  list-style-type: none;
+  margin-left: 0;
+  white-space: nowrap;
+  display: inline;
+  float: left;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+/* line 48, ../../../../.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/compass-0.11.7/frameworks/compass/stylesheets/compass/typography/lists/_horizontal-list.scss */
+#container footer .links li:first-child, #container footer .links li.first {
+  padding-left: 0;
+}
+/* line 49, ../../../../.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/compass-0.11.7/frameworks/compass/stylesheets/compass/typography/lists/_horizontal-list.scss */
+#container footer .links li:last-child {
+  padding-right: 0;
+}
+/* line 50, ../../../../.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/compass-0.11.7/frameworks/compass/stylesheets/compass/typography/lists/_horizontal-list.scss */
+#container footer .links li.last {
+  padding-right: 0;
+}
+/* line 33, ../../assets/screen.sass */
 #container h3.day-header {
   text-align: center;
 }
-/* line 31, ../../assets/screen.sass */
+/* line 35, ../../assets/screen.sass */
 #container h3.day-header:focus, #container h3.day-header:hover, #container h3.day-header:active {
   color: #aa4411;
   text-decoration: none;
 }
-/* line 35, ../../assets/screen.sass */
+/* line 39, ../../assets/screen.sass */
 #container button {
   background-color: #969696;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="hsl(0, 0%, 73%)", endColorstr="hsl(0, 0%, 59%)");
@@ -506,71 +568,75 @@ img {
   text-shadow: 0 1px 1px rgba(255, 255, 255, 0.23);
   -webkit-font-smoothing: antialiased;
 }
-/* line 38, ../../assets/screen.sass */
+/* line 42, ../../assets/screen.sass */
 #container ul {
   margin: 0.5em 1em;
   padding: 0;
 }
-/* line 43, ../../assets/screen.sass */
+/* line 47, ../../assets/screen.sass */
 #container #full_schedule_horizontal {
   clear: both;
   margin-left: 1.639%;
   margin-right: 1.639%;
-  padding-left: 8.197%;
-  padding-right: 8.197%;
-}
-/* line 48, ../../assets/screen.sass */
-#container #full_schedule_horizontal .time {
-  clear: both;
-  border-bottom: 2px solid black;
 }
 /* line 51, ../../assets/screen.sass */
+#container #full_schedule_horizontal .time {
+  clear: both;
+  margin-left: 1.639%;
+  margin-right: 1.639%;
+  border-bottom: 2px solid black;
+}
+/* line 54, ../../assets/screen.sass */
 #container #full_schedule_horizontal .time .day {
   display: inline;
   float: left;
-  width: 18.367%;
-  margin-right: 2.041%;
+  width: 18.033%;
+  margin-right: 1.639%;
 }
-/* line 55, ../../assets/screen.sass */
+/* line 56, ../../assets/screen.sass */
+#container #full_schedule_horizontal .time .day:first-child {
+  margin-left: 1.639%;
+}
+/* line 58, ../../assets/screen.sass */
 #container #full_schedule_horizontal .time .day:last-child {
   display: inline;
   float: right;
-  margin-right: 0;
+  margin-right: 1.639%;
   #margin-left: -1em;
 }
-/* line 58, ../../assets/screen.sass */
+/* line 61, ../../assets/screen.sass */
 #container #full_schedule {
   clear: both;
   margin-left: 1.639%;
   margin-right: 1.639%;
 }
-/* line 60, ../../assets/screen.sass */
+/* line 63, ../../assets/screen.sass */
 #container #full_schedule .day {
   display: inline;
   float: left;
-  width: 18.367%;
-  margin-right: 2.041%;
+  width: 18.644%;
+  margin-right: 1.695%;
 }
-/* line 62, ../../assets/screen.sass */
+/* line 65, ../../assets/screen.sass */
 #container #full_schedule .day .time {
   background-color: #222222;
 }
-/* line 66, ../../assets/screen.sass */
+/* line 69, ../../assets/screen.sass */
 #container #full_schedule:last-child {
   display: inline;
   float: right;
   margin-right: 0;
   #margin-left: -1em;
 }
-/* line 69, ../../assets/screen.sass */
+/* line 72, ../../assets/screen.sass */
 #container #schedule .booking {
   border-bottom: 1px solid black;
 }
-/* line 75, ../../assets/screen.sass */
+/* line 78, ../../assets/screen.sass */
 #container #schedule .booking .room {
   text-align: right;
 }
-/* line 78, ../../assets/screen.sass */
+/* line 81, ../../assets/screen.sass */
 #container #schedule .booking .teacher a {
   color: inherit;
   text-decoration: inherit;
@@ -580,99 +646,99 @@ img {
 #container #schedule .booking .teacher a:active, #container #schedule .booking .teacher a:focus {
   outline: none;
 }
-/* line 80, ../../assets/screen.sass */
+/* line 83, ../../assets/screen.sass */
 #container #schedule .booking button {
   margin-bottom: 1px;
 }
 @media screen and (min-width: 960px) {
-  /* line 68, ../../assets/screen.sass */
+  /* line 71, ../../assets/screen.sass */
   #container #schedule {
     display: inline;
     float: left;
-    width: 47.541%;
+    width: 37.705%;
     margin-right: 1.639%;
     display: inline;
     float: right;
     margin-right: 1.639%;
     #margin-left: -1em;
   }
-  /* line 86, ../../assets/screen.sass */
+  /* line 89, ../../assets/screen.sass */
   #container #schedule .booking .course {
     display: inline;
     float: left;
-    width: 48.276%;
-    margin-right: 3.448%;
+    width: 47.826%;
+    margin-right: 4.348%;
   }
-  /* line 88, ../../assets/screen.sass */
+  /* line 91, ../../assets/screen.sass */
   #container #schedule .booking .suffix {
     display: inline;
     float: left;
-    width: 48.276%;
-    margin-right: 3.448%;
+    width: 47.826%;
+    margin-right: 4.348%;
     display: inline;
     float: right;
     margin-right: 0;
     #margin-left: -1em;
   }
-  /* line 91, ../../assets/screen.sass */
+  /* line 94, ../../assets/screen.sass */
   #container #schedule .booking .timeslot {
     display: inline;
     float: left;
-    width: 48.276%;
-    margin-right: 3.448%;
+    width: 47.826%;
+    margin-right: 4.348%;
   }
-  /* line 93, ../../assets/screen.sass */
+  /* line 96, ../../assets/screen.sass */
   #container #schedule .booking .room {
     display: inline;
     float: left;
-    width: 48.276%;
-    margin-right: 3.448%;
+    width: 47.826%;
+    margin-right: 4.348%;
     display: inline;
     float: right;
     margin-right: 0;
     #margin-left: -1em;
   }
-  /* line 96, ../../assets/screen.sass */
+  /* line 99, ../../assets/screen.sass */
   #container #schedule .booking .teacher {
     display: inline;
     float: left;
-    width: 65.517%;
-    margin-right: 3.448%;
+    width: 73.913%;
+    margin-right: 4.348%;
   }
-  /* line 98, ../../assets/screen.sass */
+  /* line 101, ../../assets/screen.sass */
   #container #schedule .booking button {
     display: inline;
     float: left;
-    width: 31.034%;
-    margin-right: 3.448%;
+    width: 21.739%;
+    margin-right: 4.348%;
     display: inline;
     float: right;
     margin-right: 0;
     #margin-left: -1em;
   }
 }
-/* line 103, ../../assets/screen.sass */
+/* line 106, ../../assets/screen.sass */
 #container #bookings_list .bookings {
   display: none;
 }
-/* line 105, ../../assets/screen.sass */
+/* line 108, ../../assets/screen.sass */
 #container #bookings_list .bookings h4 {
   margin: 0.5em 0;
 }
-/* line 107, ../../assets/screen.sass */
+/* line 110, ../../assets/screen.sass */
 #container #bookings_list .booking {
   border-bottom: 1px solid black;
 }
-/* line 111, ../../assets/screen.sass */
+/* line 114, ../../assets/screen.sass */
 #container #bookings_list .booking .suffix {
   font-size: 0.75em;
   line-height: 2em;
 }
-/* line 113, ../../assets/screen.sass */
+/* line 116, ../../assets/screen.sass */
 #container #bookings_list .booking .people {
   margin: 0.2em 0;
 }
-/* line 117, ../../assets/screen.sass */
+/* line 120, ../../assets/screen.sass */
 #container #bookings_list .booking .people .person a {
   color: inherit;
   text-decoration: inherit;
@@ -682,54 +748,54 @@ img {
 #container #bookings_list .booking .people .person a:active, #container #bookings_list .booking .people .person a:focus {
   outline: none;
 }
-/* line 119, ../../assets/screen.sass */
+/* line 122, ../../assets/screen.sass */
 #container #bookings_list .booking button {
   line-height: 1.1;
 }
 @media screen and (min-width: 960px) {
-  /* line 102, ../../assets/screen.sass */
+  /* line 105, ../../assets/screen.sass */
   #container #bookings_list {
     display: inline;
     float: left;
-    width: 47.541%;
+    width: 57.377%;
     margin-right: 1.639%;
     margin-left: 1.639%;
   }
-  /* line 126, ../../assets/screen.sass */
+  /* line 129, ../../assets/screen.sass */
   #container #bookings_list .booking .course {
     clear: both;
   }
-  /* line 128, ../../assets/screen.sass */
-  #container #bookings_list .booking .suffix {
-    padding-left: 17.241%;
-    display: inline;
-    float: left;
-    width: 65.517%;
-    margin-right: 3.448%;
-  }
   /* line 131, ../../assets/screen.sass */
-  #container #bookings_list .booking .people {
-    padding-left: 17.241%;
+  #container #bookings_list .booking .suffix {
+    padding-left: 17.143%;
     display: inline;
     float: left;
-    width: 65.517%;
-    margin-right: 3.448%;
+    width: 65.714%;
+    margin-right: 2.857%;
   }
   /* line 134, ../../assets/screen.sass */
-  #container #bookings_list .booking .room {
-    clear: left;
-    padding-left: 17.241%;
+  #container #bookings_list .booking .people {
+    padding-left: 17.143%;
     display: inline;
     float: left;
-    width: 31.034%;
-    margin-right: 3.448%;
+    width: 65.714%;
+    margin-right: 2.857%;
   }
-  /* line 138, ../../assets/screen.sass */
+  /* line 137, ../../assets/screen.sass */
+  #container #bookings_list .booking .room {
+    clear: left;
+    padding-left: 17.143%;
+    display: inline;
+    float: left;
+    width: 31.429%;
+    margin-right: 2.857%;
+  }
+  /* line 141, ../../assets/screen.sass */
   #container #bookings_list .booking button {
     display: inline;
     float: left;
-    width: 13.793%;
-    margin-right: 3.448%;
+    width: 14.286%;
+    margin-right: 2.857%;
     display: inline;
     float: right;
     margin-right: 0;
