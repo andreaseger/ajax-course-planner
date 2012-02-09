@@ -14,7 +14,7 @@ module Sinatra
     end
 
     def index_for_day(day)
-      @days.index{|e| e[0] == 'mi'}
+      @days.index{|e| e[0] == day}
     end
     def label_for_day(i)
       days[i][0]
