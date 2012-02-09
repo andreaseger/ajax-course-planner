@@ -14,20 +14,20 @@ class @Schedule
   @build_from_cookie: ->
     cookie = $.cookie("schedule-data")
     store = JSON.parse(cookie)
-    if store? and store.bookings.length == 0
+    if store? and store.bookings.length != 0
       store.structure = 'table_by_days'
       $.getJSON '/api/s', store, (data) =>
         $('#schedule').replaceWith ich.schedule(data)
     else
       $('#schedule').text ''
 
-  build_from_bookings: (bookings) ->
+  @build_from_bookings: (bookings) ->
     $.getJSON '/api/s', {bookings: bookings, exams: true, structure: 'table_by_times'}, (data) =>
       $('#schedule').replaceWith ich.big_schedule_by_times(data.bookings)
       #TODO History
 
   @init: ->
-    build_from_bookings window.location.pathname.split('/')
+    @build_from_bookings window.location.pathname.split('/')
     $("##{meta.id}").hide()
     $('#groupselect').hide()
 
