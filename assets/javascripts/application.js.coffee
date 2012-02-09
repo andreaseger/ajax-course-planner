@@ -1,7 +1,7 @@
 #= require vendor
-#= require bookingslist
-#= require groupselect
-#= require schedule
+#= require bookingslist_builder
+#= require groups_builder
+#= require schedule_builder
 #= require_self
 
 $.getJSON '/templates.json', (data) =>
@@ -9,14 +9,15 @@ $.getJSON '/templates.json', (data) =>
   init()
 
 History = window.History
-History.Adapter.bind window, 'statechange', =>
-  State = History.getState().data
+History.Adapter.bind window, 'popstate', =>
+  State = History.getState()
 
-  switch State.pagename
+  switch State.data.pagename
     when 'bookingslist'
-      @bookingslist_builder.from_history State
+      @bookingslist_builder.from_history State.data
     when 'schedule'
-      @schedule_builder.from_history State
+      @schedule_builder.from_history State.data
+  History.log(State.data, State.title, State.url)
 
 @groups_builder = new GroupsBuilder()
 @bookingslist_builder = new BookingslistBuilder()
@@ -30,5 +31,8 @@ init = ->
     $.cookie("schedule-data",null)
   $ ->
     switch $('meta[name=pagename]').attr 'content'
-      when 'bookingslist' then @bookingslist_builder.init()
-      when 'schedule' then @schedule_builde.init()
+      when 'bookingslist'
+        uri = window.location.pathname.split('/')
+        bookingslist_builder.init(uri[uri.length - 1])
+      when 'schedule'
+        schedule_builder.init()

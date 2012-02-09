@@ -4,10 +4,10 @@ require_relative 'lib/helper'
 
 class CoursePlanner < Sinatra::Base
   configure do |c|
-    register Sinatra::Contrib
-    register Sinatra::Flash
     register Mustache::Sinatra
+    register Sinatra::Namespace
     helpers Sinatra::MyHelper
+    require_relative 'views/site.rb'
 
     set :mustache, {
       templates: File.dirname(__FILE__) + '/templates',
@@ -17,7 +17,6 @@ class CoursePlanner < Sinatra::Base
     disable :exams
 
     set :public_folder, File.dirname(__FILE__) + '/public'
-    enable :sessions
     $redis = Redis.new(REDIS_CONFIG)
   end
 
@@ -47,7 +46,7 @@ class CoursePlanner < Sinatra::Base
           exams = schedule.map { |e| Exam.find_by_course(e[:course][:name]) }.flatten.compact
           json( bookings: schedule, has_exams: !exams.empty?, exams: exams, permalink: perm )
         else
-          json( bookings: schedule, has_exams: false, permalink: perm )
+          json( bookings: schedule, has_exams: false, permalink: perm, keys: b.map{|e| e[:key]}  )
         end
       end
     end
@@ -72,9 +71,10 @@ class CoursePlanner < Sinatra::Base
   end
 
   get '/schedule/*' do
-    mustache :site, :layout => false
+    @pagename = 'schedule'
+    mustache :site, layout: false
   end
   get '/bookings/g/:group' do
-    mustache :site, :layout => false
+    mustache :site, layout: false
   end
 end

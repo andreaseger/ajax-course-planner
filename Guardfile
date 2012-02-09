@@ -7,10 +7,12 @@ guard 'rspec', :version => 2, :cli => '--color --format d' do
   watch('spec/spec_helper.rb')  { "spec" }
 end
 
-guard 'compass' do
-  watch(/^assets\/(.*)\.s[ac]ss/)
-end
-
-guard 'bundler' do
-  watch('Gemfile')
+guard 'livereload' do
+  watch(%r{templates/.+\.(mustache)})
+  watch(%r{lib/helper/.+\.rb})
+  watch(%r{service/.+\.rb})
+  watch(%r{config/.+\.rb})
+  watch(%r{(public/|app/assets).+\.(css|js|html)})
+  watch(%r{(assets/.+\.css)\.s[ac]ss}) { |m| m[1] }
+  watch(%r{(assets/.+\.js)\.coffee}) { |m| m[1] }
 end

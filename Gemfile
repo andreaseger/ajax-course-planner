@@ -33,6 +33,7 @@ group :development do
   gem 'capistrano'
   gem 'sinatra-reloader', :require => 'sinatra/reloader'
   gem 'guard-sprockets2'
+  gem 'guard-livereload'
   #gem 'compass'
   #gem 'compass-susy-plugin'
   #gem 'guard-compass'
