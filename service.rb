@@ -8,7 +8,6 @@ class CoursePlanner < Sinatra::Base
     register Sinatra::Flash
     register Mustache::Sinatra
     helpers Sinatra::MyHelper
-    require './views/layout'
 
     set :mustache, {
       templates: File.dirname(__FILE__) + '/templates',
@@ -73,13 +72,9 @@ class CoursePlanner < Sinatra::Base
   end
 
   get '/schedule/*' do
-    @pagename = "schedule"
-    @bookings = params[:splat].first
-    mustache :site
+    mustache :site, :layout => false
   end
-  get '/bookings/g/:group' do |group|
-    @group = group
-    @api_url = "/api/b/g/#{group}" if group
-    mustache :site
+  get '/bookings/g/:group' do
+    mustache :site, :layout => false
   end
 end

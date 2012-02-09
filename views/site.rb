@@ -1,14 +1,11 @@
 class CoursePlanner
   module Views
-    class Site < Layout
-      def api_url
-        @api_url
+    class Site < Mustache
+      def title
+        "Coures Planner"
       end
-      def group
-        @group
-      end
-      def image
-        'not_sure.jpg'
+      def pagename
+        @pagename || "bookingslist"
       end
     end
   end

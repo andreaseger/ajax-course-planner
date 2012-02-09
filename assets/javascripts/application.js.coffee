@@ -12,42 +12,23 @@ History = window.History
 History.Adapter.bind window, 'statechange', =>
   State = History.getState().data
 
-  #TODO handle the switch to the big schedule and back
-  Bookingslist.build_for_group State.group, false
-  $('#groups').val State.group
+  switch State.pagename
+    when 'bookingslist'
+      @bookingslist_builder.from_history State
+    when 'schedule'
+      @schedule_builder.from_history State
 
-@meta = 
-  id: 'bookings_list'
-  page: 'meta[name=pagename]'
+@groups_builder = new GroupsBuilder()
+@bookingslist_builder = new BookingslistBuilder()
+@schedule_builder = new ScheduleBuilder()
+
+@reset = ->
+  $('#main').replaceWith ich.main
 
 init = ->
   $('footer').on 'click', '#clear_cookie', =>
     $.cookie("schedule-data",null)
   $ ->
-    switch $(meta.page).attr 'content'
-      when 'bookingslist' then Bookingslist.init()
-      when 'schedule' then Schedule.init()
-
-###
-$.getJSON('/templates.json', function (data) {
-  $.each(data, function (i,template) {
-    ich.addTemplate(template.name, template.template);
-  });
-  template_finished();
-});
-function template_finished(){
-  $('footer').on('click', '#clear_cookie', function(){
-    $.cookie("schedule-data",null)
-  });
-  $(function(){
-    switch($(meta.page).attr('content')){
-    case 'bookingslist':
-      init_bookingslist();
-      break;
-    case 'schedule':
-      init_schedule();
-      break;
-    };
-  });
-}
-###
+    switch $('meta[name=pagename]').attr 'content'
+      when 'bookingslist' then @bookingslist_builder.init()
+      when 'schedule' then @schedule_builde.init()
