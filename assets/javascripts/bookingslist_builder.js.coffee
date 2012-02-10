@@ -14,10 +14,10 @@ class @BookingslistBuilder
       if div.is(':hidden')
         $('.bookings').hide()
         div.toggle()
-        $.scrollTo $(e.currentTarget), {duration: 'fast'}
+        #$.scrollTo $(e.currentTarget), {duration: 'fast'}
       else
         div.toggle()
-        $.scrollTo 0,{duration: 'fast'}
+        #$.scrollTo 0,{duration: 'fast'}
 
     $('#container').on 'click', '.bookings-schedule-toggle', (e) =>
       key = $(e.currentTarget).data('booking-key')

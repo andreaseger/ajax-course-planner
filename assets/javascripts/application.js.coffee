@@ -3,6 +3,7 @@
 #= require groups_builder
 #= require schedule_builder
 #= require_self
+#= require fluid
 
 $.getJSON '/templates.json', (data) =>
   ich.addTemplate(template.name, template.template) for template in data
