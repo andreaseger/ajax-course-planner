@@ -86,4 +86,33 @@ describe Booking do
       booking.key.should_not == other_booking.key
     end
   end
+  context '#similar?' do
+    let(:data) do
+      {
+        timeslot: {
+          label: "08:15",
+          start_minute: 15,
+          start_hour: 8,
+          length: 90,
+          day: { name: "fr", label: "Freitag"}
+        },
+        room: { name: 'r0007', label: 'R0.007', building: 'r', floor: 0 },
+        group: { name: 'IG' },
+        course: { label: 'Happy Hacking' },
+        teacher: { name: 'bar' },
+      }
+    end
+    let(:booking) { Booking.from_hash(data) }
+    it "should be true if the bookings are equal" do
+      booking.similar?(booking).should be_true
+    end
+    it "should be true if only the room is different" do
+      similar_booking = Booking.from_hash(data.merge(room: { name: 'r3007', label: 'R3.007', building: 'r', floor: 3 }))
+      booking.similar?(similar_booking).should be_true
+    end
+    it "should be false if the timeslot is different" do
+      similar_booking = Booking.from_hash(data.merge(timeslot: { label: "foo" }))
+      booking.similar?(similar_booking).should be_false
+    end
+  end
 end

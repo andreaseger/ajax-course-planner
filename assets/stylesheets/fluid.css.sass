@@ -1,0 +1,95 @@
+*
+  padding: 0
+  margin: 0
+  text-rendering: optimizeSpeed
+  -webkit-font-smoothing: none
+
+a
+  color: red !important
+  text-decoration: underline
+  &:hover
+    text-decoration: none
+
+body
+  overflow: hidden
+  color: #444
+  *
+    font-size: 11px
+    line-height: 15px
+    font-family: "Courier New", monospace
+
+button
+  outline: none
+  background: green
+  color: black
+  font-weight: bold
+  padding: 6px 7px
+  border: 1px solid rgb(0, 240, 0)
+  cursor: pointer
+  //-webkit-box-shadow: 2px 2px 0px 0px rgb(210, 210, 210)
+  //-moz-box-shadow: 2px 2px 0px 0px rgb(210, 210, 210)
+  //box-shadow: 2px 2px 0px 0px rgb(210, 210, 210)
+  &::-moz-focus-inner
+    border: 0
+  &:hover
+    position: relative
+    left: -1px
+    top: -1px
+    //-webkit-box-shadow: 3px 3px 0px 0px rgb(220, 220, 220)
+    //-moz-box-shadow: 3px 3px 0px 0px rgb(220, 220, 220)
+    //box-shadow: 3px 3px 0px 0px rgb(220, 220, 220)
+  &:active
+    position: relative
+    left: 1px
+    top: 1px
+    //-webkit-box-shadow: 0px 0px
+    //-moz-box-shadow: 0px 0px
+    //box-shadow: 0px 0px
+
+#fluid
+  color: green
+  background-color: black
+  white-space: pre
+  width: auto
+  height: auto
+  display: inline-block
+  cursor: default
+  -moz-user-select: -moz-none
+  -khtml-user-select: none
+  -webkit-user-select: none
+  user-select: none
+  &.fading
+    font-style: italic
+
+html.js #main
+  display: none
+
+#main
+  position: absolute
+  z-index: 100
+
+#main
+  right: 15px
+  bottom: 15px
+  pointer-events: none
+  display: inline-block
+  background: black
+  color: grey
+  padding: 15px
+  #clear
+    float: right
+    margin-bottom: 10px
+  #origin
+    clear: both
+
+.overlay
+  background: green
+  /*padding: 0 27px 0 22px;
+  padding: 0 21px
+  pointer-events: auto
+
+.overlay
+  -webkit-transition: all 0.8s ease-in
+  -moz-transition: all 0.8s ease-in
+  -o-transition: all 0.8s ease-in
+  transition: all 0.8s ease-in

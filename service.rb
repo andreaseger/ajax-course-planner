@@ -70,6 +70,9 @@ class CoursePlanner < Sinatra::Base
     end
   end
 
+  get '/fluid' do
+    mustache :fluid, layout: false
+  end
   get '/schedule/*' do
     @pagename = 'schedule'
     mustache :site, layout: false

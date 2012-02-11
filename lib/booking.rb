@@ -2,6 +2,7 @@ require 'json'
 require_relative 'recursivly_symbolize_keys'
 require_relative 'buildable'
 require_relative 'has_key'
+require 'active_support/core_ext/hash/diff'
 
 class Booking < Hash
   extend Buildable
@@ -18,8 +19,14 @@ class Booking < Hash
       $redis.sadd "#{namespace}:by_group:#{self[:group][:name]}", key
       $redis.sadd "group", self[:group][:name]
     end
+    self
   end
 
+  def similar?(other)
+    one = self.dup
+    [one, other].each {|e| e.delete(:room) }
+    one.diff(other).empty?
+  end
   def db_key
     "#{namespace}:#{key}"
   end

@@ -19,8 +19,9 @@
         a
           +unstyled-link
     button
-      @extend strong
-      line-height: 1.1
+      +adjust-font-size-to(18px)
+      font-weight: normal
+      line-height: 1em
   @media screen and (min-width: 960px)
     +columns(6)
     +alpha

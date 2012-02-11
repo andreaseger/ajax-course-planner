@@ -3,7 +3,7 @@ $col_width: 5em
 $gutter_width: 1em
 $side_gutter_width: $gutter_width
 
-$show-grid-backgrounds: true
+$show-grid-backgrounds: false
 
 $base_font_size: 16px
 $base_line_height: 24px
@@ -31,6 +31,34 @@ $alt: #cc6633
 // OTHER MIXINS
 // Mixins set here will be available in defaults, screen, print and IE
 // Or anywhere you import either base or defaults
+
+=my-button($buttoncolor, $text, $background)
+  outline: none
+  background: $buttoncolor
+  color: $text
+  font-weight: bold
+  padding: 6px 7px
+  border: 1px solid $buttoncolor - #222222
+  cursor: pointer
+  -webkit-box-shadow: 2px 2px 0px 0px $background
+  -moz-box-shadow: 2px 2px 0px 0px $background
+  box-shadow: 2px 2px 0px 0px $background
+  &::-moz-focus-inner
+    border: 0
+  &:hover
+    position: relative
+    left: -1px
+    top: -1px
+    -webkit-box-shadow: 3px 3px 0px 0px $background
+    -moz-box-shadow: 3px 3px 0px 0px $background
+    box-shadow: 3px 3px 0px 0px $background
+  &:active
+    position: relative
+    left: 1px
+    top: 1px
+    -webkit-box-shadow: 0px 0px
+    -moz-box-shadow: 0px 0px
+    box-shadow: 0px 0px
 
 =bootstrap-button
   background-color: hsl(0, 0%, 59%)

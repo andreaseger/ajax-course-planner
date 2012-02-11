@@ -13,4 +13,7 @@ describe BookingsParser do
       BookingsParser.run
     end
   end
+  context 'merge_similar' do
+    pending
+  end
 end

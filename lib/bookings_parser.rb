@@ -1,6 +1,9 @@
 require_relative 'parser'
 require_relative 'booking'
 class BookingsParser < Parser
+  def all_bookings
+    @all_bookings ||= []
+  end
   def update_data
     get_timetables.each do |booking|
       room = build_room(booking.xpath('room').text)
@@ -10,8 +13,9 @@ class BookingsParser < Parser
                                 booking.xpath('stoptime').text)
       teacher = build_person(booking.xpath('teacher').text)
       suffix = booking.xpath('suffix').text
+      find_equal(timeslot)
       booking.xpath('courses/course').each do |course|
-        Booking.from_hash(
+        b = Booking.from_hash(
           {
             timeslot: timeslot,
             room: room,
@@ -20,9 +24,18 @@ class BookingsParser < Parser
             teacher: teacher,
             people: course.xpath('teacher').map {|t| t.text == teacher.try(:[],:name) ? nil : build_person(t.text) }.compact,
             suffix: suffix
-          }).save
+          })
+        all_bookings << b
       end
     end
+    merge_similar
+    save_all
+  end
+  def save_all
+    all_bookings.each(&:save)
+  end
+  def merge_similar
+    #TODO
   end
 private
   def get_timetables

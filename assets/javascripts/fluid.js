@@ -31,8 +31,7 @@ $(function() {
         })();
 
         // this won't be perfect, as the screen dims won't often be evenly disible
-        //fluid.setResolution(Math.round($(window).height() / glyphDims.height), Math.round($(window).width() / glyphDims.width));
-        fluid.setResolution(Math.round(600 / glyphDims.height), Math.round($(window).width() / glyphDims.width));
+        fluid.setResolution(Math.round($(window).height() / glyphDims.height), Math.round($(window).width() / glyphDims.width));
       })
       .trigger('resize');
 
@@ -44,10 +43,11 @@ $(function() {
     //fluid.setIterations(15);
     //display.Config.density = 260;
     fluid.setIterations(5)
-    display.Config.density = 120
+    display.Config.density = 180
 
-    //display.Animation.start( /*displayFPS()*/ )
+    display.Animation.start( /*displayFPS()*/ )
   }
+  $('#main').hide().fadeTo('slow', 1)
   $('#clear').mousedown(function(e) {
       var $el = $(el)
       $el
@@ -59,19 +59,4 @@ $(function() {
             .fadeIn('fast')
         })
   })
-  $('#start').click(function(e) {
-    $('#fluid').toggle();
-    $('#stop').toggle();
-    $('#start').toggle();
-    display.Animation.start();
-    fluid.reset();
-  });
-  $('#stop').click(function(e) {
-    fluid.reset();
-    display.Animation.stop();
-    $('#fluid').toggle();
-    $('#stop').toggle();
-    $('#start').toggle();
-  });
-
 });
