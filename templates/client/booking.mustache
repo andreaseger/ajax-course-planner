@@ -1,7 +1,7 @@
 <article class="booking">
   {{>course}}{{>suffix}}
   <div class="timeslot">{{timeslot.day.label}} | {{timeslot.label}}</div>
-  {{>room}}
+  {{#rooms}}{{>room}}{{/rooms}}
   {{#teacher.label}}
     <div class="teacher">{{>person}}</div>
   {{/teacher.label}}
