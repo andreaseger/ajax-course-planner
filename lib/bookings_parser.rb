@@ -1,6 +1,9 @@
 require_relative 'parser'
 require_relative 'booking'
 class BookingsParser < Parser
+  def all_bookings=(v)
+    @all_bookings = v
+  end
   def all_bookings
     @all_bookings ||= []
   end
@@ -13,12 +16,11 @@ class BookingsParser < Parser
                                 booking.xpath('stoptime').text)
       teacher = build_person(booking.xpath('teacher').text)
       suffix = booking.xpath('suffix').text
-      find_equal(timeslot)
       booking.xpath('courses/course').each do |course|
         b = Booking.from_hash(
           {
             timeslot: timeslot,
-            room: room,
+            rooms: [room],
             group: build_group(course.xpath('group').text),
             course: build_course(course.xpath('modul').text),
             teacher: teacher,
@@ -28,14 +30,26 @@ class BookingsParser < Parser
         all_bookings << b
       end
     end
+    p "before merge: #{all_bookings.count}"
     merge_similar
+    p "after merge: #{all_bookings.count}"
     save_all
   end
   def save_all
     all_bookings.each(&:save)
   end
   def merge_similar
-    #TODO
+    all_bookings.map! { |b|
+      #next b if b[:rooms].nil?
+      booking = b
+      rooms = all_bookings.select{|e| b.similar?(e) }
+                          .reduce([]){|a, e| a | e[:rooms] }
+      unless rooms.empty?
+        booking[:rooms] = rooms
+      end
+      booking
+    }#.each { |b| b[:rooms].uniq! }
+     .uniq!
   end
 private
   def get_timetables

@@ -5,7 +5,7 @@ describe Booking do
   let(:data) do
     {
       timeslot: { start_minute: 0, start_hour: 10, end_minute: 30, end_hour: 11 },
-      room: { name: 'r0007', label: 'R0.007', building: 'r', floor: 0 },
+      rooms: [{ name: 'r0007', label: 'R0.007', building: 'r', floor: 0 }],
       group: { name: 'IG' },
       course: { name: 'webengineering', label: 'Web Engineering' },
       people: [ { name: 'hofhansjoachim', label: 'Hof Hans-Joachim' }, { name: 'schiedermeierreinhard', label: 'Schiedermeier Reinhard' } ],
@@ -32,13 +32,13 @@ describe Booking do
         end
       end
     end
-    context '#room' do
+    context '#rooms' do
       it 'should create a new booking object with room data' do
-        booking.should have_key(:room)
+        booking.should have_key(:rooms)
       end
       [ :name, :label, :building, :floor ].each do |key|
         it "should have a #{key}" do
-          booking[:room].should have_key(key)
+          booking[:rooms][0].should have_key(key)
         end
       end
     end
@@ -48,7 +48,7 @@ describe Booking do
       end
       [ :name ].each do |key|
         it "should have a #{key}" do
-          booking[:room].should have_key(key)
+          booking[:group].should have_key(key)
         end
       end
     end
@@ -96,7 +96,7 @@ describe Booking do
           length: 90,
           day: { name: "fr", label: "Freitag"}
         },
-        room: { name: 'r0007', label: 'R0.007', building: 'r', floor: 0 },
+        rooms: [{ name: 'r0007', label: 'R0.007', building: 'r', floor: 0 }],
         group: { name: 'IG' },
         course: { label: 'Happy Hacking' },
         teacher: { name: 'bar' },
@@ -107,7 +107,7 @@ describe Booking do
       booking.similar?(booking).should be_true
     end
     it "should be true if only the room is different" do
-      similar_booking = Booking.from_hash(data.merge(room: { name: 'r3007', label: 'R3.007', building: 'r', floor: 3 }))
+      similar_booking = Booking.from_hash(data.merge(rooms: [{ name: 'r3007', label: 'R3.007', building: 'r', floor: 3 }]))
       booking.similar?(similar_booking).should be_true
     end
     it "should be false if the timeslot is different" do

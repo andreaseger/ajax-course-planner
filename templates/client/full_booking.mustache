@@ -11,6 +11,6 @@
     {{/people}}
   </ul>
   <button type="button" class="bookings-schedule-toggle" data-booking-key="{{& key}}">&#x21c4;</button>
-  {{>room}}
+  {{#rooms}}{{>room}}{{/rooms}}
   <div class="clear"></div>
 </article>

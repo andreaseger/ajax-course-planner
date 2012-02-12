@@ -24,7 +24,8 @@ class Booking < Hash
 
   def similar?(other)
     one = self.dup
-    [one, other].each {|e| e.delete(:room) }
+    other = other.dup
+    [one, other].each {|e| e.delete(:rooms) }
     one.diff(other).empty?
   end
   def db_key
