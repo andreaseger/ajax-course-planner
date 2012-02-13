@@ -1,8 +1,10 @@
 @import "base.css.sass"
+@import "compass/typography/vertical_rhythm"
 
 #full_schedule_horizontal
   +full
   .time
+    position: relative
     border-bottom: 2px solid black
     .day
       +columns(2)
@@ -10,3 +12,18 @@
         +alpha
       &:last-child
         +omega
+    .timeslot-header
+      //color: #658b38
+      position: absolute
+      top: 0
+      left: 40
+      //width: 100%
+      //text-align: center
+      +adjust-font-size-to(100px)
+      opacity: 0.17
+      z-index: -1
+      @extend strong
+      margin: 0
+    .booking button,
+    .time-label
+      display: none

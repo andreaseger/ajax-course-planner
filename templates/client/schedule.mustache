@@ -1,5 +1,8 @@
 <article id="schedule">
-  <header><h2 id="schedule-header">Schedule:</h2></header>
+  <header>
+    <h2 id="schedule-header">Schedule:</h2>
+    <a id="schedule-permalink" href="{{permalink}}" data-booking-keys="{{keys}}">Permalink</a>
+  </header>
   {{#bookings.days}}
     <section id="day-{{label}}" class="day">
       <header><h4>{{name}}</h4></header>
@@ -13,5 +16,7 @@
       {{/times}}
     </section>
   {{/bookings.days}}
-  <footer><a id="schedule-permalink" href="{{permalink}}" data-booking-keys="{{keys}}">Permalink</a></footer>
+  <footer>
+    <a id="clear_cookie" href='#'>clear schedule</a>
+  </footer>
 </article>
