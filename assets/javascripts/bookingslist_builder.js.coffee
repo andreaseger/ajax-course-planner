@@ -14,10 +14,10 @@ class @BookingslistBuilder
       if div.is(':hidden')
         $('.bookings').hide()
         div.toggle()
-        #$.scrollTo $(e.currentTarget), {duration: 'fast'}
+        $.scrollTo $(e.currentTarget), {duration: 'fast'}
       else
         div.toggle()
-        #$.scrollTo 0,{duration: 'fast'}
+        $.scrollTo $('#bookings-header') ,{duration: 'fast'}
 
     $('#container').on 'click', '.bookings-schedule-toggle', (e) =>
       key = $(e.currentTarget).data('booking-key')
@@ -28,8 +28,9 @@ class @BookingslistBuilder
     $.getJSON '/api/b/g', {group: group, structure: 'table_by_days'}, (data) =>
       $('#bookings_list').replaceWith ich.bookings_list(data) if data
     title = @setup_pagetitle("Bookings for #{group}")
+    $('meta[name=pagename]').attr 'content', 'bookingslist'
     if history
-      History.pushState {pagename: 'bookingslist', group: group}, title, "/bookings/g/#{group}"
+      History.pushState {pagename: 'bookingslist', group: group, template: templates}, title, "/bookings/g/#{group}"
 
   setup_pagetitle: (title) ->
     document.title = title

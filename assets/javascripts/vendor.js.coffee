@@ -1,5 +1,4 @@
 #= require_self
-#= require vendor/json2
 #= require vendor/ICanHaz
 #= require vendor/history
 #= require vendor/history.adapter.jquery

@@ -5,30 +5,16 @@
 #= require_self
 
 $.getJSON '/templates.json', (data) =>
+  @templates = data
   ich.addTemplate(template.name, template.template) for template in data
-  init()
+  $(window).trigger('templates-loaded')
 
 History = window.History
-History.Adapter.bind window, 'popstate', =>
-  State = History.getState()
-
-  switch State.data.pagename
-    when 'bookingslist'
-      @bookingslist_builder.from_history State.data
-    when 'schedule'
-      @schedule_builder.from_history State.data
-  History.log(State.data, State.title, State.url)
-
 @groups_builder = new GroupsBuilder()
 @bookingslist_builder = new BookingslistBuilder()
 @schedule_builder = new ScheduleBuilder()
 
-@reset = ->
-  $('#main').replaceWith ich.main
-
-init = ->
-  $('footer').on 'click', '#clear_cookie', =>
-    $.cookie("schedule-data",null)
+$(window).on 'templates-loaded', =>
   $ ->
     switch $('meta[name=pagename]').attr 'content'
       when 'bookingslist'
@@ -36,3 +22,19 @@ init = ->
         bookingslist_builder.init(uri[uri.length - 1])
       when 'schedule'
         schedule_builder.init()
+  $(window).on 'statechange', =>
+    State = History.getState()
+    History.log(State.data, State.title, State.url)
+
+    switch State.data.pagename
+      when 'bookingslist'
+        @bookingslist_builder.from_history State.data
+      when 'schedule'
+        @schedule_builder.from_history State.data
+
+$('footer').on 'click', '#clear_cookie', =>
+  $.cookie("schedule-data",null)
+
+@reset = ->
+  $('#main').replaceWith ich.main
+

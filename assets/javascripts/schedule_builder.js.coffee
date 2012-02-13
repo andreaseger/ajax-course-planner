@@ -7,7 +7,7 @@ class @ScheduleBuilder
       reset()
       @from_bookings keys
       bookingslist_builder.hide()
-      false
+      e.preventDefault()
 
   toggle_booking_in_cookie: (key) ->
     data = JSON.parse $.cookie("schedule-data")
@@ -36,7 +36,7 @@ class @ScheduleBuilder
           ich.schedule(data)
       $('#schedule').replaceWith html
     if history
-      History.pushState {pagename: 'schedule', bookings: keys}, "Schedule", "/schedule/#{keys.join('/')}"
+      History.pushState {pagename: 'schedule', bookings: keys, template: templates}, "Schedule", "/schedule/#{keys.join('/')}"
 
   from_history: (history) ->
     if history?
