@@ -21,14 +21,14 @@ REDIS_CONFIG =  if ENV['PLANNER_REDIS_URL']
 require './service'
 
 map '/assets' do
-  environment = Sprockets::Environment.new
-  environment.append_path 'assets/javascripts'
-  environment.append_path 'assets/stylesheets'
-  environment.append_path 'assets/images'
-  environment.append_path "#{Gem.loaded_specs['compass'].full_gem_path}/frameworks/compass/stylesheets"
-  environment.append_path "#{Gem.loaded_specs['compass'].full_gem_path}/frameworks/compass/stylesheets/compass"
-  environment.append_path "#{Gem.loaded_specs['compass-susy-plugin'].full_gem_path}/sass"
-
+  compass_gem_root = Gem.loaded_specs['compass'].full_gem_path
+  environment = Sprockets::Environment.new { |env| env.logger = Logger.new(STDOUT) }
+  environment.append_path File.join 'assets', 'javascripts'
+  environment.append_path File.join 'assets', 'stylesheets'
+  environment.append_path File.join 'assets', 'images'
+  environment.append_path File.join Gem.loaded_specs['compass'].full_gem_path, 'frameworks', 'compass', 'stylesheets'
+  environment.append_path File.join Gem.loaded_specs['compass'].full_gem_path, 'frameworks', 'compass', 'stylesheets', 'compass'
+  environment.append_path File.join Gem.loaded_specs['compass-susy-plugin'].full_gem_path, 'sass'
   run environment
 end
 

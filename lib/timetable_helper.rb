@@ -1,5 +1,6 @@
+require 'sinatra/base'
 module Sinatra
-  module MyHelper
+  module TimetableHelpers
     def days
       @days ||= %w(mo di mi do fr).zip(%w(Montag Dienstag Mittwoch Donnerstag Freitag))
     end

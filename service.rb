@@ -1,22 +1,23 @@
 require_relative 'lib/booking'
 require_relative 'lib/exam'
-require_relative 'lib/helper'
+require_relative 'lib/timetable_helper'
 
 class CoursePlanner < Sinatra::Base
-  configure do |c|
-    register Mustache::Sinatra
-    register Sinatra::Namespace
-    helpers Sinatra::MyHelper
-    require_relative 'views/site.rb'
+  register Mustache::Sinatra
+  register Sinatra::Namespace
+  require_relative 'views/site.rb'
+  helpers Sinatra::TimetableHelpers
 
+  set :root, File.dirname(__FILE__)
+  set :public_folder, File.join(root, 'public')
+
+  configure do |c|
     set :mustache, {
-      templates: File.dirname(__FILE__) + '/templates',
-      views: File.dirname(__FILE__) + '/views',
+      templates: File.join(root, 'templates'),
+      views: File.join(root, 'views'),
       namespace: CoursePlanner
     }
     disable :exams
-
-    set :public_folder, File.dirname(__FILE__) + '/public'
     $redis = Redis.new(REDIS_CONFIG)
   end
 
@@ -33,6 +34,7 @@ class CoursePlanner < Sinatra::Base
   get '/templates.json' do
     json templates
   end
+
   namespace '/api' do
     get '/s' do
       bookings = params[:bookings]
@@ -59,7 +61,7 @@ class CoursePlanner < Sinatra::Base
     end
 
     get '/g' do
-      json( groups: $redis.smembers('group').sort )
+      json( groups: $redis.smembers('group').map(&:upcase).sort )
     end
 
     get '/e' do
@@ -71,13 +73,16 @@ class CoursePlanner < Sinatra::Base
   end
 
   get '/fluid' do
+    @settings = settings
     mustache :fluid, layout: false
   end
   get '/schedule/*' do
     @pagename = 'schedule'
+    @settings = settings
     mustache :site, layout: false
   end
   get '/bookings/g/:group' do
+    @settings = settings
     mustache :site, layout: false
   end
 end
