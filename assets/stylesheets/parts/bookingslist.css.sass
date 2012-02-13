@@ -7,7 +7,8 @@
     h4
       margin: .5em 0
   .booking
-    border-bottom: 1px solid black
+    border-bottom: 1px solid $contrast
+    padding-bottom: 2px
     .course
       @extend strong
     .suffix
@@ -22,7 +23,49 @@
       +adjust-font-size-to(18px)
       font-weight: normal
       line-height: 1em
-  @media screen and (min-width: 960px)
+  @media screen and (max-width: 480px)
+    // phones - portrait
+    +full
+    .booking
+      .course
+        +full
+      .suffix
+        +prefix(1)
+        +columns(7)
+        +omega(8)
+      .people
+        +prefix(1)
+        +columns(7)
+        +omega(8)
+      .room
+        clear: left
+        +prefix(2)
+        +columns(5)
+      button
+        +columns(2)
+        +omega
+  @media screen and (min-width: 481px) and (max-width: 768px)
+    // high dpi phones - portrait | phones - landscape | tables - portrait
+    +full
+    +pad(1,1)
+    .booking
+      .course
+        +full(8)
+      .suffix
+        +prefix(1,8)
+        +columns(6,8)
+      .people
+        +prefix(1,8)
+        +columns(6,8)
+      .room
+        clear: left
+        +prefix(2,8)
+        +columns(3,8)
+      button
+        +columns(1,8)
+        +omega(8)
+  @media screen and (min-width: 769px)
+    // big enough screens to show the full layout
     +columns(6)
     +alpha
     .booking

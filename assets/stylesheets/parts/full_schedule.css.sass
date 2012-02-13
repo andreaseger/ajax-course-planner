@@ -3,22 +3,26 @@
 
 #full_schedule_horizontal
   +full
+  min-width: 769px
   .time
     position: relative
-    border-bottom: 2px solid black
+    border-bottom: 2px solid $main
     .day
       +columns(2)
       &:first-child
         +alpha
       &:last-child
         +omega
+    .suffix
+      +adjust-font-size-to(12px)
+      line-height: 1em
     .timeslot-header
-      //color: #658b38
+      color: $contrast
       position: absolute
-      top: 0
-      left: 40
-      //width: 100%
-      //text-align: center
+      top: -15px
+      //left: 40px
+      width: 100%
+      text-align: center
       +adjust-font-size-to(100px)
       opacity: 0.17
       z-index: -1

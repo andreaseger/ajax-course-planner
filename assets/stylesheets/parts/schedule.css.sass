@@ -1,10 +1,14 @@
 @import "base.css.sass"
 @import "compass/typography/links"
+@import "compass/typography/vertical_rhythm"
 #schedule
   .booking
-    border-bottom: 1px solid black
+    border-bottom: 1px solid $contrast
+    padding-bottom: 5px
     .course
       @extend strong
+    .suffix
+      +adjust-font-size-to(11px)
     .timeslot
       @extend .clear
     .day-label
@@ -16,7 +20,44 @@
         +unstyled-link
     button
       margin-bottom: 1px
-  @media screen and (min-width: 960px)
+  @media screen and (max-width: 480px)
+    // phones - portrait
+    +full
+    .booking
+      .course
+        +full
+      .suffix
+        +full
+      .people
+        +prefix(1)
+        +columns(6)
+      .room
+        +columns(3)
+        +omega
+      button
+        +full
+  @media screen and (min-width: 481px) and (max-width: 768px)
+    // high dpi phones - portrait | phones - landscape | tables - portrait
+    +full
+    +pad(1,1)
+    .booking
+      .course
+        +full(8)
+      .suffix
+        +prefix(1,8)
+        +columns(7,8)
+        +omega(8)
+      .timeslot
+        +columns(4,8)
+      .room
+        +columns(4,8)
+        +omega(8)
+      .teacher
+        +columns(6,8)
+      button
+        +columns(2,8)
+        +omega(8)
+  @media screen and (min-width: 769px)
     +columns(4)
     +omega
     .booking
