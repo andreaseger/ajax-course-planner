@@ -35,6 +35,7 @@ class @ScheduleBuilder
           data.keys = JSON.stringify(data.keys)
           ich.schedule(data)
       $('#schedule').replaceWith html
+      $('meta[name=pagename]').attr 'content', 'schedule'
     if history
       History.pushState {pagename: 'schedule', bookings: keys, template: templates}, "Schedule", "/schedule/#{keys.join('/')}"
 

@@ -34,6 +34,7 @@ $(window).on 'templates-loaded', =>
 
 $('footer').on 'click', '#clear_cookie', =>
   $.cookie("schedule-data",null)
+  $(window).trigger('statechange')
 
 @reset = ->
   $('#main').replaceWith ich.main
