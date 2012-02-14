@@ -22,19 +22,19 @@
 
 body
   +sans-family
-  color: $main
-  background-color: black
+  color: $primary
+  background-color: $background
 
 /* @group links
 
 \:focus
-  outline: 1px dotted $alt
+  outline: 1px dotted $secondary
 
 a
   &:link, &:visited
-    color: $alt
+    color: $secondary
   &:focus, &:hover, &:active
-    color: $alt - #222222
+    color: $secondary - #222222
     text-decoration: none
 
 /* @end
@@ -44,7 +44,7 @@ a
 h1, h2, h3, h4, h5, h6
   +serif-family
   font-weight: bold
-  color: #FF8000
+  color: $forth
 
 /* @end
 
@@ -80,7 +80,7 @@ textarea, input[type="text"]
 
 table
   width: 100%
-  border: 1 / 16 + unquote("em solid") $main + #333333
+  border: 1 / 16 + unquote("em solid") $primary + #333333
     left: none
     right: none
   padding: 7 / 16 + unquote("em 0")

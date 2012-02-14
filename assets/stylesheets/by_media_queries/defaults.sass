@@ -8,7 +8,7 @@
     h4
       margin: .5em 0
   .booking
-    border-bottom: 1px solid $contrast
+    border-bottom: 1px solid $third
     padding-bottom: 2px
     .course
       @extend strong
@@ -26,7 +26,7 @@
       line-height: 1em
 #schedule
   .booking
-    border-bottom: 1px solid $contrast
+    border-bottom: 1px solid $third
     padding-bottom: 5px
     .course
       @extend strong
@@ -48,7 +48,7 @@
   min-width: 769px
   .time
     position: relative
-    border-bottom: 2px solid $main
+    border-bottom: 2px solid $third
     .day
       +columns(2)
       &:first-child
@@ -59,16 +59,18 @@
       +adjust-font-size-to(12px)
       line-height: 1em
     .timeslot-header
-      color: $contrast
+      color: $third
       position: absolute
       top: -15px
       //left: 40px
       width: 100%
       text-align: center
       +adjust-font-size-to(100px)
-      opacity: 0.17
+      opacity: 0.2
       z-index: -1
       @extend strong
       margin: 0
-    .booking button
-      display: none
+    .booking
+      margin: 1px
+      button
+        display: none
