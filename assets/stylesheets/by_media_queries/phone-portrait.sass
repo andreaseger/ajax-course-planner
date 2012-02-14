@@ -1,0 +1,24 @@
+@import "base.css.sass"
+@import "compass/typography/links"
+@import "compass/typography/vertical_rhythm"
+
+// phones portrait
+@media screen and (max-width: 480px)
+  #bookings_list, #schedule
+    +full
+    .booking
+      .course
+        +full
+      .suffix
+        +prefix(1)
+        +columns(9)
+      .people
+        +prefix(1)
+        +columns(6)
+      .room
+        clear: left
+        +prefix(2)
+        +columns(5)
+      button
+        +columns(3)
+        +omega

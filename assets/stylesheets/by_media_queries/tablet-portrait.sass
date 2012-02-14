@@ -1,0 +1,43 @@
+@import "base.css.sass"
+@import "compass/typography/links"
+@import "compass/typography/vertical_rhythm"
+
+// high dpi phones - portrait | phones - landscape | tables - portrait
+@media screen and (min-width: 481px) and (max-width: 768px)
+  #bookings_list, #schedule
+    +full
+    +pad(1,1)
+    .booking
+      .course
+        +full(8)
+      .suffix
+        +prefix(1,8)
+      button
+        +omega(8)
+  #schedule
+    .booking
+      .suffix
+        +columns(7,8)
+        +omega(8)
+      .timeslot
+        +columns(4,8)
+      .room
+        +columns(4,8)
+        +omega(8)
+      .teacher
+        +columns(6,8)
+      button
+        +columns(2,8)
+  #bookings_list
+    .booking
+      .suffix
+        +columns(6,8)
+      .people
+        +prefix(1,8)
+        +columns(6,8)
+      .room
+        clear: left
+        +prefix(2,8)
+        +columns(3,8)
+      button
+        +omega(8)

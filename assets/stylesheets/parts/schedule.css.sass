@@ -21,43 +21,9 @@
     button
       margin-bottom: 1px
   @media screen and (max-width: 480px)
-    // phones - portrait
-    +full
-    .booking
-      .course
-        +full
-      .suffix
-        +full
-      .people
-        +prefix(1)
-        +columns(6)
-      .room
-        +columns(3)
-        +omega
-      button
-        +full
   @media screen and (min-width: 481px) and (max-width: 768px)
-    // high dpi phones - portrait | phones - landscape | tables - portrait
-    +full
-    +pad(1,1)
-    .booking
-      .course
-        +full(8)
-      .suffix
-        +prefix(1,8)
-        +columns(7,8)
-        +omega(8)
-      .timeslot
-        +columns(4,8)
-      .room
-        +columns(4,8)
-        +omega(8)
-      .teacher
-        +columns(6,8)
-      button
-        +columns(2,8)
-        +omega(8)
   @media screen and (min-width: 769px)
+  #schedule
     +columns(4)
     +omega
     .booking

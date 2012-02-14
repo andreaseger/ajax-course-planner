@@ -1,0 +1,74 @@
+@import "base.css.sass"
+@import "compass/typography/links"
+@import "compass/typography/vertical_rhythm"
+
+#bookings_list
+  .bookings
+    display: none
+    h4
+      margin: .5em 0
+  .booking
+    border-bottom: 1px solid $contrast
+    padding-bottom: 2px
+    .course
+      @extend strong
+    .suffix
+      +adjust-font-size-to(12px)
+    .people
+      @extend .clear
+      margin: 0.2em 0
+      .person
+        a
+          +unstyled-link
+    button
+      +adjust-font-size-to(18px)
+      font-weight: normal
+      line-height: 1em
+#schedule
+  .booking
+    border-bottom: 1px solid $contrast
+    padding-bottom: 5px
+    .course
+      @extend strong
+    .suffix
+      +adjust-font-size-to(11px)
+    .timeslot
+      @extend .clear
+    .day-label
+      display: none
+    .room
+      text-align: right
+    .teacher
+      a
+        +unstyled-link
+    button
+      margin-bottom: 1px
+#full_schedule_horizontal
+  +full
+  min-width: 769px
+  .time
+    position: relative
+    border-bottom: 2px solid $main
+    .day
+      +columns(2)
+      &:first-child
+        +alpha
+      &:last-child
+        +omega
+    .suffix
+      +adjust-font-size-to(12px)
+      line-height: 1em
+    .timeslot-header
+      color: $contrast
+      position: absolute
+      top: -15px
+      //left: 40px
+      width: 100%
+      text-align: center
+      +adjust-font-size-to(100px)
+      opacity: 0.17
+      z-index: -1
+      @extend strong
+      margin: 0
+    .booking button
+      display: none
