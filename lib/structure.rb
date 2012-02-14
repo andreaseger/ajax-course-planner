@@ -59,6 +59,7 @@ module Structure
     etimes = etime.split(':').map(&:to_i)
     {
       label: stime,
+      end_label: etime,
       start_minute: stimes[1],
       start_hour: stimes[0],
       length: ( etimes[0] - stimes[0] ) * 60 + ( etimes[1] - stimes[1] ),

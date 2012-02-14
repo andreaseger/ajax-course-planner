@@ -61,17 +61,19 @@
       +adjust-font-size-to(12px)
       line-height: 1em
     .timeslot-header
-      color: $third
+      color: $forth
+      +adjust-font-size-to(98px)
       position: absolute
-      top: -15px
-      //left: 40px
       width: 100%
       text-align: center
-      +adjust-font-size-to(100px)
       opacity: 0.2
       z-index: -1
       @extend strong
       margin: 0
+      top: 50%
+      line-height: 0
+    .center
+      vertical-align: middle
     .booking
       margin: 1px
       button

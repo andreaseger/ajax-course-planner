@@ -7,6 +7,9 @@ class BookingsParser < Parser
   def all_bookings
     @all_bookings ||= []
   end
+  def remove_old_bookings
+    #todo
+  end
   def update_data
     get_timetables.each do |booking|
       room = build_room(booking.xpath('room').text)

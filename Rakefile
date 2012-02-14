@@ -30,14 +30,14 @@ namespace :update do
   task :bookings => ["environment"] do
     require './lib/bookings_parser'
     BookingsParser.run
-    print "Bookingsparser run\n"
+    print "Bookingsparser finished\n"
   end
 
   desc 'run the ExamsParser'
   task :exams => ["environment"] do
     require './lib/exams_parser'
     ExamsParser.run
-    print "Examsparser run\n"
+    print "Examsparser finished\n"
   end
 
   desc 'update both'

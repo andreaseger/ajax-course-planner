@@ -13,6 +13,6 @@ guard 'livereload' do
   watch(%r{service/.+\.rb})
   watch(%r{config/.+\.rb})
   watch(%r{(public/|app/assets).+\.(css|js|html)})
-  watch(%r{(assets/.+\.css)\.s[ac]ss}) { |m| m[1] }
+  watch(%r{(assets/.+(\.css)?)\.s[ac]ss}) { |m| m[1] }
   watch(%r{(assets/.+\.js)\.coffee}) { |m| m[1] }
 end

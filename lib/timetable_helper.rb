@@ -35,25 +35,26 @@ module Sinatra
         bookings
       when :table_by_days
         { days: bookings.reduce((0..4).map{|e| {label: label_for_day(e), name: name_for_day(e), times: [] } }){ |a,e|
-                day = e[:timeslot][:day][:name]
-                time = e[:timeslot][:label]
-                i = index_for_day day
-                j = index_for_time time
-                a[i][:times][j] ||= {label: time.gsub(':',''), name: time, bookings: []}
-                a[i][:times][j][:bookings] << e
-                a
-              }.each{|e| e[:times].compact! unless e.nil? }
+            day = e[:timeslot][:day][:name]
+            time = e[:timeslot][:label]
+            i = index_for_day day
+            j = index_for_time time
+            a[i][:times][j] ||= {label: time.gsub(':',''), name: time, bookings: []}
+            a[i][:times][j][:bookings] << e
+            a
+          }.each{|e| e[:times].compact! unless e.nil? }
         }
       when :table_by_times
         { times: bookings.reduce([]) { |a,e|
-                day = e[:timeslot][:day][:name]
-                time = e[:timeslot][:label]
-                j = index_for_day day
-              i = index_for_time time.gsub(':','')
-              a[i] ||= {label: time.gsub(':',''), name: time, days: (0..4).map{|e| {label: label_for_day(e).to_s, bookings: [] } } }
-              a[i][:days][j][:bookings] << e
-              a
-            }
+            day = e[:timeslot][:day][:name]
+            time = e[:timeslot][:label]
+            end_time = e[:timeslot][:end_label]
+            j = index_for_day day
+            i = index_for_time time.gsub(':','')
+            a[i] ||= {label: time.gsub(':',''), name: time, text: "#{time} - #{end_time}", days: (0..4).map{|e| {label: label_for_day(e).to_s, bookings: [] } } }
+            a[i][:days][j][:bookings] << e
+            a
+          }
         }
       end
     end
