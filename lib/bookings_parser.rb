@@ -33,9 +33,9 @@ class BookingsParser < Parser
         all_bookings << b
       end
     end
-    p "before merge: #{all_bookings.count}"
+    print "bookings before merge: #{all_bookings.count}\n".blue
     merge_similar
-    p "after merge: #{all_bookings.count}"
+    print "bookings after merge: #{all_bookings.count}\n".blue
     save_all
   end
   def save_all

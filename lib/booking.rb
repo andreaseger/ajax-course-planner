@@ -17,7 +17,7 @@ class Booking < Hash
     $redis.multi do
       $redis.set db_key, to_json
       $redis.sadd "#{namespace}:by_group:#{self[:group][:name]}", key
-      $redis.sadd "group", self[:group][:name]
+      $redis.sadd "groups", self[:group][:name]
     end
     self
   end
@@ -39,5 +39,8 @@ class Booking < Hash
   end
   def self.find_by_group group
     $redis.smembers("#{namespace}:by_group:#{group}").map {|k| find k }
+  end
+  def self.delete_all
+    $redis.del *$redis.keys("#{@namespace}*"), "groups"
   end
 end

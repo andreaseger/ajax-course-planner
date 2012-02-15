@@ -14,6 +14,9 @@ gem 'thin'
 gem 'redis'
 gem 'nokogiri'
 
+gem 'awesome_print'
+gem 'colorize'
+
 group :production do
   gem 'hiredis'
 end
@@ -26,18 +29,14 @@ group :assets do
   gem 'uglifier'
   gem 'compass-susy-plugin', :require => 'susy'
   gem 'compass', ">= 0.12.alpha.1", :require => false
-  gem 'compass-h5bp'
 end
 
 group :development do
   gem 'capistrano'
   gem 'sinatra-reloader', :require => 'sinatra/reloader'
   gem 'guard-sprockets2'
+  gem 'compass-h5bp'
   gem 'guard-livereload'
-  #gem 'compass'
-  #gem 'compass-susy-plugin'
-  #gem 'guard-compass'
-  #gem 'guard-bundler'
 end
 
 group :development, :test do

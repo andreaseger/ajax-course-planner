@@ -61,7 +61,7 @@ class CoursePlanner < Sinatra::Base
     end
 
     get '/g' do
-      json( groups: $redis.smembers('group').map(&:upcase).sort )
+      json( groups: $redis.smembers('groups').map(&:upcase).sort )
     end
 
     get '/e' do
