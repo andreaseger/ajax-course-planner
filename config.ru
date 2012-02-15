@@ -1,10 +1,11 @@
-require_relative 'config/environment'
+$:.unshift File.expand_path("../config",__FILE__)
+require 'environment'
 
 map '/assets' do
-  run @sprockets
+  run sprockets
 end
 
-require_relative 'course_planner'
+require './course_planner'
 map '/' do
   run CoursePlanner.new
 end

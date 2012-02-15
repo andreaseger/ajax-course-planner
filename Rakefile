@@ -1,15 +1,17 @@
+$:.unshift File.expand_path("../config",__FILE__)
+$:.unshift File.expand_path("../lib",__FILE__)
 require 'rake'
 
 desc 'setup the environment for the rest of the tasks'
 task :environment do
-  require_relative 'config/environment'
+  require 'environment'
   $redis = Redis.new(REDIS_CONFIG)
 end
 
 namespace :update do
   desc 'run the BookingsParser'
   task :bookings => ["environment", "delete:bookings"] do
-    require_relative 'lib/bookings_parser'
+    require 'bookings_parser'
     BookingsParser.run
     print "Bookingsparser finished\n".green
   end
@@ -28,7 +30,7 @@ end
 namespace :delete do
   desc 'delete all bookings'
   task :bookings => ["environment"] do
-    require_relative 'lib/booking'
+    require 'booking'
     print "#{Booking.delete_all} Items deleted\n".yellow
   end
   #desc 'delete all exams'
