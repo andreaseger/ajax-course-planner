@@ -7,7 +7,7 @@ Bundler.setup
 Bundler.require(:default, rack_env, :assets)
 print "#{rack_env}\n".cyan
 
-REDIS_CONFIG =  if ENV['PLANNER_REDIS_URL']
+REDIS_CONFIG =  if ENV['PLANNER_REDIS_URL'] && rack_env == 'production'
                   require 'uri'
                   uri = URI.parse ENV['PLANNER_REDIS_URL']
                   {
