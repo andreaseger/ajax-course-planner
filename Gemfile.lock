@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/rack/rack.git
-  revision: 7289f396b832169d63b1c1e8e26a968414f8a1c3
+  revision: 0fbb575c1983980f621319650280a4dc8ba2af6c
   specs:
     rack (1.4.1)
 
@@ -10,7 +10,7 @@ GEM
     activesupport (3.2.1)
       i18n (~> 0.6)
       multi_json (~> 1.0)
-    addressable (2.2.6)
+    addressable (2.2.7)
     awesome_print (1.0.2)
     backports (2.3.0)
     capistrano (2.9.0)
@@ -59,13 +59,12 @@ GEM
       sprockets (~> 2.0)
     highline (1.6.11)
     hike (1.2.1)
-    hiredis (0.4.4)
     i18n (0.6.0)
     kgio (2.7.2)
     libv8 (3.3.10.4)
     metaclass (0.0.1)
     method_source (0.7.0)
-    mocha (0.10.3)
+    mocha (0.10.4)
       metaclass (~> 0.0.1)
     multi_json (1.0.4)
     mustache (0.99.4)
@@ -77,10 +76,10 @@ GEM
     net-ssh-gateway (1.1.0)
       net-ssh (>= 1.99.1)
     nokogiri (1.5.0)
-    pry (0.9.8.1)
+    pry (0.9.8.2)
       coderay (~> 1.0.5)
       method_source (~> 0.7)
-      slop (>= 2.4.3, < 3)
+      slop (>= 2.4.4, < 3)
     rack-protection (1.2.0)
       rack
     rack-test (0.6.1)
@@ -96,7 +95,7 @@ GEM
     rspec-expectations (2.8.0)
       diff-lcs (~> 1.1.2)
     rspec-mocks (2.8.0)
-    sass (3.1.14)
+    sass (3.1.15)
     sinatra (1.3.2)
       rack (~> 1.3, >= 1.3.6)
       rack-protection (~> 1.2)
@@ -113,13 +112,13 @@ GEM
     sinatra-reloader (1.0)
       sinatra-contrib
     slop (2.4.4)
-    sprockets (2.3.0)
+    sprockets (2.3.1)
       hike (~> 1.2)
       multi_json (~> 1.0)
       rack (~> 1.0)
       tilt (~> 1.1, != 1.3.0)
     sqlite3 (1.3.5)
-    therubyracer (0.9.9)
+    therubyracer (0.9.10)
       libv8 (~> 3.3.10)
     thin (1.3.1)
       daemons (>= 1.0.9)
@@ -130,10 +129,10 @@ GEM
     uglifier (1.2.3)
       execjs (>= 0.3.0)
       multi_json (>= 1.0.2)
-    unicorn (4.1.1)
-      kgio (~> 2.4)
+    unicorn (4.2.0)
+      kgio (~> 2.6)
       rack
-      raindrops (~> 0.6)
+      raindrops (~> 0.7)
     vcr (2.0.0.rc1)
 
 PLATFORMS
@@ -152,7 +151,6 @@ DEPENDENCIES
   guard-livereload
   guard-rspec
   guard-sprockets2
-  hiredis
   mocha
   mustache
   nokogiri

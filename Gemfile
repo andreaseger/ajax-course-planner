@@ -17,10 +17,7 @@ gem 'nokogiri'
 gem 'awesome_print'
 gem 'colorize'
 
-group :production do
-  gem 'hiredis'
-  gem 'unicorn'
-end
+gem 'unicorn', :require => false
 
 group :assets do
   gem 'therubyracer'
