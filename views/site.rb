@@ -9,7 +9,7 @@ class CoursePlanner
       end
       def stylesheets_tag
         if @settings.production?
-          '<link href="/compiled/css/application.css" media="screen, projection" rel="stylesheet" type="text/css" />'
+          '<link href="/compiled/css/application.min.css" media="screen, projection" rel="stylesheet" type="text/css" />'
         else
           '<link href="/assets/application.css" media="screen, projection" rel="stylesheet" type="text/css" />'
         end

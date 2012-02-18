@@ -53,3 +53,57 @@ namespace :db do
   desc 'rebuild database'
   task :rebuild => ['db:flush', 'update:bookings']
 end
+
+namespace :assets do
+  desc 'compile assets'
+  task :compile => [:compile_js, :compile_css] do
+  end
+
+  desc 'compile javascript assets'
+  task :compile_js => ['environment'] do
+    asset     = sprockets['application.js']
+    outpath   = File.join(root, 'public', 'compiled', 'js')
+    outfile   = Pathname.new(outpath).join('application.min.js') # may want to use the digest in the future?
+
+    FileUtils.mkdir_p outfile.dirname
+
+    asset.write_to(outfile)
+    asset.write_to("#{outfile}.gz")
+    puts "successfully compiled js assets"
+  end
+
+  desc 'compile css assets'
+  task :compile_css => ['environment'] do
+    asset     = sprockets['application.css']
+    outpath   = File.join(root, 'public', 'compiled', 'css')
+    outfile   = Pathname.new(outpath).join('application.min.css') # may want to use the digest in the future?
+
+    FileUtils.mkdir_p outfile.dirname
+
+    asset.write_to(outfile)
+    asset.write_to("#{outfile}.gz")
+    puts "successfully compiled css assets"
+  end
+
+  desc 'copy images'
+  task :copy_images => ['environment'] do
+    #TODO
+  end
+
+  desc 'delete compiled assets'
+  task :clean_all do
+    FileUtils.rm_rf File.join(root, 'public', 'compiled')
+  end
+  desc 'delete compiled css'
+  task :clean_css do
+    FileUtils.rm_rf File.join(root, 'public', 'compiled', 'css')
+  end
+  desc 'delete compiled js'
+  task :clean_js do
+    FileUtils.rm_rf File.join(root, 'public', 'compiled', 'js')
+  end
+  # todo: add :clean_all, :clean_css, :clean_js tasks, invoke before writing new file(s)
+end
+def root
+  File.dirname(__FILE__)
+end
