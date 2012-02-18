@@ -19,6 +19,7 @@ class CoursePlanner < Sinatra::Base
     }
     disable :exams
     $redis = Redis.new(REDIS_CONFIG)
+    print REDIS_CONFIG "\n"
   end
 
   configure :development do |c|
