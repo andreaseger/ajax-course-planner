@@ -19,6 +19,7 @@ gem 'colorize'
 
 group :production do
   gem 'hiredis'
+  gem 'unicorn'
 end
 
 group :assets do
