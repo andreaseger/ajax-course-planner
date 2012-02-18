@@ -108,7 +108,14 @@ namespace :assets do
   task :clean_js do
     FileUtils.rm_rf File.join(root, 'public', 'compiled', 'js')
   end
-  # todo: add :clean_all, :clean_css, :clean_js tasks, invoke before writing new file(s)
+
+  desc "create template.json"
+  task :create_templates do
+    require 'json'
+    File.open(File.join(root, 'public', 'templates.json'), 'w') do |f|
+      f.print Dir['templates/client/*'].map {|e| { name: File.basename(e, '.mustache').sub(/^_/,''), template: IO.read(e) } }.to_json
+    end
+  end
 end
 def root
   File.dirname(__FILE__)
