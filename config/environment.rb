@@ -19,7 +19,6 @@ REDIS_CONFIG =  if ENV['PLANNER_REDIS_URL'] && rack_env == 'production'
                 else
                   {}
                 end
-print "redis: #{REDIS_CONFIG}".cyan
 
 
 def sprockets

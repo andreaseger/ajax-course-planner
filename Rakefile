@@ -60,8 +60,11 @@ namespace :assets do
   end
 
   desc 'compile javascript assets'
-  task :compile_js => ['environment'] do
-    asset     = sprockets['application.js']
+  task :compile_js => ['environment', 'assets:clean_js'] do
+    require 'uglifier'
+    s = sprockets
+    s.js_compressor = Uglifier.new(mangle: true)
+    asset     = s['application.js']
     outpath   = File.join(root, 'public', 'compiled', 'js')
     outfile   = Pathname.new(outpath).join('application.min.js') # may want to use the digest in the future?
 
@@ -73,8 +76,11 @@ namespace :assets do
   end
 
   desc 'compile css assets'
-  task :compile_css => ['environment'] do
-    asset     = sprockets['application.css']
+  task :compile_css => ['environment', 'assets:clean_css'] do
+    require 'yui/compressor'
+    s = sprockets
+    s.css_compressor = YUI::CssCompressor.new
+    asset     = s['application.css']
     outpath   = File.join(root, 'public', 'compiled', 'css')
     outfile   = Pathname.new(outpath).join('application.min.css') # may want to use the digest in the future?
 
