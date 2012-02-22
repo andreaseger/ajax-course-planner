@@ -1,7 +1,7 @@
 # A sample Gemfile
 source "https://rubygems.org"
 
-gem 'rack', :git => 'git://github.com/rack/rack.git'
+gem 'rack'#, :git => 'git://github.com/rack/rack.git'
 gem 'rake'
 
 gem 'sinatra', :require => 'sinatra/base'
