@@ -1,6 +1,7 @@
 class CoursePlanner
   module Views
     class Site < Mustache
+      include Assets::Helper
       def title
         "Coures Planner"
       end
@@ -8,19 +9,11 @@ class CoursePlanner
         @pagename || "bookingslist"
       end
       def stylesheets_tag
-        if @settings.production?
-          '<link href="/compiled/css/application.min.css" media="screen, projection" rel="stylesheet" type="text/css" />'
-        else
-          '<link href="/assets/application.css" media="screen, projection" rel="stylesheet" type="text/css" />'
-        end
+        %{<link href="#{asset_path 'application.css'}" media="screen, projection" rel="stylesheet" type="text/css" />}
       end
 
       def javascripts_tag
-        if @settings.production?
-          '<script src="/compiled/js/application.min.js" type="text/javascript"></script>'
-        else
-          '<script src="/assets/application.js" type="text/javascript"></script>'
-        end
+        %{<script src="#{asset_path 'application.js'}"></script>}
       end
     end
   end

@@ -1,0 +1,11 @@
+<article class="news">
+  <h3 id='subject'>{{subject}}</h3>
+  <ul id='people'>
+    {{#people}}
+      <li class="person">{{>person}}</li>
+    {{/people}}
+  </ul>
+  <section id='text'>{{{text}}}</section>
+  <span id='publish'>published: {{published}}</span>
+  <div class="clear"></div>
+</article>

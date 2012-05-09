@@ -29,11 +29,10 @@ class @ScheduleBuilder
 
   from_bookings: (keys, history = true, structure = 'table_by_times', exams = false ) ->
     $.getJSON '/api/s', {bookings: keys, structure: structure, exams: exams}, (data) =>
+      data.keys = JSON.stringify(data.keys)
       html = switch structure
-        when 'table_by_times' then ich.big_schedule_by_times(data.bookings)
-        when 'table_by_days'
-          data.keys = JSON.stringify(data.keys)
-          ich.schedule(data)
+        when 'table_by_times' then ich.big_schedule_by_times(data)
+        when 'table_by_days' then ich.schedule(data)
       $('#schedule').replaceWith html
       $('meta[name=pagename]').attr 'content', 'schedule'
     if history

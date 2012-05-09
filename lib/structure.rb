@@ -60,11 +60,19 @@ module Structure
     {
       label: stime,
       end_label: etime,
+      name: "#{stime} - #{etime}",
       start_minute: stimes[1],
       start_hour: stimes[0],
       length: ( etimes[0] - stimes[0] ) * 60 + ( etimes[1] - stimes[1] ),
-      day: get_day(day)
+      day: get_day(day),
+      not_default_slot: !check_default(stime,etime)
     }
+  end
+  def check_default start, stop
+    @default_start ||= %w(08:15 10:00 11:45 13:30 15:15 17:00 18:45)
+    @default_end ||= %w(09:45 11:30 13:15 15:00 16:45 18:30 20:15)
+
+    @default_start.include?(start) && @default_end.include?(stop)
   end
   def get_day id
     case id

@@ -12,5 +12,8 @@
   </ul>
   <button type="button" class="bookings-schedule-toggle" data-booking-key="{{& key}}">&#x21c4;</button>
   {{#rooms}}{{>room}}{{/rooms}}
+  <div class="timeslot{{#timeslot.not_default_slot}} not-default-slot{{/timeslot.not_default_slot}}">
+    <span class="time-label">{{timeslot.name}}</span>
+  </div>
   <div class="clear"></div>
 </article>

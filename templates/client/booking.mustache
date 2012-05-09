@@ -1,6 +1,9 @@
 <article class="booking">
   {{>course}}{{>suffix}}
-  <div class="timeslot"><span class="day-label">{{timeslot.day.label}}</span> <span class="time-label">{{timeslot.label}}</span></div>
+  <div class="timeslot{{#timeslot.not_default_slot}} not-default-slot{{/timeslot.not_default_slot}}">
+    <!--<span class="day-label">{{timeslot.day.label}}</span>-->
+    <span class="time-label">{{timeslot.name}}</span>
+  </div>
   {{#rooms}}{{>room}}{{/rooms}}
   {{#teacher.label}}
     <div class="teacher">{{>person}}</div>

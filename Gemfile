@@ -10,14 +10,13 @@ gem 'sinatra-flash', :require => 'sinatra/flash'
 gem 'mustache', :require => 'mustache/sinatra'
 gem 'activesupport', :require => false
 
-gem 'thin'
+gem 'puma'
 gem 'redis'
 gem 'nokogiri'
+gem 'redcarpet'
 
 gem 'awesome_print'
 gem 'colorize'
-
-gem 'unicorn', :require => false
 
 group :assets do
   gem 'therubyracer'

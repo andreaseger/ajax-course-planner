@@ -1,5 +1,9 @@
 module Buildable
+  def before_create(hash)
+    hash
+  end
   def from_hash hash
+    hash = before_create(hash)
     self[hash.recursively_symbolize_keys!] if hash
   end
   def from_json json

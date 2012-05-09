@@ -1,6 +1,6 @@
-<article id="full_schedule_horizontal">
+<article id="full_schedule_horizontal" data-booking-keys='{{{keys}}}'>
   <header><h2 id="schedule-header">Schedule:</h2></header>
-  {{#times}}
+  {{#bookings.times}}
     <section id="time-{{label}}" class="time">
     <span class="timeslot-header">{{text}}<span class="center">&nbsp;</span></span>
     {{#days}}
@@ -13,13 +13,5 @@
     {{/days}}
     <div class="clear"></div>
     </section>
-  {{/times}}
+  {{/bookings.times}}
 </article>
-{{#has_exams}}
-<article id="exams">
-  <header><h2 id="exams-header">Exams:</h2></header>
-  {{#exams}}
-    {{>exam}}
-  {{/exams}}
-</article>
-{{/has_exams}}

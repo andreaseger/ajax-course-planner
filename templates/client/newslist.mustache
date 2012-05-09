@@ -1,0 +1,14 @@
+<article id="newslist">
+  <header>
+    <h2>News</h2>
+    <ul id='people'>
+      {{#people}}
+        <li class="person">{{>person}}</li>
+      {{/people}}
+    </ul>
+  </header>
+  {{#news.news}}
+    {{>news}}
+  {{/news.news}}
+</article>
+

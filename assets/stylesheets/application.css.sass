@@ -1,5 +1,6 @@
 //= require_self
 //= require_tree ./by_media_queries
+//= require ponies
 
 //= depend_on base
 //= depend_on defaults
@@ -23,6 +24,12 @@
     +horizontal-list
   footer .links
     +horizontal-list
+  #disclaimer
+    color: $primary - #AAA
+    strong
+      &:focus, &:hover, &:active
+        color: $primary - #666
+        text-decoration: none
   h3.day-header
     text-align: center
     &:focus, &:hover, &:active

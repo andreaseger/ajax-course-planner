@@ -1,6 +1,10 @@
 @import "base.css.sass"
 @import "compass/typography/links"
 @import "compass/typography/vertical_rhythm"
+@import "compass/typography/lists/horizontal-list"
+
+.not-default-slot
+  color: red
 
 #bookings_list
   .bookings
@@ -51,6 +55,9 @@
   .time
     position: relative
     border-bottom: 2px solid $third
+    &:last-child
+      border-bottom: 4px dashed $third
+      margin-bottom: 1em
     .day
       +columns(2)
       &:first-child
@@ -78,3 +85,17 @@
       margin: 1px
       button
         display: none
+
+#newslist
+  +full
+  #people
+    +horizontal-list
+  header #people
+    .person
+      margin-right: 1em
+  .news
+    #subject
+      margin-bottom: .3em
+    #publish
+      +adjust-font-size-to(12px)
+    border-bottom: 2px solid $third

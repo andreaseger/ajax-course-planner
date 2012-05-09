@@ -5,6 +5,7 @@ require 'rake'
 desc 'setup the environment for the rest of the tasks'
 task :environment do
   require 'environment'
+  require "assets"
   $redis = Redis.new(REDIS_CONFIG)
 end
 
@@ -16,9 +17,15 @@ namespace :update do
     print "Bookingsparser finished\n".green
   end
 
-  desc 'update both'
-  task :both => ['db:flush', 'update:bookings', 'update:exams']
+  desc 'update all'
+  task :all => ['db:flush', 'update:bookings', 'update:news']
 
+  desc 'run the NewsParser'
+  task :news => ["environment", "delete:news"] do
+    require 'news_parser'
+    NewsParser.run
+    print "Newsparser finished\n".green
+  end
   #desc 'run the ExamsParser'
   #task :exams => ["environment"] do
   #  require_relative 'lib/exams_parser'
@@ -31,7 +38,15 @@ namespace :delete do
   desc 'delete all bookings'
   task :bookings => ["environment"] do
     require 'booking'
-    print "#{Booking.delete_all} Items deleted\n".yellow
+    c = Booking.delete_all
+    print "#{c} Items deleted\n".yellow if c > 0
+  end
+
+  desc 'delete all news'
+  task :news => ["environment"] do
+    require 'news'
+    c = News.delete_all
+    print "#{c} Items deleted\n".yellow if c > 0
   end
   #desc 'delete all exams'
   #task :exams => ["environment"] do
@@ -51,7 +66,7 @@ namespace :db do
     ap $redis.info
   end
   desc 'rebuild database'
-  task :rebuild => ['db:flush', 'update:bookings']
+  task :rebuild => ['db:flush', 'update:all']
 end
 
 namespace :assets do
@@ -119,4 +134,7 @@ namespace :assets do
 end
 def root
   File.dirname(__FILE__)
+end
+def sprockets
+  Assets.sprockets
 end
