@@ -78,6 +78,7 @@ namespace :assets do
   desc 'compile javascript assets'
   task :compile_js => ['environment'] do
     source = 'application.js'
+    require 'uglifier'
     s = sprockets
     s.js_compressor = Uglifier.new(mangle: true)
     asset     = s[source]
@@ -88,12 +89,16 @@ namespace :assets do
 
     asset.write_to(outfile)
     asset.write_to("#{outfile}.gz")
+
     puts "successfully compiled js assets"
+
+    write_manifest(source,asset.digest_path)
   end
 
   desc 'compile css assets'
   task :compile_css => ['environment'] do
     source = 'application.css'
+    require 'yui/compressor'
     s = sprockets
     s.css_compressor = YUI::CssCompressor.new
     asset     = s[source]
@@ -105,6 +110,7 @@ namespace :assets do
     asset.write_to(outfile)
     asset.write_to("#{outfile}.gz")
     puts "successfully compiled css assets"
+    write_manifest(source, asset.digest_path)
   end
 
   desc 'copy images'
@@ -132,4 +138,19 @@ def root
 end
 def sprockets
   Assets.sprockets
+end
+MANIFEST_PATH = File.join(root, 'public', 'assets', 'manifest.json')
+def write_manifest(source,digest_path)
+  require 'json'
+  FileUtils.touch MANIFEST_PATH
+  file = IO.read(MANIFEST_PATH)
+  if file.empty?
+    manifest = {}
+  else
+    manifest = JSON.parse(file)
+  end
+  manifest.merge!(source => digest_path)
+  File.open(MANIFEST_PATH, 'w') do |f|
+    f.print manifest.to_json
+  end
 end

@@ -14,9 +14,8 @@ module Assets
   def self.asset_path(source)
     case ENV['RACK_ENV']
     when 'production'
-      sprockets.js_compressor ||= Uglifier.new(mangle: true)
-      sprockets.css_compressor ||= YUI::CssCompressor.new
-      sprockets.find_asset(source).digest_path
+      @manifest ||= JSON.parse IO.read(File.join('public', 'assets', 'manifest.json'))
+      @manifest[source]
     else
       sprockets.find_asset(source).digest_path
     end

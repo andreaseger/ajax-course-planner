@@ -26,8 +26,8 @@ group :assets do
   gem 'sprockets'
   gem 'coffee-script'
   gem 'sass'
-  gem 'uglifier'
-  gem 'yui-compressor'
+  gem 'uglifier', :require => false
+  gem 'yui-compressor', :require => false
   gem 'susy', :git => 'git://github.com/ericam/susy.git', :require => false
   #gem 'compass-susy-plugin', :require => 'susy'
   gem 'compass', :git => 'git://github.com/chriseppstein/compass.git', :require => false
