@@ -72,17 +72,18 @@ end
 
 namespace :assets do
   desc 'compile assets'
-  task :compile => [:compile_js, :compile_css] do
+  task :compile => [:clean_all, :compile_js, :compile_css, :create_templates] do
   end
 
   desc 'compile javascript assets'
-  task :compile_js => ['environment', 'assets:clean_js'] do
+  task :compile_js => ['environment'] do
+    source = 'application.js'
     require 'uglifier'
     s = sprockets
     s.js_compressor = Uglifier.new(mangle: true)
-    asset     = s['application.js']
+    asset     = s[source]
     outpath   = File.join(root, 'public', 'assets')
-    outfile   = Pathname.new(outpath).join('application.min.js') # may want to use the digest in the future?
+    outfile   = Pathname.new(outpath).join( ::Assets.sprockets.find_asset(source).digest_path ) # may want to use the digest in the future?
 
     FileUtils.mkdir_p outfile.dirname
 
@@ -92,13 +93,14 @@ namespace :assets do
   end
 
   desc 'compile css assets'
-  task :compile_css => ['environment', 'assets:clean_css'] do
+  task :compile_css => ['environment'] do
+    source = 'application.css'
     require 'yui/compressor'
     s = sprockets
     s.css_compressor = YUI::CssCompressor.new
-    asset     = s['application.css']
+    asset     = s[source]
     outpath   = File.join(root, 'public', 'assets')
-    outfile   = Pathname.new(outpath).join('application.min.css') # may want to use the digest in the future?
+    outfile   = Pathname.new(outpath).join( ::Assets.sprockets.find_asset(source).digest_path ) # may want to use the digest in the future?
 
     FileUtils.mkdir_p outfile.dirname
 
@@ -114,15 +116,8 @@ namespace :assets do
 
   desc 'delete compiled assets'
   task :clean_all do
-    FileUtils.rm_rf File.join(root, 'public', 'compiled')
-  end
-  desc 'delete compiled css'
-  task :clean_css do
-    FileUtils.rm_rf File.join(root, 'public', 'compiled', 'css')
-  end
-  desc 'delete compiled js'
-  task :clean_js do
-    FileUtils.rm_rf File.join(root, 'public', 'compiled', 'js')
+    FileUtils.rm_rf File.join(root, 'public', 'assets')
+    FileUtils.rm_rf File.join(root, 'public', 'templates.json')
   end
 
   desc "create template.json"
@@ -131,6 +126,7 @@ namespace :assets do
     File.open(File.join(root, 'public', 'templates.json'), 'w') do |f|
       f.print Dir['templates/client/*'].map {|e| { name: File.basename(e, '.mustache').sub(/^_/,''), template: IO.read(e) } }.to_json
     end
+    puts 'templates.json created'
   end
 end
 def root
