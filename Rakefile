@@ -78,7 +78,6 @@ namespace :assets do
   desc 'compile javascript assets'
   task :compile_js => ['environment'] do
     source = 'application.js'
-    require 'uglifier'
     s = sprockets
     s.js_compressor = Uglifier.new(mangle: true)
     asset     = s[source]
@@ -95,7 +94,6 @@ namespace :assets do
   desc 'compile css assets'
   task :compile_css => ['environment'] do
     source = 'application.css'
-    require 'yui/compressor'
     s = sprockets
     s.css_compressor = YUI::CssCompressor.new
     asset     = s[source]
