@@ -6,4 +6,6 @@ require 'environment'
 #end
 
 require './course_planner'
-CoursePlanner.run!
+map '/' do
+  run CoursePlanner.new
+end
