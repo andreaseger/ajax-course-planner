@@ -18,6 +18,8 @@ gem 'redcarpet'
 gem 'awesome_print'
 gem 'colorize'
 
+gem 'unicorn', :require => false
+
 group :assets do
   gem 'therubyracer'
   gem 'sprockets'
