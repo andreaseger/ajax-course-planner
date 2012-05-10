@@ -5,6 +5,7 @@
 
 # Example:
 #
+set :job_template, "zsh -i -l -c ':job'"
 set :output, "/www-data/courses/shared/log/cron_log.log"
 
 every 2.hours do

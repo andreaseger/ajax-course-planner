@@ -8,6 +8,14 @@ class CoursePlanner
       def pagename
         @pagename || "bookingslist"
       end
+      def ga_site_it
+        case ENV[:RACK_ENV]
+        when 'productive'
+          ENV['PLANNER_GA_ID']
+        when 'development'
+          'meh'
+        end
+      end
       def stylesheets_tag
         %{<link href="#{asset_path 'application.css'}" media="screen, projection" rel="stylesheet" type="text/css" />}
       end

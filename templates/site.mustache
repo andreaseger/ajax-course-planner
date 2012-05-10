@@ -29,16 +29,14 @@
 <script>window.jQuery || document.write('<script src="/assets/jquery.js"><\/script>')</script>
 {{{javascripts_tag}}}
 
-<!-- dont need those now
 <script>
-  var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']]; // Change UA-XXXXX-X to be your site's ID
+  var _gaq=[['_setAccount','{{ga_site_id}}'],['_trackPageview']]; // Change UA-XXXXX-X to be your site's ID
   (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];g.async=1;
   g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
   s.parentNode.insertBefore(g,s)}(document,'script'));
 </script>
--->
 
-<!--[if lt IE 7 ]>
+<!--[if lt IE 8 ]>
   <script src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.2/CFInstall.min.js"></script>
   <script>window.attachEvent("onload",function(){CFInstall.check({mode:"overlay"})})</script>
 <![endif]-->

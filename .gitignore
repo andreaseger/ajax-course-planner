@@ -3,3 +3,4 @@ log/*
 */.sass-cache/*
 .sass-cache/*
 config/deploy.rb
+config/settings.rb
