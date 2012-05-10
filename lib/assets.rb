@@ -11,4 +11,14 @@ module Assets
     @sprockets.append_path File.join Gem.loaded_specs['susy'].full_gem_path, 'sass'
     @sprockets
   end
+  def self.asset_path(source)
+    case ENV['RACK_ENV']
+    when 'production'
+      sprockets.js_compressor ||= Uglifier.new(mangle: true)
+      sprockets.css_compressor ||= YUI::CssCompressor.new
+      sprockets.find_asset(source).digest_path
+    else
+      sprockets.find_asset(source).digest_path
+    end
+  end
 end
