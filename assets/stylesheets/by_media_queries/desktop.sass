@@ -6,9 +6,8 @@
 @media screen and (min-width: 769px)
   #bookings_list
     +columns(6)
-    +alpha
     .booking
-      .course
+      //.course
         +full(6)
       .suffix
         +prefix(1,6)
@@ -21,24 +20,19 @@
         +prefix(1,6)
         +columns(2,6)
       button
-        +columns(1,6)
-        +omega(6)
+        +columns(1 omega,6)
   #schedule
-    +columns(4)
-    +omega
+    +columns(4 omega)
     .booking
       .course
         +columns(2,4)
       .suffix
-        +columns(2,4)
-        +omega(4)
+        +columns(2 omega,4)
       .timeslot
         +columns(2,4)
       .room
-        +columns(2,4)
-        +omega(4)
+        +columns(2 omega,4)
       .teacher
         +columns(3,4)
       button
-        +columns(1,4)
-        +omega(4)
+        +columns(1 omega,4)

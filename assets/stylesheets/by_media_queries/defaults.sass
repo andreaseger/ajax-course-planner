@@ -3,6 +3,11 @@
 @import "compass/typography/vertical_rhythm"
 @import "compass/typography/lists/horizontal-list"
 
+header
+  h1#title
+    +columns(4)
+  #pony-pics
+    +columns(6 omega)
 .not-default-slot
   color: red
 
@@ -25,11 +30,14 @@
       .person
         a
           +unstyled-link
+    .timeslot
+      clear: both
     button
       +adjust-font-size-to(18px)
       font-weight: normal
       line-height: 1em
 #schedule
+  float: right
   .booking
     border-bottom: 1px solid $third
     padding-bottom: 5px
@@ -39,7 +47,7 @@
       +adjust-font-size-to(11px)
       line-height: 1em
     .timeslot
-      @extend .clear
+      clear: both
     .day-label
       display: none
     .room
@@ -50,7 +58,7 @@
     button
       margin-bottom: 1px
 #full_schedule_horizontal
-  +full
+  clear: both
   min-width: 769px
   .time
     position: relative
@@ -60,8 +68,6 @@
       margin-bottom: 1em
     .day
       +columns(2)
-      &:first-child
-        +alpha
       &:last-child
         +omega
     .suffix
@@ -87,7 +93,7 @@
         display: none
 
 #newslist
-  +full
+  clear: both
   #people
     +horizontal-list
   header #people

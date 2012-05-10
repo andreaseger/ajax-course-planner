@@ -1,5 +1,5 @@
 tmp/*
 log/*
-assets/.sass-cache/*
+*/.sass-cache/*
 .sass-cache/*
 config/deploy.rb

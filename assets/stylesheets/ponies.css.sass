@@ -1,5 +1,38 @@
-$pony-background: #ff028d
+$pony-background: #F859A3
+$pony-primary: #734695
+$pony-secondary: #3CBEBA
+$pony-third: #FFF799
+$pony-forth: #A8E8FF
 
 .pony
   background-color: $pony-background
-  color: black
+  color: $pony-primary
+  \:focus
+    outline: 1px dotted $pony-secondary
+  a
+    &:link, &:visited
+      color: $pony-secondary
+    &:focus, &:hover, &:active
+      color: $pony-secondary - #222222
+  h1, h2, h3, h4, h5, h6
+    color: $pony-forth
+  #disclaimer
+    color: $pony-primary - #AAA
+    strong
+      &:focus, &:hover, &:active
+        color: $pony-primary - #666
+  h3.day-header
+    &:focus, &:hover, &:active
+      color: $pony-secondary - #222222
+  #bookings-list .booking,
+  #schedule .booking
+    border-bottom: 1px solid $pony-third
+  #full_schedule_horizontal .time
+    border-bottom: 2px solid $pony-third
+    &:last-child
+      border-bottom: 4px dashed $pony-third
+    .timeslot-header
+      color: $pony-forth
+
+  #newslist .news
+    border-bottom: 2px solid $pony-third

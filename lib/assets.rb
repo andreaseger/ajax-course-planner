@@ -8,7 +8,7 @@ module Assets
     @sprockets.append_path File.join 'assets', 'images'
     @sprockets.append_path File.join Gem.loaded_specs['compass'].full_gem_path, 'frameworks', 'compass', 'stylesheets'
     @sprockets.append_path File.join Gem.loaded_specs['compass'].full_gem_path, 'frameworks', 'compass', 'stylesheets', 'compass'
-    @sprockets.append_path File.join Gem.loaded_specs['compass-susy-plugin'].full_gem_path, 'sass'
+    @sprockets.append_path File.join Gem.loaded_specs['susy'].full_gem_path, 'sass'
     @sprockets
   end
 end

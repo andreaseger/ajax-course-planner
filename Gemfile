@@ -25,15 +25,16 @@ group :assets do
   gem 'sass'
   gem 'uglifier', :require => false
   gem 'yui-compressor', :require => false
-  gem 'compass-susy-plugin', :require => 'susy'
-  gem 'compass', ">= 0.12.alpha.1", :require => false
+  gem 'susy', :git => 'git://github.com/ericam/susy.git', :require => false
+  #gem 'compass-susy-plugin', :require => 'susy'
+  gem 'compass', :git => 'git://github.com/chriseppstein/compass.git', :require => false
 end
 
 group :development do
   gem 'capistrano'
   gem 'sinatra-reloader', :require => 'sinatra/reloader'
   gem 'guard-sprockets2'
-  gem 'compass-h5bp'
+  #gem 'compass-h5bp'
   gem 'guard-livereload'
 end
 

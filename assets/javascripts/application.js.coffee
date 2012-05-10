@@ -44,10 +44,12 @@ $(window).on 'templates-loaded', =>
   if turn_on
     $('body')[0].className = 'pony'
     $('footer #pony a').replaceWith("<a href='#'>Less Ponies.</a>")
+    $('#pony-pics').show()
     $.cookie("pony", 1)
   else
     $('body')[0].className = ''
     $('footer #pony a').replaceWith("<a href='#'>More Ponies!!!</a>")
+    $('#pony-pics').hide()
     $.cookie("pony", null)
 
 $('footer').on 'click', '#clear_cookie', =>
