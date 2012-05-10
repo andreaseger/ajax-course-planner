@@ -4,6 +4,7 @@ require 'rake'
 
 desc 'setup the environment for the rest of the tasks'
 task :environment do
+  p Time.now
   require 'environment'
   require "assets"
   $redis = Redis.new(REDIS_CONFIG)

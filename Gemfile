@@ -19,6 +19,7 @@ gem 'awesome_print'
 gem 'colorize'
 
 gem 'unicorn', :require => false
+gem 'whenever',:require => false
 
 group :assets do
   gem 'therubyracer'

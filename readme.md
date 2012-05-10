@@ -1,10 +1,10 @@
-HM Course Planner
+HM Course Planner with News
 ===
 
 What is this
 ---
 
-This is an attempt to build a responsive single site page to create a schedule for your courses at the [University of Applied Science Munich](http://www.hm.edu).
+This is an attempt to build a responsive single site page to create a schedule for your courses at the [University of Applied Science Munich](http://www.hm.edu). Also it will show you the news from the bulletin board.
 
 How it works
 ---
@@ -24,6 +24,8 @@ What it does
 - browse through the bookings of each group and choose the ones you plan to attend
 - chosen bookings will be saved in a cookie and shown next to the list of bookings
 - for the chosen bookings, a permalink to your schedule is provided which lets you bookmark/share your schedule
+- show you the news from the bulletin board for the profs you selected a
+  course
 
 How to run it
 ---
@@ -37,7 +39,7 @@ This would connect to host 1.2.3.4 on port 9000, uses database number 3 using th
 
     bundle install
     bundle exec rake update:bookings
-    bundle exec rackup -p4567
+    bundle exec puma -p4567
 
 >> goto 127.0.0.1:4567/
 
