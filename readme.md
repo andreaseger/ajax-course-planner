@@ -43,6 +43,17 @@ This would connect to host 1.2.3.4 on port 9000, uses database number 3 using th
 
 >> goto 127.0.0.1:4567/
 
+Known Issues
+---
+
+- the bakground timeslot text in the big schedule view is messed up with
+  Firefox, till now I didn't cared to fix that. It works in Chrome, Safari, Opera and IE9.
+- IE on WP7.5 looks ok-ish it only does not like the font used, didn't test other mobile browser cause I lack the devices.
+- Sometimes the bookings do not get merged correctly and appear multiple
+  times, didn't investigate why that happends. Most of the times it works.
+- no caching-header set
+- pony mode needs improvments: more pony pics and better colors 
+
 Who am I
 ---
 

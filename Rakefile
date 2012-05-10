@@ -23,7 +23,6 @@ namespace :update do
 
   desc 'run the NewsParser'
   task :news => ["environment", "delete:news"] do
-    p `locale`
     require 'news_parser'
     NewsParser.run
     print "Newsparser finished\n".green
