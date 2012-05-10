@@ -18,7 +18,7 @@ class @ScheduleBuilder
       data.bookings.remove key
     else
       data.bookings.push key
-    $.cookie("schedule-data", JSON.stringify(data))
+    $.cookie("schedule-data", JSON.stringify(data), {expire: 120})
 
   from_cookie: ->
     cookie = $.cookie("schedule-data")

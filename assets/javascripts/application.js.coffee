@@ -45,7 +45,7 @@ $(window).on 'templates-loaded', =>
     $('body')[0].className = 'pony'
     $('footer #pony a').replaceWith("<a href='#'>Less Ponies.</a>")
     $('#pony-pics').show()
-    $.cookie("pony", 1)
+    $.cookie("pony", 1, {expire: 120})
   else
     $('body')[0].className = ''
     $('footer #pony a').replaceWith("<a href='#'>More Ponies!!!</a>")
