@@ -80,7 +80,7 @@ namespace :assets do
     s = sprockets
     s.js_compressor = Uglifier.new(mangle: true)
     asset     = s['application.js']
-    outpath   = File.join(root, 'public', 'compiled', 'js')
+    outpath   = File.join(root, 'public', 'assets')
     outfile   = Pathname.new(outpath).join('application.min.js') # may want to use the digest in the future?
 
     FileUtils.mkdir_p outfile.dirname
@@ -96,7 +96,7 @@ namespace :assets do
     s = sprockets
     s.css_compressor = YUI::CssCompressor.new
     asset     = s['application.css']
-    outpath   = File.join(root, 'public', 'compiled', 'css')
+    outpath   = File.join(root, 'public', 'assets')
     outfile   = Pathname.new(outpath).join('application.min.css') # may want to use the digest in the future?
 
     FileUtils.mkdir_p outfile.dirname
