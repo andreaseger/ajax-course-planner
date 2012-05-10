@@ -5,9 +5,14 @@
 
 # Example:
 #
-set :job_template, "zsh -i -l -c ':job'"
-set :output, "/www-data/courses/shared/log/cron_log.log"
 
-every 2.hours do
+#PATH='/usr/local/bin:/usr/bin:/bin:/opt/ruby/bin'
+
+#set :job_template, "bash -l -c PATH=#{PATH} ':job'"
+set :output, "/www-data/courses/shared/log/cron_log.log"
+e = 'LANG=en_US.UTF-8 LANGUAGE=en_US.UTF-8 LC_ALL=en_US.UTF-8'
+job_type :rake,    "cd :path && #{e} RAILS_ENV=:environment bundle exec rake :task --silent :output"
+
+every 1.hour do
   rake "update:news"
 end

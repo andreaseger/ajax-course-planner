@@ -83,7 +83,7 @@ class CoursePlanner < Sinatra::Base
       if bookings
         people = Set.new(bookings.map { |e| Booking.find(e) }.compact.map{|b| b.merge(key: b.key)}.map{|e| [ e[:people], e[:teacher] ] }.flatten)
         people_codes = people.map{|e| e[:name] }
-        news = build_newslist( News.find_by_people( people_codes ) )
+        news = build_newslist( News.find_by_people( people_codes ).sort_by{|e| e[:publish]}.reverse )
         json( news: news, people: people.to_a )
       end
     end

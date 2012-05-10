@@ -18,26 +18,26 @@
 #container
   +container
   +susy-grid-background
-  header nav
-    clear: both
-    +horizontal-list
-  footer .links
-    +horizontal-list
-  #disclaimer
-    color: $primary - #AAA
-    strong
-      &:focus, &:hover, &:active
-        color: $primary - #666
-        text-decoration: none
-  h3.day-header
-    text-align: center
+header nav
+  clear: both
+  +horizontal-list
+footer .links
+  +horizontal-list
+#disclaimer
+  color: $primary - #AAA
+  strong
     &:focus, &:hover, &:active
-      color: $secondary - #222222
+      color: $primary - #666
       text-decoration: none
+h3.day-header
+  text-align: center
+  &:focus, &:hover, &:active
+    color: $secondary - #222222
+    text-decoration: none
 
-  button
-    +my-button($secondary, black, transparent)
+button
+  +my-button($secondary, black, transparent)
 
-  ul
-    margin: .5em 1em
-    padding: 0
+ul
+  margin: .5em 1em
+  padding: 0

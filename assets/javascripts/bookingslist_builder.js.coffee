@@ -7,10 +7,14 @@ class @BookingslistBuilder
 
   setup_handler: ->
     $('#container').on 'change', '#groups', (e) =>
-      @for_group $(e.currentTarget).val()
+      group = $(e.currentTarget).val()
+      if (_gaq) then _gaq.push(['_trackEvent', 'course-planner', 'groups', 'change', group])
+      @for_group group
 
     $('#container').on 'click', '.day-header', (e) =>
-      div = $('#' + $(e.currentTarget).data('bookings-list'))
+      day = $(e.currentTarget).data('bookings-list')
+      if (_gaq) then _gaq.push(['_trackEvent', 'course-planner', 'bookings', 'by-day', day])
+      div = $('#' + day)
       if div.is(':hidden')
         $('.bookings').hide()
         div.toggle()
@@ -21,6 +25,7 @@ class @BookingslistBuilder
 
     $('#container').on 'click', '.bookings-schedule-toggle', (e) =>
       key = $(e.currentTarget).data('booking-key')
+      if (_gaq) then _gaq.push(['_trackEvent', 'course-planner', 'bookings', 'toggle', key])
       schedule_builder.toggle_booking_in_cookie(key)
       schedule_builder.from_cookie()
 

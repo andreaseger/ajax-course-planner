@@ -3,6 +3,7 @@ Array::remove = (e) -> @[t..t] = [] if (t = @indexOf(e)) > -1
 class @NewslistBuilder
   constructor: ->
     $(window).on 'click', 'nav #slide-to-news', =>
+      if (_gaq) then _gaq.push(['_trackEvent', 'course-planner', 'news', 'slide_to_news'])
       $.scrollTo $('#newslist header h2') ,{duration: 'fast'}
 
   fetch_and_load: (keys) ->

@@ -63,11 +63,12 @@ $('footer').on 'click', 'strong', =>
   $('section#disclaimer p').toggle()
 $('footer').on 'click', '#pony a', =>
   if $('body')[0].className == "pony"
+    if (_gaq) then _gaq.push(['_trackEvent', 'course-planner', 'pony', 'deactivate'])
     toggle_pony(false)
   else
+    if (_gaq) then _gaq.push(['_trackEvent', 'course-planner', 'pony', 'activate'])
     toggle_pony(true)
   return false
 
 @reset = ->
   $('#main').replaceWith ich.main
-
