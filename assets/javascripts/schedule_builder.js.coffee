@@ -3,7 +3,7 @@ Array::remove = (e) -> @[t..t] = [] if (t = @indexOf(e)) > -1
 class @ScheduleBuilder
   constructor: ->
     $('#container').on 'click', '#schedule-permalink', (e) =>
-      if (_gaq) then _gaq.push(['_trackEvent', 'course-planner', 'schedule', 'permalink'])
+      if (_gaq) then _gaq.push(['_trackEvent', 'schedule', 'permalink'])
       keys = $(e.currentTarget).data('booking-keys')
       reset()
       @from_bookings keys
