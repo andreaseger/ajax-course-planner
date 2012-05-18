@@ -10,7 +10,7 @@ gem 'sinatra-flash', :require => 'sinatra/flash'
 gem 'mustache', :require => 'mustache/sinatra'
 gem 'activesupport', :require => false
 
-gem 'puma'
+gem 'puma', require: false
 gem 'redis'
 gem 'nokogiri'
 gem 'redcarpet'
@@ -18,7 +18,7 @@ gem 'redcarpet'
 gem 'awesome_print'
 gem 'colorize'
 
-gem 'unicorn', :require => false
+#gem 'unicorn', :require => false
 gem 'whenever',:require => false
 
 group :assets do

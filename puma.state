@@ -1,0 +1,13 @@
+---
+pid: 20309
+config: !ruby/object:Puma::Configuration
+  options:
+    :min_threads: 2
+    :max_threads: 10
+    :quiet: true
+    :binds:
+    - tcp://0.0.0.0:4567
+    :control_url: unix:///tmp/puma-status-1337382674822-20309
+    :state: puma.state
+    :control_url_temp: /tmp/puma-status-1337382674822-20309
+    :control_auth_token: 1396efc9cfc92d37fff08d36373b5418
