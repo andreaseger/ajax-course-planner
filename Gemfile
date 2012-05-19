@@ -11,6 +11,7 @@ gem 'mustache', :require => 'mustache/sinatra'
 gem 'activesupport', :require => false
 
 gem 'puma', require: false
+gem 'unicorn', :require => false
 gem 'redis'
 gem 'nokogiri'
 gem 'redcarpet'
@@ -18,7 +19,6 @@ gem 'redcarpet'
 gem 'awesome_print'
 gem 'colorize'
 
-#gem 'unicorn', :require => false
 gem 'whenever',:require => false
 
 group :assets do
